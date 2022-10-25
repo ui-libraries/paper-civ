@@ -1,0 +1,1158 @@
+;
+;   CIVILIZATION GAME DATA
+;   Extended Original
+;   Copyright (c) 1999 by MicroProse Software
+;
+;   You can alter this file at your own risk to change
+;   the rules of the game.  Keep in mind that altering the
+;   contents of this file may cause your game to malfunction,
+;   particularly if you use values outside the specified
+;   ranges.
+
+;
+;   Cosmic Principles
+;
+;   The following numbers control various key rules
+;   of the game.  GREAT discretion is advised if you
+;   opt to change these.  Values too far out of the
+;   expected range can cause the game to behave strangely.
+;   All values entered in rules.txt are bounded by +/-127. 
+;   However, this does not mean that all numbers within this 
+;   range will work properly, for example, unit costs must 
+;   not exceed 17.
+;
+@COSMIC
+3    ; Road movement multiplier
+2    ; 1 in x chance Trireme lost (mod. by Seafaring, Navigation)
+2    ; # of food each citizen eats per turn
+10   ; # of rows in food box (rows * city_size+1 = box)
+10   ; # of rows in shield box
+1    ; Settlers eat (govt <= Monarchy)
+2    ; Settlers eat (govt >= Communism)
+7    ; City size for first unhappiness at Chieftain level
+14   ; Riot factor based on # cities (higher factor lessens the effect)
+8    ; Aqueduct needed to exceed this size
+12   ; Sewer System needed to exceed this size
+10   ; Tech paradigm (higher # slows research)
+20   ; Base time for engineers to transform terrain (x2)
+3    ; Monarchy  pays support for all units past this (max 8)
+3    ; Communism pays support for all units past this (max 8)
+8    ; Fundamentalism pays support for all units past this (max 8)
+0    ; Communism is equivalent of this palace distance.
+50   ; Fundamentalism loses this % of science
+50   ; Percent shield penalty for production type change
+10   ; Max paradrop range
+75   ; Mass/Thrust paradigm (increasing slows spaceship time)
+5    ; Max effective science rate in fundamentalism (x10, so 5 = 50%)
+1    ; Score value of each citizen
+20   ; Score value of each wonder
+1    ; Score value of spaceship, 1=# of habitats x prob. of success, 0=0
+-10  ; Score value per player-controlled pollution
+1    ; Score value (x3) per turn of peace after turn 199
+5    ; Score value per Future Technology
+0    ; Score penalty per betrayal
+0    ; Score penalty per unit destroyed
+00000011 ; bitmask for goodie huts, right bit =map0, 0=no goodie huts
+0    ; Helicopters pick up huts 0=no 1=yes
+
+;
+;   Civilization Advances
+;
+;   Ai Value, Civilized Modifier, Preq1, Preq2, Epoch, Category
+;
+;     Ai Value = Basic value at which computer players
+;                view this advance (used in determining
+;                which discovery to pursue, which to
+;                acquire during exchanges, and value of
+;                gift during diplomacy).
+;     Modifier = Modifier to value based on the "civilized"
+;                aspect of a leader's personality.  Positive
+;                values increase value for civilized leaders,
+;                decrease it for militaristic.  Negative
+;                values vice versa.
+;     preq1, preq2 = Prerequisites
+;
+;     Epoch = historical period
+;             0 = Ancient
+;             1 = Renaissance
+;             2 = Industrial Revolution
+;             3 = Modern
+;
+;     Category = Knowledge category
+;             0 = Military
+;             1 = Economic
+;             2 = Social
+;             3 = Academic
+;             4 = Applied
+;
+@CIVILIZE
+Advanced Flight,     4,-2,  Rad, Too, 3, 4    ; AFl
+Alphabet,            5, 1,  nil, nil, 0, 3    ; Alp
+Amphibious Warfare,  3,-2,  Nav, Tac, 3, 0    ; Amp
+Astronomy,           4, 1,  Mys, Mat, 1, 3    ; Ast
+Atomic Theory,       4,-1,  ToG, Phy, 2, 3    ; Ato
+Automobile,          6,-1,  Cmb, Stl, 3, 4    ; Aut
+Banking,             4, 1,  Tra, Rep, 1, 1    ; Ban
+Bridge Building,     4, 0,  Iro, Cst, 0, 4    ; Bri
+Bronze Working,      6,-1,  nil, nil, 0, 4    ; Bro
+Ceremonial Burial,   5, 0,  nil, nil, 0, 2    ; Cer
+Chemistry,           5,-1,  Uni, Med, 1, 3    ; Che
+Chivalry,            4,-2,  Feu, Hor, 1, 0    ; Chi
+Code of Laws,        4, 1,  Alp, nil, 0, 2    ; CoL
+Combined Arms,       5,-1,  Mob, AFl, 3, 0    ; CA
+Combustion,          5,-1,  Ref, Exp, 2, 4    ; Cmb
+Communism,           5, 0,  Phi, Ind, 2, 2    ; Cmn
+Computers,           4, 1,  Min, MP,  3, 4    ; Cmp
+Conscription,        7,-1,  Dem, Met, 2, 0    ; Csc
+Construction,        4, 0,  Mas, Cur, 0, 4    ; Cst
+Corporation,         4, 0,  Ind, Eco, 2, 1    ; Cor
+Currency,            4, 1,  Bro, nil, 0, 1    ; Cur
+Democracy,           5, 1,  Ban, Inv, 2, 2    ; Dem
+Economics,           4, 1,  Uni, Ban, 2, 1    ; Eco
+Electricity,         4, 0,  Met, Mag, 2, 4    ; E1
+Electronics,         4, 1,  E1,  Cor, 3, 4    ; E2
+Engineering,         4, 0,  Whe, Cst, 0, 4    ; Eng
+Environmentalism,    3, 1,  Rec, SFl, 3, 2    ; Env
+Espionage,           2,-1,  Cmn, Dem, 3, 0    ; Esp
+Explosives,          5, 0,  Gun, Che, 2, 4    ; Exp
+Feudalism,           4,-1,  War, Mon, 0, 0    ; Feu
+Flight,              4,-1,  Cmb, ToG, 2, 4    ; Fli
+Fundamentalism,      3,-2,  MT,  Csc, 2, 2    ; Fun
+Fusion Power,        3, 0,  NP,  Sup, 3, 3    ; FP
+Genetic Engineering, 3, 2,  Med, Cor, 3, 3    ; Gen
+Guerrilla Warfare,   4, 1,  Cmn, Tac, 3, 0    ; Gue
+Gunpowder,           8,-2,  Inv, Iro, 1, 0    ; Gun
+Horseback Riding,    4,-1,  nil, nil, 0, 0    ; Hor
+Industrialization,   6, 0,  RR,  Ban, 2, 1    ; Ind
+Invention,           6, 0,  Eng, Lit, 1, 4    ; Inv
+Iron Working,        5,-1,  Bro, War, 0, 4    ; Iro
+Labor Union,         4,-1,  MP,  Gue, 3, 2    ; Lab
+Laser,               4, 0,  NP,  MP,  3, 3    ; Las
+Leadership,          5,-1,  Chi, Gun, 1, 0    ; Ldr
+Literacy,            5, 2,  Wri, CoL, 0, 3    ; Lit
+Machine Tools,       4,-2,  Stl, Tac, 2, 4    ; Too
+Magnetism,           4,-1,  Phy, Iro, 1, 3    ; Mag
+Map Making,          6,-1,  Alp, nil, 0, 1    ; Map
+Masonry,             4, 1,  nil, nil, 0, 4    ; Mas
+Mass Production,     5, 0,  Aut, Cor, 3, 4    ; MP
+Mathematics,         4,-1,  Alp, Mas, 0, 3    ; Mat
+Medicine,            4, 0,  Phi, Tra, 1, 1    ; Med
+Metallurgy,          6,-2,  Gun, Uni, 1, 0    ; Met
+Miniaturization,     4, 1,  Too, E2,  3, 4    ; Min
+Mobile Warfare,      8,-1,  Aut, Tac, 3, 0    ; Mob
+Monarchy,            5, 1,  Cer, CoL, 0, 2    ; Mon
+Monotheism,          5, 1,  Phi, PT,  1, 2    ; MT
+Mysticism,           4, 0,  Cer, nil, 0, 2    ; Mys
+Navigation,          6,-1,  Sea, Ast, 1, 1    ; Nav
+Nuclear Fission,     6,-2,  Ato, MP,  3, 3    ; NF
+Nuclear Power,       3, 0,  NF,  E2,  3, 3    ; NP
+Philosophy,          6, 1,  Mys, Lit, 1, 2    ; Phi
+Physics,             4,-1,  Nav, Lit, 1, 3    ; Phy
+Plastics,            4, 1,  Ref, SFl, 3, 4    ; Pla
+Ultrastring Theory,  8, 0,  nil, nil, 3, 3    ; Plu
+Polytheism,          4, 0,  Cer, Hor, 0, 2    ; PT
+Pottery,             4, 1,  nil, nil, 0, 1    ; Pot
+Radio,               5,-1,  Fli, E1,  3, 4    ; Rad
+Railroad,            6, 0,  SE, Bri,  2, 1    ; RR
+Recycling,           2, 1,  MP, Dem,  3, 2    ; Rec
+Refining,            4, 0,  Che, Cor, 2, 4    ; Ref
+Refrigeration,       3, 1,  E1,  San, 3, 1    ; Rfg
+Republic,            5, 1,  CoL, Lit, 0, 2    ; Rep
+Robotics,            5,-2,  Cmp, Mob, 3, 0    ; Rob
+Rocketry,            6,-2,  AFl, E2,  3, 0    ; Roc
+Sanitation,          4, 2,  Med, Eng, 2, 1    ; San
+Seafaring,           4, 1,  Map, Pot, 0, 1    ; Sea
+Space Flight,        4, 1,  Cmp, Roc, 3, 3    ; SFl
+Stealth,             3,-2,  Sup, Rob, 3, 0    ; Sth
+Steam Engine,        4,-1,  Phy, Inv, 2, 3    ; SE
+Steel,               4,-1,  E1,  Ind, 2, 4    ; Stl
+Superconductor,      4, 1,  Pla, Las, 3, 3    ; Sup
+Tactics,             6,-1,  Csc, Ldr, 2, 0    ; Tac
+Theology,            3, 2,  MT,  Feu, 1, 2    ; The
+Theory of Gravity,   4, 0,  Ast, Uni, 1, 3    ; ToG
+Trade,               4, 2,  Cur, CoL, 0, 1    ; Tra
+University,          5, 1,  Mat, Phi, 1, 3    ; Uni
+Warrior Code,        4,-1,  nil, nil, 0, 0    ; War
+Wheel,               4,-1,  Hor, nil, 0, 4    ; Whe
+Writing,             4, 2,  Alp, nil, 0, 3    ; Wri
+Future Technology,   1, 0,  Sup, Rec, 3, 3    ; ...
+Robotic Warfare,     6,-2,  Plu, Rob, 3, 0    ; U1
+Quantum Transport,   8, 0,  Plu, nil, 3, 4    ; U2
+Telka Sumara,        5,-1,  Plu, nil, 3, 4    ; U3
+Teratogeny,          5,-1,  Gen,  U2, 3, 3    ; X1
+Cybernetics,         4,-1,  U1,  Gen, 3, 4    ; X2
+Boht Comaree,        4,-2,  U3,   X1, 3, 0    ; X3
+Bioplasmas,          4,-2,  X2,   FP, 3, 0    ; X4
+Hyperentropics,      7, 0,  U2,   X4, 3, 3    ; X5
+Reality Engineering, 7, 0,  X5,  nil, 3, 4    ; X6
+Transcendence,       9, 2,  X6,   X5, 3, 2    ; X7
+
+;
+; Above 11 tech slots (U1 to X8) allow you to define your own 
+; civilization advances if desired.  Supply the name, the AI 
+; value, and the prerequisites.
+;
+; Then use the "U1", "U2", etc. 
+; identifier to incorporate it into the tech chain as a
+; prerequisite for other techs, units, city improvements.
+;
+
+;
+;  City Improvements
+;
+;   cost(x10), upkeep, preq
+;
+@IMPROVE
+Nothing,                  1,  0,    nil,
+Palace,                   10, 0,    Mas,
+Barracks,                 4,  1,    nil,
+Granary,                  6,  1,    Pot,
+Temple,                   4,  1,    Cer,
+MarketPlace,              8,  1,    Cur,
+Library,                  8,  1,    Wri,
+Courthouse,               8,  1,    CoL,
+City Walls,               8,  0,    Mas,
+Aqueduct,                 8,  2,    Cst,
+Bank,                     12, 3,    Ban,
+Cathedral,                12, 3,    MT,
+University,               16, 3,    Uni,
+Mass Transit,             16, 4,    MP,
+Colosseum,                10, 4,    Cst,
+Factory,                  20, 4,    Ind,
+Manufacturing Plant,      32, 6,    Rob,
+SDI Defense,              20, 4,    Las,
+Recycling Center,         20, 2,    Rec,
+Power Plant,              16, 4,    Ref,
+Hydro Plant,              24, 4,    E2,
+Nuclear Plant,            16, 2,    NP,
+Stock Exchange,           16, 4,    Eco,
+Sewer System,             12, 2,    San,
+Supermarket,               8, 3,    Rfg,
+Superhighways,            20, 5,    Aut,
+Research Lab,             16, 3,    Cmp,
+SAM Missile Battery,      10, 2,    Roc,
+Coastal Fortress,          8, 1,    Met,
+Solar Plant,              32, 4,    Env,
+Harbor,                   6,  1,    Sea,
+Offshore Platform,        16, 3,    Min,
+Airport,                  16, 3,    Rad,
+Police Station,           6,  2,    Cmn,
+Port Facility,            8,  3,    Amp,
+Starport,                 16, 3,    Plu,
+SS Structural,            8,  0,    SFl,
+SS Component,             16, 0,    Pla,
+SS Module,                32, 0,    Sup,
+(Capitalization),         60, 0,    Cor,
+Pyramids,                 20, 0,    Mas,
+Hanging Gardens,          20, 0,    Pot,
+Colossus,                 20, 0,    Bro,
+Lighthouse,               20, 0,    Map,
+Great Library,            30, 0,    Lit,
+Oracle,                   30, 0,    Mys,
+Great Wall,               30, 0,    Mas,
+Sun Tzu's War Academy,    30, 0,    Feu,
+King Richard's Crusade,   30, 0,    Eng,
+Marco Polo's Embassy,     20, 0,    Tra,
+Michelangelo's Chapel,    40, 0,    MT,
+Copernicus' Observatory,  30, 0,    Ast,
+Magellan's Expedition,    40, 0,    Nav,
+Shakespeare's Theatre,    30, 0,    Med,
+Leonardo's Workshop,      40, 0,    Inv,
+J. S. Bach's Cathedral,   40, 0,    The,
+Isaac Newton's College,   40, 0,    ToG,
+Adam Smith's Trading Co., 40, 0,    Eco,
+Darwin's Voyage,          40, 0,    RR,
+Statue of Liberty,        40, 0,    Dem,
+Eiffel Tower,             30, 0,    SE,
+Women's Suffrage,         60, 0,    Ind,
+Hoover Dam,               60, 0,    E2,
+Manhattan Project,        60, 0,    NF,
+United Nations,           60, 0,    Cmn,
+Apollo Program,           60, 0,    SFl,
+SETI Program,             60, 0,    Cmp,
+Cure for Cancer,          60, 0,    Gen,
+
+;
+; Expiration advancements for Wonders of the World
+;
+@ENDWONDER
+nil,        ; Pyramids
+RR,         ; Hanging Gardens
+Fli,        ; Colossus
+Mag,        ; Lighthouse
+E1,         ; Great Library
+The,        ; Oracle
+Met,        ; Great Wall
+Mob,        ; Sun Tzu's War Academy
+Ind,        ; King Richard's Crusade
+Cmn,        ; Marco Polo's Embassy
+Plu,        ; Michelangelo
+X5,        ; Copernicus
+nil,        ; Magellan
+nil,        ; Shakespeare
+Aut,        ; Da Vinci's Workshop
+nil,        ; Bach
+X6,        ; Newton
+nil,        ; Smith's Trading Co.
+nil,        ; Darwin
+nil,        ; Statue of Liberty
+U1,        ; Eiffel Tower
+nil,        ; Women's Suffrage
+nil,        ; Hoover Dam
+nil,        ; Manhattan Project
+X1,        ; United Nations
+nil,        ; Apollo
+Plu,        ; SETI
+nil,        ; Cure for Cancer
+
+
+;
+;    Unit Types
+;
+; until, domain,  move,rng,  att,def  hit,firepwr  cost,hold,  role, preq,  flags
+;
+; until       = Civ advance which renders unit obsolete
+; Move        = Movement rate (spaces per turn)
+; Range       = # of turns fuel carried (0 for non-air units)
+;
+; domain      = Movement domain of unit
+:               0 = Ground
+;               1 = Air
+;               2 = Sea
+;
+; att         = Attack factor (chance to score hit attacking)
+; def         = Defense factor (chance to score hit defending)
+; hit         = Hit points (damage x10 which can be taken before elimination)
+; firepwr     = # damage points caused per hit scored on enemy.
+;
+; cost        = Cost (# of shield rows, usually of 10 shields each)
+; hold        = # of holds on ship (for carrying units)
+;
+; role        = AI role (Generally affects the way in
+;               which computer players use the unit, but
+;               roles >= 5 will actually affect abilities
+;               of the unit)
+;               0 = Attack
+;               1 = Defend
+;               2 = Naval Superiority
+;               3 = Air Superiority
+;               4 = Sea Transport
+;               5 = Settle
+;               6 = Diplomacy
+;               7 = Trade
+;
+; preq        = Prerequisite advance
+;
+; "Flags" control special advantages & restrictions.  Not
+; all of these flags "make sense" for all types of units
+; (paradropping ships, for instance).  Nonsensical variations
+; may produce bizarre effects (or worse).  You were warned.
+;
+;   100000000000000 = Unit can spot submarines
+;   010000000000000 = x2 on defense versus air (AEGIS)
+;   001000000000000 = Destroyed after attacking (missiles)
+;   000100000000000 = Free support for fundamentalism (fanatics)
+;   000010000000000 = x2 on defense versus horse (pikemen)
+;   000001000000000 = Alpine (treats all squares as road)
+;   000000100000000 = Can make paradrops
+;   000000010000000 = Can carry air units (carrier)
+;   000000001000000 = Negates city walls (howitzer)
+;   000000000100000 = Ship must stay near land (trireme)
+;   000000000010000 = Can attack air units (fighter)
+;   000000000001000 = Submarine advantages/disadvantages
+;   000000000000100 = Can make amphibious assaults
+;   000000000000010 = Ignore zones of control
+;   000000000000001 = Two space visibility
+;
+;
+@UNITS
+Settlers,     Exp, 0,  1.,0,  0a,1d,  2h,1f,  4,0,  5, nil, 000000000000000
+Engineers,     U2, 0,  2.,0,  0a,2d,  2h,1f,  4,0,  5, Exp, 000000000000000
+Warriors,     Feu, 0,  1.,0,  1a,1d,  1h,1f,  1,0,  1, nil, 000000000000000
+Phalanx,      Feu, 0,  1.,0,  1a,2d,  1h,1f,  2,0,  1, Bro, 000000000000000
+Archers,      Gun, 0,  1.,0,  3a,2d,  1h,1f,  3,0,  1, War, 000000000000000
+Legion,       Gun, 0,  1.,0,  4a,2d,  1h,1f,  4,0,  1, Iro, 000000000000000
+Pikemen,      Gun, 0,  1.,0,  1a,2d,  1h,1f,  2,0,  1, Feu, 000010000000000
+Musketeers,   Csc, 0,  1.,0,  3a,3d,  2h,1f,  3,0,  1, Gun, 000000000000000
+Fanatics,     nil, 0,  1.,0,  4a,4d,  2h,1f,  2,0,  1, Fun, 000100000000000
+Partisans,    nil, 0,  1.,0,  4a,4d,  2h,1f,  5,0,  1, Gue, 000001000000010
+Alpine Troops, U1, 0,  1.,0,  5a,5d,  2h,1f,  5,0,  1, Tac, 000001000000000
+Riflemen,      U1, 0,  1.,0,  5a,4d,  2h,1f,  4,0,  1, Csc, 000000000000000
+Marines,       X2, 0,  1.,0,  8a,5d,  2h,1f,  6,0,  0, Amp, 000000000000100
+Paratroopers,  X2, 0,  1.,0,  6a,4d,  2h,1f,  6,0,  1, CA,  000000100000000
+Mech. Inf.,    X6, 0,  3.,0,  6a,6d,  3h,1f,  5,0,  1, Lab, 000000000000000
+Horsemen,     Chi, 0,  2.,0,  2a,1d,  1h,1f,  2,0,  0, Hor, 000000000000000
+Chariot,      PT,  0,  2.,0,  3a,1d,  1h,1f,  3,0,  0, Whe, 000000000000000
+Elephant,     MT,  0,  2.,0,  4a,1d,  1h,1f,  4,0,  0, PT,  000000000000000
+Crusaders,    Ldr, 0,  2.,0,  5a,1d,  1h,1f,  4,0,  0, MT,  000000000000000
+Knights,      Ldr, 0,  2.,0,  4a,2d,  1h,1f,  4,0,  0, Chi, 000000000000000
+Dragoons,     Tac, 0,  2.,0,  5a,2d,  2h,1f,  5,0,  0, Ldr, 000000000000000
+Cavalry,      Mob, 0,  2.,0,  8a,3d,  2h,1f,  6,0,  0, Tac, 000000000000000
+Armor,         X5, 0,  3.,0, 10a,5d,  3h,1f,  8,0,  0, Mob, 000000000000000
+Catapult,     Met, 0,  1.,0,  6a,1d,  1h,1f,  4,0,  0, Mat, 000000000000000
+Cannon,       Too, 0,  1.,0,  8a,1d,  2h,1f,  4,0,  0, Met, 000000000000000
+Artillery,    Rob, 0,  1.,0, 10a,1d,  2h,2f,  5,0,  0, Too, 000000000000000
+Howitzer,      X6, 0,  2.,0, 12a,2d,  3h,2f,  7,0,  0, Rob, 000000001000000
+Fighter,      Sth, 1, 10.,1,  4a,3d,  2h,2f,  6,0,  3, Fli, 000000000010001
+Bomber,       Sth, 1,  8.,2, 12a,1d,  2h,2f, 12,0,  0, AFl, 000000000000001
+Helicopter,    U1, 1,  6.,0, 10a,3d,  2h,2f, 10,0,  0, CA,  100000000000001
+Stlth Ftr.,   nil, 1, 14.,1,  8a,4d,  2h,2f,  8,0,  3, Sth, 000000000010001
+Stlth Bmbr.,  nil, 1, 12.,2, 14a,5d,  2h,2f, 16,0,  0, Sth, 000000000000001
+Trireme,      Nav, 2,  3.,0,  1a,1d,  1h,1f,  4,2,  4, Map, 000000000100000
+Caravel,      Mag, 2,  3.,0,  2a,1d,  1h,1f,  4,3,  4, Nav, 000000000000000
+Galleon,      Ind, 2,  4.,0,  0a,2d,  2h,1f,  4,4,  4, Mag, 000000000000000
+Frigate,      E1,  2,  4.,0,  4a,2d,  2h,1f,  5,2,  2, Mag, 000000000000000
+Ironclad,     E1,  2,  4.,0,  4a,4d,  3h,1f,  6,0,  2, SE,  000000000000000
+Destroyer,     U1, 2,  6.,0,  4a,4d,  3h,1f,  6,0,  2, E1,  100000000000001
+Cruiser,      Roc, 2,  5.,0,  6a,6d,  3h,2f,  8,0,  2, Stl, 100000000000001
+AEGIS Cruiser,nil, 2,  5.,0,  8a,8d,  3h,2f, 10,0,  2, Roc, 110000000000001
+Battleship,   nil, 2,  4.,0, 12a,12d, 4h,2f, 16,0,  2, Aut, 000000000000001
+Submarine,    nil, 2,  3.,0, 10a,2d,  3h,2f,  6,0,  2, Cmb, 000000000001001
+Carrier,      nil, 2,  5.,0,  1a,9d,  4h,2f, 16,0,  2, AFl, 000000010000001
+Transport,    nil, 2,  5.,0,  0a,3d,  3h,1f,  5,8,  4, Ind, 000000000000000
+Cruise Msl.,   X5, 1, 12.,1, 18a,0d,  1h,3f,  6,0,  0, Roc, 001000000000000
+Nuclear Msl.,  X5, 1, 16.,1, 99a,0d,  1h,1f, 16,0,  0, Roc, 001000000000000
+Diplomat,     Esp, 0,  2.,0,  0a,0d,  1h,1f,  3,0,  6, Wri, 000000000000010
+Spy,          nil, 0,  3.,0,  0a,0d,  1h,1f,  3,0,  6, Esp, 000000000000011
+Caravan,      Cor, 0,  1.,0,  0a,1d,  1h,1f,  5,0,  7, Tra, 000000000000010
+Freight,      nil, 0,  2.,0,  0a,1d,  1h,1f,  5,0,  7, Cor, 000000000000010
+Explorer,     Gue, 0,  1.,0,  0a,1d,  1h,1f,  3,0,  0, Sea, 000001000000010
+Chon-ee,       U3, 0,  0.,0,  6a,6d,  3h,1f,  4,0,  1, nil, 000000000000000
+Colonist,     nil, 0,  3.,0,  0a,3d,  2h,1f,  4,0,  5, U2,  000000000000000
+Mupbu,        nil, 0,  3.,0,  0a,3d,  2h,1f,  4,0,  5, U2,  000000000000010
+RA-MARU,      nil, 0,  2.,0, 10a,6d,  3h,2f,  7,0,  1, U1,  110010000000001
+Sulka,        nil, 0,  1.,0,  6a,8d,  3h,1f,  5,0,  1, U3,  010010000000000
+War Dog,      nil, 0,  2.,0,  8a,7d,  3h,2f,  9,0,  0, U1,  100011000000000
+Kestrel,      nil, 1,  7.,0, 10a,5d,  3h,2f,  8,0,  0, U1,  100000000010001
+Benthon,      nil, 2,  5.,0, 10a,10d, 4h,3f,  8,0,  2, U1,  110000000000001
+Liwyathan,    nil, 2,  6.,0, 12a,12d, 3h,3f,  6,0,  2, X1,  000100000000000
+Spithre,      nil, 0,  3.,0, 12a,5d,  2h,2f,  5,0,  0, X1,  000100000000000
+Drakon,       nil, 1,  9.,0, 16a,7d,  3h,3f, 13,0,  0, X1,  000000000010000
+Teleporter,   nil, 0,  3.,0,  9a,7d,  2h,3f,  7,0,  0, X2,  000000100000010
+Cyborg,       nil, 0,  2.,0, 12a,8d,  3h,3f, 10,0,  1, X2,  110011000000101
+Plasman,      nil, 0,  3.,0, 14a,9d,  4h,5f, 14,0,  0, X4,  000000001000010
+Entrix,       nil, 0,  2.,0, 16a,10d, 4h,5f, 14,0,  0, X5,  100000001000111
+Magog,        nil, 0,  2.,0, 18a,11d, 5h,5f, 17,0,  0, X6,  010000001000001
+Xaos Missile, nil, 1, 18.,1, 99a,0d,  1h,1f, 17,0,  0, X5,  001000000010001
+Dreadnought,  nil, 1, 10.,0, 18a,8d,  4h,3f, 17,0,  0, X4,  110000000010001
+Eightball,    nil, 0,  2.,0, 20a,9d,  2h,5f, 15,0,  0, X6,  000000001000010
+Spare 1,      nil, 0,  1.,0,  1a,1d,  1h,1f,  2,0,  0, no,  000000000000000
+Spare 2,      nil, 0,  1.,0,  1a,1d,  1h,1f,  2,0,  0, no,  000000000000000
+Spare 3,      nil, 0,  1.,0,  1a,1d,  1h,1f,  2,0,  0, no,  000000000000000
+Hoy Groot,    nil, 0,  3.,0, 12a,7d,  2h,3f,  5,0,  0, X3,  000010000000000
+Pronat,       nil, 2,  6.,0,  8a,7d,  2h,2f,  5,0,  2, X3,  000000000000000
+Ongshawk,     nil, 1,  5.,0,  5a,2d,  2h,2f,  6,0,  0, nil, 000000000010000
+Honata,        X3, 2,  3.,0,  4a,3d,  2h,1f,  4,0,  2, nil, 000000000100000
+Jiraki,        X3, 0,  1.,0,  3a,3d,  1h,1f,  2,0,  0, nil, 000000000000000
+Denshuk,      nil, 0,  1.,0,  5a,3d,  2h,1f,  3,0,  0, nil, 000000000000000
+Wuk Turr,     nil, 0,  2.,0,  7a,4d,  2h,2f,  5,0,  0, nil, 000000000000000
+
+
+;
+; Note: the above 11 unit types (extra land, ship, air, and test units) are 
+; available for user defined unit types.  If these units are given prerequisites
+; other than "no" they will appear in the game when the specified
+; technology is reached.  Use if you want to create your own unit types
+; without sacrificing any of the predefined units.  Be sure to define
+; the "role" field accurately, so that the computer will understand how
+; to make use of the new units in its own civilizations.
+;
+; There is no requirement that the extra units be used to
+; create exactly one of each type; you could create three
+; ground units.  But the icons provided are for one of each.
+; The 11 extra unit types have default icons provided by the game.
+; To actually change the icons is a somewhat more difficult
+; task.  The icons are stored in "UNITS.GIF".
+;
+; Sound effects for these 11 units may be added by providing
+; CUSTOM1.WAV, CUSTOM2.WAV, and CUSTOM3.WAV for the extra units and
+: Extra1.wav through extra8.wav for the 8 test units.  These should be
+; 8-bit, mono, and sampled at 22050hz.
+;
+; Ideas:
+;
+; Hovercraft,   nil, 2,  8.,0,  0a,1d,  2h,2f,  7,1,  4, MP,  000000000000000
+;
+
+
+;
+;  Terrain
+;
+;  Movecost, defense,   food, shields, trade,
+;        . . .  Irrigate, bonus, #turns, ai-irrigate,
+;        . . .  Mine,     bonus, #turns, ai-mine
+;        . . .  Transform
+;
+;   defense = multiply by 50% to get % of normal combat factor defended at.
+;       (so 3 x 50% = 150%, meaning a strength 2 unit defends at 3).
+;
+;  Irrigate/Mine = yes, no, or type of terrain changed to
+;  Transform     = Terrain type engineers can transform to
+;
+;  bonus = # extra production from that change
+;
+;  turns = # turns for settler to make change
+;
+;  ai    = Minimum govt level necessary for
+;          computer player to want to perform irrigate/mine
+;        0 Never
+;        1 Despotism
+;        2 Monarchy
+;        3 Communism
+;        4 Fundamentalism
+;        5 Republic
+;        6 Democracy
+;
+@TERRAIN
+Desert,     1,2,  0,1,0,   yes, 1, 5, 5,   yes, 1, 5,  3,  Pln,   no, ; Drt
+Plains,     1,2,  1,1,0,   yes, 1, 5, 1,   For, 0,15,  0,  Grs,   no, ; Pln
+Grassland,  1,2,  2,1,0,   yes, 1, 5, 2,   For, 0,10,  0,  Hil,   no, ; Grs
+Forest,     2,3,  1,2,0,   Pln, 0, 5, 5,   no,  0, 5,  0,  Grs,   no, ; For
+Hills,      2,4,  1,0,0,   yes, 1,10, 0,   yes, 3,10,  1,  Pln,   no, ; Hil
+Mountains,  3,6,  0,1,0,   no,  1,10, 0,   yes, 1,10,  6,  Hil,   no, ; Mou
+Tundra,     1,2,  1,0,0,   yes, 1,10, 1,   no,  0, 0,  0,  Drt,   no, ; Tun
+Glacier,    2,2,  0,0,0,   no,  0, 0, 0,   yes, 1,15,  3,  Tun,   no, ; Gla
+Swamp,      2,3,  1,0,0,   Grs, 0,15, 6,   For, 0,15,  0,  Pln,   no, ; Swa
+Jungle,     2,3,  1,0,0,   Grs, 0,15, 6,   For, 0,15,  0,  Pln,   no, ; Jun
+Ocean,      1,2,  1,0,2,   no,  0, 0, 0,   no,  0, 0,  0,  no,    no, ; Oce
+Oasis,      1,2,  3,1,0,
+Buffalo,    1,2,  1,3,0,
+Grassland,  1,2,  2,1,0,
+Pheasant,   2,3,  3,2,0,
+Coal,       2,4,  1,2,0,
+Gold,       3,6,  0,1,6,
+Game,       1,2,  3,1,0,
+Ivory,      2,2,  1,1,4,
+Peat,       2,3,  1,4,0,
+Gems,       2,3,  1,0,4,
+Fish,       1,2,  3,0,2,
+Desert Oil, 1,2,  0,4,0,
+Wheat,      1,2,  3,1,0,
+Grassland,  1,2,  2,1,0,
+Silk,       2,3,  1,2,3,
+Wine,       2,4,  1,0,4,
+Iron,       3,6,  0,4,0,
+Furs,       1,2,  2,0,3,
+Glacier Oil,2,2,  0,4,0,
+Spice,      2,3,  3,0,4,
+Fruit,      2,3,  4,0,1,
+Whales,     1,2,  2,2,3,
+
+@TERRAIN1
+Wasteland,     2,2,  0,1,0,   yes, 1, 5, 5,  yes, 1, 5, 3,  Pln,   no, ; Drt
+Scrubland,     1,2,  1,1,0,   yes, 1, 5, 1,  For, 0,15, 6,  Grs,   no, ; Pln
+Grasses,       1,2,  2,1,0,   yes, 1, 5, 1,  Drt, 0,10, 0,  For,   no, ; Grs
+Woodlands,     2,3,  1,2,0,   Pln, 0, 5, 5,  no,  0, 5, 0,  Grs,   no, ; For
+Eternal Fog,   2,4,  1,0,1,   no,  0, 0, 0,  yes, 2,10, 1,  Pln,   no, ; Hil
+Mountains,     3,6,  0,1,0,   no,  1,10, 0,  yes, 1,10, 2,  Swa,   no, ; Mou
+Tundra,        1,2,  1,0,0,   yes, 1,10, 1,  no,  0, 0, 0,  Drt,   no, ; Tun
+Arctic,        2,2,  0,0,0,   no,  0, 0, 0,  yes, 1,15, 3,  Tun,   no, ; Gla
+No-man's Land, 2,3,  0,2,1,   Pln, 0,15, 1,  yes, 1, 5, 2,  Grs,   no, ; Swa
+Red Sands,     3,1,  0,1,1,   no,  0, 0, 0,  yes, 2,15, 2,  Drt,   no, ; Jun
+Misty Sea,     1,2,  1,0,2,   no,  0, 0, 0,  no,  0, 0, 0,  no,    no, ; Oce
+Fossils,       2,2,  0,2,3,
+Ruins,         1,3,  1,3,1,
+Chatapi,       1,2,  2,2,0,
+Shoat Lizards, 2,3,  3,2,0,
+Sandstorm,     3,4,  0,4,1,
+Dead City,     3,7,  0,2,3,
+Flame Stone,   1,2,  1,2,2,
+Artifacts,     2,2,  0,1,3,
+Lava Pit,      3,1,  0,4,3,
+Anomaly,       1,2,  0,0,5,
+Seabees,       1,2,  2,1,3,
+Monolith,      2,2,  0,1,5,
+Regiment Ivy,  1,2,  3,2,1,
+Chatapi,       1,2,  2,2,0,
+Methane,       2,3,  1,4,1,
+Fulminium,     2,4,  1,2,3,
+Transmetals,   3,6,  0,3,2,
+Menhirs,       1,2,  1,0,3,
+Pebble Wash,   2,2,  0,2,1,
+War Machine,   3,6,  0,5,1,
+Bioplasm,      3,2,  1,1,2,
+Sargasso,      3,1,  3,1,1,
+
+@TERRAIN2
+Desert,     1,2,  0,1,0,   yes, 1, 5, 5,   yes, 1, 5,  3,  Pln,   no, ; Drt
+Plains,     1,2,  1,1,0,   yes, 1, 5, 1,   For, 0,15,  0,  Grs,   no, ; Pln
+Grassland,  1,2,  2,1,0,   yes, 1, 5, 2,   For, 0,10,  0,  Hil,   no, ; Grs
+Forest,     2,3,  1,2,0,   Pln, 0, 5, 5,   no,  0, 5,  0,  Grs,   no, ; For
+Hills,      2,4,  1,0,0,   yes, 1,10, 0,   yes, 3,10,  1,  Pln,   no, ; Hil
+Mountains,  3,6,  0,1,0,   no,  1,10, 0,   yes, 1,10,  6,  Hil,   no, ; Mou
+Tundra,     1,2,  1,0,0,   yes, 1,10, 1,   no,  0, 0,  0,  Drt,   no, ; Tun
+Glacier,    2,2,  0,0,0,   no,  0, 0, 0,   yes, 1,15,  3,  Tun,   no, ; Gla
+Swamp,      2,3,  1,0,0,   Grs, 0,15, 6,   For, 0,15,  0,  Pln,   no, ; Swa
+Jungle,     2,3,  1,0,0,   Grs, 0,15, 6,   For, 0,15,  0,  Pln,   no, ; Jun
+Ocean,      1,2,  1,0,2,   no,  0, 0, 0,   no,  0, 0,  0,  no,    no, ; Oce
+Oasis,      1,2,  3,1,0,
+Buffalo,    1,2,  1,3,0,
+Grassland,  1,2,  2,1,0,
+Pheasant,   2,3,  3,2,0,
+Coal,       2,4,  1,2,0,
+Gold,       3,6,  0,1,6,
+Game,       1,2,  3,1,0,
+Ivory,      2,2,  1,1,4,
+Peat,       2,3,  1,4,0,
+Gems,       2,3,  1,0,4,
+Fish,       1,2,  3,0,2,
+Desert Oil, 1,2,  0,4,0,
+Wheat,      1,2,  3,1,0,
+Grassland,  1,2,  2,1,0,
+Silk,       2,3,  1,2,3,
+Wine,       2,4,  1,0,4,
+Iron,       3,6,  0,4,0,
+Furs,       1,2,  2,0,3,
+Glacier Oil,2,2,  0,4,0,
+Spice,      2,3,  3,0,4,
+Fruit,      2,3,  4,0,1,
+Whales,     1,2,  2,2,3,
+
+@TERRAIN3
+Desert,     1,2,  0,1,0,   yes, 1, 5, 5,   yes, 1, 5,  3,  Pln,   no, ; Drt
+Plains,     1,2,  1,1,0,   yes, 1, 5, 1,   For, 0,15,  0,  Grs,   no, ; Pln
+Grassland,  1,2,  2,1,0,   yes, 1, 5, 2,   For, 0,10,  0,  Hil,   no, ; Grs
+Forest,     2,3,  1,2,0,   Pln, 0, 5, 5,   no,  0, 5,  0,  Grs,   no, ; For
+Hills,      2,4,  1,0,0,   yes, 1,10, 0,   yes, 3,10,  1,  Pln,   no, ; Hil
+Mountains,  3,6,  0,1,0,   no,  1,10, 0,   yes, 1,10,  6,  Hil,   no, ; Mou
+Tundra,     1,2,  1,0,0,   yes, 1,10, 1,   no,  0, 0,  0,  Drt,   no, ; Tun
+Glacier,    2,2,  0,0,0,   no,  0, 0, 0,   yes, 1,15,  3,  Tun,   no, ; Gla
+Swamp,      2,3,  1,0,0,   Grs, 0,15, 6,   For, 0,15,  0,  Pln,   no, ; Swa
+Jungle,     2,3,  1,0,0,   Grs, 0,15, 6,   For, 0,15,  0,  Pln,   no, ; Jun
+Ocean,      1,2,  1,0,2,   no,  0, 0, 0,   no,  0, 0,  0,  no,    no, ; Oce
+Oasis,      1,2,  3,1,0,
+Buffalo,    1,2,  1,3,0,
+Grassland,  1,2,  2,1,0,
+Pheasant,   2,3,  3,2,0,
+Coal,       2,4,  1,2,0,
+Gold,       3,6,  0,1,6,
+Game,       1,2,  3,1,0,
+Ivory,      2,2,  1,1,4,
+Peat,       2,3,  1,4,0,
+Gems,       2,3,  1,0,4,
+Fish,       1,2,  3,0,2,
+Desert Oil, 1,2,  0,4,0,
+Wheat,      1,2,  3,1,0,
+Grassland,  1,2,  2,1,0,
+Silk,       2,3,  1,2,3,
+Wine,       2,4,  1,0,4,
+Iron,       3,6,  0,4,0,
+Furs,       1,2,  2,0,3,
+Glacier Oil,2,2,  0,4,0,
+Spice,      2,3,  3,0,4,
+Fruit,      2,3,  4,0,1,
+Whales,     1,2,  2,2,3,
+
+
+; Secondary Map Characteristics
+; (modify at your own risk)
+;
+; 0, 1,2, 3,4, 5,6,7,8, D1,M1,F1, D2,M2,F2, D3,M3,F3
+;
+; 0=map type: 1-subsea, 2-subdirt, 3-floating, 4-land dominant, 5-gas giant, 6-std
+; 1=avg blob size (types 3 and 5 only)
+; 2=avg # of blobs (types 3 and 5 only)
+; 3=avg bridge length: 0-no bridges (types 3 and 5 only)
+; 4=avg bridges per blob: 1-4 chance, 0-none (types 3 and 5 only)
+; 5=# blue rooms
+; 6=# ice rooms
+; 7=# fire chambers
+; 8=# storms
+; DMF=desired length, minimum length, frequency
+; specific effects depend on map type
+; for AC game:
+; DMF1=No, No, No
+; DMF2=No, No, No
+; DMF3=No, No, No
+
+@SECONDARY_MAPS
+6, 0,0, 0,0, 0,0,0,0,    0,0,0,  0,0,0,   0,0,0,
+
+
+@GOVERNMENTS
+Anarchy,        Mr.,         Ms.
+Despotism,      Emperor,     Empress
+Monarchy,       King,        Queen
+Communism,      Comrade,     Comrade
+Fundamentalism, High Priest, High Priestess
+Republic,       Consul,      Consul
+Democracy,      President,   President
+
+;
+;   Leaders
+;
+;   leader, female, color, style, plural, adjective, ...
+;           ...attack, expand, civilize, ...
+;           ...govt, male, female...<repeat>
+;
+;   female:     0 = male           1 = female
+;
+;   color:  Color set (1 - 7)
+;   style:  City style (0 - 3)
+;           0 = Bronze Age
+;           1 = Classical
+;           2 = Far East
+;           3 = Medieval
+;
+;   attack:     1 = aggressive    -1 = rational
+;   expand:     1 = expansionist  -1 = perfectionist
+;   civilize:   1 = civilized     -1 = militaristic
+;
+;   govt = government type for name replacement (0 = Anarchy, 6 = Democracy)
+;
+;   male, female = titles for leader of government
+;
+@LEADERS
+Caesar,       Livia,               0, 1, 1, Romans,        Roman,         0,  1,  1,     1, Dictator, Dictator, 2, Imperator, Imperatrix
+Hammurabi,    Ishtari,             0, 2, 0, Babylonians,   Babylonian,   -1, -1,  1,
+Frederick,    Maria Theresa,       0, 3, 3, Germans,       German,        1, -1,  1,     4, Archbishop, Archbishop, 6, Chancellor, Chancellor
+Ramesses,     Cleopatra,           1, 4, 0, Egyptians,     Egyptian,      0,  0,  1,     1, Pharaoh, Pharaoh, 2, Great Pharaoh, Great Pharaoh
+Abe Lincoln,  E. Roosevelt,        0, 5, 1, Americans,     American,     -1,  0,  1,     4, Reverend, Reverend, 5, Speaker, Speaker
+Alexander,    Hippolyta,           1, 6, 1, Greeks,        Greek,         0,  1, -1,     6, Prime Minister, Prime Minister
+Pichi,        Marendi,             0, 7, 2, Gazpichi,      Gazpichi,      1,  1, -1,     0, Ik, Ek, 3, Kof, Ha'Kof, 4, Walapo, Awalapo, 5, Sinet, Asinet, 6, Joy, Joyid
+Lenin,        Catherine the Great, 1, 1, 3, Russians,      Russian,       1,  0, -1,     2, Czar, Czarina, 4, Patriarch, Matriarch
+Shaka,        Shakala,             0, 2, 0, Zulus,         Zulu,          1,  0,  0,
+Louis XIV,    Joan of Arc,         0, 3, 3, French,        French,        1,  1,  1,     4, Archbishop, Archbishop, 6, Premier, Premier
+Montezuma,    Nazca,               0, 4, 0, Aztecs,        Aztec,         0, -1,  1,
+Mao Tse Tung, Wu Zhao,             0, 5, 2, Chinese,       Chinese,       0,  0,  1,     3, Chairman, Chairperson
+Henry VIII,   Elizabeth I,         1, 6, 3, English,       English,       0,  1,  0,     4, Lord Protector, Lady Protector, 6, Prime Minister, Prime Minister
+Lorath,       Fanroff,             1, 7, 2, Brr'til,       Brr'tilian,    0,  0,  0,     0, Olo, Alu, 3, Powa, Poelu, 4, Rurath, Ruoff, 5, Olido, Alidu, 6, Barit, Barit
+Cunobelin,    Boadicea,            1, 1, 0, Celts,         Celtic,       -1,  1,  0,     4, Druid, Druid
+Tokugawa,     Amaterasu,           0, 2, 2, Japanese,      Japanese,      1, -1, -1,     2, Shogun, Shogun, 6, Prime Minister, Prime Minister
+Canute,       Gunnhild,            1, 3, 3, Vikings,       Viking,        1,  1,  0,     1, Warlord, Warlord
+Philip II,    Isabella,            1, 4, 3, Spanish,       Spanish,      -1,  1, -1,     4, Archbishop, Archbishop
+Xerxes,       Scheherezade,        0, 5, 0, Persians,      Persian,       0, -1,  0,     2, Shah, Shah,  4, Ayatollah, Ayatollah
+Hannibal,     Dido,                0, 6, 1, Carthaginians, Carthaginian,  0,  0, -1,
+Mux,          Fute,                0, 7, 2, Treg,          Tregin,       -1, -1,  1,     0, Ed, Edi, 3, Ghec, Ghej, 4, Polt, Polti, 5, Kocim, Cimi, 6, Hafin, Hafini
+
+Saladin,    ...,     0, 5, Arabs,       Arab,        1,  0,  1,     4, Ayatollah, Ayatollah, 2, Sultan, Sultana
+Atawallpa,  ...,     0, 1, Incas,       Inca,       -1,  1,  1,
+
+
+
+;
+;   Trading Commodities
+;
+@CARAVAN
+Hides,
+Wool,
+Beads,
+Cloth,
+Salt,
+Coal,
+Copper,
+Dye,
+Wine,
+Silk,
+Silver,
+Spice,
+Gems,
+Gold,
+Oil,
+Uranium,
+
+
+@ORDERS
+Fortify,            F
+Fortified,          F
+Sleep,              S
+Build Fortress,     F
+Build Road,         R
+Build Irrigation,   I
+Build Mine,         m
+Transform,          O
+Clean Pollution,    p
+Build Airbase,      E
+Build Transporter,  J
+Go to,              G
+
+
+@DIFFICULTY
+Chieftain
+Warlord
+Prince
+King
+Emperor
+Deity
+
+@ATTITUDES
+Worshipful
+Friendly
+Cordial
+Receptive
+Neutral
+Reserved
+Icy
+Hostile
+Enraged
+
+
+@CIVILIZE2
+0 ; AFl
+0 ; Alp
+0 ; Amp
+0 ; Ast
+0 ; Ato
+0 ; Aut
+0 ; Ban
+0 ; Bri
+0 ; Bro
+0 ; Cer
+0 ; Che
+0 ; Chi
+0 ; CoL
+0 ; CA
+0 ; Cmb
+0 ; Cmn
+0 ; Cmp
+0 ; Csc
+0 ; Cst
+0 ; Cor
+0 ; Cur
+0 ; Dem
+0 ; Eco
+0 ; E1
+0 ; E2
+0 ; Eng
+0 ; Env
+0 ; Esp
+0 ; Exp
+0 ; Feu
+0 ; Fli
+0 ; Fun
+4 ; FP
+0 ; Gen
+0 ; Gue
+0 ; Gun
+0 ; Hor
+0 ; Ind
+0 ; Inv
+0 ; Iro
+0 ; Lab
+0 ; Las
+0 ; Ldr
+0 ; Lit
+0 ; Too
+0 ; Mag
+0 ; Map
+0 ; Mas
+0 ; MP
+0 ; Mat
+0 ; Med
+0 ; Met
+0 ; Min
+0 ; Mob
+0 ; Mon
+0 ; MT
+0 ; Mys
+0 ; Nav
+0 ; NF
+0 ; NP
+0 ; Phi
+0 ; Phy
+0 ; Pla
+1 ; Plu
+0 ; PT
+0 ; Pot
+0 ; Rad
+0 ; RR
+0 ; Rec
+0 ; Ref
+0 ; Rfg
+0 ; Rep
+0 ; Rob
+0 ; Roc
+0 ; San
+0 ; Sea
+0 ; SFl
+0 ; Sth
+0 ; SE
+0 ; Stl
+0 ; Sup
+0 ; Tac
+0 ; The
+0 ; ToG
+0 ; Tra
+0 ; Uni
+0 ; War
+0 ; Whe
+0 ; Wri
+0 ; ...
+2 ; U1
+2 ; U2
+3 ; U3
+2 ; X1
+2 ; X2
+3 ; X3
+2 ; X4
+2 ; X5
+2 ; X6
+2 ; X7
+
+; Above--Group (0-7) for each advance
+; 0=basic, 1=event given only, 2=advanced 3=alien only 4=human only
+; Below--Codes determine each tribe's relation to the 8 possible Groups
+; 0= can research, can own, 1=can't research, can own, 2=can't research, can't own
+
+@LEADERS2
+01020000  ; Romans
+01020000  ; Babylonians
+01020000  ; Germans
+01020000  ; Egyptians
+01020000  ; Americans
+01020000  ; Greeks
+01002000  ; Gazpichi
+01020000  ; Russians
+01020000  ; Zulus
+01020000  ; French
+01020000  ; Aztecs
+01020000  ; Chinese
+01020000  ; English
+01002000  ; Brr'til
+01020000  ; Celts
+01020000  ; Japanese
+01020000  ; Vikings
+01020000  ; Spanish
+01020000  ; Persians
+01020000  ; Carthaginians
+01002000  ; Treg
+
+01000000  ; Arabs
+01000000  ; Incas
+
+
+; Advanced unit fields
+; A) 'tribe color may build' mask:      0 - can't; 1 - can
+; B) 'not allowed on map' mask:   1 - not allowed on map
+; C) minimum bribe amount:        n - minimum bribe; 0 - don't care; -1 - can't bribe
+; D) 'build transport site' mask: 1: can; 0: can't for each site type (reverse programmer notation)
+; E) 'use transport site' mask:   1: can; 0: can't for each site type (reverse programmer notation)
+; F) native transport ability:    1: can; 0: can't for each map relationship type (reverse programmer notation)
+; G) General flags
+;   00000001   invisible until attack:               1 - invisible
+;   00000010   non-disbandable (human players only): 1 - cannot disband
+;   00000100   0-range-air-unit damage override:     1 - override damage
+;   00001000   barbarian units can't be bought off:  1 - can't buy off
+;   00010000   impassable terrain override:          1 - override impassable terrain
+;   00100000   engineer capabilities flag:           1 - has abilities
+;   01000000   barbarian unit will not expire:       1 - no expire
+;	10000000   override .SPR file for this unit:	 1 - don't use .SPR
+;   A         B     C          D                 E               F             G
+
+@UNITS_ADVANCED
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Settlers
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Engineers
+01111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Warriors
+01111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Phalanx
+01111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Archers
+01111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Legion
+01111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Pikemen
+01111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Musketeers
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Fanatics
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Partisans
+01111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Alpine Troops
+01111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Riflemen
+01111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Marines
+01111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Paratroopers
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Mech. Inf.
+01111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Horsemen
+01111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Chariot
+01111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Elephant
+01111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Crusaders
+01111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Knights
+01111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Dragoons
+01111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Cavalry
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Armor
+11111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Catapult
+11111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Cannon
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Artillery
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Howitzer
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Fighter
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Bomber
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Helicopter
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Stlth Ftr.
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Stlth Bmbr.
+11111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Trireme
+11111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Caravel
+11111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Galleon
+11111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Frigate
+11111111, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Ironclad
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Destroyer
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Cruiser
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;AEGIS Cruiser
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Battleship
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Submarine
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Carrier
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Transport
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Cruise Msl.
+01111111, 00000010, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Nuclear Msl.
+01111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Diplomat
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Spy
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Caravan
+11111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Freight
+01111111, 00000000, 0, 0000000000000000, 0000000000000001, 0000000000000000, 00000000  ;Explorer
+10000000, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Chon-ee
+01111110, 00000010, 0, 0000000000000001, 0000000000000011, 0000000000000000, 00100000  ;Colonist
+10000000, 00000001, 0, 0000000000000010, 0000000000000011, 0000000000000000, 00100000  ;Mupbu
+11111110, 00000000,-1, 0000000000000000, 0000000000000011, 0000000000000000, 00000000  ;RA-MARU
+10000000, 00000000, 0, 0000000000000000, 0000000000000010, 0000000000000000, 00000010  ;Sulka
+11111110, 00000000,-1, 0000000000000000, 0000000000000011, 0000000000000000, 00000000  ;War Dog
+11111110, 00000000, 0, 0000000000000000, 0000000000000011, 0000000000000000, 00000100  ;Kestrel
+11111110, 00000000, 0, 0000000000000000, 0000000000000011, 0000000000000000, 00000000  ;Benthon
+11111110, 00000000, 0, 0000000000000000, 0000000000000011, 0000000000000000, 01000010  ;Liwyathan
+11111110, 00000000, 0, 0000000000000000, 0000000000000011, 0000000000000000, 01000010  ;Spithre
+11111110, 00000000, 0, 0000000000000000, 0000000000000011, 0000000000000000, 01000110  ;Drakon
+11111110, 00000000, 0, 0000000000000000, 0000000000000011, 0000000000000001, 00000001  ;Teleporter
+11111110, 00000000, 0, 0000000000000000, 0000000000000011, 0000000000000000, 00000000  ;Cyborg
+11111110, 00000000, 0, 0000000000000000, 0000000000000011, 0000000000000001, 00000000  ;Plasman
+11111110, 00000000, 0, 0000000000000000, 0000000000000011, 0000000000000001, 00000010  ;Entrix
+11111110, 00000000,-1, 0000000000000000, 0000000000000011, 0000000000000001, 00000000  ;Magog
+11111110, 00000000,-1, 0000000000000000, 0000000000000011, 0000000000000000, 00000000  ;Xaos Missile
+11111110, 00000000, 0, 0000000000000000, 0000000000000011, 0000000000000001, 00000100  ;Dreadnought
+11111110, 00000000,-1, 0000000000000000, 0000000000000011, 0000000000000000, 00000000  ;Eightball
+00000000, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Spare 1
+00000000, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Spare 2
+00000000, 00000000, 0, 0000000000000000, 0000000000000000, 0000000000000000, 00000000  ;Spare 3
+10000000, 00000000, 0, 0000000000000000, 0000000000000010, 0000000000000000, 00000000  ;Hoy Groot
+10000000, 00000000, 0, 0000000000000000, 0000000000000010, 0000000000000000, 00000000  ;Pronat
+10000000, 00000000,-1, 0000000000000000, 0000000000000010, 0000000000000000, 00000100  ;Ongshawk
+10000000, 00000000,-1, 0000000000000000, 0000000000000010, 0000000000000000, 00000000  ;Honata
+10000000, 00000000,-1, 0000000000000000, 0000000000000010, 0000000000000000, 00000000  ;Jiraki
+10000000, 00000000,-1, 0000000000000000, 0000000000000010, 0000000000000000, 00000000  ;Denshuk
+10000000, 00000000,-1, 0000000000000000, 0000000000000010, 0000000000000000, 00000000  ;Wuk Turr
+
+; 0-15 define legal transport possibilities
+; art matched in threes 0/3/6/9/12/15; 1/4/7/10/13; 2/5/8/11/14
+
+@MAP_TRANSPORT_RELATIONSHIPS
+0,1  ; 0/1   Human Transporter
+0,1  ; 1/2   Alien Transporter
+0,0  ; 2/3   None
+0,0  ; 3/1   None
+0,0  ; 4/2   None
+0,0  ; 5/3   None
+0,0  ; 6/1   None
+0,0  ; 7/2   None
+0,0  ; 8/3   None
+0,0  ; 9/1   None
+0,0  ; 10/2   None
+0,0  ; 11/3   None
+0,0  ; 12/1   None
+0,0  ; 13/2   None
+0,0  ; 14/3   None
+0,0  ; 15/1   None
+
+@INITIAL_SETTINGS
+0,0,3 ; Romans
+0,0,3 ; Babylonians
+0,0,3 ; Germans
+0,0,3 ; Egyptians
+0,0,3 ; Americans
+0,0,3 ; Greeks
+1,0,51 ; Gazpichi
+0,0,3 ; Russians
+0,0,3 ; Zulus
+0,0,3 ; French
+0,0,3 ; Aztecs
+0,0,3 ; Chinese
+0,0,3 ; English
+1,0,51 ; Brr'til
+0,0,3 ; Celts
+0,0,3 ; Japanese
+0,0,3 ; Vikings
+0,0,3 ; Spanish
+0,0,3 ; Persians
+0,0,3 ; Carthaginians
+1,0,51 ; Treg
+
+; Combat sounds
+
+@SOUNDS
+<none> 	 	; Settlers
+<none> 	 	; Engineers
+Warrior.wav  	; Warriors
+<none> 	 	; Phalanx
+Archers.wav  	; Archers
+<none> 	 	; Legion
+Warrior.wav  	; Pikemen
+<none> 	 	; Musketeers
+Fanatics.wav  	; Fanatics
+Partisans.wav  	; Partisans
+Marines.wav  	; Alpine Troops
+Riflemen.wav  	; Riflemen
+Marines.wav  	; Marines
+<none> 	 	; Paratroopers
+<none> 	 	; Mech. Inf.
+<none> 	 	; Horsemen
+Chariot.wav  	; Chariot
+Elephant.wav  	; Elephant
+<none> 	 	; Crusaders
+<none> 	 	; Knights
+<none> 	 	; Dragoons
+<none> 	 	; Cavalry
+Newarmor.wav  	; Armor
+<none> 	 	; Catapult
+Oldcannons.wav  ; Cannon
+<none>  		; Artillery
+<none>  		; Howitzer
+<none>  		; Fighter
+<none>  		; Bomber
+<none>  		; Helicopter
+<none>  		; Stlth Ftr.
+<none>  		; Stlth Bmbr.
+Trireme.wav  	; Trireme
+<none> 	 	; Caravel
+<none> 	 	; Galleon
+<none> 	 	; Frigate
+<none> 	 	; Ironclad
+<none> 	 	; Destroyer
+<none> 	 	; Cruiser
+<none> 	 	; AEGIS Cruiser
+<none> 	 	; Battleship
+<none> 	 	; Submarine
+<none> 	 	; Carrier
+Transport.wav  	; Transport
+<none> 	 	; Cruise Msl.
+<none> 	 	; Nuclear Msl.
+<none>  		; Diplomat
+Spysilencer.wav 	; Spy
+<none>  		; Caravan
+<none>		; Freight
+<none>		; Explorer
+Flytrap.wav     ; Chon-ee
+<None>          ; Colonist
+<None>          ; Mupbu
+Excelsior.wav   ; RA-MARU
+Plasm.wav       ; Sulka
+Havoc.wav       ; War Dog
+Gyrfalcon.wav   ; Kestrel
+Dreadnought.wav ; Benthon
+Unspeakable.wav ; Liwyathan
+Spider.wav      ; Spithre
+Typhoeus.wav    ; Drakon
+Bolter.wav      ; Teleporter
+Pasticcio.wav   ; Cyborg
+Repeller.wav    ; Plasman
+Singulon.wav    ; Entrix
+Adamastor.wav   ; Magog
+Stinger.wav     ; Xaos Missile
+Bulldog.wav     ; Dreadnought
+NePlusUltra.wav ; Eightball
+<None>          ; Spare 1
+<None>          ; Spare 2
+<None>          ; Spare 3
+Pedipalpi.wav   ; Hoy Groot
+Raia.wav        ; Pronat
+Keeing.wav      ; Ongshawk
+Porpoise.wav    ; Honata
+Otterine.wav    ; Jiraki
+Tree.wav        ; Denshuk
+Wolves.wav      ; Wuk Turr
+
+@RIVERS
+River,          ; map 1
+River,          ; map 2
+River,          ; map 3
+River,          ; map 4
+
+; please do not remove this line

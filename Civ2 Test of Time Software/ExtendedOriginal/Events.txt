@@ -1,0 +1,450 @@
+; Events file
+; Civ II ToT Original Game extension
+; Copyright 1999 MicroProse Software
+
+;
+; Initialization
+; --------------
+
+@BEGINEVENTS
+@INITFLAG
+
+;
+; Flags
+; -----
+; 
+; 0   not used
+; 1   not used
+; 2   not used
+; 3   not used
+; 4   not used
+; 5   not used
+; 6   not used
+; 7   not used
+; 8   not used
+; 9   not used
+; 10  not used
+; 11  not used
+; 12  not used
+; 13  not used
+; 14  not used
+; 15  not used
+; 16  not used
+; 17  not used
+; 18  not used
+; 19  not used
+; 20  not used
+; 21  not used
+; 22  not used
+; 23  not used
+; 24  not used
+; 25  not used
+; 26  not used
+; 27  not used
+; 28  not used
+; 29  not used
+; 30  not used
+; 31  not used
+
+;
+; Prevent Interspecies Negotiations
+; ---------------------------------
+
+; prohibit negotiations between humans and aliens
+
+@IF
+Negotiation
+talkermask=0b00000000000011111101111110111111
+listenermask=0b00000000000100000010000001000000
+@THEN
+@ENDIF
+
+; prohibit negotiations between aliens and humans
+
+@IF
+Negotiation
+talkermask=0b00000000000100000010000001000000
+listenermask=0b00000000000011111101111110111111
+@THEN
+@ENDIF
+
+; when Trigger Tech (63) is discovered,
+; allow the discovering tribe to negotiate
+; with the other species (as talker)
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=63
+@THEN
+Negotiator
+who=triggerreceiver
+type=talker
+state=clear
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=63
+@THEN
+Negotiator
+who=triggerreceiver
+type=listener
+state=clear
+@ENDIF
+
+;
+; Arrival at AC
+; -------------
+
+; prep terrain for arrival
+; play arrival AVI
+; create arriving units on AC map
+; enable advanced tech branch (all tribes)
+
+@IF
+Turn
+Turn=5
+@THEN
+JustOnce
+ChangeTerrain
+Map=1
+TerrainType=1
+ExceptionMask=0b01111111111
+Maprect
+65,35,80,35,80,50,65,50
+@ENDIF
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=anysize
+@THEN
+JustOnce
+ChangeTerrain
+Map=1
+TerrainType=5
+Maprect
+70,35,70,35,70,35,70,35
+@ENDIF
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=anysize
+@THEN
+EnableTechnology
+whom=everybody
+technology=63
+value=0
+CreateUnit
+owner=TriggerAttacker
+unit=Colonist
+veteran=No
+homecity=none
+randomize
+locations
+80,50,1
+75,50,1
+80,45,1
+75,45,1
+70,40,1
+70,45,1
+75,40,1
+65,35,1
+65,40,1
+70,35,1
+endlocations
+@ENDIF
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=anysize
+@THEN
+JustOnce
+CreateUnit
+owner=TriggerAttacker
+unit=Colonist
+veteran=No
+homecity=none
+randomize
+locations
+78,48,1
+73,43,1
+68,38,1
+77,43,1
+72,38,1
+68,47,1
+73,48,1
+68,43,1
+77,38,1
+72,47,1
+endlocations
+@ENDIF
+
+; repeat for further units
+; 2 Marines is default
+; for first civ to land only,
+; if # habitats/life support on ship (size)=
+; 2, add a Colonist
+; 3, add a Colonist and a Marines
+; 4, add 2 Colonists and a Marines
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=anysize
+@THEN
+CreateUnit
+owner=TriggerAttacker
+unit=Marines
+veteran=No
+homecity=none
+randomize
+locations
+79,50,1
+74,50,1
+79,45,1
+74,45,1
+69,40,1
+69,45,1
+74,40,1
+64,35,1
+64,40,1
+69,35,1
+endlocations
+@ENDIF
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=anysize
+@THEN
+JustOnce
+CreateUnit
+owner=TriggerAttacker
+unit=Marines
+veteran=No
+homecity=none
+randomize
+locations
+77,47,1
+72,42,1
+67,37,1
+76,42,1
+71,37,1
+67,46,1
+72,49,1
+67,42,1
+76,37,1
+71,46,1
+endlocations
+@ENDIF
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=2
+@THEN
+JustOnce
+CreateUnit
+owner=TriggerAttacker
+unit=Colonist
+veteran=No
+homecity=none
+randomize
+locations
+74,36,1
+68,35,1
+70,48,1
+79,40,1
+73,40,1
+65,45,1
+66,49,1
+63,37,1
+60,45,1
+60,17,1
+endlocations
+@ENDIF
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=3
+@THEN
+JustOnce
+CreateUnit
+owner=TriggerAttacker
+unit=Colonist
+veteran=No
+homecity=none
+randomize
+locations
+69,20,1
+53,25,1
+48,40,1
+46,13,1
+40,31,1
+40,45,1
+31,39,1
+55,41,1
+38,18,1
+47,24,1
+endlocations
+@ENDIF
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=3
+@THEN
+JustOnce
+CreateUnit
+owner=TriggerAttacker
+unit=Marines
+veteran=No
+homecity=none
+randomize
+locations
+70,20,1
+54,25,1
+49,40,1
+47,13,1
+41,31,1
+41,45,1
+32,39,1
+56,41,1
+39,18,1
+48,24,1
+endlocations
+@ENDIF
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=4
+@THEN
+JustOnce
+CreateUnit
+owner=TriggerAttacker
+unit=Colonist
+veteran=No
+homecity=none
+randomize
+locations
+69,20,1
+53,25,1
+48,40,1
+46,13,1
+40,31,1
+40,45,1
+31,39,1
+55,41,1
+38,18,1
+47,24,1
+endlocations
+@ENDIF
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=4
+@THEN
+JustOnce
+CreateUnit
+owner=TriggerAttacker
+unit=Marines
+veteran=No
+homecity=none
+randomize
+locations
+70,20,1
+54,25,1
+49,40,1
+47,13,1
+41,31,1
+41,45,1
+32,39,1
+56,41,1
+39,18,1
+48,24,1
+endlocations
+@ENDIF
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=4
+@THEN
+JustOnce
+CreateUnit
+owner=TriggerAttacker
+unit=Colonist
+veteran=No
+homecity=none
+randomize
+locations
+74,36,1
+68,35,1
+70,48,1
+79,40,1
+73,40,1
+65,45,1
+66,49,1
+63,37,1
+60,45,1
+60,17,1
+endlocations
+@ENDIF
+
+; Research Win
+; ------------
+
+; warn player when someone gets reality Engineering (X6)
+; and becomes capable of researching Transcendence
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=98
+@THEN
+JustOnce
+Text
+^^The race to discover the secret of Transcendence has begun!
+^
+The winner shall move on to a higher form of existence,
+transcending the physical universe, with all its woes and
+limitations.
+^
+Those who fail will languish, confined to their mortal shapes,
+until such time as the Transcendent Ones might look back,
+feel something akin to pity, and deign to lift their former
+friends and enemies to join them.
+EndText
+@ENDIF
+
+; when any tribe discovers Transcendence (X7)
+; end the game and play the relevant AVI
+
+@IF
+ReceivedTechnology
+receiver=anybody
+technology=99
+@THEN
+JustOnce
+Text
+^^The Quest for Transcendence has ended.
+^^The Winners' Ascension has begun.
+^
+Those who failed to reach the peak in time can only watch in
+futile envy as the Shining Ones rise to a new state of being.
+EndText
+PlayAVIFile
+Scene6.avi
+EndGame
+endscreens=yes
+@ENDIF
+
+@ENDEVENTS

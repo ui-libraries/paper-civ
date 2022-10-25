@@ -1,0 +1,378 @@
+;
+;   CIVILIZATION In-Game Tutorial
+;   Test of Time SF Game
+;   Copyright (c) 1999 by MicroProse Software
+;
+;   Altering the contents of this file may cause the
+;   game to malfunction.
+;
+
+@FIRSTMOVE
+@width=400
+@y=5
+@title=Civ Tutorial
+Your first task is to find a suitable
+site and found your capital city.
+The best city sites are near rivers,
+graminiae, coastal areas, or areas
+near special resources.
+
+@BUILDCITY
+@width=320
+@y=5
+@title=Civ Tutorial
+This spot looks like a good site for a
+city. Select 'Build New City' from the
+ORDERS menu or use the 'b' key to found
+a city here.
+
+@FIRSTPRODUCT
+@width=420
+@y=5
+@title=Civ Tutorial: Your First City
+Each of your cities can build additional
+units, or city improvements to further
+the growth of your civilization. Only
+one item can be in production per city.
+Production orders can be changed at any
+time.
+
+@FIRSTCIV
+@width=420
+@title=Civ Tutorial: Civilization Advances
+Cities also act as centers for trade and
+the flow of information. Your scientists
+can collect this information to acquire
+important new abilities and skills for
+your civilization.
+
+@FIRSTUNIT1
+@width=420
+@y=5
+@title=Civ Tutorial: First Military Unit
+You have just built your first military
+unit. Use the keyboard arrows to move
+this unit and the ORDERS menu to give
+special commands. Military units allow
+you to explore, expand, attack, and
+defend your civilization.
+
+@FIRSTUNIT2
+@width=500
+@title=Civ Tutorial: Units
+Fortify units in your cities to defend
+them against barbarians or enemy armies.
+^
+Colonist and Nidus units can found new
+cities as well as build roads, cultivation,
+and refineries around existing cities.  If
+you can, try to have at least one of these
+in play at all times.
+^
+Fast-moving units are useful for exploring
+uncharted territory.
+
+@ONECITY
+@width=420
+@y=5
+@title=Civ Tutorial: New Cities
+The city of %STRING0 is growing rather large.
+Now might be a good time to expand by building a second
+city. To do this, click on %STRING0 and instruct it
+to build a Colonist or Nidus. This unit can move to a
+new site and build a city.
+
+@CITYSTUFF
+@width=420
+@x=180
+@title=Civ Tutorial: City Resources
+A city's inhabitants produce different raw materials
+depending on the types of terrain nearby. On the city
+display, "worked" spaces are shown with icons that
+represent the output the inhabitants are producing.
+^
+Experiment with clicking on these spaces to move inhabitants
+from space to space; notice that some spaces produce more of
+some things, less of others. Most spaces can be improved
+through the addition of roads, cultivation, and/or refineries
+by Colonists and Niduses. Find the configuration which suits
+you best.
+^
+Notice that you can also remove citizens from the
+map altogether, making them Entertainers.  Entertainers
+produce Entertainment, but make no food or other resources.
+
+@MINING
+@width=320
+@y=5
+@title=Civ Tutorial: Refining
+This area could produce more resources.
+Building a refinery ('m' key) will add
+to the production capacity of %STRING0.
+
+@IRRIGATE
+@width=320
+@y=5
+@title=Civ Tutorial: Cultivation
+This would be a suitable area to build
+cultivation ('i'_key). More food will help
+the city of %STRING0 to grow more rapidly.
+
+@ROAD
+@width=440
+@y=5
+@title=Civ Tutorial: Roads
+This would be a good place to build a
+road ('r' key). Your units will be able to move
+faster and more data will be generated
+in the city of %STRING0.  As you expand,
+work towards connecting your cities with
+roads.
+
+@HELP1
+@width=500
+@title=Civ Tutorial: General Principles #1
+Defend your cities with at least one
+(preferably two) good defensive units.
+^
+Strike a balance between improving your
+existing cities and striking out to found
+new cities.
+^
+Don't expand beyond your ability to defend
+yourself; barbarians and hostile armies
+can appear without warning.
+
+@HELP2
+@width=500
+@title=Civ Tutorial: General Principles #2
+Make peace with your stronger neighbors.
+Isolate and conquer your weaker neighbors.
+^
+Use ships to explore the seas and transport
+your units to other continents (and worlds).
+^
+Use Arrabers to establish trade routes and
+strengthen your economy. Trade helps your
+people accumulate both wealth and knowledge.
+^
+As your civilization grows, don't forget to
+use your diplomatic units to learn what your
+opponents are up to.
+
+@DISORDER
+@width=480
+@title=Civ Tutorial: Civil Disorder
+@button=Details
+A city falls into Civil Disorder when
+the number of unhappy citizens exceeds
+the number of happy citizens. Growth
+and production cease while a city is
+in disorder.
+^
+Remedies for disorder include:
+^* Increasing the amount of data used for Entertainment.
+^* Moving military units into the city.
+^* Building an improvement that increaes happiness.
+^* Turning citizens into entertainers.
+^
+Click on "Details" for further details, or if you
+are having difficulty.
+
+@DISORDER2
+@width=600
+@title=Civ Tutorial: Civil Disorder Details
+1) Entertainment: To increase the amount of data used
+for entertainment, select "Tax Rate" under the KINGDOM
+menu. 20% is often a good rate, especially if your
+government is a Hierarchy or Confederation.  For every
+two entertainment your city produces, one new happy
+citizen appears.
+^
+2) Martial Law: If your government is a Despotism, Hierarchy,
+or Collective, you may move military units into your cities
+to suppress disorder. Up to 3 units in each city can be used
+for this purpose. Each unit causes one unhappy citizen to
+become content.
+^
+3) Orreries, Hologaming Arcades, and so on: Some improvements
+help to reduce disorder by changing one or more unhappy
+citizens to content. Of course, if your city is already in
+disorder, you may need to "Buy" the building (or temporarily
+use entertainers), since no production takes place during
+civil disorder.
+
+@DISORDER3
+@width=600
+@title=Civ Tutorial: Civil Disorder Details
+4) Entertainers: On the city display, click on one of the
+worked spaces in the city radius to make that citizen into
+an entertainer. Entertainers produce no food, materiel, or
+data; instead, each produces two additional entertainment.
+^
+5) Great Joining: If you have discovered the governement type
+"The Great Joining", you can switch to that as your form of
+government. Under this, no citizen is ever unhappy (of course,
+scientific research is curtailed).
+
+@SCHISM
+@width=320
+@title=Civ Tutorial: Civil War
+The %STRING0 are a large and powerful
+civilization. However, rebel factions
+threaten to start a civil war. If your
+armies can capture their capital city,
+the shock could split their empire in two!
+
+@SHIPS
+@width=480
+@y=5
+@title=Civ Tutorial: Ships
+You have built your first naval unit. Use
+ships to explore the seas and transport your
+units to other continents--and worlds.
+^
+If your ship is a Yare, remember that it may be lost
+if it does not end each turn near a land space.
+^
+To embark a unit on a ship in port, issue the sleep ('s')
+order for the unit before moving the ship out to sea.
+Or, while the ship is at sea, simply move
+the unit 'onto' the ship from an adjacent space.
+^
+To disembark a unit, click on the ship or press
+the 'u' key to unload.
+
+@RAILROADS
+@width=480
+@title=Civ Tutorial: Slideways
+You have just acquired knowledge of Frictionless
+Surfaces, an important achievement. A Colonist, Nidus,
+Settler, Melior, or Environeer will build a slideway if
+you press the 'r' key in a space that already has a road.
+^
+Your units will be able to move long distances over
+Slideways.  Slideways also increase materiel production
+in spaces which already produce at least two materiel.
+
+@FARMLAND
+@width=480
+@title=Civ Tutorial: Tohubohu
+You have acquired knowledge of Prionic Stabilizers. Prionic
+control of biochaotic reactions allows you to instigate the
+tohubohu process on your land. A Colonist, Nidus, Melior, or
+Environeer will improve Cultivation to Tohubohu if you press
+the 'i' key in a space that already has cultivation. This will
+increase food production in a nearby city once that city has
+a Harvester to reap the hyperproductive crop.
+
+@AIRUNIT
+@width=480
+@y=5
+@title=Civ Tutorial: Air Units
+You civilization has built its first air unit.
+Air units can be used to destroy enemy units and cities; they
+can also defend your skies from enemy air units. Air units
+can also be used to explore.
+^
+Most air units carry a limited supply of fuel; they must return
+to a friendly city or Service Base before that fuel is exhausted.
+
+@REPUBLIC
+@width=480
+@title=Civ Tutorial: Confederation
+Your civilization has gained knowledge of another form
+of government, the CONFEDERATION. Switching governments
+can bring great benefits to your civilization; on the other
+hand, it can create large headaches--careful planning is
+necessary. For more information on all forms of government,
+see the CIVILOPEDIA entries under "Governments". If you do
+wish to switch governments, you must have a Revolution--see
+the Kingdom menu.
+
+@DEMOCRATS
+@width=600
+@title=Civ Tutorial: Confederation & Proteocracy
+You have chosen to govern your civilization as a %STRING0.
+This is a major change from earlier forms of government, and
+will present you with a new set of challenges (and rewards!)
+^
+As your citizens gain more individual freedoms, they begin
+to produce more data. On the other hand, it becomes more
+difficult to keep them happy. One of the best ways to do so
+is to divert some of your data to entertainment. Select
+"Tax Rate" from the Kingdom Menu and set your Entertainment
+Rate to 20%%. Since your citizens are now producing so much
+more data, you can easily afford this.
+^
+Your citizens will also tend to become unhappy when you send
+your military units out of your cities. You may need to
+return some of your units to cities. You may even need to
+disband some units. This sacrifice is often worth it in terms
+of the knowledge and wealth you will gain in exchange.
+
+@TRADE
+@width=420
+@title=Civ Tutorial: Trade Guilds
+You have just acquired knowledge of TRADE GUILDS. This leads to
+Market Economy, which allows your cities to produce ARRABERS to
+trade data between different parts of the world. Arrabers can set
+up trade routes which, especially from your larger cities, can
+rapidly increase your wealth and knowledge.
+
+@CARAVAN
+@width=440
+@y=5
+@title=Civ Tutorial: Arrabers
+You have just produced your first ARRABER. Move it to a
+distant city to establish a data trade route. Trade routes
+with small, nearby, and friendly cities produce less revenue
+than routes with large, distant and rival cities. Try to find
+a city which demands the data your arraber is carrying (you
+can click on a rival city to learn its demands).  Arrabers
+may also be used to help build Wonders of the World.
+
+@WRITING
+@width=420
+@title=Civ Tutorial: Monopolium
+Your civilization has learned to create MONOPOLIUM. This
+ultradense material can be used to make super-tough units.
+
+@SEAFARING
+@width=420
+@title=Civ Tutorial: Sensing Aqueous
+Your civilization has mastered the art of SENSING
+AQUEOUS. You may now produce the KELPIE, a submarine
+unit that most enemy units find difficult to spot.
+
+@EXPAND0
+@width=520
+@title=Civ Tutorial: Expansion (#1)
+A civilization grows by expanding its territory. This can be
+accomplished either by founding new cities or by conquering
+rival cities. Perhaps we should instruct one of our cities
+to produce a new COLONIST or NIDUS unit.
+
+@EXPAND1
+@width=520
+@title=Civ Tutorial: Expansion (#2)
+For our civilization to grow, we must expand to new
+city sites.  Perhaps we should send this new unit to
+found a new city.
+
+@DAMAGE
+@width=520
+@title=Civ Tutorial: Damaged Units
+This unit has sustained combat damage, as indicated
+by the colored bar near the unit. Green indicates a
+relatively healthy unit; Yellow and Red show increasing
+levels of damage.
+^
+A unit may partially heal itself by skipping its entire
+turn (press the SPACE bar). Units repair themselves more
+quickly in cities and behind force fields. Cities with
+a Garrison can repair ground units in a single turn. Other
+improvements can repair ships and air units.
+
+
+@END

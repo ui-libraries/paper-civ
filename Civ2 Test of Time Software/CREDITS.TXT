@@ -1,0 +1,244 @@
+
+@CREDITS
+
+
+
+
+
+
+
+
+
+
+
+
+
+^CIVILIZATION II 
+Test of Time 
+ACKNOWLEDGEMENTS
+
+
+
+
+^ Hasbro Interactive / HUNT VALLEY
+
+
+^PRODUCER
+Alex De Lucia
+
+^ASSOCIATE PRODUCER
+Chris Bowling
+
+^GAME DESIGN
+Mick Uhl
+John Possidente
+
+^PROGRAMMERS
+Steve Cox, Lead
+Jim Thomas
+Chris Taormino
+Rob Knopf
+Mark Bradshaw
+
+^GRAPHIC ARTISTS
+Frank Frazier, Lead
+Todd Bilger
+Jim Crawley
+Betsy Kirk
+
+^ADDITIONAL ART
+Casey Aramian
+Kevin Boehm
+Mary Pat Buck
+Walter Carter
+Rob Cloutier
+Mark Glidden
+Sam Laskowski
+Scott Nixon
+Eric Peterson
+Henry Schwetzke
+Charlie Shenton
+Jeff Skalski
+Coolhand Interactive
+Dragonlight Productions
+Mondo Media
+The Animation Factory
+
+^MUSIC BY
+Roland Rizzo
+
+^SOUND DESIGNERS
+Mark Cromer
+Mark G. Reis
+
+^RECORDING ENGINEERS
+Mark Cromer
+Mark G. Reis
+
+
+^QUALITY ASSURANCE
+
+^QA Manager
+Tom Falzone
+
+^Lead Testers
+Ross Edwards
+Jeff Smith
+
+^Testers
+Tim Beggs
+Matt Bittman
+Barry Caudill
+Ellie Crawley
+Michael Davidson
+Grant Frazier
+Jason Gleason
+Mark Gutknecht
+Brad Hoppenstein
+Carl Johnson
+Rose Kofsky
+Charles Lane
+Joe Lease
+Jason Lego
+Brandon Martin
+Rex Martin
+Tim Mccracken
+Steven Purdie
+Sal Saccheri
+Rick Saffery
+Greg Schneider
+Joe Walbeck
+Nathan Wright
+
+^Additional Testing
+Ray Pfeifer
+
+^MANUAL
+Jonatha Caspian-Kaufman
+with Julie L. Stroehmann
+and Laning Polatty
+
+^OTHER DOCUMENTATION
+John Possidente
+
+
+^SPECIAL THANKS TO
+William Denman
+Lori Der
+Gayle Keidel
+Rhonda Williams
+
+
+^Hasbro Interactive 
+
+^Tom Dusenberry
+President
+
+^Steve Arthur
+Product Manager
+
+^John Sutyak
+Director of Business Development
+
+^Tony Parks
+V.P. Research and Development
+
+^Kevin Gillespie
+V.P. Product Development Worldwide
+
+^Rich Reily
+V.P. of Technology
+
+^Michael Craighead
+Director of Quality Assurance
+
+^Kurt Boutin
+Test Supervisor
+
+^Dan McJilton
+Lead Tester
+
+^Andy Mazurek
+^Randy Lee
+^Jake Hopkins
+^Mark Huggins
+Testers
+
+^John Hurlbut
+V.P. of Marketing
+
+^Jim Buchanan
+General Manager, Marketing
+
+^Gale Steiner
+Director of Marketing
+
+^Rich Cleveland
+Director of Marketing
+
+^Tom Nichols
+Director of Marketing
+
+^George Burtch
+Director of Marketing Services
+
+^Tim Evans
+Channel Marketing Director
+
+^Dana Henry
+Director of Public Relations
+
+^Steve Webster
+Creative Services Director
+
+^Kathryn Lynch
+Creative Services Manager
+
+^Steve Martin
+Art Director
+
+^Jennifer Brackett
+Senior Graphic Designer
+
+^Patricia McCarthy
+Graphic Designer
+
+^Elizabeth Mackney
+Editorial Specialist
+
+^Tony Moreira
+Manager of Technical Services
+
+^Bob Sadacca
+Director of Operations
+
+^Tracy Kureta
+Operations and Special Project Manager
+
+^Bruce Kelly
+^Ron Parkinson
+^Donna Mahan
+^Linda Ferros
+Legal and Finance
+
+^Hasbro Interactive Worldwide
+
+^Barry Jafrato
+Senior V.P. of New Business and Acquisitions
+
+^Tim Christian
+Managing Director
+
+^Steve Cross
+Creative Director
+
+^Sam Baker
+Head of Localization
+
+^Anton Lorton
+Localization Project Manager
+
+^Civilization II : Test of Time™
+^(C) 1999 Hasbro Interactive, Inc.  All Rights Reserved
+
+@END

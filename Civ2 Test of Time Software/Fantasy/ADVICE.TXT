@@ -1,0 +1,410 @@
+;
+;   CIVILIZATION II FANTASY AUTO ADVICE
+;   Copyright (c) 1995 by MicroProse Software
+;
+;   Altering the contents of this file may cause the
+;   game to malfunction.
+;
+
+@MILITARY
+@width=225
+@title=War Advisor
+@x=5
+@y=5
+
+@DOMESTIC
+@width=225
+@title=Domestic Advisor
+@x=-5
+@y=5
+
+@SCIENCE0
+@width=250
+@title=Magic Advisor
+@x=-5
+I recommend we develop %STRING0.
+
+@SCIENCE1
+@width=250
+@title=Magic Advisor
+@x=-5
+I recommend we develop %STRING0 so
+that we can build:
+
+@SCIENCE2
+@width=250
+@title=Magic Advisor
+@x=-5
+I recommend we develop %STRING0 so
+that we can someday learn:
+
+
+
+@
+@@Temple
+The people are unhappy.
+We should build a %STRING0.
+
+@
+@@Arena
+The people grow restless.
+Let us appease them with an
+%STRING0.
+
+@
+@@Monastery
+The people are discontent.
+Perhaps a %STRING0 will
+inspire the citizenry.
+
+@
+@@Barracks
+Our armies cannot be effective
+without proper training!
+We should build a %STRING0
+to produce veteran warriors
+and heal injured ground
+fighters quickly.
+
+@
+@@Sea Fortress
+We should build a %STRING0
+to produce veteran naval units
+and repair damaged ships quickly.
+
+@
+@@Temporal Portal
+We should build a %STRING0
+to produce veteran flying creatures
+and heal damaged flying creatures
+quickly.
+
+@
+@@Storehouse
+We should build a %STRING0
+to encourage city growth.
+
+@
+@@Farmer's Market
+Why are we allowing food to
+rot in the fields? Let us
+build a %STRING0 to distribute
+it properly!
+
+@
+@@Docks
+The people grow hungry.  Let
+us build a %STRING0 to harvest
+the ocean's bounty.
+
+@
+@@Bazaar
+Our people are poor. Let us build a
+%STRING0 to attract merchants and
+traders.
+
+@
+@@Counting House
+Our economy is stagnant.  We should
+build a %STRING0 to stimulate it.
+
+@
+@@Toll House
+Let us build a %STRING0 and grow
+rich together!
+
+@
+@@Ley Lines
+Our antiquated transport system is
+holding back the economy.  We must
+build %STRING0 at once!
+
+@
+@@Sage's Library
+Wisdom and Magic, not might, are our 
+greatest assets. Let us build a 
+%STRING0, that we might not squander it.
+
+@
+@@Wizard's Tower
+In the long run, magic is the key
+to greatness. Let us build a %STRING0 forthwith.
+
+@
+@@Alchemy Laboratory
+We should build an %STRING0
+to increase our knowledge of magic.
+
+@
+@@King's Court
+We must not tolerate lawlessness and
+petty corruption!  I suggest we build
+a %STRING0 to enforce the King's values.
+
+@
+@@City Walls
+This city is virtually defenseless!
+We should build %STRING0 at once!
+
+@
+@@Harbor Guardian
+@@Magic Shield
+We should build an %STRING0
+to protect our city.
+
+@
+@@Aqueduct
+The people are thirsty!
+We should build an %STRING0
+to let our city grow.
+
+@
+@@Catacombs
+The streets are covered with filth!
+We should build a %STRING0
+to let our city grow.
+
+@
+@@Bestiary
+@@Bottomless Well
+We must build a %STRING0
+to absorb our corrosions!
+
+@
+@@Forge
+@@Artifact Guild
+@@Staff Of Power
+@@Alchemical Guild
+@@Nexus
+@@Crystal Pyramid
+We are falling behind in productivity!
+Let us quickly build the %STRING0.
+
+@
+@@Temple Of Aegir
+We must exploit the wealth of the seas!
+Let us build a %STRING0.
+
+@
+@@Fireball Shield
+We should build a %STRING0, to protect
+our city from the infernal Fireballs.
+
+@
+@@S.E. Structure
+@@S.E. Engine
+@@S.E. Armament
+We should build a %STRING0
+to reduce Loki's Fortress.
+
+@
+@@Settler
+@@M Settler
+@@B Settler
+@@G Miner
+@@E Settler
+@@S Settler
+We should send out %STRING0s
+to colonize this world.
+
+@
+@@Dwarf
+We need the %STRING0 to tunnel into
+and through the underworld.
+
+@
+@@H Warrior
+@@M Merman
+@@B Hawkman
+@@E Warrior
+@@I Infidel
+@@G Goblin
+@@S Skeleton
+Our cities are vulnerable to attack.
+Let us build a %STRING0 and defend
+them.
+
+@
+@@E Warrior
+@@I Infidel
+
+Our cities are vulnerable to attack.
+Let us build an %STRING0 and defend
+them.
+
+@
+@@H Housecarl
+@@M Merguard
+@@B Eagleman
+@@I Berserker
+@@S Barrow Wight
+We need a(n) %STRING0
+to defend our race.
+
+@
+@@I Berserker
+We need an %STRING0
+to defend our race.
+
+@
+@@G Trolls
+We must recruit %STRING0
+to defend our beliefs!
+
+@
+@@B Old Man
+@@S Lich
+@@I Baba Yaga
+@@Worm
+We should summon the %STRING0
+for its great power.
+
+@
+@@I Gold Horde
+@@M Otterine
+@@H Paladin
+@@E Changeling
+@@G Ogre
+@@S Fell Wraith
+@@B Mtn. Giant
+We should build mighty %STRING0s
+and rule the known world!
+
+@
+@@E Archers
+We should train our men with
+bow and arrow, for our iron
+units are strong on both 
+attack and defense!
+
+@
+@@G Spider
+We should build %STRING0
+to defend our cities and attack
+our enemies.
+
+@
+@@S Witch
+Let us take to the offensive! I
+suggest we build a %STRING0.
+
+@
+@@Catapult
+With a %STRING0 we could penetrate
+enemy strong points.
+
+@
+@@Sorcerer
+The %STRING0 can penetrate water
+and rock, we should use him to 
+visit all of the worlds within his
+reach.  
+
+@
+@@Siege Engine
+@@Bombard
+We should build a %STRING0
+and blast our enemies to smithereens!
+
+@
+@@Skidbladnir
+@@Dragon
+Let us build a %STRING0 and
+blast our enemies into the Stone Age!
+
+@
+@@I Elephant
+We should build an %STRING0
+to trample our enemies!
+
+@
+@@Warlock
+@@B Great Eagle
+We need a %STRING0 to
+defend our skies!
+
+@
+@@E Rider
+@@S Night Rider
+@@Ranger
+@@G Crag Wolf
+@@I Horsemen
+@@S Night Rider
+@@M Trtn Legion
+We should build a swift
+%STRING0 to punish our enemies.
+
+@
+@@Great Bats
+We should summon a flight of
+%STRING0 to punish our enemies.
+
+@
+@@E Treefolk
+We should build the %STRING0
+to defend our cities and attack
+our enemies.
+
+@
+@@Ice Drake
+Let us build %STRING0s and
+teach our enemies a lesson!
+
+@
+@@Longboat
+@@M Porpoise
+@@Jack O'Lantern
+We should build %STRING0s
+to explore the world.
+
+@
+@@H Wizard
+We should build the powerful
+%STRING0 to explore and 
+dominate the world.
+
+@
+@@Dragon Boat
+@@M Kraken
+@@Shield Boat
+We should build %STRING0s
+to rule the seas.
+
+@
+@@Thunderbolt
+@@Default
+We should build a %STRING0.
+
+@
+@@Fireball
+Perhaps it's time for a nice, 
+city-destroying %STRING0
+
+@
+@@Skald
+We should train a %STRING0
+to make contact with other
+civilizations and steal their
+secrets.
+
+@
+@@Fairy
+We should hire a %STRING0
+to meddle with the cities
+of our enemies.
+
+@
+@@Caravan
+@@Freight
+We should build a %STRING0
+to establish trade routes
+with other civilizations.
+
+@
+@@Wonder
+Let us undertake a great project
+for the glory of our civilization,
+%STRING0!
+
+@
+

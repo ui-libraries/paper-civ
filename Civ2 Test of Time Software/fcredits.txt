@@ -1,0 +1,168 @@
+
+@CREDITS
+
+
+
+
+
+
+
+
+
+
+
+
+
+^FANTASTIC WORLDS
+^Civ II Scenarios and Construction Kit
+
+
+
+^PRODUCER
+Martin De Riso
+
+^EDITOR DESIGN
+Mick Uhl
+with Stephen L. Cox
+
+^PROGRAMMING
+Stephen L. Cox
+
+^MACRO PROGRAMMING
+Kerry Wilkinson
+
+^SCENARIO DESIGN
+
+^The New World
+^Samurai
+^Atlantis
+^The Mythical History of Midgard
+^The World of Jules Verne (inspired by Chrispy Bowling)
+by Mick Uhl
+
+^The Age of Reptiles
+^Mars Now!
+by John Possidente
+
+^Masters of Magic Jr.
+^Masters of Orion Jr.
+by Ken Burd
+
+^X-Com: Assault
+by Bob Abe
+
+^Ice Planet
+by Brandon Martin and Matt Bittman
+
+^ART
+
+^Austin Art Team
+
+^LEAD ARTIST
+Patrick Owens
+
+^GRAPHIC ARTISTS
+Shelly Hollen
+Jim McIntyre
+Judith Peterson
+Sam Yeates
+
+^Hunt Valley Art Team
+
+^GRAPHIC ARTISTS
+Jim Crawley
+Barbara Jeznach
+Joe Morel
+Betsy Kirk
+John Cameron
+Brandon Martin
+Alan Denham
+
+^ADDITIONAL ART
+Herb Perez
+Scott Nixon
+John Gallagher
+Eric Martin
+
+^MUSIC BY
+Kevin Manthei
+Roland Rizzo
+
+^SOUND DESIGNERS
+Mark Cromer
+Mark G. Reis
+
+^RECORDING ENGINEERS
+Mark Cromer
+Mark G. Reis
+
+^QA SUPERVISOR
+Thomas Falzone, Jr.
+
+^QA PROJECT LEADS
+Rick Saffery
+Steve Purdie
+Rosalie Kofsky
+
+^QA STAFF
+Bob Abe
+Paul Ambrose
+Kevin Bane
+Matt Bittman
+Brandi Boone
+Jim Crawley
+Alan Denham
+Mike Dubose
+Grant Frazier
+Mike Gibbons
+Jason Lego
+Brandon Martin
+Rex Martin
+Tim McCracken
+John Allan Ross
+Dean Schwarzkopf
+Mike Seal
+Aron Seiler
+
+^MANUAL WRITER
+John Possidente
+
+^GRAPHIC SERVICES
+Jerome Paterno
+Rick Rasay
+Reiko Yamamoto
+
+^MARKETING PRODUCT MANAGERS
+Carter Lipscomb
+Geraldine Burke
+
+^LOCALIZATION
+Daniel Berner
+Karen Ffinch
+SDL
+ 
+^BEST OF THE NET SCENARIOS
+Brian D. Wassom - Battle of the Sexes
+Charles Magee - Civ-Life
+Antonio Leal - Hidden
+Mike McCart - Bears at Play and Santa is Coming
+Jeff Head - USA2010, Paradise and Mammoth
+
+^Special thanks to
+Murray Taylor
+Yma - Mate of Org
+Org
+Kerry Wilkinson
+Chris Tice
+Lindsay Cox
+Greg Harvey
+Wendy White
+The King
+Corky, Destin and Don
+Daniel Quick, aka The Emperor
+
+^Stock photographs provided by:
+The Corel Stock Photo Library
+PDI
+
+@END

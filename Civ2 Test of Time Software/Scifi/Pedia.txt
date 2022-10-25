@@ -1,0 +1,643 @@
+;
+;   CIVILIZATION CIVILOPEDIA TEXT
+;   Huis Clos/Lalande 21185 Science Fiction Game
+;   Copyright (c) 1999 by MicroProse Software
+;
+;   Altering the contents of this file may cause the
+;   game to malfunction.
+;
+
+@PEDIAPICKCIV
+@width=540
+@columns=3
+@listbox
+@title=Civilopedia: Civilization Advances
+
+@PEDIACIV
+@width=480
+@title=Civilization Advance
+^^%STRING0
+^
+
+
+@PEDIACIVFACTS
+^Allows the government form of the same name.
+^Allows settler-type units to build force fields.
+^Allows settler-type units to build service pads.
+^Allows settler-type units to build slideways.
+^Allows settler-type units to create tohubohu.
+^
+^Increases the effect of mutandis museums.
+^Worth bonus points in Civilization score.
+^Increases naval movement rates by one.
+^Improves Spaceship thrust by 25%.
+^Free advance for the first to discover.
+^Decreases the effect of holgaming arcades.
+^Cancels the effect of
+
+
+@PEDIAPICKUNIT
+@width=540
+@columns=3
+@listbox
+@title=Civilopedia: Unit Types
+
+@PEDIAUNIT
+@width=480
+@title=Unit Type
+^^%STRING0
+^
+
+@PEDIAUNITFACTS
+^Can see two spaces.
+^Ignores Zones of Control.
+^Can make amphibious landings.
+^Is a sub-sea unit.
+^Can attack air units.
+^May be lost away from land.
+^Ignores City Shields.
+^Can carry air units.
+^Can make paradrops.
+^Treats all terrain as roaded.
+^Defense +50% vs units that move 2.
+^Free support for Great Joining govts.
+^Destroyed after attacking.
+^Defense +100% vs air units.
+^Can spot sub-sea units.
+
+
+@PEDIAPICKGOVT
+@width=480
+@listbox
+@title=Civilopedia: Governments
+
+
+@PEDIAPICKIMPROVE
+@width=540
+@columns=3
+@listbox
+@title=Civilopedia: City Improvements
+
+@PEDIAIMPROVE
+@width=480
+@title=City Improvement
+^^%STRING0
+^
+
+@;Capital
+@PEDIAIMPROVE1
+Eliminates inaccuracy and waste in the city,
+and decreases it in all nearby cities.
+
+@;Garrison
+@PEDIAIMPROVE2
+City produces Veteran ground units. Ground units
+can be completely repaired in a single turn.
+
+@;Hydroponic Reserve
+@PEDIAIMPROVE3
+Only half of city's food store is depleted when
+the city increases in size.
+
+@;Orrery
+@PEDIAIMPROVE4
+Up to two discontented citizens are made content.
+
+@;Guild Library
+@PEDIAIMPROVE5
+Increases tax and entertainment output by 50%.
+
+@;Laboratory
+@PEDIAIMPROVE6
+Increases science output by 50%.
+
+@;Satellite Uplink
+@PEDIAIMPROVE7
+Decreases inaccuracy by 50%. Makes the city more
+resistant to bribery by enemy diplomats and spies.
+Under Proteocracy, one content citizen becomes happy.
+
+@;City Shields
+@PEDIAIMPROVE8
+Units in the city defend at 300% versus ground attacks.
+
+@;Justice Network
+@PEDIAIMPROVE9
+Allows the city to increase beyond size 7.
+
+@;Investment House
+@PEDIAIMPROVE10
+Increases tax and entertainment output by an
+additional 50% (cumulative with Guild Library).
+
+@;Hologaming Arcade
+@PEDIAIMPROVE11
+Makes four unhappy citizens content (3 after the
+discovery of the Collective government).
+
+@;Infomatrix
+@PEDIAIMPROVE12
+Increases science output by an additional
+50% (cumulative with Laboratory).
+
+@;Priodulcificator
+@PEDIAIMPROVE13
+Eliminates biochaos potential caused by population.
+
+@;Mutandis Museum
+@PEDIAIMPROVE14
+Three unhappy citizens are made content
+(four with Omniform Bacteria).
+
+@;Workshop
+@PEDIAIMPROVE15
+Increases materiel production in the city by 50%.
+
+@;Transmogrifier
+@PEDIAIMPROVE16
+Increases materiel production by an additional 50%
+(cumulative with Workshop).
+
+@;Nucleon Shield
+@PEDIAIMPROVE17
+Protects everything within three spaces of the city
+from disintegrator attack.
+
+@;Sphacelatorium
+@PEDIAIMPROVE18
+Decreases the biochaos potential caused by workshops.
+
+@;Carbonarium
+@PEDIAIMPROVE19
+Increases workshop output by 50%.
+
+@;Morphic Generator
+@PEDIAIMPROVE20
+Increases workshop output by 50%.
+Cleaner than a carbonarium and safer
+than a biochaotic generator.
+
+@;Biochaotic Generator
+@PEDIAIMPROVE21
+Increases workshop output by 50%.
+Cleaner than a carbonarium, but there is a
+risk of a hyperchaotic reaction unless the
+civilization has discovered Green Attractors.
+
+@;Emergence Center
+@PEDIAIMPROVE22
+Increases tax and entertainment output by 50%
+(cumulative with Guild Library and Investment House).
+
+@;M.A.I.D.S.
+@PEDIAIMPROVE23
+Allows the city to grow beyond size 14.
+
+@;Havester
+@PEDIAIMPROVE24
+Allows the city to harvest the 50% more food
+produced by tohubohu squares (cultivated twice)
+in the city's radius.
+
+@;GEnIE Park
+@PEDIAIMPROVE25
+All squares in the city's radius with roads
+or slideways produce 50% more data.
+
+@;Collapsatron Q
+@PEDIAIMPROVE26
+Increases science output by an additional 50%
+(cumulative with Laboratory and Infomatrix).
+
+@;Fulmine Ring
+@PEDIAIMPROVE27
+Units in the city are doubled on defense against
+air units and non-disintegrator missile units.
+
+@;Tsunamines
+@PEDIAIMPROVE28
+Units in the city are doubled on defense against
+attack by enemy naval units.
+
+@;Gravitic Generator
+@PEDIAIMPROVE29
+Increases workshop output by 50%. Safer for
+the environment than all other forms of power.
+
+@;Algae Farm
+@PEDIAIMPROVE30
+All non-land (ocean) squares in the city's
+radius produce one extra unit of food.
+
+@;Deep Dome
+@PEDIAIMPROVE31
+All non-land (ocean) squares in the city's
+radius produce one materiel.
+
+@;Instaporter
+@PEDIAIMPROVE32
+Each city with an instaporter can teleport one unit
+per turn to any friendly city on the same map, as
+long as the receiving city also has an instaporter.
+The city produces veteran air units.
+Any air unit spending its entire turn in the city
+is completely repaired.
+
+@;Dopplegarage
+@PEDIAIMPROVE33
+Decreases by 1 the unhappiness caused by troops away
+from the city.
+
+@;Harbor Town
+@PEDIAIMPROVE34
+The city produces veteran naval units.
+Any naval unit spending its entire turn in the city
+is completely repaired.
+
+@;Spaceport
+@PEDIAIMPROVE35
+Each city with a spaceport can launch one unit per
+turn to any friendly city--on any map--as long as the
+receiving city also has a spaceport.
+
+@;Superstructure
+@PEDIAIMPROVE36
+The first of these provides a backbone for the FTL ship.
+Further superstructural elements serve to connect the
+additional parts of the ship to this backbone.
+
+@;FTL Drive Element
+@PEDIAIMPROVE37
+Adds one Abaryonic Chamber (for power) or one Hyperfusion
+Coil (for propulsion) for the FTL ship.
+
+@;Ship's Facility
+@PEDIAIMPROVE38
+Adds one Habitat (living quarters) or one Lability Cell
+(support) or one Quantron Shield (protection) to the FTL ship.
+
+@;Gene Census
+@PEDIAIMPROVE39
+Converts materiel production into data.
+
+@;NutriNet
+@PEDIAIMPROVE40
+Counts as a Hydroponic Reserve in every one of your cities.
+
+@;Great Games
+@PEDIAIMPROVE41
+One extra happy citizen in every city.
+
+@;Wizard Scouts
+@PEDIAIMPROVE42
+The city produces one extra data in each square that
+already produces one.
+
+@;Sea Guides
+@PEDIAIMPROVE43
+All new naval units you produce receive veteran status.
+Naval units can move across oceans without danger of
+being lost, and all but the Yare have their movement rate
+increased by one.
+
+@;Acrolectic Solenoid
+@PEDIAIMPROVE44
+The civilization that builds this receives any advance
+already acquired by any other two civilizations.
+
+@;Taniq Planetarium
+@PEDIAIMPROVE45
+Doubles the effect of a civilization's orreries.
+
+@;All-Field
+@PEDIAIMPROVE46
+Puts a City Shield around every friendly city.
+Forces enemy civilizations to offer a cease-fire or
+peace treaty during negotiations.
+Your units' combat strength is doubled against barbarians.
+
+@;MILQUETOAST
+@PEDIAIMPROVE47
+All new ground units produced gain Veteran status.
+Any unit which wins a combat gains Veteran status.
+
+@;Recyclotron
+@PEDIAIMPROVE48
+Every square in the city's radius produces one
+extra materiel.
+
+@;Marconi Tower
+@PEDIAIMPROVE49
+You establish an embassy with every other civilization.
+Thus, your intelligence report will always be complete,
+and you are notified when others discover advances.
+
+@;Living Wage
+@PEDIAIMPROVE50
+Makes four unhappy citizens content in each of your cities
+(3 after the discovery of the Collective government).
+
+@;SITW Project
+@PEDIAIMPROVE51
+Doubles the science output of the city.
+
+@;Oceanus Field
+@PEDIAIMPROVE52
+Adds 2 to the movement rate of all your naval vessels.
+
+@:Singing Gardens
+@PEDIAIMPROVE53
+All unhappy citizens in the city are made content.
+
+@;Morphon Attractor
+@PEDIAIMPROVE54
+Whenever one of your units becomes obsolete because of a new
+technology you have discovered, it is immediately replaced
+by an equivalent modern unit.
+
+@;Sir Arthur's Stone
+@PEDIAIMPROVE55
+Makes 2 unhappy citizens content in every friendly city on
+the same continent.
+
+@;Combine
+@PEDIAIMPROVE56
+Increases science output of improvements in the city by 50%.
+
+@;Central Service
+@PEDIAIMPROVE57
+Eliminates the maintenance cost of all city improvements
+which ordinarily cost 1 Bp per turn. The costs of those
+improvements requiring more than 1 Bp are not affected.
+
+@;Fleck's Genesis
+@PEDIAIMPROVE58
+Bestows two free civilization advances.
+
+@;Julian Bureaucracy
+@PEDIAIMPROVE59
+Allows a leader to choose any form of government, even if
+the requisite advance has not yet been discovered.
+Eliminates the period of unrest between governments.
+
+@;Psi-brator
+@PEDIAIMPROVE60
+When you first obtain control of the Psi-brator, every
+other civilization's attitude toward you is immediately
+shifted significantly in your favor.  Their attitudes
+continue to improve gradually over time, and they're
+quicker to forget your past "indiscretions".
+
+@;Organ Bank
+@PEDIAIMPROVE61
+In every one of your cities, decreases by 1 the unhappiness
+caused by troops away from the city.
+This temporarily disables existing Dopplegarages and prevents
+the construction of new ones.
+
+@;HeLa Turbine
+@PEDIAIMPROVE62
+Provides the power of a morphic generator to every city
+in your civilization.
+This temporarily disables existing Morphic Generators and
+prevents the construction of new ones.
+
+@;Penance
+@PEDIAIMPROVE63
+Allows all civilizations with the requisite technology
+to build disintegrator weapons.
+
+@;Xenosabe Concourse
+@PEDIAIMPROVE64
+Establishes an embassy with every other civilization.
+Forces enemy civilizations to offer a cease-fire or
+peace treaty during negotiations.
+The leader of a Proteocracy can declare war half the time.
+
+@;View From Earth
+@PEDIAIMPROVE65
+Allows all civilizations with the requisite technology
+to construct FTL spaceship parts.
+
+@;Eureka Institute
+@PEDIAIMPROVE66
+Provides the effect of a Collapsatron Q in every friendly city.
+This doubles the research output of the entire civilization,
+but temporarily disables existing Collapsatron Qs and prevents
+the construction of new ones.
+
+@;Roscoe's Circus
+@PEDIAIMPROVE67
+Makes one citizen happy in each city.
+
+@PEDIAGOVT
+@width=600
+@title=Civilization: Governments
+The form of government you choose for your civilization will
+affect the way resources are distributed in your cities, the
+rate at which your citizens can produce and sustain new units
+and city improvements, and the extent to which your citizens
+have a say in the way you govern them.
+^
+Some forms of government, such as Despotism, Hierarchy, the
+Collective, and The Great Joining, allow rapid expansion,
+production and maintenance of large numbers of military
+units, and complete control over political affairs.
+^
+Proteocracy and Confederation, on the other hand, give the
+citizens the freedom to produce vast amounts of data, which
+increases wealth and knowledge rapidly. These free citizens
+often grow unhappy when military units are stationed out of
+their home cities. Also, the Senate in these governments can
+interfere in the conduct of foreign affairs.
+^
+To change your civilization's government, you must have a
+Revolution--select "Revolution" from the Kingdom Menu.  This
+will entail a brief period of Pandemonium.
+
+@PEDIAGOVT0
+@width=600
+@title=Civilization Government: Pandemonium
+Pandemonium is not so much a type of government as the
+lack of any stable government. Pandemonium occurs when
+your civilization's government falls or when you decide
+to have a Revolution. After a few turns of Pandemonium,
+you will be able to reconstitute your government.
+^
+Pandemonium is similar to Despotism, except that the
+inaccuracy rate is very high (see Despotism). No taxes
+are collected during a Pandemonium, and no scientific
+research is conducted.
+
+@PEDIAGOVT1
+@width=600
+@title=Civilization Government: Despotism
+^UNIT SUPPORT
+Each unit above the city size costs one materiel per turn.
+Settler units require one food per turn.
+^
+^HAPPINESS
+Up to three military units stationed in each city help maintain
+order, making one unhappy citizen (per unit) content.
+^
+^INACCURACY AND WASTE
+Despotism has a high rate of inaccuracy and waste.  The level
+of inaccuracy in a particular city is based on its distance from
+your capital.
+^
+^SPECIAL
+Under a Despotism, none of the tax rates (science, taxes, and
+entertainment) may be set higher than 60%.  Also, any terrain
+square that would normally produce three or more of a particular
+thing (food, materiel, or data) produces one less.
+^
+^HINTS
+Because of Despotism's high rate of inaccuracy, it is almost
+always an inferior form of government.  Try to switch to something
+else as soon as possible.
+
+@PEDIAGOVT2
+@width=600
+@title=Civilization Government: Hierarchy
+^UNIT SUPPORT
+Each unit beyond the third costs one materiel per turn.
+Settler units require one food per turn.
+^
+^HAPPINESS
+Up to three military units stationed in each city help maintain
+order, making one unhappy citizen (per unit) content.
+^
+^INACCURACY AND WASTE
+Hierarchy has a moderate rate of inaccuracy and waste.  The level
+of inaccuracy in a particular city is based on its distance from
+your capital.
+^
+^SPECIAL
+Under a Hierarchy, none of the tax rates (science, taxes, and
+entertainment) may be set higher than 70%.
+^
+^HINTS
+Hierarchy is an excellent form of government for a young
+civilization.
+
+
+@PEDIAGOVT3
+@width=600
+@title=Civilization Government: The Collective
+^UNIT SUPPORT
+Each unit beyond the fourth costs one materiel per turn.
+Settler units require TWO food per turn.
+^
+^HAPPINESS
+Up to three military units stationed in each city help maintain
+order, making TWO unhappy citizens (per unit) content.
+^
+^INACCURACY AND WASTE
+In the Collective, peer review and the free flow of information
+virtually eliminates fraud and mistakes in data recording. Your
+cities, therefore, experience relatively low rates of inaccuracy.
+^
+^SPECIAL
+All Salmagundy units produced under Collective governments are
+given Veteran status.
+In the Collective, none of the tax rates (science, taxes, and
+entertainment) may be set higher than 80%.
+^
+^HINTS
+The Collective is best for large, far-flung empires which need
+to maintain a large military.  Use your powerful spies to
+steal technology.
+
+@PEDIAGOVT4
+@width=600
+@title=Civilization Government: The Great Joining
+^UNIT SUPPORT
+The Unimind can support up to five units without maintenance cost;
+additional units cost one materiel each.  Settler units require
+TWO food per turn. Only The Great Joining can cultivate the Blue
+Willies.
+^
+^HAPPINESS
+All citizens are submerged in the bliss of the Great Joining;
+there are no individuals, so no individual is ever unhappy.
+^
+^INACCURACY AND WASTE
+The Great Joining has a low rate of inaccuracy.
+However, the endless bliss of merged consciousness has the special
+disadvantage that science is halved.
+^
+^SPECIAL
+Improvements which normally convert unhappy citizens to content
+citizens instead produce genetic mapping data (Base Pairs) equal to
+the number of citizens they would otherwise affect. These improvements
+also require no maintenance.
+The diplomatic penalties for "terrorist acts" committed by your spying
+and diplomatic units are reduced.
+In The Great Joining, none of the tax rates (science, taxes, and
+entertainment) may be set higher than 80%.
+^
+^HINTS
+The Great Joining eliminates all happiness problems and provides
+excellent data revenue. Scientific research tends to languish.
+
+
+@PEDIAGOVT5
+@width=600
+@title=Civilization Government: Confederation
+^UNIT SUPPORT
+Each unit costs one materiel per turn.
+Settler units require TWO food per turn.
+^
+^HAPPINESS
+Each military unit after the first which is not in a friendly
+city or a force field within 3 spaces of a friendly city
+causes one citizen in its home city to become unhappy.
+^
+^INACCURACY AND WASTE
+A Confederation has a low rate of inaccuracy and waste. The level
+of inaccuracy in a particular city is based on its distance from
+your capital.
+^
+^SPECIAL
+Under a Confederation, each terrain square that ordinarily produces
+at least one unit of data produces an extra unit.
+None of the tax rates (science, taxes, and entertainment) may be set
+higher than 80%
+^
+^HINTS
+Switching to a Confederation can give an astounding boost to your
+science and tax revenues, although you'll probably have to divert
+some of your data to entertainment.  It becomes more difficult and
+expensive to keep an army in the field, but building the Organ Bank
+wonder can help with this problem.
+
+@PEDIAGOVT6
+@width=600
+@title=Civilization Government: Proteocracy
+^UNIT SUPPORT
+Each unit costs one materiel per turn.
+Settlers require TWO food per turn.
+^
+^HAPPINESS
+Each unit which is not in a friendly city or a force field
+within 3 spaces of a friendly city causes TWO citizens in its
+home city to become unhappy.
+^
+^INACCURACY AND WASTE
+Proteocracies experience NO inaccuracy or waste.
+^
+^SPECIAL
+Under a Proteocracy, each terrain square that ordinarily produces
+at least one unit of data produces an extra unit.
+The units and cities of a Proteocracy are immune to bribery.
+There are no limits on the tax rate settings (science, taxes, and
+entertainment).
+^
+^HINTS
+Proteocracies can produce spectacular amounts of revenue and
+scientific research.  However, because of the severe happiness
+restrictions on military units, this form of government tends to
+be viable only for large, advanced civilizations. Increasing your
+luxuries rate and building Wonders can help alleviate this problem.
+
+@;This line must remain at the end of this file!

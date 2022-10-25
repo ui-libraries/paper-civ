@@ -1,0 +1,77 @@
+Loaded TOTPP.dll, applying patches...
+Applied patch: City limits
+Applied patch: Unit limits
+Applied patch: Home city
+Applied patch: Terrain types
+Applied fix: Edit Control
+Applied fix: AI Hostility
+Applied fix: Steal forbidden techs
+Applied fix: Civilopedia Movement Rate
+Applied fix: Global Warming
+Applied fix: Modify reputation
+Applied fix: City screen unit selection
+Applied fix: City screen unit disband
+Applied fix: Teleporter improvement map check
+Applied fix: Move unit event
+Applied fix: Resource animation loop
+Applied fix: Reset city name
+Applied fix: City working tiles
+Applied fix: Native transport
+Applied fix: Zoom level
+Applied fix: Disabled button rendering
+Applied fix: Diplomacy screen crash
+Applied fix: End player turn
+Applied fix: AI unit orientation
+Applied fix: Build transporter
+Applied fix: Map layout
+Applied fix: Civilopedia wonder graphics transparency
+Applied fix: Pikemen flag
+Applied fix: Ship disband
+Applied fix: Take technology
+Applied patch: Decrease CPU Use
+Applied patch: No CD
+Applied patch: Map size, money and population limits
+Applied patch: Throne room
+Applied patch: Overview
+Applied patch: Transform requires tech
+Applied patch: Air units respect impassable terrain
+Applied patch: Health bars
+Applied patch: Extra cosmic parameters
+Applied patch: Configurable Trade Revenue
+Applied patch: Configurable defensive bonuses
+Applied patch: Configurable city population loss
+Applied patch: Shield colors
+Applied patch: Configurable stack kills
+Applied patch: Event Heap
+Applied patch: Fertility
+Applied patch: City view
+Applied patch: Mouse wheel support
+Applied patch: Navigable rivers
+Applied patch: Edit terrain keyboard shortcuts
+Applied patch: City major objective
+Applied patch: Improvement flags
+Applied patch: TOTPP configuration
+Applied patch: Civilopedia improvement icons
+Applied patch: Active unit indicators
+Applied patch: Combat animation
+Applied patch: Rush buy
+Applied patch: Terrain overlays
+Applied patch: Movement multipliers
+Applied patch: Production carry over
+Applied patch: Leonardo's Workshop veterancy settings
+Applied patch: Attacks per turn
+Applied patch: Extra units
+Applied patch: DirectShow video
+Applied patch: DirectShow audio
+Applied patch: Custom game mods
+Applied patch: Custom mod resources
+Applied patch: Landmarks
+Applied patch: AI Tweaks
+Applied patch: Playable tribes & difficulties
+Applied patch: Reporting options
+Applied patch: Difficulty
+Applied patch: Configurable first trade arrow for roads
+Applied patch: Settler flags
+Applied patch: Extra techs
+Applied patch: Lua scenario scripting
+Done!

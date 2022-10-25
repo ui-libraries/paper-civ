@@ -1,0 +1,354 @@
+Modern Council Text  2/12/96   v2.2
+
+@M1
+0,84, Military: Build more units!
+f5,4656,4763, Foreign: No, build more embassies.
+#, end
+t3, 3193,3212, Trade: There are more important matters (like building marketplaces).
+t5, 3193,3212, Trade: There are more important matters (like building caravans).
+s3, 3101,3124, Science: I disagree.
+s4, 3101,3124, Science: I disagree.
+a3, 3554,3580, Attitude: I disagree.
+end
+
+@M2
+86,199, Military: We need more weapons technology!
+f3, 3406,3431, Foreign: I disagree.
+t2, 3193,3212, Trade: I disagree.
+t4, 3193,3212, Trade: I disagree.
+a1, 3646,3692, Attitude: I've got some troubles, King.
+#, end 
+end
+
+@M3
+201,270, Military: We need more naval technologies!
+t2, 3193,3212, Trade: I disagree.
+t4, 3193,3212, Trade: I disagree.
+f3, 3498,3526, Foreign: Pah! The last thing we need is more military techs.
+a1, 3646,3692, Attitude: I've got some troubles, King.
+a3, 3747,3769, Attitude: Pah! Let's change the scientists to entertainers first.
+end
+
+@M4
+272,359, Military: Build barracks!
+f5, 3406,3431, Foreign: I disagree.
+t3, 3193,3212, Trade: I disagree. 
+t5, 3193,3212, Trade: I disagree.
+t1, 2844,2882, Trade: Remember expenses, sir.
+#, end 
+s3, 3101,3124, Science: I disagree.
+s4, 3101,3124, Science: I disagree.
+a3, 3554,3580, Attitude: I disagree.
+end
+
+@M5
+361,502, Military: We need to build city walls, especially in the capitol!
+s3, 3101,3124, Science: I disagree.
+s4, 3101,3124, Science: I disagree.
+f5, 3406,3431, Foreign: I disagree.
+t3, 3193,3212, Trade: I disagree.
+t5, 3193,3212, Trade: I disagree.
+t, 2844,2882, Trade:  Remember expenses, sir.
+#, end 
+a3, 3554,3580, Attitude: I disagree.
+end
+
+@M6
+504,568, Military: We're doing great!
+f7, 3384,3404, Foreign: I agree.
+t7, 3349,3382, Trade: I agree.
+t1, 3193,3212, Trade: I disagree.
+s6, 3150,3172, Science: Can we talk, sir?
+s1, 3150,3172, Science: Can we talk, sir?
+a1, 3608,3644, Attitude: Can we talk, sir?
+end
+
+@M7
+570,649, Military: Let's go bonk some heads!
+f4, 4656,4763, Foreign: Let us take by cunning what he would take by force.
+#, end
+f, 3406,3431, Foreign: I disagree.
+s6, 3080,3099, Science: I agree, and let's take some techs while we're at it.
+t, 3193,3212, Trade: I disagree.
+end
+
+
+@S1
+1012,1096, Science: We must raise the science rate!
+f3, 3384,3404, Foreign: I agree.
+#, a, 3582,3606, Attitude: Don't listen to them!
+a1, 5360,5443, Attitude: Just don't be lowering the luxury rate.
+#, end
+a2, 5360,5443, Attitude: Just don't be lowering the luxury rate.
+#, end
+a3, 5360,5443, Attitude: Just don't be lowering the luxury rate.
+#, end
+t2, 3174,3191, Trade: I agree.
+t4, 3174,3191, Trade: I agree.
+t, 3314,3347, *
+end
+
+@S2
+1098,1252, Science: We should raise the science rate, sir.
+f3, 3384,3404, Foreign: I agree.
+#, a, 3582,3606, Attitude: Don't listen to them!
+a1, 5360,5443, Attitude: Just don't be lowering the luxury rate.
+#, end
+a2, 5360,5443, Attitude: Just don't be lowering the luxury rate.
+#, end
+a3, 5360,5443, Attitude: Just don't be lowering the luxury rate.
+#, end
+t2, 3174,3191, Trade: I agree.
+t4, 3174,3191, Trade: I agree.
+t1, 2705,2778, Trade: If raising the science rate means lowering taxes, forget it.
+end
+
+@S3
+1254,1377, Science: Build technology improvements.
+m1, 867,957, Military: Not so fast...we need to build more units.
+#, end
+m4, 867,957, Military: Not so fast...we need to build barracks.
+#, end
+m5, 867,957, Military: Not so fast...we need to build city walls.
+#, end
+t3, 3193,3212, Trade: I disagree.
+t4, 3174,3191, Trade: I agree.
+#, f5, 3433,3461, Foreign: Don't listen to them, sir!
+t5, 3193,3212, Trade: I disagree.
+t1, 2705,2778, Trade: Building things cost money, sir, and we can't afford it.
+#, end 
+m2, 2884,2913, Military: I agree.
+m3, 2884,2913, Military: I agree.
+f3, 4765,4804, Foreign: I agree.
+f5,3406,3431, Foreign: I disagree.
+a3, 3554,3580, Attitude: I disagree.
+end
+
+@S4
+1379,1571, Science: Build trade routes.
+m1, 867,957, Military: Not so fast...we need to build more units.
+#, end
+m4, 867,957, Military: Not so fast...we need to build barracks.
+#, end
+m5, 867,957, Military: Not so fast...we need to build city walls.
+#, end
+f3, 4765,4804, Foreign: I agree.
+t, 3174,3191, Trade: I agree.
+m2, 2884,2913, Military: I agree.
+#, f5, 3433,3461, Foreign: Don't listen to them, sir!
+m3, 2884,2913, Military: I agree.
+#, f5, 3433,3461, Foreign: Don't listen to them, sir!
+f5, 3406,3431, Foreign: I disagree.
+end
+
+@S5
+1573,1643, Science: Everything's a-ok!
+a6 ,3694,3745, *
+m2, 3027,3078, Military: Pah! Then why don't you discover more weapons?
+m3, 3027,3078, Military: Pah! Then why don't you discover more naval techs?
+t2, 3193,3212, Trade: I disagree.
+t4, 3193,3212, Trade: I disagree.
+end
+
+@S6
+1645,1748, Science: Take or steal technologies, sir...that would show your perspicacity.
+m1,3027,3078, *
+m2,2884,2913, Military: I agree.
+m3,2884,2913, Military: I agree.
+m4,3027,3078, *
+m5,3027,3078, *
+m6,2884,2913, Military: I agree.
+m7,2884,2913, Military: I agree.
+end
+
+@S7
+1750,1920, Science: We're #1!
+a1, 3646,3692, Attitude: I've got some troubles, King.
+a6, 3694,3745, *
+t6, 3349,3382, Trade: I agree.
+t7, 3349,3382, Trade: I agree.
+f7, 3384,3404, Foreign: I agree.
+end
+
+
+@T1
+2097,2200, Trade: We're in trouble...raise the taxes or hire tax collectors.
+a1, 5360,5443, Attitude: Just lay off the luxury rate, King.
+#, end 
+a2, 5445,5520, Attitude: Just lay off the luxury rate, King.
+#, end 
+a3, 5445,5520, Attitude: Just lay off the luxury rate, King.
+#, end 
+s1, 1922,2001, Science: The science rate is already too low!
+s2, 1922,2001, Science: The science rate is already too low!
+end
+
+@T2
+2202,2303, Trade: Discover Economics.
+m2, 812,865, Military: Don't listen to him, sir, it's better weapons we need.
+m3, 812,865, Military: Don't listen to him, sir, it's better ships we need.
+end
+
+@T3
+2305,2360, Trade: Build Stock Exchange.
+f5,3406,3431, Foreign: I disagree.
+m1,651,731, Military: Build some units first.
+m4,651,731, Military: Build some barracks first.
+m5,651,731, Military: Build some city walls first.
+s3, 3101,3124, Science: I disagree.
+s4, 3101,3124, Science: I disagree.
+a3, 3554,3580, Attitude: I disagree.
+end
+
+@T4
+2362,2473, Trade: Discover trade.
+f, 3384,3404, Foreign: I agree.
+m2, 812,865, Military: Don't listen to him, sir, it's better weapons we need.
+m3, 812,865, Military: Don't listen to him, sir, it's better ships we need.
+end
+
+@T5
+2475,2570, Trade: Build caravans.
+f5,3406,3431, Foreign: I disagree.
+m1,651,731, Military: Build some units first.
+m4,651,731, Military: Build some barracks first.
+m5,651,731, Military: Build some city walls first.
+s3, 3101,3124, Science: I disagree.
+a3, 3554,3580, Attitude: I disagree.
+end
+
+@T6
+2572,2616, Trade: We're doing well.
+a1,3646,3692, Attitude: The government's going to fall!
+a2,3554,3580, Attitude: I disagree.
+a3,3554,3580, Attitude: I disagree.
+end
+
+@T7
+2618,2703, Trade: We're rich!!!
+m1,3027,3078, Military: Pah! So buy us some units.
+#, end 
+m4,3027,3078, Military: Pah! So buy us some barracks.
+#, end 
+m5,3027,3078, Military: Pah! So buy us some city walls.
+#, end 
+f5, 3498,3526, Foreign: Pah! Why not buy us some embassies, then?
+#, end 
+end
+
+
+@F1
+3771,3870, Foreign: Go explore!
+r5, s, 3080,3099, Science: I agree.
+r5, m, 2884,2913, Military: I agree.
+r5, a, 3528,3552, Attitude: I agree.
+r5, t, 3174,3191, Trade: I agree.
+end
+
+@F2
+3872,4002, Foreign: Let us form an alliance with another civilization.
+m, 733,810, Military: We shouldn't fraternize with the enemy, sir.
+end
+
+@F3
+4004,4100, Foreign: We should discover espionage.
+s, 3080,3099, Science: I agree.
+#, t2, 3214,3238, Trade: Don't listen to them, sir.
+t4, 3193,3212, Trade: I disagree.
+m2, 959,1010, Military: Who cares? We need better weapons pronto.
+m3, 959,1010, Military: Who cares? We need better weapons pronto
+end
+
+@F4
+4102,4273, Foreign: We should repair our reputation with other civilizations.
+;m1, magg, Military: I agree.
+m, 3004,3025, *
+end
+
+@F5
+4275,4381, Foreign: We should build embassies.
+m1, 651,731, Military: Pay some attention to your military first.
+m4, 651,731, Military: Pay some attention to your military first.
+m5, 651,731, Military: Pay some attention to your city walls first.
+t3, 3193,3212, Trade: I disagree.
+t5, 3193,3212, Trade: I disagree.
+t1, 2844,2882, Trade:  Remember expenses, sir....
+#, end 
+s3, 3101,3124, Science: I disagree.
+s4, 3101,3124, Science: I disagree.
+a3, 3554,3580, Attitude: I disagree.
+end
+
+@F6
+4383,4526, Foreign: We should trade technologies with other civilizations.
+m2, 2884,2913, Military: I agree.
+#, s7, 3126,3148, Science: I disagree...we don't need their foolish technologies.
+m3, 2884,2913, Military: I agree.
+#, s7, 3126,3148, Science: I disagree...we don't need their foolish technologies.
+m6, 733,810, Military: We shouldn't fraternize with the enemy, sir.
+m7, 733,810, Military: We shouldn't fraternize with the enemy, sir.
+s7, 3101,3124, Science: I disagree...we don't need their foolish technologies.
+#, end
+s5, s, 3080,3099, Science: I agree.
+t, 3174,3191, Trade: I agree. 
+end
+
+@F7
+4528,4654, Foreign: We are doing remarkably well in foreign affairs.
+s7, 3080,3099, Science: I agree.
+a6, 3694,3745, *
+end
+
+
+@A1
+4806,4875, Attitude: Get temples and entertainers or the government falls!
+r5, t, 3174,3191, Trade: I agree.
+r5, s, 3080,3099, Science: I agree.
+r5, m, 2884,2913, Military: I agree.
+r5, f, 3384,3404, Foreign: I agree.
+end
+
+@A2
+4877,4969, Attitude: We must raise the luxury rate, quickly.
+t1, 2780,2842, Trade: It is the taxes we should be raising!
+#, end
+t6, 2780,2842, Trade: It is the taxes we should be raising!
+#, end 
+s1, 3150,3172, Science: Can we talk, sir?
+#, end 
+s2, 2003,2095, Science: The science rate is low as it stands.
+#, end 
+f3, 3406,3431, Foreign: I disagree.
+m2, 2915,2939, Military: I disagree.
+m3, 2915,2939, Military: I disagree.
+end
+
+@A3
+4971,5096, Attitude: Things are bad...more temples and entertainers are necessary.
+t1, 3278,3312, Trade: We've got problems, sir.
+s1, 2003,2095, Science: We must maintain the science rate!
+s2, 2003,2095, Science: We must maintain the science rate!
+m1, 3027,3078, Military: Pah! It is more units we need.
+m4, 3027,3078, Military: Pah! It is barracks we need.
+m5, 3027,3078, Military: Pah! It is city walls we need.
+end
+
+@A4
+5098,5231, Attitude: We should raise the luxury rate.
+t1, 3193,3212, Trade: I disagree.
+t6, 3193,3212, Trade: I disagree.
+t, 3193,3212, Trade: I disagree.
+s1, 3101,3124, Science: I disagree.
+s2, 3101,3124, Science: I disagree.
+s, 3101,3124, Science: I disagree.
+end
+
+@A5
+5233,5295, Attitude: We're rockin', your majesty.
+t7, 3174,3191, Trade: I agree.
+end
+
+@A6
+5297,5358, Attitude: The people love you!
+t7, 3349,3382, Trade: Let's do lunch.
+end

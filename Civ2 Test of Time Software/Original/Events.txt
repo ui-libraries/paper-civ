@@ -1,0 +1,30 @@
+; Events file 12/18/98
+; Original Game
+; 
+
+
+@BEGINEVENTS
+
+@IF
+RECEIVEDTECHNOLOGY
+receiver=anybody
+futuretech=5
+@AND
+RANDOMTURN
+denominator=3
+@THEN
+TEXT
+^At the very moment the proof of the Unified Field Theory is to be 
+^demonstrated, the World Consortium Of Physicists makes an even more 
+^startling discovery- Why the universe exists at all. 
+^With this knowledge, life on earth progresses to a higher plane of 
+^existence where there is no longer any need for competition. 
+YOU HAVE WON THE GAME! 
+ENDTEXT
+ENDGAME
+endscreens=yes
+PLAYAVIFILE
+Scene6.avi
+@ENDIF
+
+@ENDEVENTS

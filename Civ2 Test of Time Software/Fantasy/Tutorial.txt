@@ -1,0 +1,413 @@
+;
+;   CIVILIZATION In-Game Tutorial
+;   Copyright (c) 1995 by MicroProse Software
+;
+;   Altering the contents of this file may cause the
+;   game to malfunction.
+;
+
+@FIRSTMOVE
+@width=400
+@y=5
+@title=Civ Tutorial
+Your first task is to find a suitable
+site and found your capital city.
+The best city sites are near rivers,
+glades, coastal areas, or areas
+near special resources.
+
+@BUILDCITY
+@width=320
+@y=5
+@title=Civ Tutorial
+This spot looks like a good site for a
+city. Select 'Build New City' from the
+ORDERS menu or use the 'b' key to found
+a city here.
+
+@FIRSTPRODUCT
+@width=420
+@y=5
+@title=Civ Tutorial: Your First City
+Each of your cities can build additional
+Settlers, military units, or city improvements
+to further the growth of your civilization.
+Only one item can be in production
+per city. Production orders can be changed
+at any time. Select the item you wish to
+build by clicking the 'CHANGE' button in
+the city information screen which follows.
+
+@FIRSTCIV
+@width=420
+@title=Civ Tutorial: Civilization Advances
+Cities also act as centers for trade and
+the flow of information. Your wise men
+and magicians can collect this information
+to acquire important new abilities and
+skills for your civilization.
+
+@FIRSTUNIT1
+@width=420
+@y=5
+@title=Civ Tutorial: First Fighting Unit
+You have just built your first fighting
+unit. Use the keyboard arrows to move
+this unit and the ORDERS menu to give
+special commands. Military units allow
+you to explore, expand, attack, and
+defend your civilization.
+
+@FIRSTUNIT2
+@width=500
+@title=Civ Tutorial: Units
+Fortify units in your cities to defend
+them against barbarians or enemy armies.
+Defend your cities with units with good defense
+(D) strengths. Your city build window will display
+this number for each available unit. It is the
+second of the three ADM numbers.
+^
+Settler units, goblin miners, and dwarves can 
+found new cities as well as build roads, irrigation, 
+and mines around existing cities.  If you can, try 
+to have at least one settler in play at all times.
+^
+Fast-moving units like Skalds or Jack O'Lanterns are 
+useful for exploring uncharted territory.
+^
+Attack your enemies with Catapults and units with
+large attack (A) strengths. Your city build window
+will display this number for each available unit.
+It is the first of the first of the three ADM numbers.
+
+@ONECITY
+@width=420
+@y=5
+@title=Civ Tutorial: New Cities
+The city of %STRING0 is growing rather large.
+Now might be a good time to expand by building a second
+city. To do this, click on %STRING0 and instruct it
+to build a Settler unit, Dwarf, or Goblin miner. These
+units can move to a new site and build a city.
+
+@CITYSTUFF
+@width=420
+@x=180
+@title=Civ Tutorial: City Resources
+A city's inhabitants produce different resources depending
+on the types of terrain nearby. On the city information
+screen, "inhabited" spaces are shown with the "wheat",
+"shields", and "trade arrows" that the inhabitants are
+producing.
+^
+Experiment with clicking on these spaces to move inhabitants
+from space to space; notice that some spaces produce more of
+some things, less of others. Most spaces can be improved
+through the addition of roads, irrigation, and/or mining by
+Settlers, Goblin miners, or Dwarves. Find the configuration 
+which suits you best.
+^
+Notice that you can also remove citizens from the
+map altogether, making them "Troubadours".  Troubadours
+produce luxuries, but make no food or other resources.
+
+@MINING
+@width=320
+@y=5
+@title=Civ Tutorial: Mining
+This area could produce more resources.
+Mining ('m' key) hills on the surface world
+will add to the production capacity of %STRING0. 
+This might not be the case on other worlds.
+
+@IRRIGATE
+@width=320
+@y=5
+@title=Civ Tutorial: Irrigation
+This would be a suitable area to build
+irrigation ('i'_key). More food will help the
+city of %STRING0 to grow more rapidly. If
+you are unsure which terrains profit from
+irrigation, check the terrain types in the
+civilopedia.
+
+@ROAD
+@width=440
+@y=5
+@title=Civ Tutorial: Roads
+This would be a good place to build a
+road ('r' key). Your units will be able to move
+faster and more trade will be generated
+in the city of %STRING0.  As you expand,
+work towards connecting your cities with
+roads. If you are unsure which terrains
+profit from roads, check the terrain types
+in the civilopedia.
+
+@HELP1
+@width=500
+@title=Civ Tutorial: General Principles #1
+Defend your cities with at least one
+(preferably two) good defensive units.
+^
+Strike a balance between improving your
+existing cities and striking out to found
+new cities.
+^
+Don't expand beyond your ability to defend
+yourself; barbarians and hostile armies
+may appear without warning.
+^
+Be aware that having too many cities too soon
+can increase unhappiness levels.
+
+@HELP2
+@width=500
+@title=Civ Tutorial: General Principles #2
+Make peace with your stronger neighbors.
+Isolate and conquer your weaker neighbors.
+^
+Use Porpoise Pods, Krakens and ships to explore 
+the seas and transport your units to other
+continents.
+^
+Use Caravans to establish trade routes and
+strengthen your economy. Trade helps your
+people accumulate both wealth and knowledge.
+Unfortunately, caravans cannot penetrate the
+clouds or undersea.
+^
+As your civilization grows don't forget to
+use your Skalds to learn what your
+opponents are up to.
+
+@DISORDER
+@width=480
+@title=Civ Tutorial: Civil Disorder
+@button=Details
+A city falls into Civil Disorder when
+the number of unhappy citizens exceeds
+the number of happy citizens. Growth
+and production cease while a city is
+in disorder.
+^
+Remedies for disorder include:
+^* Increasing the amount of trade used for Luxuries.
+^* Moving fighting units into the city.
+^* Building a Temple, Monastery, or Arena.
+^* Turning citizens into troubadours.
+^* Switching to a Fundamentalist government.
+^
+Click on "Details" for further details, or if you
+are having difficulty.
+
+@DISORDER2
+@width=600
+@title=Civ Tutorial: Civil Disorder Details
+1) Luxuries: To increase the amount of trade used for
+luxuries, select "Tax Rate" under the KINGDOM menu.
+20% is often a good rate, especially if your government
+is a Monarchy or Republic.  For every two luxuries your
+city produces, one new happy citizen appears.
+^
+2) Martial Law: If your government is a Despotism, Monarchy,
+or Communes, you may move fighting units into your cities
+to suppress disorder. Up to 3 units in each city can be used
+for this purpose. Each unit causes one unhappy citizen to
+become content.
+^
+3) Temples, Arenas, and Monasteries: These city improvements
+help to reduce disorder by changing one or more unhappy
+citizens to content. Of course, if your city is already in
+disorder, you may need to "Buy" the building (or temporarily
+use troubadours), since no production takes place during
+civil disorder.
+
+@DISORDER3
+@width=600
+@title=Civ Tutorial: Civil Disorder Details
+4) Troubadours: On the city information screen, click on one
+of the inhabited spaces in the city radius to make that
+citizen into an troubadour. Troubadours produce no food,
+resources, or trade; instead, each produces two additional
+luxuries.
+^
+5) Fanaticism: If you have discovered the civilization
+advance "Fanaticism", you can switch to Fanaticism
+as a form of government. Under Fanaticism, no citizen
+is ever unhappy (of course, magic research is curtailed).
+
+@SCHISM
+@width=320
+@title=Civ Tutorial: Civil War
+The %STRING0 are a large and powerful
+race. However, rebel factions threaten 
+to start a civil war. If your armies can 
+capture their capital city, the shock could 
+split the country in two!
+
+@SHIPS
+@width=480
+@y=5
+@title=Civ Tutorial: Ships
+You have built your first sea unit. Use
+them to explore the seas and transport your
+units to other continents. Not all sea units
+can transport. Check the civilopedia to make sure. 
+^
+If your ship is a Longboat, remember that it may be lost
+if it does not end each turn near a land space.
+^
+To embark a unit on a sea unit in port, issue the sleep 
+('s') order for the unit before moving the sea unit out 
+to sea. Or, while the ship is at sea, simply move
+the unit 'onto' the ship from an adjacent space.
+^
+To disembark a unit, click on the sea unit or press
+the 'u' key to unload.
+
+@RAILROADS
+@width=480
+@title=Civ Tutorial: Ley Lines
+You have just acquired knowledge of Ley Lines, an
+important achievement. A Settler, Dwarf, or Goblin miner
+will build a ley line if you press the 'r' key in a space
+that already has a road.
+^
+Your units will be able to move long distances over
+ley lines.  Ley lines also increase resource production
+in spaces which already produce at least two 'shields'.
+
+@FARMLAND
+@width=480
+@title=Civ Tutorial: Settled lands
+You have acquired knowledge of Dragon's Teeth. The fecund
+nature of these teeth when planted allow you to improve 
+the quality of your settled lands. A Settler, Dwarf, or
+Goblin miner will improve settled lands if you press the 
+'i' key in a space that already has irrigation. This will 
+increase food production in a nearby city once that city 
+has a Farmers Market to distribute the food.
+
+@AIRUNIT
+@width=480
+@y=5
+@title=Civ Tutorial: flying Units
+You civilization has built its first flying unit.
+Flying units can be used to attack enemy units and cities; 
+they can also defend your skies from enemy fliers. Flying
+units can also be used to explore.
+^
+Necromancers, Thunderbolts, and Fireballs have a limited supply 
+of magic; they must return to a friendly city or elevated
+platform before that magic is exhausted.
+
+@REPUBLIC
+@width=480
+@title=Civ Tutorial: Althing
+Your civilization has gained knowledge of another form
+of government, the ALTHING. Switching governments can
+bring great benefits to your civilization; on the other
+hand, it can create large headaches--careful planning is
+necessary. For more information on all forms of government,
+see the CIVILOPEDIA entries under "Governments". If you do
+wish to switch governments, you must have a Revolution--see
+the Kingdom menu.
+
+@DEMOCRATS
+@width=600
+@title=Civ Tutorial: Althing and Greatlaw
+You have chosen to govern your civilization as a %STRING0.
+This is a major change from earlier forms of government, and
+will present you with a new set of challenges (and rewards!)
+^
+As your citizens gain more individual freedoms, they begin
+to produce more trade. On the other hand, it becomes more
+difficult to keep them happy. One of the best ways to do so
+is to divert some of your trade to Luxuries. Select "Tax Rate"
+from the Kingdom Menu and set your Luxuries Rate to 20%%.
+Since your citizens are now producing so much more trade, you
+can easily afford this.
+^
+Your citizens will also tend to become unhappy when you send
+your fighting units out of your cities. You may need to
+return some of your units to cities. You may even need to
+disband some units. This sacrifice is often worth it in terms
+of the knowledge and wealth you will gain in exchange.
+
+@TRADE
+@width=420
+@title=Civ Tutorial: Trade
+You have just acquired knowledge of TRADE. Your cities can
+now produce CARAVANS to carry trade goods between different
+parts of the surface world and underworld. Caravans, especially 
+from your larger cities, can rapidly increase your wealth and 
+knowledge. Sorry, caravans are incapable of flying or 
+snorkling.
+
+@CARAVAN
+@width=440
+@y=5
+@title=Civ Tutorial: Caravans
+You have just produced your first CARAVAN. Move it to a
+distant city to establish a trade route. Trade routes with
+small, nearby and friendly cities produce less revenue than
+routes with large, distant and rival cities. Try to find a
+city which demands the goods your caravan is carrying (you
+may click on a rival city to learn its demands).  Caravans
+may also be used to help build Wonders of the World. 
+Caravans cannot visit either the undersea or cloud worlds.
+
+@WRITING
+@width=420
+@title=Civ Tutorial: Ideograms
+Your civilization has learned the art of IDEOGRAMS. Your
+cities may now commission SKALDS to help make contact
+with other civilizations. SKALDS can establish embassies
+with other powers, help you keep an eye on your friends, and
+even steal knowledge from your rivals.
+
+@SEAFARING
+@width=420
+@title=Civ Tutorial: Shipbuilding
+Your civilization has mastered the art of SHIPBUILDING.
+You may now produce JACK O'LANTERNS to help you discover
+new territories. Jack O'lanterns can move six spaces per
+turn regardless of the terrain, which helps them cover
+a great deal of terrain quickly. If you have not yet
+done so, consider building sea units to carry your
+jack O'lanterns and other units to distant continents.
+
+
+@EXPAND0
+@width=520
+@title=Civ Tutorial: Expansion (#1)
+A civilization grows by expanding its territory. This can be
+accomplished either by founding new cities or by conquering
+rival cities. Perhaps we should instruct one of our cities
+to produce a new SETTLERS unit, GOBLIN MINER, or DWARF.
+
+@EXPAND1
+@width=520
+@title=Civ Tutorial: Expansion (#2)
+For our civilization to grow, we must expand to new
+city sites.  Perhaps we should send these SETTLERS,GOBLIN
+MINERS, OR DWARVES to found a new city.
+
+@DAMAGE
+@width=520
+@title=Civ Tutorial: Damaged Units
+This unit has sustained combat damage, as indicated
+by the colored bar along the top of the unit.
+Green indicates a relatively healthy
+unit; Yellow and Red show increasing levels of damage.
+^
+A unit may partially heal itself by skipping its entire
+turn (press the SPACE bar). Units repair themselves more
+quickly in cities and fortresses. Cities with Barracks can
+repair ground units in a single turn. Other improvements
+(Port Facility, Airport) can repair ships and air units.
+
+
+@END

@@ -1,0 +1,1488 @@
+; Events file
+; Lalande 21185 Science Fiction Game
+; Copyright 1999 MicroProse Software
+
+;
+; Initialization
+; --------------
+
+@BEGINEVENTS
+@INITFLAG
+
+;
+; Flags
+; -----
+; 
+; 0   not used
+; 1   Penultimum (82, The) discovered
+; 2   Transfer Gate (94, X2) discovered
+; 3   Human tribe has discovered Artificial Gravity (61)
+; 4   Alien tribe has discovered Unification Theory (76)
+; 5   not used
+; 6   not used
+; 7   not used
+; 8   not used
+; 9   not used
+; 10  not used
+; 11  not used
+; 12  not used
+; 13  not used
+; 14  not used
+; 15  not used
+; 16  not used
+; 17  not used
+; 18  not used
+; 19  not used
+; 20  not used
+; 21  not used
+; 22  not used
+; 23  not used
+; 24  not used
+; 25  not used
+; 26  not used
+; 27  not used
+; 28  not used
+; 29  not used
+; 30  not used
+; 31  not used
+
+;
+; Introduction
+;
+
+@IF
+Turn
+turn=1
+@THEN
+JUSTONCE
+Text
+Years ago, a magnificent starship filled with valiant settlers set out to reach the star nearest their home world. En route, their sensing devices detected an enormous alien artifact, and they changed course to investigate. Unfortunately for the starship crew and passengers, they somehow activated the artifact's defensive systems.
+^
+Some sort of gateway opened up directly in front of the colony ship, and the next thing the survivors knew, they were entering the atmosphere of an unknown planet. The ship itself was almost completely destroyed, but due to the heroic efforts of the pilots and security officers, a few small groups managed to survive the fall.
+^ 
+Their best hope for the future is putting their training to good use--to tame and colonize this new world. If all goes well, then someday, somehow, they might be able to find a way to return home.
+EndText
+@ENDIF
+
+;
+; Prevent Interspecies Negotiations
+; ---------------------------------
+
+; prohibit negotiations between humans and aliens
+
+@IF
+Negotiation
+talkermask=0b00000000000101010110101011010101
+listenermask=0b00000000000010101001010100101010
+@THEN
+@ENDIF
+
+; prohibit negotiations between aliens and humans
+
+@IF
+Negotiation
+talkermask=0b00000000000010101001010100101010
+listenermask=0b00000000000101010110101011010101
+@THEN
+@ENDIF
+
+; when Xenolinguistics (Cmb) is discovered,
+; allow the discovering tribe to negotiate
+; with the other species (as talker)
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=14
+@THEN
+Negotiator
+who=triggerreceiver
+type=talker
+state=clear
+@ENDIF
+
+; when Xenolinguistics (Cmb) is discovered,
+; allow the discovering tribe to negotiate
+; with the other species (as listener)
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=14
+@THEN
+Negotiator
+who=triggerreceiver
+type=listener
+state=clear
+@ENDIF
+
+;
+; Give Colonist transport build ability
+; when anyone discovers spacecraft
+; ------------------------------------
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=66
+@THEN
+JustOnce
+Transport
+Unit=Colonist
+State=On
+Mode=Build
+Type=1
+Text
+Colonists and the Nidus can now build SSTO Pads,
+which allow space-worthy units to travel into orbit.
+EndText
+@ENDIF
+
+
+;
+; Give Nidus transport build ability
+; when anyone discovers spacecraft
+; ------------------------------------
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=66
+@THEN
+JustOnce
+Transport
+Unit=Nidus
+State=On
+Mode=Build
+Type=1
+@ENDIF
+
+;
+; Give Environeer and Melior planetary base build ability
+; when anyone discovers forward vectoring (CA)
+; -------------------------------------------------------
+
+;
+; Environeer (3 events)
+; ----------------------
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=13
+@THEN
+JustOnce
+Transport
+Unit=Environeer
+State=On
+Mode=Build
+Type=2
+Text
+Environeers and the Melior can now build Planetary Bases.
+EndText
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=13
+@THEN
+JustOnce
+Transport
+Unit=Environeer
+State=On
+Mode=Build
+Type=5
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=13
+@THEN
+JustOnce
+Transport
+Unit=Environeer
+State=On
+Mode=Build
+Type=11
+@ENDIF
+
+;
+; Melior (3 events)
+; ------------------
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=13
+@THEN
+JustOnce
+Transport
+Unit=Melior
+State=On
+Mode=Build
+Type=2
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=13
+@THEN
+JustOnce
+Transport
+Unit=Melior
+State=On
+Mode=Build
+Type=5
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=13
+@THEN
+JustOnce
+Transport
+Unit=Melior
+State=On
+Mode=Build
+Type=11
+@ENDIF
+
+;
+; Announce Melior's transform ability
+; when anyone discovers GEnIEs (Env)
+; ------------------------------------
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=26
+@THEN
+JustOnce
+Text
+Now that you have the requisite technology, the
+^Melior can use the new Transform ("o") order to
+^drastically change the terrain type in a square.
+^These units also work twice as quickly as their
+^predecessors in all ordinary tasks (road building,
+^cultivation, etc).
+EndText
+@ENDIF
+
+;
+; Give Environeer and Melior gravitic grid build ability
+; when anyone discovers quantum gravitics (Stl)
+; -------------------------------------------------------
+
+;
+; Environeer (6 events)
+; ----------------------
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Environeer
+State=On
+Mode=Build
+Type=0
+Text
+Environeers and the Melior can now build Gravitic Grids.
+EndText
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Environeer
+State=On
+Mode=Build
+Type=3
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Environeer
+State=On
+Mode=Build
+Type=6
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Environeer
+State=On
+Mode=Build
+Type=9
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Environeer
+State=On
+Mode=Build
+Type=12
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Environeer
+State=On
+Mode=Build
+Type=15
+@ENDIF
+
+;
+; Melior (6 events)
+; ------------------
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Melior
+State=On
+Mode=Build
+Type=0
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Melior
+State=On
+Mode=Build
+Type=3
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Melior
+State=On
+Mode=Build
+Type=6
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Melior
+State=On
+Mode=Build
+Type=9
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Melior
+State=On
+Mode=Build
+Type=12
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+Transport
+Unit=Melior
+State=On
+Mode=Build
+Type=15
+@ENDIF
+
+;
+; Announce Melior's transform ability
+; when anyone discovers GEnIEs (Env)
+; ------------------------------------
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=26
+@THEN
+JustOnce
+Text
+Now that you have the requisite technology, the Melior can use the new
+Transform ("o") order to drastically change the terrain type in a square.
+These units also work twice as quickly as their predecessors in all
+ordinary tasks (road building, cultivation, etc).
+EndText
+@ENDIF
+
+
+;
+; Give Key Technology in Orbit (Map 1)
+; ------------------------------------
+
+; when the first shuttle is built, notify
+; the player of its intermap capability
+
+@IF
+CityProduction
+builder=anybody
+unit=Shuttle
+@THEN
+JustOnce
+Text
+The newly built Shuttle unit is capable of rising to orbit
+on its own power. Use the Teleport order to move it into
+orbit around Funestis and to return it to the surface.
+EndText
+@ENDIF
+
+; when the first shuttle is built,
+; give the builder Plasma Chamber (X3) and
+; notify the player
+
+@IF
+CityProduction
+builder=anybody
+unit=Shuttle
+@THEN
+JustOnce
+GiveTechnology
+technology=95
+receiver=triggerdefender
+Text
+On a test flight of the new Shuttle, explorers in orbit
+around Funestis have stumbled onto an ancient artifact of
+immeasurable military importance. The radio reports describe
+a compact plasma containment unit. The original use of this
+device remains unknown, but it shows great promise as an
+ammunition chamber for plasma weapons of all types.
+EndText
+@ENDIF
+
+; when each tribe builds its first shuttle,
+; enable Plasma Chamber (X3) for research
+; with no notification
+
+@IF
+CityProduction
+builder=anybody
+unit=Shuttle
+@THEN
+EnableTechnology
+whom=triggerdefender
+technology=95
+value=0
+@ENDIF
+
+;
+; Give Key Technology on Naumachia (Map 2)
+; ----------------------------------------
+
+; when the first Hohmann is built, notify
+; the player of its intermap capability
+
+@IF
+CityProduction
+builder=anybody
+unit=Hohmann
+@THEN
+JustOnce
+Text
+The newly built Hohmann unit can not only travel to and from
+orbit, but it can also reach the planet Naumachia on its own
+power. Use the Teleport order to get it there and back.
+EndText
+@ENDIF
+
+; when the first Hohmann is built,
+; give the builder Deleriumn Capacitance (X4)
+; and notify the player
+
+@IF
+CityProduction
+builder=anybody
+unit=Hohmann
+@THEN
+JustOnce
+GiveTechnology
+technology=96
+receiver=triggerdefender
+Text
+Carried there on the maiden voyage of the new Hohmann unit,
+planetary archaeologists digging into ancient ruins on the planet
+Naumachia have unearthed evidence of an unsuspected use for the
+crystal element Delierium 116. Significant portions of the text
+are intact, enough to re-create the long lost, alien technology.
+EndText
+@ENDIF
+
+; when each tribe builds its first Hohmann,
+; enable Deleriumn Capacitance (X4) research
+; with no notification
+
+@IF
+CityProduction
+builder=anybody
+unit=Hohmann
+@THEN
+EnableTechnology
+whom=triggerdefender
+technology=96
+value=0
+@ENDIF
+
+;
+; Ensure Player Access to Quantum Gravitics
+; ------------------------------------------
+
+;
+; set flag 3 if any (human) tribe gets artificial gravity (61)
+;
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=61
+@THEN
+Flag
+Who=TriggerReceiver
+Flag=3
+Continuous
+State=Set
+@ENDIF
+
+;
+; set flag 4 if any (alien) tribe gets unification theory (76)
+;
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@THEN
+Flag
+Who=TriggerReceiver
+Flag=4
+Continuous
+State=Set
+@ENDIF
+
+;
+; if a human civ gets 61, but no alien civ has 76 (flag 4),
+; then give all alien civs 76
+; (except any renamed player civs)
+;
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=61
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000010000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=76
+receiver=Ellecor
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=61
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000010000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=76
+receiver=Grau
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=61
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000010000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=76
+receiver=Iihibati
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=61
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000010000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=76
+receiver=Ponn Jahr
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=61
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000010000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=76
+receiver=Vallan
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=61
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000010000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=76
+receiver=Det Pin
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=61
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000010000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=76
+receiver=Selephon
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=61
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000010000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=76
+receiver=Jilda
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=61
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000010000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=76
+receiver=Ka Rhee
+@ENDIF
+
+;
+; if an alien civ gets 76, but no human civ has 61 (flag 3),
+; then give all human civs 61
+; (except any renamed player civs)
+;
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Cadre
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=True Colony
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Clerisy
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Engineers
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Star Officers
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Funesti
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Seekers
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Uridians
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Enclave
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Liberests
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Sciolists
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=76
+@AND
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000001000
+State=Clear
+@THEN
+JustOnce
+GiveTechnology
+technology=61
+receiver=Observers
+@ENDIF
+
+;
+; Create and Maintain Giants
+; --------------------------
+
+; when each tribe gets Quantum Gravitics (Stl)
+; create 9 HaGibborim units on Nona
+; 3 Adamastor, 3 Dondasch, and 3 Urdar
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+CreateUnit
+Owner=Barbarians
+Unit=Adamastor
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+74,60,3
+53,42,3
+42,24,3
+11,16,3
+5,5,3
+16,74,3
+24,53,3
+42,42,3
+60,11,3
+35,28,3
+EndLocations
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+CreateUnit
+Owner=Barbarians
+Unit=Adamastor
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+47,6,3
+35,24,3
+24,42,3
+11,61,3
+50,50,3
+61,47,3
+42,35,3
+22,24,3
+6,11,3
+49,2,3
+EndLocations
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+CreateUnit
+Owner=Barbarians
+Unit=Adamastor
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+8,6,3
+25,51,3
+18,31,3
+45,71,3
+1,1,3
+100,100,3
+75,18,3
+20,88,3
+45,75,3
+143,28,3
+EndLocations
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+CreateUnit
+Owner=Barbarians
+Unit=Dondasch
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+1,1,3
+22,22,3
+43,34,3
+64,46,3
+85,58,3
+106,61,3
+127,73,3
+115,52,3
+103,31,3
+91,19,3
+EndLocations
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+CreateUnit
+Owner=Barbarians
+Unit=Dondasch
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+8,24,3
+16,39,3
+32,59,3
+64,24,3
+128,39,3
+24,59,3
+40,24,3
+72,39,3
+56,59,3
+80,24,3
+EndLocations
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+CreateUnit
+Owner=Barbarians
+Unit=Dondasch
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+14,24,3
+34,24,3
+54,24,3
+74,24,3
+37,39,3
+67,39,3
+97,39,3
+135,59,3
+85,59,3
+35,59,3
+EndLocations
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+CreateUnit
+Owner=Barbarians
+Unit=Urdar
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+40,12,3
+40,27,3
+40,32,3
+40,43,3
+50,17,3
+50,33,3
+50,65,3
+74,2,3
+74,56,3
+74,111,3
+EndLocations
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+CreateUnit
+Owner=Barbarians
+Unit=Urdar
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+2,35,3
+24,70,3
+46,44,3
+68,110,3
+90,65,3
+112,47,3
+136,4,3
+11,23,3
+39,34,3
+76,76,3
+EndLocations
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=79
+@THEN
+JustOnce
+CreateUnit
+Owner=Barbarians
+Unit=Urdar
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+77,14,3
+54,37,3
+32,34,3
+6,45,3
+143,101,3
+121,87,3
+98,65,3
+84,34,3
+42,12,3
+17,12,3
+EndLocations
+@ENDIF
+
+; whenever a HaGibborim unit is defeated
+; create a replacement on Nona
+
+@IF
+UnitKilled
+Unit=Adamastor
+Attacker=Anybody
+Defender=Anybody
+@THEN
+CreateUnit
+Owner=Barbarians
+Unit=Adamastor
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+74,60,3
+53,42,3
+42,24,3
+11,16,3
+5,5,3
+16,74,3
+24,53,3
+42,42,3
+60,11,3
+35,28,3
+EndLocations
+@ENDIF
+
+@IF
+UnitKilled
+Unit=Dondasch
+Attacker=Anybody
+Defender=Anybody
+@THEN
+CreateUnit
+Owner=Barbarians
+Unit=Dondasch
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+8,24,3
+16,39,3
+32,59,3
+64,24,3
+128,39,3
+24,59,3
+40,24,3
+72,39,3
+56,59,3
+80,24,3
+EndLocations
+@ENDIF
+
+@IF
+UnitKilled
+Unit=Urdar
+Attacker=Anybody
+Defender=Anybody
+@THEN
+CreateUnit
+Owner=Barbarians
+Unit=Urdar
+Veteran=True
+HomeCity=None
+Randomize
+Locations
+40,12,3
+40,27,3
+40,32,3
+40,43,3
+50,17,3
+50,33,3
+50,65,3
+74,2,3
+74,56,3
+74,111,3
+EndLocations
+@ENDIF
+
+;
+; Give Special Techs for Destroying Giants
+; ----------------------------------------
+
+; when any tribe defeats an Adamastor
+; give them X5 Singularity Mechanics
+
+@IF
+UnitKilled
+Defender Only
+unit=Adamastor
+attacker=anybody
+defender=Barbarians
+@THEN
+JustOnce
+Text
+An ancient device of awe-inspiring power has been defeated.
+^
+Researchers studying recordings of the battle and the few
+remains of the "guardian" weapon have found intriguing data
+that hint at a previously unsuspected branch of physics.
+^
+Any civilization that attacks and destroys one of these
+devices should be able to research into this new physics.
+EndText
+@ENDIF
+
+@IF
+UnitKilled
+Defender Only
+unit=Adamastor
+attacker=anybody
+defender=Barbarians
+@THEN
+GiveTechnology
+technology=97
+receiver=triggerattacker
+@ENDIF
+
+; when any tribe defeats an Urdar
+; give them X6 Wormhole Generation
+
+@IF
+UnitKilled
+Defender Only
+unit=Urdar
+attacker=anybody
+defender=Barbarians
+@THEN
+JustOnce
+Text
+One of the ancient "creatures" that seemingly guard the planet
+Nona from colonization attempts has been destroyed.
+^
+Whatever means the strange defender used to transport from place
+to place left an unusual residual subatomic vibration signature.
+Scientists are confident that research into this phenomenon will
+lead to great leaps forward in the physical sciences.
+^
+Any civilization that attacks and destroys one of these creatures
+should become able to research previously unknown topics.
+EndText
+@ENDIF
+
+@IF
+UnitKilled
+Defender Only
+unit=Urdar
+attacker=anybody
+defender=Barbarians
+@THEN
+GiveTechnology
+technology=98
+receiver=triggerattacker
+@ENDIF
+
+; when any tribe defeats a Dondasch
+; give them X7 Wormhole Control
+
+@IF
+UnitKilled
+Defender Only
+unit=Dondasch
+attacker=anybody
+defender=Barbarians
+@THEN
+JustOnce
+Text
+Forces have stopped a destructive, giant being of unknown design,
+composition, and origin. Its destruction is not assured, however,
+as it might have escaped by as yet unexplainable means.
+^
+Just before disappearing, the incredible device seemed to generate
+and control a confined space-time incongruity in several dimensions.
+Experts suggest that this might have been an attempt to escape,
+perhaps a successful one. Nearby detectors gathered plenty of data,
+and further study of the effect could have untold benefits.
+^
+Any civilization that attacks and destroys one of these beings should
+gain access to new avenus of science.
+EndText
+@ENDIF
+
+@IF
+UnitKilled
+Defender Only
+unit=Dondasch
+attacker=anybody
+defender=Barbarians
+@THEN
+GiveTechnology
+technology=99
+receiver=triggerattacker
+@ENDIF
+
+;
+; Research Win
+; ------------
+
+; warn player when Penultimum and Transfer Gate are extant
+; and it becomes possible to research Earthgate
+
+; Set Flag 1 when any tribe
+; gets Penultimum (The)
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=82
+@THEN
+Flag
+Who=TriggerReceiver
+Flag=1
+Continuous
+State=Set
+@ENDIF
+
+; Set Flag 2 when any tribe
+; gets Transfer Gate (X2)
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=94
+@THEN
+Flag
+Who=TriggerReceiver
+Flag=2
+Continuous
+State=Set
+@ENDIF
+
+; present warning when both flags are set
+
+@IF
+CheckFlag
+Who=Everybody
+Mask=0b00000000000000000000000000000110
+State=Set
+@THEN
+JustOnce
+Text
+^^The race to complete the Earthgate has begun!
+^
+The ability to create Penultimum, combined with Transfer Gate technology,
+makes it possible to construct a wormhole with twin openings, connecting
+Lalande 21185 (this planetary system) with the Solar system. Ships going
+through would be instantly translated into Earth orbit!
+^
+All scientific efforts are being funneled into Earthgate research.
+Whatever civilization completes this project will be the first to reach Earth,
+and will be able to control access to the wormhole gate thereafter.
+EndText
+@ENDIF
+
+; when any tribe discovers Earthgate (Tac)
+; end the game and play the relevant AVI
+
+@IF
+ReceivedTechnology
+receiver=anybody
+technology=81
+@THEN
+JustOnce
+Text
+^^The EarthGate has been opened!
+^
+A small group of ships has set on a diplomatic mission--to return to the home
+world from which our human ancestors sprang and re-open relations with them.
+^
+Perhaps someday, with Earth technology added to ours, we will be able to send
+emissaries to the home planet of our non-human ancestors, as well.
+EndText
+PlayAVIFile
+Scene11.avi
+EndGame
+endscreens=yes
+@ENDIF
+
+@ENDEVENTS

@@ -1,0 +1,1067 @@
+;
+;   CIVILIZATION CITY LIST
+;   Huis Clos/Lalande 21185 Science Fiction Game
+;   Copyright (c)1999 by MicroProse Software
+;
+;   This file can be altered at your own risk to change
+;   the default names for cities.  Keep in mind that
+;   altering the contents of this file may cause your game
+;   to malfunction.
+;
+;   City names may contain no more than 15 characters.
+;
+
+@Cadre
+Fox Base
+Camp Drake
+Post Six
+Station Zero
+Hannibal
+Caesar
+Greensward
+Exchange
+Archimedes
+Fort Prompt
+Base Gamma
+Honor
+Strength
+Nod Outpost
+Regiment
+Eisenhower
+Sparks
+Thach
+Fusion Town
+Yamamoto
+Discipline
+Mechanicsburg
+Potts Field
+Roosevelt
+Six Principles
+Montgomery
+Dodds Base
+Calamity
+Parker
+Harris Field
+Falcon Park
+Hawk City
+Petersburg
+Griffin
+Kestrel
+Last DItch
+Fawkes
+Murphy
+Pournelle
+Gloria Mundi
+@STOP
+
+@Ellecor
+Nang
+Muelle
+Dachcor
+Punnani
+Sieg'an
+Haelle
+Pin Tac
+Tolloc
+Torth'an
+Dun Hip
+Bebben
+Ben Hip
+Song'an
+Rena'lan
+Men Tac
+Nin Goreng
+Teng
+Pol'ung
+Tessa
+Mamot
+Bessing'an
+Wach
+Pen Lan'an
+Bell
+Sin Glan
+Telling'an
+Northda
+Dona'lan
+Swelang
+Ha Tigg
+Taciti
+Broth'an
+Colenang
+Brig
+Kilasni
+Rarap
+Bef'on
+Darand'an
+Semo
+Jano'lan
+@STOP
+
+@True Colony
+Earthbase 1
+Newhome
+Bella Vista
+Lane Park
+Edgar Hills
+Beverly
+Tang's Wash
+Oldfield
+Seven Streams
+Socrates Bluff
+Edelweiss
+Wagneria
+Makersburg
+Neu Oslo
+Camel Peak
+Jutenecht
+High Point
+Cookston
+Penelope
+Ed's Orchard
+Florence
+Perfection
+Griffin's Rest
+Klein City
+Catalonia
+Oakenton
+Genomia
+Sagan's Rock
+Gordon Village
+Nova Medina
+Weng's Branch
+Olive
+Fraziertown
+Denada
+Venturia
+Kilofski
+Dexter City
+Poignant
+Eldersburg
+Zapata
+@STOP
+
+@Grau
+Grau-bat
+Rah-tic
+Cap-tic
+Shu'pen
+Nod-bat
+Kli-sho
+Ment'pen
+Pik-sho
+Ahwe-bat
+Joru-sho
+Gen'pen
+Bok-tic
+Non-tic
+Chur'pen
+Opa-bat
+Ret-sho
+Wre-bat
+Baan'pen
+Ror-bat
+Loli-tic
+Ghoi'pen
+Fani'pen
+Fron-sho
+Jio-tic
+Waw-tic
+Asha-bat
+Cre-sho
+Hot'pen
+Ton-tic
+Dint'pen
+Tabi-bat
+Kon-bat
+Cho'pen
+Min-tic
+Okal-bat
+Hit'pen
+Pop'pen
+Oli-sho
+Grik-bat
+Sidi-tic
+@STOP
+
+@Clerisy
+Elder Lodge
+The Temple
+Sanctorum
+Initiatus
+Seven
+Hidden City
+Forbidding
+Megiddo
+Ar-pinchus
+Perigroso
+Templara
+Philosovo
+Feracci
+Denurral
+Catatonia
+Masonia
+Brinville
+Teregon
+New Seven
+Candor
+Rosicru
+Grapholalia
+Long Haul
+Qui Rin
+Pontificarum
+Breakaway
+Dataramp
+Wheffer
+Alleform
+Higgs
+Caesarea
+Dhalhaus
+October
+Nova Fenris
+Nonagona
+Heironymous
+Altair Garden
+Paradigm
+Gaiana
+Eight
+@STOP
+
+@Iihibati
+Iihi
+Ioaia
+Welata
+Batiohi
+Tarcha
+Auioi
+Mistem Chio
+Vachiohi
+Plou
+Uaeo
+Whiolo
+Chohachi
+Aasn
+Oeaio
+Hutalahu
+Tem Vachi
+Woonagg
+Eieio
+Defteli
+Acbati
+Fetan
+Yohihi
+Oon
+Nohihi
+Iolop
+Hiyoyu
+Ewo
+Wasayani
+Ven Shuki
+Yaiahu
+Rendo
+Napowasa
+Rikdosi
+Oi Yohi
+Tiktemi
+Callahayi
+Pala
+Ha Ioha
+Nsanomi
+Loloti
+@STOP
+
+@Engineers
+Origin Point
+Alpha Town
+Beta Town
+Gamma Town
+Delta Town
+Feynman City
+Oppenheimer
+Expansion
+Urbs Novum
+Pelucid
+Thuviana
+Pig's Retreat
+Mantissa
+Faraday
+Lyman Alpha
+Peregrination
+Simplicity
+Evesham
+Ford Heights
+New Barstow
+Bodisatva
+Ill Wind
+Maxwell
+Hell's Pantry
+Stickley
+Epsilon
+Yakima
+Wednesday
+Nova Sophia
+Occam
+Firedance
+Morphitria
+Proteopolis
+Shapesong
+Winding Tree
+Littledale
+Xenomark
+Lenticula
+Cydon
+Dragonia
+@STOP
+
+@Star Officers
+Star City
+Outpost One
+Second Outpost
+Valerian
+Orion Station
+Comet Town
+Meteor City
+Planetville
+Moonburg
+Stellar Village
+Rocket Center
+Peenemunde
+Verne City
+van Allentown
+von Braunberg
+Obergopolis
+Tsiolkofsky
+Leyland
+Bonestell
+Mercuria
+Venus Town
+Mars City
+Jupiterville
+Saturnalia
+Uranopolis
+Neptune City
+Pluto Station
+Europa
+Callisto
+Io City
+Ganymede
+Luna City
+Deimos
+Phobos
+Enceladas
+Mimas
+Charon
+Triton
+Titania
+Aphrodite
+@STOP
+
+@Ponn Jahr
+Cittrah
+Torman
+Emmenee
+Tiqor
+Slephi
+Roo
+Qit Rah
+Tarwapee
+Chitru
+Meg Ponnee
+Copith
+Dar
+Khitow
+Sitponn
+Fom
+Tirgon
+Nopala
+Cat Fraa
+Liw
+Korr
+Mag Fratee
+Pola
+Saegee
+Kitoree
+Ropith
+Missa
+Jiree
+Ternesh
+Garit
+Mighoee
+Ket Yop
+Rahree
+Peddun
+Turgidee
+Calment
+Chop
+Mogotee
+Reisee
+Saddath
+Cihtona
+@STOP
+
+@Funesti
+Funestia
+Lalande
+Gatewood
+Ursa
+Flamsteed
+Huygens
+Herschel
+Piazzi
+Fabricius
+Bode
+Mayrberg
+Jacqueline
+Lagrange
+Hevelius
+Tombaugh
+Dreyerville
+Kuiper
+Copernica
+Lyot
+Schiaparelli
+Mercator
+Naumachiala
+Draper
+Leverrier
+Lowell
+Baade
+Laplace
+Olbers
+Wright
+de la Caille
+Lockyer
+Cassini
+Galle
+Nona City
+Christy
+Oberth
+Messier
+Hale
+Bessel
+Mitchell
+@STOP
+
+@Vallan
+Hepcotivai
+Cor ban Mov
+Tifoth Cor
+Cobantesha
+Abanco Rhal
+Tchar Co'
+Avallanico
+Larco Tar
+T'ofer Cor
+Pacor Nog
+Sto Ban Co
+Wareco
+Colulundi
+Din Ekco
+Tibosh Pacor
+Ash'cor
+Tirec Cor
+Kisco Tiah
+Riwoco
+Codaresi
+Ben'cor
+Co Nipaba
+Tillen Cor
+Hannco
+Aheptico
+Atibosh Cor
+Pa'cor Tish
+Tiwarco
+Con pa Con
+Deng'cor
+Tisu Pa'cor
+Incoprak
+Fothco Tifoth
+Tico Jala
+Lavilco
+Vallani Cor
+Timencor
+Manti Cor
+Hellascor
+Bin Ticor
+@STOP
+
+@Seekers
+Utopia
+Wayside
+Erewhon
+Portage
+Xanadu
+Pitstop
+El Dorado
+Pause
+Shangri-La
+Jacobs Rest
+Arcadia
+Detour
+Quivira
+Wrong Way
+Laputa
+Janes Path
+Cockaigne
+Reckoning
+Tir-na-n'Og
+Off Track
+Goshen
+Dead End
+Agapemone
+Pass Through
+Cibola
+Witsend
+Eden
+Exchange
+Avalon
+Truckstop
+Paradise
+Beaten Path
+Atlantia
+Cloverleaf
+Never-Never
+Lost Again
+Canaan
+Spur
+Perelandra
+Backtrack
+@STOP
+
+@Det Pin
+Ostrakahn
+Yunadi
+Segglot
+Krat
+Mephen
+Pillan
+Tolimar
+Chenkata
+Ortuga
+Trong
+Frentok
+Nunti
+Tran Dott
+Lok
+Hark Dott
+Upar
+Pollnita
+Err Gard
+Jammet
+Fleen
+Wassin
+Abalee
+Yotupan
+Daraka
+Brezzle
+Zeferd
+Nimpiki
+Fedrik
+Gher
+Hasting
+Iolandi
+Czern
+Demmet
+Istog
+Cink
+Limulat
+Ploon
+Gorus
+Ridda
+Bovit
+@STOP
+
+@Uridians
+Ceres
+Leonidas
+Ida
+Aquarides
+Gaspra
+Ariesana
+Mathilde
+Sagittarion
+Dactyl
+Geminidus
+Kalliope
+Tauridia
+Pallas
+Cancrii
+Juno
+Libridus
+Vesta
+Virgididus
+Astraea
+Piscidar
+Hebe
+Capricida
+Iris
+Scorpiida
+Flora
+Vulpecula
+Metis
+Andromeda
+Hygiea
+Orion City
+Parthenope
+Pleideton
+Victoria
+Bootesville
+Egeria
+Draconis
+Irene
+Indii
+Eunomia
+Magellanium
+@STOP
+
+@Enclave
+Oogonium
+Gameta
+Nooville
+Intron
+Procaryon
+Mendel
+Eucarya
+Anthera
+Energida
+Basidium
+Coenocyl
+Zygo City
+Syncyton
+Eumitosia
+Mitochonia
+Diaster
+Golgi
+Exona
+Ribo
+Telophasa
+Vacuolia
+Chromonema
+Pili
+Desmata
+Flagella
+Centriole
+Xyloburg
+Sporocarp
+Karyosoma
+Zoetica
+Allele
+Glair
+Haploid
+Enata
+Diploides
+Xenocliny
+Operon
+De Vries
+Codonia
+Galton
+@STOP
+
+@Selephon
+Wegma
+Tloon
+Seleph
+Eleyon
+Killee
+Reledon
+Bennet
+Doshen
+Grannet
+Minnit
+Gennet
+Pegett
+Din Wegi
+Pentar
+Fon Wegi
+Politec
+Sheb
+Werma
+Jolup
+Siglai
+Triggi
+Ashendi
+Phontar
+Wara Wegi
+Fig Wegi
+Kleber
+Honna
+Vestupi
+Exrack
+Wilchron
+Lonnet Sag
+Chu Wegi
+Yui Commet
+Smag Topp
+Riffen Wegi
+Herple
+Demark Sag
+Sfet
+Sperl Ont
+Chibu Wegi
+@STOP
+
+@Liberests
+Freedom
+Liberty
+Jones' Farm
+Billburg
+Potter
+Myway
+Nueva Iago
+Thomasville
+Quixote
+Green Enough
+Put It Here
+North River
+Flight
+New Eureka
+Misery
+Adams City
+Stockwood
+Utopia
+Erewhon
+Kingman
+Fenstown
+Stuckland
+Watson Park
+Sequence
+Vigils Peak
+Cytosinia
+Number 19
+Crickton
+Lilith Pond
+Dantes Rest
+Alanina
+Griffniana
+Hallowed
+Guaninia
+Mutania
+Progress
+Tyrosino
+Prosperity
+Halliday
+Change
+@STOP
+
+@Jilda
+Osa Jild
+Sabang
+Ghina
+Jilisa
+Rhollsa
+Chinchin
+Plosa
+Fissa'sa
+Ansa Mehi
+Savesh
+Dai Sa
+Jid
+Mehsa
+Ratanha
+Veshangi
+Enghine
+Angjil
+Iktapesh
+Osjiy
+Bergor
+Jorrisa
+Shissita
+Chrep
+Wran Sa Tow
+Gikk
+Oslilo
+Hollsa
+Sajor
+Opand
+Kevisa
+Osmeng
+Lillosa
+Giysa
+Lottinsa
+Eva
+Ovesh
+Quisa'sa
+Rensee
+Killisa
+Bellen
+@STOP
+
+@Sciolists
+Uncertain
+Jarlsburg
+Gehenna
+Youngston
+Questionable
+Marienburg
+Haight
+Smolensk
+Unproven
+Pittston
+Barstow
+Denton
+Mysterious
+Paris
+Eugene
+Wigner
+Misunderstood
+Postern
+Oberon
+Falstaff
+Skeptical
+Allegory
+London
+Beijing
+Post Hoc
+Timor
+Slim Butte
+Pleisio
+Irrational
+Oak
+Berlin
+Mandolina
+Unreasoned
+York
+Xinha
+Bologna
+Speculative
+Wooster
+Hampstead
+Chekov
+@STOP
+
+@Ka Rhee
+Kekirhee
+Dakirhee
+Pachirhee
+Thungirhee
+Tetirhee
+Lhotirhee
+Kho'irhee
+Pontirhee
+Stacirhee
+Imi'irhee
+Taqirhee
+Oftirhee
+Peghirhee
+Yotirhee
+Sakirhee
+Oka'irhee
+Tchakirhee
+Umchirhee
+Pa'irhee
+Lancirhee
+Qesirhee
+Elkirhee
+Hakirhee
+Rektirhee
+Chotirhee
+Phatirhee
+Utecirhee
+Aachirhee
+Opocirhee
+Plikirhee
+Inotirhee
+Chelirhee
+Gokirhee
+Fra'irhee
+Toffirhee
+Geghirhee
+Fektirhee
+Okirhee
+Cri'irhee
+Pikirhee
+@STOP
+
+@Observers
+Pharos
+Querista
+Interloc
+Belvedere
+Zetetia
+Delvoton
+Point Lookout
+Pellate
+Heurisma
+Espial
+Lab 3-A
+The Institute
+Dekko
+Skeptinium
+Allentown
+Squiz
+Kurtz
+Recce
+Coign
+Ekaterina
+Quodlibet
+Worm's Eye
+Invest
+Martin Gardens
+Argusia
+Munimento
+Randiburg
+Inquirendo
+Probandi
+Corrob
+Scrutiny
+Pyrron
+Evinca
+Perlustra
+Adducium
+Nuncupatia
+Indaga
+Apodictin
+Minimifid
+Once Over
+@STOP
+
+@Sectoids
+Cydonia
+Pyramids
+Death Zone
+Mutonia
+Silacoidis
+Etherea
+Chryssalin
+Sectopodia
+Celatid Town
+Abductio
+Cruusha
+Alpha
+Beta
+Gamma
+Delta
+Sigma
+Iota
+Omega
+Pi
+Phi
+Theta
+Nu
+Mu
+Lambda
+Epsilon
+Xi
+Zebulon
+Piscataway
+Whomp
+Ortho
+Heptalor
+Splig
+Mnemosyne
+Caffiene
+Kalliope
+Euterpe
+Polyhymnia
+Arythmia
+Protuberance
+Splut
+@STOP
+
+@Ethereals
+Uhl
+Taormino
+Thomas
+Delucia
+Bowling
+Reis
+Rizzo
+Bilger
+Crawley
+Cloutier
+Bradshaw
+Frazier
+Kirk
+Cromer
+Knopf
+Laskowski
+Kathman
+Bell
+Corcoran
+Strader
+Clark
+Frawley
+Basignani
+Keidel
+Garcia
+Cameron
+Morel
+Vivirito
+Howard
+Ellis
+Mycka
+Shenton
+Miller
+Paquin
+Goodlet
+Spanburg
+Dubose
+Taylor
+Tranter
+Possidente
+@STOP
+
+@EXTRA
+Polyploid
+Omniforma
+Minerva
+Hecate
+Nowhere
+Faraway
+Beachhead
+Base Camp
+Camp Elsa
+Station 6
+Alliance
+Dusenberry
+East Frump
+West Frump
+Morphola
+Oliphant
+Wicked
+Farmington
+North Evans
+Tick River
+South Evans
+Beverly
+Severna
+Jennifer
+Olivia
+Angela
+Fleur
+Monique
+Nova Point
+Veronica
+Touchdown
+Therese
+Four Corners
+Dolores
+Anytown
+Belinda
+Third york
+Leanna
+Denton
+Normandy
+@STOP
+
+
+@BARBARIANS
+17
+Drik
+Effoph
+Hax
+Neph Tel
+Pentim
+Loloi
+Section 4
+Sprang
+Glutons
+Ban-Chi
+Qert Horde
+Ittigrau
+Pel-Oci
+Krach
+Smerch
+Ii Pah Nima
+Colou
+
+@end

@@ -1,0 +1,87 @@
+
+  // banana (fruit)
+
+  0x00000000, // ban00.bmp    0
+  0x00000481, // ban01.bmp    1
+  0x0000091c, // ban02.bmp    2
+
+  // buffalo
+
+  0x00000de3, // buf00.bmp    3
+  0x000011e8, // buf01.bmp    4
+  0x000015bb, // buf02.bmp    5
+
+  // fish
+
+  0x0000197c, // fis00.bmp    6
+  0x00001e73, // fis01.bmp    7
+  0x000023a6, // fis02.bmp    8
+
+  // furs
+
+  0x000029ef, // fur00.bmp    9
+  0x00002e02, // fur02.bmp    10
+  0x000031e1, // fur03.bmp    11
+
+  // gems
+
+  0x0000355c, // gem00.bmp    12
+  0x00003977, // gem01.bmp    13
+  0x00003dd4, // gem02.bmp    14
+  0x000041e3, // gem03.bmp    15
+
+  // gold
+
+  0x000045f6, // gol00.bmp    16
+  0x00004ceb, // gol01.bmp    17
+  0x000053e0, // gol02.bmp    18
+  0x00005ad5, // gol03.bmp    19
+
+  // oasis
+
+  0x000061ca, // oas00.bmp    20
+  0x00006a93, // oas01.bmp    21
+  0x0000730e, // oas02.bmp    22
+
+  // oil
+
+  0x00007b4d, // oil00.bmp    23
+  0x00007e10, // oil01.bmp    24
+  0x000081c3, // oil02.bmp    25
+  0x00008638, // oil03.bmp    26
+
+  // oxen (game)
+
+  0x00008b7f, // ox00.bmp     27
+  0x00008ee0, // ox01.bmp     28
+  0x00009229, // ox02.bmp     29
+
+  // pheasant
+
+  0x0000953a, // phe00.bmp    30
+  0x000098a7, // phe01.bmp    31
+  0x00009c0c, // phe02.bmp    32
+
+  // spice
+
+  0x00009f59, // spi00.bmp    33
+  0x0000a1e0, // spi01.bmp    34
+  0x0000a491, // spi02.bmp    35
+
+  // walrus (ivory)
+
+  0x0000a730, // wal00.bmp    36
+  0x0000aa4d, // wal01.bmp    37
+  0x0000ad40, // wal02.bmp    38
+
+  // whales
+
+  0x0000b021, // wha00.bmp    39
+  0x0000b426, // wha01.bmp    40
+  0x0000b87d, // wha02.bmp    41
+
+  // wheat
+
+  0x0000bd38, // whe00.bmp    42
+  0x0000ce6d, // whe01.bmp    43
+  0x0000dfa2, // whe02.bmp    44

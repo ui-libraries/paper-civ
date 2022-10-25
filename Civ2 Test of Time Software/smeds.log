@@ -1,0 +1,8 @@
+******************** SMEDS LOG *********************
+File Output to: smeds.log
+SMEDS32 Version: 2.0.0        
+
+(    0) 1.1.0  Test of Time  07-Sep-99
+(    0) 
+(    0) Disconnecting from network:
+(    0)    XD_ResetLibrary();

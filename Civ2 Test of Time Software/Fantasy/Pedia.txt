@@ -1,0 +1,660 @@
+;
+;   CIVILIZATION CIVILOPEDIA TEXT
+;   Copyright (c) 1995 by MicroProse Software
+;
+;   Altering the contents of this file may cause the
+;   game to malfunction.
+;
+
+@PEDIAPICKCIV
+@width=540
+@columns=3
+@listbox
+@title=Civilopedia: Civilization Advances
+
+@PEDIACIV
+@width=480
+@title=Civilization Advance
+^^%STRING0
+^
+
+
+@PEDIACIVFACTS
+^Allows government form of same name.
+^Allows miners/dwarves to build fortresses.
+^Allows miners/dwarves to build elevated platforms.
+^Allows settlers to build ley lines.
+^Allows settlers to develop settled lands.
+^Increases the effect of temples.
+^Increases the effect of arenas.
+^Worth bonus points in Civilization score.
+^Increases ship movement rates by one.
+^Improves Great Siege Engine performance by 25%.
+^Free civ. advance for first civ. to discover.
+^Decreases the effect of Monasteries.
+^Cancels the effect of
+
+
+@PEDIAPICKUNIT
+@width=540
+@columns=3
+@listbox
+@title=Civilopedia: Unit Types
+
+@PEDIAUNIT
+@width=480
+@title=Unit Type
+^^%STRING0
+^
+
+@PEDIAUNITFACTS
+^Can see units two spaces away.
+^Ignores enemy Zones of Control.
+^Can make amphibious landings.
+^Invisible to most enemy ships.
+^Can attack flying units in the air.
+^May be lost out of sight of land.
+^Ignores City Walls.
+^Can carry friendly flying units.
+^Can make levitations.
+^Treats all squares as road squares.
+^Defense +50% versus units with a movement factor of 2.
+^Only Goblins can build Troll; only Infidels can build Berserker.
+^Destroyed after attacking.
+^Defense +100% versus flying units.
+^Can spot enemy submersibles in adjacent squares.
+
+
+@PEDIAPICKGOVT
+@width=480
+@listbox
+@title=Civilopedia: Governments
+
+
+@PEDIAPICKIMPROVE
+@width=540
+@columns=3
+@listbox
+@title=Civilopedia: City Improvements
+
+@PEDIAIMPROVE
+@width=480
+@title=City Improvement
+^^%STRING0
+^
+
+@;Palace
+@PEDIAIMPROVE1
+Eliminates corruption and waste in the city,
+and decreases it in all nearby cities.
+
+@;Barracks
+@PEDIAIMPROVE2
+City produces Veteran ground units. Ground units can
+be completely repaired in a single turn.
+
+@;Granary
+@PEDIAIMPROVE3
+Only half of city's food store is depleted when
+city increases in size.
+
+@;Temple
+@PEDIAIMPROVE4
+Up to two discontented citizens are made content.
+
+@;Marketplace
+@PEDIAIMPROVE5
+Increases tax and luxury output by 50%.
+
+@;Library
+@PEDIAIMPROVE6
+Increases magic output by 50%.
+
+@;Courthouse
+@PEDIAIMPROVE7
+Decreases corruption by 50%. Makes city more resistant
+to bribery by enemy skalds and fairies. Under Greatlaw,
+one content citizen becomes happy.
+
+@;City Walls
+@PEDIAIMPROVE8
+Units in city are tripled on defense versus ground attacks.
+
+@;Aqueduct
+@PEDIAIMPROVE9
+Allows city to increase beyond size 8.
+
+@;Bank
+@PEDIAIMPROVE10
+Increases tax and luxury output by an
+additional 50% (cumulative w/ Bazaar).
+
+@;Cathedral
+@PEDIAIMPROVE11
+Makes four unhappy citizens content (Three after 
+discovering the Commune).
+
+@;University
+@PEDIAIMPROVE12
+Increases magic output by an additional
+50% (cumulative w/ Sage's Library).
+
+@;Mass Transit
+@PEDIAIMPROVE13
+Eliminates corrosion caused by population.
+
+@;Colosseum
+@PEDIAIMPROVE14
+Three unhappy citizens are made content
+(four w/ Aether Control (fantasy)/The Song of Dreya (Midgard)).
+
+@;Factory
+@PEDIAIMPROVE15
+Increases resource production in city by 50%.
+
+@;Mfg. Plant
+@PEDIAIMPROVE16
+Increases resource production by an additional 50%
+(cumulative w/ Forge).
+
+@;SDI Defense
+@PEDIAIMPROVE17
+Protects everything within three spaces of
+the city from fireball attack.
+
+@;Recycling Center
+@PEDIAIMPROVE18
+Decreases the corrosion caused by forges.
+
+@;Power Plant
+@PEDIAIMPROVE19
+Increases forge output by 50%.
+
+@;Hydro Plant
+@PEDIAIMPROVE20
+Increases forge output by 50%.  Less corrosive
+than the Staff Of Power, and generally safer than
+the Nexus.
+
+@;Nuclear Plant
+@PEDIAIMPROVE21
+Increases forge output by 50%.  Less corrosive than
+than the Staff Of Power (like the Alchemical Guild), 
+but there is a risk of self destruction unless you 
+have discovered the incombustible energy of dragon 
+fire through Dragon Study.
+
+@;Stock Exchange
+@PEDIAIMPROVE22
+Increases tax and luxuries output by an additional
+50% (cumulative with Bazaar and Counting House for 
+a grand total of 150%).
+
+@;Sewer System
+@PEDIAIMPROVE23
+Allows city to grow beyond size 12.
+
+@;Supermarket
+@PEDIAIMPROVE24
+Allows squares in the city's radius with
+the "settled lands" improvement (irrigated twice)
+to produce 50% more food.
+
+@;Superhighways
+@PEDIAIMPROVE25
+All squares in the city's radius with roads
+(or ley lines) produce 50% more trade.
+
+@;Research Lab
+@PEDIAIMPROVE26
+Increases magic output by an additional 50%
+(cumulative with Sage's Library and Wizard's Tower
+for a grand total of 150%).
+
+@;SAM Missile Battery
+@PEDIAIMPROVE27
+Units in city are doubled on defense against
+flying units and thunderbolts.
+
+@;Coastal Fortress
+@PEDIAIMPROVE28
+Units in city are doubled on defense against
+shore bombardment by enemy ships.
+
+@;Solar Plant
+@PEDIAIMPROVE29
+Increases forge output by 50%.  Cleaner
+than all other forms of power.
+
+@;Harbor
+@PEDIAIMPROVE30
+All ocean squares in the city's radius
+produce one extra unit of food.
+
+@;Offshore Platform
+@PEDIAIMPROVE31
+All ocean squares in the city's radius
+produce one shield.
+
+@;Airport
+@PEDIAIMPROVE32
+City produces veteran flying units.
+Any flying unit spending its entire turn in the city
+is completely restored to health.
+Permits direct movement between cities on the same map. 
+
+@;Police Station
+@PEDIAIMPROVE33
+Decreases unhappiness caused by soldiers away from city by 1.
+
+@;Port Facility
+@PEDIAIMPROVE34
+City produces veteran ships.
+Any ship spending its entire turn in the city is
+completely repaired.
+
+@;Transporter
+@PEDIAIMPROVE35
+Permits direct movement between cities on different maps. 
+
+@;SS Structural
+@PEDIAIMPROVE36
+Forms the framework of your great siege engine.
+
+@;SS Component
+@PEDIAIMPROVE37
+BOILERS: Each boiler adds 12.5% to the siege engine's power. 
+Thus, at most, 8 boilers can be fitted onto the siege engine.
+FUEL: Each cell provides enough fuel to power one boiler.
+
+@;SS Module
+@PEDIAIMPROVE38
+MECHANICS: Each module improves the accuracy of one weapon module.
+WEAPON: Each module increases the amount of damage the siege engine
+can inflict. Four modules is lethal.
+MOBILITY: Each module provides wheeled support for two other
+armaments.
+
+@;Capitalization
+@PEDIAIMPROVE39
+Converts production into trade.
+
+@;Pyramids
+@PEDIAIMPROVE40
+Counts as a Storehouse in every one of your cities.
+
+@;Hanging Gardens
+@PEDIAIMPROVE41
+One extra happy citizen in every city.
+
+@;Colossus
+@PEDIAIMPROVE42
+City produces one extra trade arrow in each square that
+already produces one.
+
+@;Lighthouse
+@PEDIAIMPROVE43
+Longboats can move across oceans w/o danger, and all other
+types of ship have their movement rate increased by one.
+Also, all new ships you produce receive veteran status.
+
+@;Great Library
+@PEDIAIMPROVE44
+Civilization receives any civilization advance
+already discovered by two other civilizations.
+
+@;Oracle
+@PEDIAIMPROVE45
+Doubles the effect of all of your temples.
+
+@;Great Wall
+@PEDIAIMPROVE46
+Enemy civilizations must offer cease-fire/peace
+in negotiations. Acts like a city wall in each of 
+your cities. Combat strength doubled against
+barbarians.
+
+@;Sun Tzu's War Academy
+@PEDIAIMPROVE47
+All new ground troops produced gain Veteran status.
+Any unit which wins a combat gains Veteran status.
+
+@;King Richard's Crusade
+@PEDIAIMPROVE48
+Every square in the city's radius produces an extra
+resource "shield".
+
+@;Marco Polo's Embassy
+@PEDIAIMPROVE49
+You receive a free embassy with every rival Civilization (so
+your intelligence report will always be complete and you will
+receive updates when other civilizations discover technologies).
+
+@;Michelangelo's Chapel
+@PEDIAIMPROVE50
+Counts as a Monastery in each of your cities.
+
+@;Copernicus' Observatory
+@PEDIAIMPROVE51
+Doubles total magic of city.
+
+@;Magellan's Expedition
+@PEDIAIMPROVE52
+Movement rate of all ships is increased by two.
+
+@:Shakespeare's Theatre
+@PEDIAIMPROVE53
+All unhappy citizens in city are content.
+
+@;Da Vinci's Workshop
+@PEDIAIMPROVE54
+Whenever one of your units becomes obsolete because of a new
+technology you have discovered, it is immediately replaced
+by an equivalent modern unit.
+
+@;J.S. Bach's Cathedral
+@PEDIAIMPROVE55
+Decreases unhappy citizens on same continent by 2 per city.
+
+@;Isaac Newton's College
+@PEDIAIMPROVE56
+Doubles the output of each of the three magic improvements 
+- Sage's Library, Wizard's Tower, and Alchemy Laboratory -
+in city. 
+
+@;Adam Smith's Trading Co.
+@PEDIAIMPROVE57
+Pays the maintenance for all city improvements which
+ordinarily cost 1 gold per turn.  City improvements
+requiring more than 1 gold per turn maintenance are not
+affected.
+
+@;Darwin's Voyage
+@PEDIAIMPROVE58
+Two free civilization advances.
+
+@;The Statue of Liberty
+@PEDIAIMPROVE59
+Eliminates the period of unrest between governments.
+Also allows any form of government to be chosen, even if
+the proper advance has not been discovered.
+
+@;The Eiffel Tower
+@PEDIAIMPROVE60
+When you first obtain control of the Angelic Monument,
+every civilization's attitude toward you is immediately shifted 25 points
+in your favor (on a hundred point scale).  Attitudes continue to improve
+gradually over time.  Other civilizations are also quicker to forget your
+past transgressions.
+
+@;Women's Suffrage
+@PEDIAIMPROVE61
+Counts as a Dungeon in every one of your cities.
+(Decreases unhappiness caused by troops away from city by 1).
+
+@;Hoover Dam
+@PEDIAIMPROVE62
+Provides Alchemical Guild Power to every city on every continent.
+
+@;Manhattan Project
+@PEDIAIMPROVE63
+Allows Fireballs to be invoked.
+
+@;United Nations
+@PEDIAIMPROVE64
+^* Free embassy with every other civilization.
+^* Enemy civ's cannot refuse your peace treaties.
+^* Under Greatlaw, you can declare war 50% of the time
+^  (peacekeeping missions).
+
+@;Apollo Program
+@PEDIAIMPROVE65
+Allows construction of great siege engine improvements. The gods
+reveal the worlds to everyone.
+
+@;SETI Program
+@PEDIAIMPROVE66
+Counts as an alchemy laboratory in every one of your cities; 
+effectively doubles your magic output.
+
+@;Cure for Cancer
+@PEDIAIMPROVE67
+One extra happy citizen in each city.
+
+@PEDIAGOVT
+@width=600
+@title=Civilization: Governments
+The form of government you choose for your civilization will
+affect the way resources are distributed in your cities, the
+rate at which your citizens can produce and sustain new units
+and city improvements, and the extent to which your citizens
+have a say in the way you govern them.
+^
+Some forms of government, such as Despotism, Monarchy, and
+later Communes and Fanaticism, allow you to expand
+rapidly, to produce and sustain large numbers of military
+units, and to control your affairs completely.
+^
+Greatlaw and Althing, on the other hand, give your
+citizens the freedom to produce vast amounts of trade, which
+increases your wealth and knowledge rapidly. On the other
+hand, your citizens may grow unhappy when you send military
+units out of your cities; also, your Council may try to
+interfere in your conduct of foreign affairs.
+^
+To change your civilization's government, you must have a
+Revolution--select "Revolution" from the Kingdom Menu.  This
+will entail a brief period of Anarchy.
+
+@PEDIAGOVT0
+@width=600
+@title=Civilization Government: Anarchy
+Anarchy represents not so much a government type as the
+lack of any stable government. Anarchy occurs when your
+civilization's government falls, or when you decide to
+have a Revolution. After a few turns of Anarchy, you will
+be able to reconstitute your government.
+^
+Anarchy is similar to Despotism, except that the corruption
+rate is VERY HIGH (see entry for Despotism).  However, no
+taxes are collected during a period of Anarchy, and no
+scientific research is conducted.
+
+@PEDIAGOVT1
+@width=600
+@title=Civilization Government: Despotism
+^UNIT SUPPORT
+Each unit above the city size costs one shield per turn.
+Settlers eat one food per turn.
+^
+^HAPPINESS
+Up to three military units in each city will institute
+"martial law", converting an unhappy citizen into a content
+citizen.
+^
+^CORRUPTION AND WASTE
+Despotism has a HIGH rate of corruption and waste.  The
+level of corruption in a particular city is based on its
+distance from your capital.
+^
+^SPECIAL
+Under a Despotism, none of the magic/tax/luxury rates may
+be set higher than 60%.  ALSO, ANY SQUARE WHICH WOULD ORDINARILY
+PRODUCE THREE OR MORE OF A RESOURCE (FOOD, SHIELDS, TRADE) PRODUCES
+ONE LESS.
+^
+^HINTS
+Because of Despotism's high rate of corruption, it is almost
+always an inferior form of government.  Try to switch to a
+Monarchy as soon as possible.
+
+
+@PEDIAGOVT2
+@width=600
+@title=Civilization Government: Monarchy
+^UNIT SUPPORT
+Each unit beyond the third costs one shield per turn.
+Settlers eat one food per turn.
+^
+^HAPPINESS
+Up to three military units in each city will institute
+"martial law", converting an unhappy citizen into a content
+citizen.
+^
+^CORRUPTION AND WASTE
+Monarchy has a MODERATE rate of corruption and waste.  The
+level of corruption in a particular city is based on its
+distance from your capital.
+^
+^SPECIAL
+Under a Monarchy, none of the magic/tax/luxury rates may
+be set higher than 70%.
+^
+^HINTS
+Monarchy is an excellent form of government for a young
+civilization.
+
+
+@PEDIAGOVT3
+@width=600
+@title=Civilization Government: Communes
+^UNIT SUPPORT
+Each unit beyond the third costs one shield per turn.
+Settlers eat one food per turn.
+^
+^HAPPINESS
+Up to three military units in each city will institute
+"martial law", converting *TWO* unhappy citizens into
+content citizens (so a total of SIX unhappy citizens can
+be suppressed).
+^
+^CORRUPTION AND WASTE
+Under Communes, state control of the economy eliminates
+crime.  Your cities, therefore, experience no corruption.
+^
+^SPECIAL
+All Faires produced under Communes are given VETERAN status.  
+Under Communes, none of the magic/tax/luxury rates may be 
+set higher than 80%.
+^
+^HINTS
+Communes is best for large, far-flung empires which need
+to maintain a large military.  Use your powerful fairies to
+steal technology from the other races.
+
+@PEDIAGOVT4
+@width=600
+@title=Civilization Government: Fanaticism
+^UNIT SUPPORT
+Can support up to EIGHT units for free; additional
+units cost one shield each.  Settlers eat two
+food per turn.  ONLY the goblin and infidel races can
+become fanatical and ONLY Goblins may produce the fanatical
+Trolls.
+^
+^HAPPINESS
+Under Fanaticism, NO CITIZEN IS EVER UNHAPPY!
+^
+^CORRUPTION AND WASTE
+Fanaticism has a LOW rate of corruption.
+However, Fanaticism has the special disadvantage that
+all MAGIC is HALVED.
+^
+^SPECIAL
+Improvements which convert unhappy citizens to
+content citizens (Temples, etc.)
+produce "tithes" equal to the number of citizens they would
+otherwise convert.  They also require no maintenance.
+The diplomatic penalties for "terrorist acts" committed by
+your skalds and fairies are reduced.
+Under Fanaticism, none of the magic/tax/luxury rates may
+be set higher than 80%.
+^
+^HINTS
+Fanaticism eliminates all happiness problems and provides
+an excellent revenue.  Magic research tends to languish.
+
+
+@PEDIAGOVT5
+@width=600
+@title=Civilization Government: Althing
+^UNIT SUPPORT
+Each unit costs one shield per turn.  Settlers eat TWO
+food per turn.
+^
+^HAPPINESS
+Each military unit AFTER THE FIRST which is not in a friendly
+city (or a fortress within 3 spaces of a friendly city)
+causes one citizen in its home city to become unhappy.
+^
+^CORRUPTION AND WASTE
+Althing has a LOW rate of corruption and waste.  The
+level of corruption in a particular city is based on its
+distance from your capital.
+^
+^SPECIAL
+Under Althing, each square which ordinarily produces at
+least one unit of trade produces an extra unit.
+None of the magic/tax/luxury rates may be set higher
+than 80%.
+^
+^HINTS
+Switching to Althing can give an astounding boost to your
+magic and tax revenues, although you'll probably have to
+divert some of your trade to luxuries.  It becomes more
+difficult (and expensive) to keep an army in the field, but
+carving the Glyph of Understanding can help with this
+problem.
+
+@PEDIAGOVT6
+@width=600
+@title=Civilization Government: Greatlaw
+^UNIT SUPPORT
+Each unit costs one shield per turn.  Settlers eat TWO
+food per turn.
+^
+^HAPPINESS
+Each unit which is not in a friendly
+city (or a fortress within 3 spaces of a friendly city)
+causes TWO citizens in its home city to become unhappy.
+^
+^CORRUPTION AND WASTE
+Greatlaws experience NO corruption or waste.
+^
+^SPECIAL
+Under Greatlaw, each square which ordinarily produces at
+least one unit of trade produces an extra unit.
+The units and cities under Greatlaw are immune to BRIBERY
+of all forms.
+The magic/tax/luxury rates may be set to any level
+desired.
+^
+^HINTS
+Greatlaws can produce spectacular amounts of revenue and
+scientific research.  However, because of the severe
+happiness restrictions on military units, this form of
+government tends to be viable only for large, advanced
+civilizations.  Increasing your luxuries rate and building
+Wonders can help alleviate this problem.
+
+@;This line must remain at the end of this file!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

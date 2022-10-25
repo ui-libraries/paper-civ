@@ -1,0 +1,377 @@
+;
+;   CIVILIZATION AUTO ADVICE
+;   Test of Time SF Game
+;   Copyright (c) 1999 by MicroProse Software
+;
+;   Altering the contents of this file may cause the
+;   game to malfunction.
+;
+
+@MILITARY
+@width=225
+@title=Military Advisor
+@x=5
+@y=5
+
+@DOMESTIC
+@width=225
+@title=Domestic Advisor
+@x=-5
+@y=5
+
+@SCIENCE0
+@width=250
+@title=Science Advisor
+@x=-5
+I recommend we research %STRING0.
+
+@SCIENCE1
+@width=250
+@title=Science Advisor
+@x=-5
+I recommend we develop %STRING0 so
+that we can build:
+
+@SCIENCE2
+@width=250
+@title=Science Advisor
+@x=-5
+I recommend we research %STRING0 so
+that we can someday learn:
+
+
+
+@
+@@Temple
+The people are unhappy.
+We should build an %STRING0.
+
+@
+@@Colosseum
+The people grow restless.
+Let us appease them with a 
+%STRING0.
+
+@
+@@Cathedral
+The people are discontent.
+Perhaps a %STRING0 will
+distract them.
+
+@
+@@Barracks
+Our armies cannot be effective
+without proper training!
+We should build a %STRING0
+to produce veteran ground units
+and repair damaged units quickly.
+
+@
+@@Port Facility
+We should build a %STRING0
+to produce veteran naval units
+and repair damaged ships quickly.
+
+@
+@@Airport
+We should build an %STRING0
+to produce veteran air units
+and repair damaged units quickly.
+
+@
+@@Granary
+We should build a %STRING0
+to encourage city growth.
+
+@
+@@Supermarket
+Why are we allowing food to
+rot in the fields? Let us
+build a %STRING0 to reap what
+we have sown!
+
+@
+@@Harbor
+The people grow hungry.  Let
+us build an %STRING0 to harvest
+the ocean's bounty.
+
+@
+@@MarketPlace
+Our society is data-poor. Let us build a
+%STRING0 to collect and store data more
+efficiently.
+
+@
+@@Bank
+Our economy is stagnant.  We should
+build an %STRING0 to stimulate it.
+
+@
+@@Stock Exchange
+Let us build a %STRING0 and grow
+data-rich through robotics!
+
+@
+@@Superhighways
+Our economy is suffering from the
+fatigue of the population. We should
+build a %STRING0 at once!
+
+@
+@@Library
+Wisdom, not might, is our greatest asset.
+Let us build a %STRING0, that we
+might increase our knowledge.
+
+@
+@@University
+In the long run, information processing will be
+the key to success. Let us build an %STRING0
+forthwith.
+
+@
+@@Research Lab
+We should build a %STRING0 to
+accelerate our rate of discovery.
+
+@
+@@Courthouse
+We must not tolerate carelessness and
+petty mistakes!  I suggest we build
+a %STRING0 to protect our data.
+
+@
+@@City Walls
+This city is virtually defenseless!
+We should build %STRING0 at once!
+
+@
+@@Coastal Fortress
+@@SAM Missile Battery
+We should install the %STRING0
+to protect our city.
+
+@
+@@Aqueduct
+The people thirst for stable communities!
+We should establish a %STRING0 so that our
+city can grow.
+
+@
+@@Sewer System
+The streets are covered with filth!
+We should build a %STRING0 system
+so that our city can grow.
+
+@
+@@Mass Transit
+@@Recycling Cntr.
+We must build a %STRING0
+before we choke on our own waste!
+
+@
+@@Factory
+@@Manufacturing Plant
+@@Power Plant
+@@Hydro Plant
+@@Nuclear Plant
+@@Solar Plant
+We are falling behind in productivity!
+Let us quickly build a %STRING0.
+
+@
+@@Offshore Platform
+We must exploit the wealth of the seas!
+Let us build a %STRING0.
+
+@
+@@SDI Defense
+We should build a %STRING0, just in case.
+
+@
+@@SS Structural
+@@SS Component
+@@SS Module
+We should build a %STRING0
+to further our attempt to
+return to Earth.
+
+@
+@@Settlers
+We should build a %STRING0
+or Nidus to colonize this
+continent.
+
+@
+@@Engineers
+We need an %STRING0 or Melior
+to develop this continent.
+
+@
+@@Warriors
+@@Pikemen
+Our cities are vulnerable to attack.
+Let us build units to defend them.
+
+@
+@@Musketeers
+@@Riflemen
+We need more military units
+to defend our nation.
+
+@
+@@Fanatics
+We must gain control of %STRING0
+to defend our beliefs!
+
+@
+@@Phalanx
+@@Mech. Inf.
+We should build strong military
+units to defend our cities.
+
+@
+@@Legion
+We should build mighty %STRING0s
+and rule the known world!
+
+@
+@@Archers
+We should train our men with
+weapons, for Guardians are
+the basis of our military forces.
+
+@
+@@Alpine Troops
+We should build the %STRING0
+to defend our cities and attack
+our enemies.
+
+@
+@@Chariot
+Let us take to the offensive! I
+suggest we build an %STRING0.
+
+@
+@@Catapult
+With a %STRING0 we could penetrate
+enemy strong points.
+
+@
+@@Helicopter
+We should build a mobile
+attack force of %STRING0s.
+
+@
+@@Cannon
+@@Howitzer
+We should build a %STRING0
+and break our enemies' spirits!
+
+@
+@@Bomber
+@@Stlth Bmbr.
+Let us build the %STRING0 and
+blast our enemies back to the Stone Age!
+
+@
+@@Elephant
+We should build a %STRING0
+to savage our enemies!
+
+@
+@@Crusaders
+We should build a %STRING0
+to sting our enemies!
+
+@
+@@Fighter
+@@Stlth Ftr.
+We need the %STRING0 to
+defend our skies!
+
+@
+@@Knights
+@@Dragoons
+@@Cavalry
+We should build a %STRING0
+to punish our enemies.
+
+@
+@@Marines
+@@Paratroopers
+We should build a %STRING0 to
+outflank our enemies in space.
+
+@
+@@Armor
+@@Artillery
+@@Partisans
+Let us build the %STRING0 and
+teach our enemies a lesson!
+
+@
+@@Trireme
+@@Caravel
+@@Galleon
+@@Explorer
+We should build %STRING0s
+to explore the world.
+
+@
+@@Horsemen
+We should gain control of an
+%STRING0 to surprise our enemies.
+
+@
+@@Frigate
+@@Ironclad
+@@Destroyer
+@@Cruiser
+@@Battleship
+@@Submarine
+@@AEGIS Cruiser
+We should build the %STRING0
+to firm up our dominion.
+
+@
+@@Carrier
+@@Transport
+@@Cruise Msl.
+@@Default
+We should build a %STRING0.
+
+@
+@@Nuclear Msl.
+Perhaps it's time for a disintegrator
+weapon.
+
+@
+@@Diplomat
+We should build an %STRING0
+or Mediary to make contact with
+other civilizations and steal
+their secrets.
+
+@
+@@Spy
+We should build a %STRING0
+to play dirty tricks on our
+enemies.
+
+@
+@@Caravan
+@@Freight
+We should build at least one
+%STRING0 to set up data transfer
+routes with faraway cities.
+
+@
+@@Wonder
+Let us undertake a great project
+for the glory of our civilization,
+%STRING0!
+
+@
+

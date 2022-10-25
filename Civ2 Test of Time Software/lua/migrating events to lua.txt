@@ -1,0 +1,477 @@
+With Lua scripting, scenario designers can finally replace the Test of Time macro language with a full-scale language. Of course, this offers endless new possibilities previously unthought of, but the first thing many designers would like to do is to migrate their familiar events to the unfamiliar Lua scripting language and the `civ` library (the library containing the bindings to interact with the game). This document describes replacement functionality for the macro language in Lua.
+
+========
+Triggers
+========
+
+AlphaCentauriArrival
+--------------------
+Use `civ.scen.onCentauriArrival`. The callback receives the arriving tribe as parameter. For replacement of the `size` parameter, use the components of `tribe.spaceship`.
+
+@IF
+AlphaCentauriArrival
+race=anybody
+size=3
+@THEN
+...
+
+civ.scen.onCentauriArrival(function (tribe)
+  if tribe.spaceship.habitation >= 3 and tribe.spaceship.lifesupport >= 3 then
+    ...
+  end
+end)
+
+
+BribeUnit
+---------
+Use `civ.scen.onBribeUnit`. The callback receives the unit and the previous owner as parameters (`unit.owner` points to the bribing tribe).
+
+@IF
+BRIBEUNIT
+who=ANYBODY
+whom=BARBARIANS
+unittype=56
+@THEN
+...
+
+civ.scen.onBribeUnit(function (unit, previousOwner)
+  if unit.type.id == 56 and previousOwner.id == 0 then
+    ...
+  end
+end)
+
+
+CheckFlag
+---------
+Replaced by operators and variables.
+
+
+CityDestroyed
+-------------
+Use `civ.scen.onCityDestroyed`. The callback receives the city that is destroyed.
+
+@IF
+CITYDESTROYED
+city=Rot
+owner=Barbarians
+@THEN
+...
+
+civ.scen.onCityDestroyed(function (city)
+  if city.name == "Rot" and city.owner.name == "Barbarians" then
+    ...
+  end
+end)
+
+
+CityProduction
+--------------
+Use `civ.scen.onCityProduction`. The callback receives the city and the produced item (unit, improvement or wonder) as parameters. Use one of the civ.isX functions to test the type of the produced item. Test `city.owner` as the replacement for `builder`.
+
+@IF
+CITYPRODUCTION
+builder=anybody
+unit=Shuttle
+@THEN
+...
+
+civ.scen.onCityProduction(function (city, prod)
+  if civ.isUnit(prod) and prod.type.name == "Shuttle" then
+    ...
+  end
+end)
+
+
+CityTaken
+---------
+Use `civ.scen.onCityTaken`. The callback receives the city and the defending tribe as parameters (`city.owner` refers to the attacking tribe, the trigger runs after capture).
+
+@IF
+CITYTAKEN
+city=Oldgrange
+attacker=ANYBODY
+defender=Humans
+@THEN
+...
+
+civ.scen.onCityTaken(function (city, defender)
+  if city.name == "Oldgrange" and defender.name == "Humans" then
+    ...
+  end
+end)
+
+
+Negotiation
+-----------
+Replaced by `civ.scen.onNegotiation`. The callback receives the talking and listening tribes. Return `true` to allow negotiation, `false` to disallow. This can completely replace complex talker/listenermasks and the Negotiator action with just a few lines:
+
+@IF
+Negotiation
+talkermask=0b00000000000101010110101011010101
+listenermask=0b00000000000010101001010100101010
+@THEN
+@ENDIF
+
+@IF
+Negotiation
+talkermask=0b00000000000010101001010100101010
+listenermask=0b00000000000101010110101011010101
+@THEN
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=14
+@THEN
+Negotiator
+who=triggerreceiver
+type=talker
+state=clear
+@ENDIF
+
+@IF
+ReceivedTechnology
+Receiver=Anybody
+Technology=14
+@THEN
+Negotiator
+who=triggerreceiver
+type=listener
+state=clear
+@ENDIF
+
+
+local isAlien = function (tribe) return tribe.id % 2 == 0 end
+
+civ.scen.onNegotiation(function (talker, listener)
+  local xeno = civ.getTech(14)
+  return isAlien(talker) == isAlien(listener) or
+    talker:hasTech(xeno) or listener:hasTech(xeno)
+end)
+
+
+NoSchism
+--------
+Use `civ.scen.onSchism`. The callback receives the tribe that is about to split up. Return `true` to allow the schism, `false` to disallow.
+
+@IF
+NOSCHISM
+DEFENDER=anybody 
+@THEN
+@ENDIF
+
+civ.scen.onSchism(function (tribe)
+  return false
+end)
+
+
+RandomTurn
+----------
+Use `civ.scen.onTurn` in combination with math.random.
+
+@IF
+RANDOMTURN
+denominator=20
+@THEN
+...
+
+civ.scen.onTurn(function (turn)
+  if math.random(1, 20) == 20 then
+    ...
+  end
+end)
+
+
+ReceivedTechnology
+------------------
+Normally, you'd use the `civ.scen.onTurn` callback in combination with one of the following tests. For receiver=anybody, use the `researched` property of a tech. For a specific receiver, use `tribe:hasTech(tech)`. For the number of future techs, use tribe.futureTechs.
+
+@IF
+RECEIVEDTECHNOLOGY
+receiver=Humans
+technology=38
+@AND
+RECEIVEDTECHNOLOGY
+receiver=Anybody
+technology=44
+@THEN
+...
+
+civ.scen.onTurn(function (turn)
+  local humanTribe = civ.getTribe(2)
+  if humanTribe:hasTech(civ.getTech(38)) and civ.getTech(44).researched then
+    ...
+  end
+end
+
+
+ScenarioLoaded
+--------------
+Use `civ.scen.onScenarioLoaded`. The callback takes no parameters. Useful for restoring state after loading.
+
+@IF
+SCENARIOLOADED
+@THEN
+...
+
+civ.scen.onScenarioLoaded(function ()
+  ...
+end)
+
+
+Turn
+----
+Use `civ.scen.onTurn`. The callback receives the turn as parameter.
+
+@IF
+TURN
+turn=10
+@THEN
+...
+
+civ.scen.onTurn(function (turn)
+  if turn == 10 then
+    ...
+  end
+end)
+
+
+TurnInterval
+------------
+Use `civ.scen.onTurn` in combination with the modulo operator.
+
+@IF
+TURNINTERVAL
+interval=4
+@THEN
+...
+
+civ.scen.onTurn(function (turn)
+  if turn % 4 == 0 then
+    ...
+  end
+end)
+
+
+UnitKilled
+----------
+Use `civ.scen.onUnitKilled`. The callback receives the defending and attacking units as parameters.
+
+@IF
+UNITKILLED
+map=0
+unit=Warriors
+attacker=Anybody
+defender=Barbarians
+@THEN
+...
+
+civ.scen.onUnitKilled(function (defender, attacker)
+  if defender.type.name == "Warriors" and
+     defender.z == 0 and
+     defender.owner.name == "Barbarians" then
+    ...
+  end
+end)
+
+
+=======
+Actions
+=======
+
+BestowImprovement
+-----------------
+For improvements, call `city:AddImprovement(improvement)` or `city:RemoveImprovement(improvement)`. For wonders, set `wonder.city`:
+
+local city = civ.getCurrentTile().city
+local granary = civ.getImprovement(3)
+local wonder = civ.getWonder(1)
+
+city:AddImprovement(granary)
+wonder.city = city
+
+city:RemoveImprovement(granary)
+wonder.city = nil
+
+
+ChangeMoney
+-----------
+Set the `money` property of a tribe, e.g.:
+
+tribe = civ.getTribe(1)
+tribe.money = tribe.money + 1000
+
+
+ChangeTerrain
+-------------
+Set the `terrainType` property of a tile to the index of the desired terrain type, e.g.:
+
+tile = civ.getCurrentTile()
+tile.terrainType = 1
+
+
+CreateUnit
+----------
+You can either use the low-level `civ.createUnit(unittype, tribe, tile)`, which will just create the unit, but does no checks to see if the unit is actually allowed on the specified tile, or alternatively you can use `civlua.createUnit(unittype, tribe, locations, options)`, which implements all the options and checks of the original CreateUnit action:
+
+unit = civ.createUnit(civ.getUnitType(2), civ.getCurrentTribe(), civ.getCurrentTile())
+
+civlua = require("civlua")
+units = civlua.createUnit(civ.getUnitType(2), civ.getCurrentTribe(), {{0, 0, 0}, {1, 1, 0}, {2, 2, 0}}, {count=3, randomize=true, veteran=true})
+
+
+DestroyACivilization
+--------------------
+Use `tribe:kill()`:
+
+civ.getTribe(0):kill()
+
+
+EnableTechnology
+----------------
+Use `tribe:enableTechGroup(techGroup, value)`, which takes a tech group (0-7) (see @LEADERS2) and a tech code (0-2) (0 = can research, can own, 1 = can't research, can own, 2 = can't research, can't own):
+
+civ.getCurrentTribe():enableTechGroup(civ.getTech(99).group, 0)
+
+
+EndGame
+-------
+Call `civ.endGame(endscreens)`. The endscreens parameter (`true` or `false`) is the same as in the EndGame action.
+
+
+EndGameOverride
+---------------
+Use the `civ.scen.onGameEnds` event. The callback receives the reason the game is ending (space ship arrives (1 and 2), conquest (3), game over (4), retiring (5), from a call to civ.endGame (6)). Return true to end the game, false to keep playing:
+
+civ.scen.onGameEnds(function (reason)
+  return reason ~= 5 or civ.getGameYear() > 2100
+end)
+
+
+Flag
+----
+Flags are replaced by variables. For continuous flags, make sure you persist them in your local state table.
+
+
+GiveTechnology
+--------------
+Use `tribe:giveTech(tech)`. To set the number of future technologies the tribe has researched, set `tribe.futureTechs`:
+
+tribe = civ.getCurrentTribe()
+tribe:giveTech(civ.getTech(21))
+tribe.futureTechs = 3
+
+
+MakeAggression
+--------------
+Use either `civ.makeAggression`, which does exactly the same as the original action. Or set `tribe.treaties[anotherTribe]` for low-level control over treaties. For example, you can make peace with the Barbarians:
+
+civ.getCurrentTribe().treaties[civ.getTribe(0)] = 0x405
+
+
+ModifyReputation
+----------------
+Set `tribe.reputation[otherTribe]`, `tribe.attitude[otherTribe]` or `tribe.betrayals`.
+
+
+MoveUnit
+--------
+Set `unit.gotoTile` to make the unit move to the specified tile programatically, which does pretty much the same thing as the MoveUnit action. Or use `civ.teleportUnit(unit, tile)`, a low-level function to put the unit on the tile without any cost to movement points or regard for location.
+
+civ.getActiveUnit().gotoTile = civ.getTile(0, 0, 0)
+
+civ.teleportUnit(civ.getCurrentTile().units(), civ.getTile(0, 0, 0))
+
+
+Negotiator
+----------
+Unnecessary, since there are no negotiation flags anymore. The return value of the `onNegotiation` callback determines if negotiation is allowed or not.
+
+
+PlayAviFile
+-----------
+Use `civ.playVideo(filename)`.
+
+
+PlayCDTrack
+-----------
+Use `civ.playCDTrack(trackID)`, or with the DirectShow Music patch enabled, also `civ.playCDTrack(filename)`, where filename is relative to the `Music` directory.
+
+
+PlayWaveFile
+------------
+Use `civ.playSound(filename)`.
+
+
+TakeTechnology
+--------------
+Use `tribe:takeTech(tech, collapse=false)`. The first parameter is the technology to take away, the optional `collapse` parameter determines whether to take away all techs that have `tech` as a prerequisite somewhere up the tree.
+
+
+Text
+----
+Use `civ.ui.text(text)`. For an equivalent to 'No Broadcast', check if the triggering tribe is a human player.
+
+if tribe.isHuman then
+  civ.ui.text("Some text")
+end
+
+
+Transport
+---------
+Set `unittype.nativeTransport`, `unittype.buildTransport` or `unittype.useTransport`. These are the masks as in columns D-F in @UNITS_ADVANCED. To allow engineers to build transport relationship 10:
+
+local engineer = civ.getUnitType(1)
+engineer.buildTransport = engineer.buildTransport | (1 << 10)
+
+
+=========
+Modifiers
+=========
+
+Continuous
+----------
+Not really necessary as such. To persist values put them in a state table, and make sure that this table is serialized.
+
+
+Delay
+-----
+To delay actions, just write it yourself, as long as you make sure the counter is serialized:
+
+civ.scen.onTurn(function (turn)
+  if state.delay > 0 then
+    state.delay = state.delay - 1
+  end
+
+  if state.delay == 0 then
+    doSomeAction()
+  end
+end)
+
+
+JustOnce
+--------
+
+Use civlua.justOnce or implement it yourself. civlua.justOnce takes a property holding a boolean and a callback as parameters:
+
+civlua.justOnce(civlua.property(someTable, "key"), function ()
+  ...actions...
+end)
+
+justOnce invokes .get() on the property, when this returns false, it runs the callback and invokes .set(true) on the property. When .get() returns true, does nothing. For example:
+
+local state = {someEventHappened = false}
+local justOnce = function (key, f) civlua.justOnce(civlua.property(state, key), f) end
+...
+if someEvent then
+  justOnce("someEventHappened", function ()
+    doSomeAction()
+  end)
+end
+
+Now, if someEvent occurs, the key `someEventHappened` is checked in `state`. If this is still false, it runs the callback, which runs `doSomeAction`. After this, `state.someEventHappened` will be true, so it won't be run again.
+
+Randomize
+---------
+Used as an option to randomize locations in civlua.createUnit. Use math.random for other situations.

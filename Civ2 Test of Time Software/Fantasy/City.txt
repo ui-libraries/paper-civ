@@ -1,0 +1,267 @@
+;
+;   CIVILIZATION CITY LIST
+;   Copyright (c) 1997 by MicroProse Software
+;
+;   This file can be altered at your own risk to change
+;   the default names for cities.  Keep in mind that
+;   altering the contents of this file may cause your game
+;   to malfunction.
+;
+;   City names may contain no more than 15 characters.
+;
+
+@ELVES
+Goldleaf
+Edgetown
+Forest Glade
+Oak Citadel
+Riverton
+Over the Water
+Splashing Falls
+Sparkling Sprig
+Leafy Vale
+Woodtown
+Underroot
+Elf Haven
+Babbling Brook
+Leaffrost
+Treetown
+Gnomebane
+Brompton
+Rivulet
+Freshet
+Stone Ring
+Treebranch
+Lichen
+@STOP
+
+@STYGIANS
+Doomsday
+Crackodoom
+Lava Pits
+Dreary Haven
+Inferno
+Walpurgisnacht
+Hades
+Gallows Hill
+Perdition
+Tarpeian Rock
+Bottomless Pits
+Tyburn Tree
+Helhole
+Brocken Mtn
+Nightscree
+Crooked Nook
+Sulfur Springs
+Miasmic Swamp
+Phosphorus Falls
+Polucca's Place
+Firestorm
+Underroot
+@STOP
+
+@GOBLINS
+Grympen Mire
+Roilnboil
+Empty Caverns
+Howln'growl
+Goblintown
+Holeinthewall
+Tarpits
+Bellyache
+Hoptoad
+Stalagtite
+Boogyman
+Trollbridge
+Nightmarch
+Greetn'eat
+The Warrens
+Stinktown
+Chrispy Boal
+Sizzlington
+Hopn'lop
+Merry Mines
+Stonegate
+Twistn'turn
+@STOP
+
+@HUMANS
+Oldgrange
+Newbridge
+Nottingham
+Hastings
+Canterbury
+Coventry
+Warwick
+Newcastle
+Oxford
+Liverpool
+Dover
+Brighton
+Norwich
+Leeds
+Reading
+Birmingham
+Richmond
+Exeter
+Cambridge
+Gloucester
+Manchester
+Bristol
+Leicester
+Carlisle
+Ipswich
+Portsmouth
+Berwick
+Westness
+Jarrow
+Skara
+Ravning Enge
+@STOP
+
+@INFIDELS
+Rot
+Krakatorum
+Tamerlaine
+Speartown
+War Camp
+War Marches
+Raiding Camp
+Temujin
+Yurt
+Warcry
+Oglatai
+Tulughma
+Samarkand
+Bokhara
+Nishapur
+Tamerlane
+Kashgar
+Tabriz
+Aleppo
+Karakorum
+Kabul
+Ormuz
+Basra
+Khanbalyk
+Khorasan
+Shangtu
+Kazan
+Quinsay
+Kerman
+@STOP
+
+@BUTEOS
+Eagle's Aerie
+Mistral City
+Falcon Perch
+Winged Fortress
+Kestrel Plains
+Gyrfalcon Stoop
+Eagle's Nest
+Osprey Ledge
+Hawktown
+Accipiter Falls
+Miss Peregrine
+Condor Crag
+Rooks' Roost
+Ravens' Perch
+Mountain Crest
+Merlin Pinnacle
+Scudding Zephyr
+Ah Eagles
+Celestial City
+Carmarthen
+Caernarfon
+Tintagel
+Caerphilly
+Rhymney
+Iona
+Rhondda
+Illauntanig
+Merthyr
+Tara
+Rhayader
+Dinas Emrys
+Llanelli
+Maesteg
+Neath
+@STOP
+
+@MERFOLK
+Atlantis
+Seaview
+Dolphin Run
+Atollia
+Coral Beach
+Reef Haven
+Nautilus
+Cephalopod City
+Hammerhead
+Neptune's Hill
+Sharktown
+Squalus Point
+Orcinus
+Grampus Cay 
+Kelpie
+Birka
+Jarlshof
+Sigtuna
+Odense
+Lunde
+@STOP
+
+@EXTRA
+Aachen
+Trier
+Armagh
+Kells
+Reims
+Lindesfarne
+Hedeby
+Kaupang
+Gotland
+Hollingstedt
+Vinland
+Gokstadt
+Trelleborg
+Trondheim
+Uppsala
+Hladir
+Aarhus
+Viborg
+Roskilde
+The Udal
+Lindholm
+Jorvik
+@STOP
+
+@BARBARIANS
+Wolf Clan
+Bear Clan
+Tiger Clan
+War Clan
+Badger Clan
+Dragon Clan
+Griffin Clan
+Oliphant Clan
+Southerons
+Scythians
+Tartars
+Parthians
+Golden Horde
+Huns
+Visigoths
+Ostrogoths
+Sueves
+Avars
+Vandals
+Alans
+Bulgars
+Magyars
+Frisians
+Picts
+Langobardi
+
+
+@end

@@ -1,0 +1,33 @@
+@SCENARIO
+@width=500
+@title=%STRING0
+^^Length: %STRING1 to %STRING2
+^
+^^THE EPIC OF MIDGARD 
+^
+^      Volsang was frozen solid in his fortress in the far south of Midgard. Everyone 
+^knew that he had been like this for a very long time - inasmuch as his frightful 
+^story had been told forever. They knew he had once been very much alive, very 
+^terrifying, and at the point of enslaving the world to his will when the brave Dreya 
+^fortuitously discovered the spell that imprisoned him forever. 
+^      Over the centuries the terror had faded into complacency and now his name only 
+^frightened children at bedtime. What no one realized was that their forefathers' 
+^victory hadn't been quite as complete as they believed and that the terror was about 
+to return.
+^
+^Your goal is to destroy the re-awakening, evil wizard Volsang before he can escape
+^the spell. You can succeed by either
+^1. Conquering the world and, thereby, uniting the power of the races to successfully 
+^overcome Volsang; or
+^2. Building the ultimate weapon, the Great Siege Engine, that can expel Volsang from all 
+^planes of existence; or 
+^3. Locating Bifrost, the rainbow bridge that connects Midgard with Asgard, the home of 
+^the gods. They will then help you defeat Volsang.
+^It is common belief that you can only find Bifrost by intense research into the magic arts
+^or by completion of several tasks set before you by the gods as a test of your 
+^worthiness.
+^NOTE: Don't rename your capital city if you care about these events working properly. 
+^
+@end -- this line must be here!
+
+
