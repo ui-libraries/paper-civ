@@ -1,0 +1,133 @@
+;
+;   CIVILIZATION MAIN MENU
+;   Copyright (c) 1995 by MicroProse Software
+;
+;   Altering the contents of this file may cause the
+;   game to malfunction.
+;
+;   Medieval Millennium mod for Civ2ToT, by Knighttime
+;   Last updated: 11/20/2020 5:21:58 PM
+;
+
+@GAME
+&Game
+Game &Options|Ctrl+O
+Graphic O&ptions|Ctrl+P
+City R&eport Options|Ctrl+E
+Multiplayer Options
+Game Profile
+Select Music
+Press Ctrl+S to Save Game|Ctrl+S
+&Load Game|Ctrl+L
+Join Game
+Set Password
+Change Timer
+&Retire|Ctrl+R
+&Quit|Ctrl+Q
+
+@KINGDOM
+&Kingdom
+Press Shift+T to Set Tax Rate|Shift+T
+Find &City|Shift+C
+&Revolution|Shift+R
+
+@VIEW
+&View
+Mo&ve Pieces|v
+&View Pieces|v
+&Zoom In|z
+Zoom Out|x
+Max Zoom In|Ctrl+Z
+Standard Zoom|Shift+Z
+Medium Zoom Out|Shift+X
+Max Zoom Out|Ctrl+X
+Show Map &Grid|Ctrl+G
+Arrange Windows
+Show Hidden &Terrain|t
+&Center View|c
+Toggle Map Layout
+Toggle City Layout
+
+@ORDERS
+&Orders
+&Build New City|b
+Build &Road|r
+&Irrigate|i
+&Mine/Woodcut|m
+Terraf&orm|o
+Build &Airbase|e
+Build Teleporter|j
+Build Castle|f
+Automate Settler|k
+Cleanse &Plague|p
+&Pillage|Shift+P
+&Unload|u
+&Go To|g
+&Paradrop|p
+Air&lift|l
+Teleport|n
+Set &Home City|h
+&Fortify|f
+&Sleep|s
+&Disband|Shift+D
+&Activate Unit|a
+&Wait|w
+Skip Turn|Space
+End Player Tur&n|Ctrl+N
+
+@ADVISORS
+&Advisors
+Chat with Kings
+Press F1 for Chief Justiciar (Production)|F1
+Constable|F2
+Chancellor|F3
+Chief Justiciar (Morale)|F4
+Press F5 for Treasurer|F5
+Press F6 for Archbishop|F6
+Casualty Timeline
+
+@WORLD
+&World
+Wonders of the World|F7
+Five Leading Cities|F8
+Civilization Score|F9
+Demographics|F11
+Atlantic Fleets|F12
+
+@CHEAT
+&Cheat
+Toggle Cheat Mode|Ctrl+K
+Create &Unit|Shift+F1
+Reveal &Map|Shift+F2
+Set &Human Player|Shift+F3
+Set Turns Elapsed|Shift+F4
+&Kill Civilization|Shift+F5
+Te&chnology Advance|Shift+F6
+&Edit Technologies|Ctrl+Shift+F6
+Force &Government|Shift+F7
+Change &Terrain At Cursor|Shift+F8
+Destro&y All Units At Cursor|Ctrl+Shift+D
+Change Money|Shift+F9
+Edit Unit|Ctrl+Shift+U
+Edit City|Ctrl+Shift+C
+Edit King|Ctrl+Shift+K
+Scenario Parameters|Ctrl+Shift+P
+Save As Scenario|Ctrl+Shift+S
+
+@MAP
+&Map
+Toggle Cheat Mode|Ctrl+K
+&Select Map|Ctrl+Shift+1
+&Import Map|Ctrl+Shift+2
+&Export Map|Ctrl+Shift+3
+
+@PEDIA
+&Civilopedia
+&Advances (Techs)
+&Improvements
+&Wonders
+&Unit Types
+&Governments
+&Terrain Types
+Medieval Millennium &Concepts
+Scen&ario Credits

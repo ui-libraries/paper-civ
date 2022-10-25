@@ -1,0 +1,4 @@
+The following two wav files should be placed into your main Sound folder:
+
+JETCRASH.wav	; this wav file is to prevent aircraft crash sound when forts are destroyed
+Winter.wav	; this wav file replaces the original sound which had a harsher winter sound

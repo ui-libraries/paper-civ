@@ -1,0 +1,350 @@
+;
+;   CIVILIZATION AUTO ADVICE
+;   Copyright (c) 1995 by MicroProse Software
+;
+;   Altering the contents of this file may cause the
+;   game to malfunction.
+;
+;   Medieval Millennium mod for Civ2ToT, by Knighttime
+;   Last updated: 11/20/2020 5:21:58 PM
+;
+
+@MILITARY
+@width=250
+@title=Military Advisor
+@x=15
+@y=75
+
+@DOMESTIC
+@width=250
+@title=Domestic Advisor
+@x=-15
+@y=75
+
+@SCIENCE0
+@width=250
+@title=Research Advisor
+@x=-15
+I recommend that we study %STRING0.
+
+@SCIENCE1
+@width=250
+@title=Research Advisor
+@x=-15
+I recommend that we research %STRING0
+since this will enable us to build
+
+@SCIENCE2
+@width=250
+@title=Research Advisor
+@x=-15
+I recommend that we learn about %STRING0
+since this will provide a foundation for future
+research into topics such as
+
+
+@
+@@Barracks
+We should build a %STRING0 to increase our chances of producing veteran land units in this city, and to help injured or damaged units regain full strength more quickly.
+
+@
+@@Grist Mill §
+We should seek to build a Grist Mill in order to increase the health and population growth of this city.
+
+@
+@@Basilica
+A %STRING0 would make unhappy citizens in this city content, by giving them a place to worship.
+
+@
+@@Marketplace
+The sale and exchange of goods is vital to our economy. Let's build a %STRING0 right away.
+
+@
+@@Monastery §
+If we establish a Monastery nearby, the Monks will gather and store many ancient writings to help us in our research.
+
+@
+@@Magistrate's Office
+We should establish a @STRING0 to keep better records and prevent the local lords from taking undue advantage of others.
+
+@
+@@City Walls
+We should build %STRING0 here to strengthen our defenses. Safe citizens are productive citizens!
+
+@
+@@Market Town Charter
+Without a %STRING0, this city is unlikely to grow much larger.
+
+@
+@@Textile Mill
+This city would generate significantly more tax income and luxury goods if it had a %STRING0.
+
+@
+@@Romanesque Cathedral
+@@Gothic Cathedral
+We should build a grand %STRING0 to glorify God and increase the contentment of our citizens.
+
+@
+@@Cathedral School
+@@University
+If we build a %STRING0, we can gather teachers and educate our young people, which will increase the research output of this city.
+
+@
+@@Sewer Conduits
+The stench in this city is unbearable, and outbreaks of disease are common. %STRING0 should help on both fronts, and might even protect us from a major plague strike!
+
+@
+@@Wood/Stone Craftsmen §
+More Wood/Stone Craftsmen would generate Materials for production in this city.
+
+@
+@@Foundry §
+Metal weapons, tools, and finished goods would provide a boost to productivity. Perhaps we could even build a Foundry?
+
+@
+@@Hospital
+A %STRING0 would always help treat the sick and injured, but would be especially valuable if this city is ever struck by a major plague.
+
+@
+@@Wind Mill
+@@Water Mill
+Mill power is required for many advanced city improvements. We should build a %STRING0 right away.
+
+@
+@@Bank
+We should build a %STRING0 to increase the flow of wealth through this city — and into the national treasury, of course.
+
+@
+@@Free City Charter
+Without a %STRING0, this city is unlikely to grow much larger.
+
+@
+@@Enclosed Fields
+If we adopt a program of %STRING0 in this city, our citizens will be motivated to work harder, and nearby land could generate even more Health.
+
+@
+@@Trade Fair Circuit
+Our coastal cities have natural advantages in generating trade, but building a %STRING0 in a landlocked city can provide a nice income boost.
+
+@
+@@Bastion Fortress
+Our old City Walls aren't up to the challenge of defending us from modern artillery, but a %STRING0 would do the job nicely.
+
+@
+@@Guildhall
+Without oversight, industry will contaminate this city and put our citizens at risk of disease. We should establish guilds and build a %STRING0 to keep our city clean and safe.
+
+@
+@@Fishing Fleet §
+We should build a Fishing Fleet to provide fresh, healthy fish to our citizens.
+
+@
+@@Harbor Crane
+A %STRING0 would allow us to unload heavy shipments of construction materials at the local dock. This could be a significant boost to our city's overall productivity.
+
+@
+@@Chivalric Tournament
+Our citizens are unhappy when homegrown troops are sent off to distant wars, but a %STRING0 would allow them to cheer as their heroes compete for the attention of local maidens!
+
+@
+@@Shipyard
+We should build a %STRING0 to increase our chances of producing veteran naval units in this city, and to help injured or damaged units regain full strength more quickly.
+
+@
+@@Atlantic Fleet: Crew
+@@Atlantic Fleet: Sails
+@@Atlantic Fleet: Ship/Cargo
+We should build an Atlantic Fleet to explore the uncharted ocean!
+
+@
+@@Peasant
+@@Yeoman
+@@Serf
+We should build a %STRING0 to found new cities and to improve the terrain near the ones that already belong to our glorious nation.
+
+@
+@@Spearman
+@@Spearman II
+@@Pikeman
+@@Pikeman II
+We must protect what we have before we can seek to expand! We should build a %STRING0 to defend us from barbarians and foreign nations.
+
+@
+@@Halberdier
+@@Swiss Pikeman
+We should build a %STRING0 to defend us from our enemies, or to strike first when the opportunity presents itself!
+
+@
+@@Axeman
+@@Axeman II
+Infantry are the backbone of the army. We should build an %STRING0 to show our enemies that we are not to be trifled with.
+
+@
+@@Seax Swordsman
+@@Swordsman
+@@Swordsman II
+Infantry are the backbone of the army. We should build a %STRING0 to show our enemies that we are not to be trifled with.
+
+@
+@@Horseman
+@@Man-at-Arms
+@@Knight II
+@@Lancer
+@@Knight
+@@Monastic Knight
+@@Knight III
+@@Demi-lancer
+Nothing strikes fear into the hearts of our enemies like the thunder of a cavalry charge! We should build a %STRING0 to patrol and expand our borders.
+
+@
+@@Cuirassier ²¨
+Nothing strikes fear into the hearts of our enemies like the thunder of a cavalry charge! We should build a Cuirassier to patrol and expand our borders.
+
+@
+@@Envoy
+@@Inquisitor
+We should send an %STRING0 to foreign lands to stir up trouble.
+
+@
+@@Merchant
+@@Commercial Trader
+We should send a %STRING0 to a distant city and establish a lucrative trade route.
+
+@
+@@Scout
+We should build a %STRING0 to explore our frontiers and send back maps of the world beyond our borders.
+
+@
+@@Archer –›
+We should build an Archer to fire Broadhead Arrows at our enemies!
+
+@
+@@Crossbowman –+
+We should build a Crossbowman to fire Bolts at our enemies!
+
+@
+@@Longbowman –»
+We should build a Longbowman to fire Bodkin Arrows at our enemies!
+
+@
+@@Bowman –»
+We should build a Bowman to fire Bodkin Arrows at our enemies!
+
+@
+@@Arbalestier –×
+We should build an Arbalestier to fire Qarrels at our enemies!
+
+@
+@@Hand Cannoneer ·
+We should build a Hand Cannoneer to fire Pebbles at our enemies!
+
+@
+@@Hand Culveriner ¨
+We should build a Hand Culveriner to fire Pellets at our enemies!
+
+@
+@@Arquebusier •
+We should build an Arquebusier to fire Bullets at our enemies!
+
+@
+@@Musketeer ²•
+We should build a Musketeer to fire Bullets at our enemies!
+
+@
+@@Siege Engineer
+@@Siege Tower
+We should build a Siege Engineer, who will construct a powerful Siege Tower when near an enemy city or castle!
+
+@
+@@Torsion Catapult þ
+Artillery are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Torsion Catapult to fire a Rock at our enemies!
+
+@
+@@Springald }—>
+Artillery are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Springald to fire an Artillery Arrow at our enemies!
+
+@
+@@Mangonel þ
+Artillery are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Mangonel to fire a Rock at our enemies!
+
+@
+@@Trebuchet Þ
+Artillery are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Trebuchet to fire a Boulder at our enemies!
+
+@
+@@Couillard þ
+Artillery are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Couillard to fire a Rock at our enemies!
+
+@
+@@Pot-de-fer }—>
+Cannons are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Pot-de-fer to fire a Garrot at our enemies!
+
+@
+@@Ribauldequin ²¤
+Artillery are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Ribauldequin to fire Stones at our enemies!
+
+@
+@@Fowler o
+Cannons are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Fowler to fire a Small Stone Ball at our enemies!
+
+@
+@@Bombard 0
+Cannons are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Bombard to fire a Medium Stone Ball at our enemies!
+
+@
+@@Basilisk O
+Cannons are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Basilisk to fire a Large Stone Ball at our enemies!
+
+@
+@@Serpentine °´
+Cannons are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Serpentine to fire a Small Iron Ball at our enemies!
+
+@
+@@Demi-culverin ó
+Cannons are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Demi-culverin to fire a Medium Iron Ball at our enemies!
+
+@
+@@Culverin Ó
+Cannons are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Culverin to fire a Large Iron Ball at our enemies!
+
+@
+@@Falconet °´
+Cannons are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Falconet to fire a Small Iron Ball at our enemies!
+
+@
+@@Saker ó
+Cannons are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Saker to fire a Medium Iron Ball at our enemies!
+
+@
+@@Field Culverin Ó
+Cannons are often needed to besiege an enemy stronghold or defeat a tough opponent. We should build a Field Culverin to fire a Large Iron Ball at our enemies!
+
+@
+@@Carvel Galley
+@@Clinker Galley
+@@Dromon
+@@Longship
+@@Balinger
+@@War Cog
+@@Slender Galley
+@@Caravel
+@@Carrack
+We should build a %STRING0 to rule the seas!
+
+@
+@@Armed Carrack ó
+We should build an Armed Carrack to rule the seas!
+
+@
+@@Trade Galley
+@@Knarr
+@@Cog
+@@Great Galley
+@@Hulk
+We should build a %STRING0 to transport troops and merchants safely.
+
+@
+@@Wonder
+Let's undertake a great and glorious project, %STRING0! The world will marvel at such a wonder!
+
+@

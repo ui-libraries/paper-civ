@@ -1,2 +1,5 @@
 _ih = {
+"civ.ui.text(\"hello\")",
+"civ",
+"print(civ)",
 }

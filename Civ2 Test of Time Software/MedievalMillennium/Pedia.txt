@@ -1,0 +1,348 @@
+;
+;   CIVILIZATION CIVILOPEDIA TEXT
+;   Copyright (c) 1999 by MicroProse Software
+;
+;   Altering the contents of this file may cause the
+;   game to malfunction.
+;
+;   Medieval Millennium mod for Civ2ToT, by Knighttime
+;   Last updated: 11/20/2020 5:12:40 PM
+;
+
+@PEDIAPICKCIV
+@width=540
+@columns=3
+@listbox
+@title=MM:Civilopedia: Civilization Advances
+
+@PEDIACIV
+@width=480
+@title=MM:Civilization Advance
+^^%STRING0
+^
+
+@PEDIACIVFACTS
+^Allows the government form of the same name.
+^Allows a Peasant to build castles.
+^SHOULD NOT APPEAR.
+^Allows a Peasant to build royal highways.
+^Allows a Peasant to upgrade a tile to enclosed fields.
+^Increases the effect of each Basilica.
+^Increases the effect of each Gothic Cathedral.
+^Worth bonus points in Civilization score.
+^Increases ship movement rates by one.
+^SHOULD NOT APPEAR.
+^Free advance for first nation to discover.
+^Decreases the effect of each Romanesque Cathedral.
+^Cancels the effect of
+
+@PEDIAPICKUNIT
+@width=540
+@columns=3
+@listbox
+@title=MM:Civilopedia: Unit Types
+
+@PEDIAUNIT
+@width=480
+@title=MM:Unit Type
+^^%STRING0
+^
+
+@PEDIAUNITFACTS
+^Can see units two tiles away.
+^Ignores enemy zones of control.
+^Can make naval assaults.
+^Can only attack ships on sea tiles.
+^(Can attack aircraft in flight.)
+^Must end its turn adjacent to a land tile.
+^Ignores City Walls.
+^(Can carry air units.)
+^(Can make paradrops.)
+^Uses 1 movement point per tile over any terrain.
+^Defense x1.5 vs land units with 2 MP and 1 HP.
+^(Only built under Tribal Monarchy.)
+^Projectile, destroyed after attacking.
+^(Defense x2 vs air units.)
+^ 
+
+@PEDIAPICKIMPROVE
+@width=540
+@columns=3
+@listbox
+@title=MM:Civilopedia: City Improvements
+
+@PEDIAIMPROVE
+@width=480
+@title=MM:City Improvement
+^^%STRING0
+^
+
+@;Royal Palace (Palace)
+@PEDIAIMPROVE1
+Makes this city your capital. Reduces or eliminates corruption and waste in the city, and (under most governments) decreases it in nearby cities. Under Merchant Republic, turns 1 content citizen in this city into a happy citizen. Please click "Special Notes" for cost and upkeep details.
+
+@;Barracks (Barracks)
+@PEDIAIMPROVE2
+Every human military land unit (i.e., excluding artillery and units with settler, diplomat, or trade abilities) that is produced in the city has an additional 50% chance of being a veteran unit. Any land unit spending an entire turn in the city is completely healed or repaired.
+
+@;Grist Mill § (Granary)
+@PEDIAIMPROVE3
+This improvement has special behavior linked to specialist units. Please click "Special Notes" for details.
+
+@;Basilica (Temple)
+@PEDIAIMPROVE4
+Turns 1 unhappy citizen into a content citizen. The discovery of Gregorian Chant will increase this by 1, thereafter affecting 2 unhappy citizens.
+
+@;Marketplace (MarketPlace)
+@PEDIAIMPROVE5
+Increases tax and luxury output by 50% of the base value (acts in concert with similar benefit available from Textile Mill and Bank).
+
+@;Monastery § (Library)
+@PEDIAIMPROVE6
+Increases research output by 50% of the base value (acts in concert with similar benefit available from Cathedral School and University). The cost of this improvement will increase when certain wonders are constructed.
+
+@;Magistrate's Office (Courthouse)
+@PEDIAIMPROVE7
+Decreases corruption by 50%. Under Merchant Republic, 1 content citizen becomes happy.
+
+@;City Walls (City Walls)
+@PEDIAIMPROVE8
+All units within the city receive a 100% defensive bonus (total of 2x) against attacks by enemy land units and small projectiles.
+
+@;Market Town Charter (Aqueduct)
+@PEDIAIMPROVE9
+Allows city to increase beyond size 5.
+
+@;Textile Mill (Bank)
+@PEDIAIMPROVE10
+Increases tax and luxury output by 50% of the base value (acts in concert with similar benefit available from Marketplace and Bank).
+
+@;Romanesque Cathedral (Cathedral)
+@PEDIAIMPROVE11
+Turns 4 unhappy citizens into content citizens. The discovery of Feudalism will decrease this by 1, thereafter affecting 3 unhappy citizens.
+
+@;Cathedral School (University)
+@PEDIAIMPROVE12
+Increases research output by 50% of the base value (acts in concert with similar benefit available from Monastery § and University).
+
+@;Sewer Conduits (Mass Transit)
+@PEDIAIMPROVE13
+Reduces the chance of a major plague strike in the city by 20%. Eliminates the unsanitary conditions (pollution) caused by city population, resulting in a lower chance of a minor plague outbreak nearby.
+
+@;Gothic Cathedral (Colosseum)
+@PEDIAIMPROVE14
+Turns 3 unhappy citizens into content citizens. The discovery of Stained Glass will increase this by 1, thereafter affecting 4 unhappy citizens.
+
+@;Wood/Stone Craftsmen § (Factory)
+@PEDIAIMPROVE15
+This improvement has special behavior linked to specialist units. Please click "Special Notes" for details. The cost of this improvement begins at 40 Materials, increases to 50 in A.D. 800, and increases to 60 in A.D. 1200.
+
+@;Foundry § (Manufacturing Plant)
+@PEDIAIMPROVE16
+This improvement has special behavior linked to specialist units. Please click "Special Notes" for details. The cost of this improvement begins at 60 Materials and gradually increases to 100 as new metal-working technologies are discovered by any tribe.
+
+@;(UNUSED-SDI) (SDI Defense)
+@PEDIAIMPROVE17
+UNUSED
+
+@;Hospital (Recycling Center)
+@PEDIAIMPROVE18
+Significantly reduces the impact of a major plague strike upon the city, and significantly reduces the likelihood of a minor plague outbreak on nearby tiles. Please click "Special Notes" for details.
+
+@;Wind Mill (Power Plant)
+@PEDIAIMPROVE19
+Provides "mill power" to the city, which is a prerequisite for a number of city specialists and improvements. Please click "Special Notes" for details.
+
+@;Water Mill (Hydro Plant)
+@PEDIAIMPROVE20
+Provides "mill power" to the city, which is a prerequisite for a number of city specialists and improvements. Please click "Special Notes" for details. In addition, increases the quantity of Materials that can be generated in the city before pollution appears (which a Wind Mill does not).
+
+@;(UNUSED-Nuclear Plant) (Nuclear Plant)
+@PEDIAIMPROVE21
+UNUSED
+
+@;Bank (Stock Exchange)
+@PEDIAIMPROVE22
+Increases tax and luxury output by 50% of the base value (acts in concert with similar benefit available from Marketplace and Textile Mill).
+
+@;Free City Charter (Sewer System)
+@PEDIAIMPROVE23
+Allows city to increase beyond size 10.
+
+@;Enclosed Fields (Supermarket)
+@PEDIAIMPROVE24
+All tiles in the city's radius with the enclosed fields upgrade (irrigated twice) produce 50% more Health.
+
+@;Trade Fair Circuit (Superhighways)
+@PEDIAIMPROVE25
+Provides a fixed amount of gold income per turn, depending on your current form of government. Please click "Special Notes" for details.
+
+@;University (Research Lab)
+@PEDIAIMPROVE26
+Increases research output by 50% of the base value (acts in concert with similar benefit available from Monastery § and Cathedral School).
+
+@;Bastion Fortress (SAM Missile Battery)
+@PEDIAIMPROVE27
+All units within the city receive a 50% defensive bonus (total of 1.5x) against attacks by large enemy projectiles fired by artillery units. Prevents City Walls from being destroyed by this type of artillery attack.
+
+@;Trade Fair Circuit (Coastal Fortress)
+@PEDIAIMPROVE28
+Provides a fixed amount of gold income per turn, depending on your current form of government. Please click "Special Notes" for details.
+
+@;Guildhall (Solar Plant)
+@PEDIAIMPROVE29
+Completely eliminates the possibility of a plague outbreak near the city due to the quantity of Materials generated. Slightly reduces the possibility of this due to the number of citizens.
+
+@;Fishing Fleet § (Harbor)
+@PEDIAIMPROVE30
+All Sea tiles within the city's radius produce 1 additional unit of Health.
+
+@;Harbor Crane (Offshore Platform)
+@PEDIAIMPROVE31
+All Sea tiles within the city's radius produce 1 unit of Materials.
+
+@;(UNUSED-Airport) (Airport)
+@PEDIAIMPROVE32
+UNUSED
+
+@;Chivalric Tournament (Police Station)
+@PEDIAIMPROVE33
+Decreases unhappiness caused by campaigning troops by 1, thereby eliminating this source of unhappiness under Constitutional Monarchy and reducing the impact per unit from 2 to 1 under Merchant Republic.
+
+@;Shipyard (Port Facility)
+@PEDIAIMPROVE34
+Every naval unit that is produced in the city has an additional 50% chance of being a veteran unit. Any naval unit spending an entire turn in the city is completely repaired.
+
+@;(UNUSED-Transporter) (Transporter)
+@PEDIAIMPROVE35
+UNUSED
+
+@;Atlantic Fleet: Crew (SS Structural)
+@PEDIAIMPROVE36
+Crew members are a vital component of your Atlantic Fleet. A minimum of 15 crew members are required in order to cast off, but more may be needed if you build a larger fleet.
+
+@;Atlantic Fleet: Sails (SS Component)
+@PEDIAIMPROVE37
+Sails consist of Canvas and Rope. At least one of each is required in order to cast off, but more will allow your fleet to sail more quickly and reach its destination sooner.
+
+@;Atlantic Fleet: Ship/Cargo (SS Module)
+@PEDIAIMPROVE38
+The Ship component is self-explanatory, and Cargo consists of Food and Water. At least one of each is required in order to cast off, but a larger fleet will earn you greater renown.
+
+@;[Scutage] ((Capitalization))
+@PEDIAIMPROVE39
+Converts Materials production directly into tax revenue.
+
+@;Domesday Book (Pyramids)
+@PEDIAIMPROVE40
+This wonder has three special benefits related to the Grist Mill improvement and its associated specialists. Please click "Special Notes" for details.
+
+@;Glorious Gothic Cathedral (Hanging Gardens)
+@PEDIAIMPROVE41
+Turns 1 content citizen into a happy citizen in every city. In the city which constructs this wonder, 2 additional content citizens are turned into happy citizens, and the city immediately receives a free Gothic Cathedral improvement.
+
+@;Hanseatic League Capital (Colossus)
+@PEDIAIMPROVE42
+City produces 1 additional unit of Trade in each tile that already produces at least 1 unit of Trade.
+
+@;Commemorative Tapestry (Lighthouse)
+@PEDIAIMPROVE43
+"Coastal" ships can end their turn away from land without sinking; all other ships have their movement rate increased by 1. Every naval unit produced in any city has an additional 50% chance of being a veteran unit. This is cumulative with the similar benefit provided by a Shipyard, for a total of 100%.
+
+@;Pilgrimage Route (Great Library)
+@PEDIAIMPROVE44
+The nation possessing this wonder automatically receives any advance known by at least two other nations.
+
+@;Palatine Chapel (Oracle)
+@PEDIAIMPROVE45
+Doubles the effect of each Basilica.
+
+@;Offa's Dyke (Great Wall)
+@PEDIAIMPROVE46
+Provides the benefit of a City Walls in every city. Combat strength is doubled against all barbarians, regardless of the battle location. Enemy civilizations must offer cease-fire/peace in negotiations.
+
+@;White Tower Fortress (Sun Tzu's War Academy)
+@PEDIAIMPROVE47
+Doubles the chance that a unit surviving a battle will gain veteran status; click Special Notes for details. Every human military land unit produced in any city has an additional 50% chance of being a veteran unit. This is cumulative with the similar benefit provided by a Barracks, for a total of 100%.
+
+@;Naval Industrial Arsenal (King Richard's Crusade)
+@PEDIAIMPROVE48
+Every tile within the city's radius produces an additional unit of Materials.
+
+@;Travels of Marco Polo (Marco Polo's Embassy)
+@PEDIAIMPROVE49
+Provides a free embassy with every nation, so your intelligence report will always be complete and you will receive updates when other nations acquire new knowledge.
+
+@;Iconic Romanesque Cathedral (Michelangelo's Chapel)
+@PEDIAIMPROVE50
+Provides the benefit of a Romanesque Cathedral in every city.
+
+@;School of Medicine (Copernicus' Observatory)
+@PEDIAIMPROVE51
+Increases research output of the city by an additional 100% (total of 2x), applied after all other applicable increases (Monastery §, Cathedral School, and University).
+
+@;Mount of St Michael (Magellan's Expedition)
+@PEDIAIMPROVE52
+Increases the movement rate of all ships by 2 tiles.
+
+@;Decorated Octagonal Basilica (Shakespeare's Theatre)
+@PEDIAIMPROVE53
+All unhappy citizens in this city are content.
+
+@;Brunelleschi's Dome (Leonardo's Workshop)
+@PEDIAIMPROVE54
+Automatically upgrades existing units belonging to your nation, whenever you acquire new knowledge that makes one unit type obsolete and simultaneously makes another unit type available.
+
+@;Opulent Romanesque Cathedral (J. S. Bach's Cathedral)
+@PEDIAIMPROVE55
+Turns 2 unhappy citizens into content citizens in every city. The city which constructs this wonder immediately receives a free Romanesque Cathedral improvement if one is not already present.
+
+@;Magnificent Cluniac Abbey (Isaac Newton's College)
+@PEDIAIMPROVE56
+Doubles the effectiveness of a Monastery §, Cathedral School, and University in this city. Each will then add 100% of base, not 50% of base, for cumulative gains of 100% / 200% / 300% instead of 50% / 100% / 150% (total of 2x / 3x / 4x instead of 1.5x / 2x / 2.5x).
+
+@;Medici Bank (Adam Smith's Trading Co.)
+@PEDIAIMPROVE57
+Pays the maintenance (upkeep) for all city improvements and city specialists which ordinarily cost 1 gold per turn. (City improvements and specialists requiring more than 1 gold per turn maintenance are not affected.)
+
+@;Ornate Gospel Book (Darwin's Voyage)
+@PEDIAIMPROVE58
+Immediately grants two free civilization advances.
+
+@;Great Charter (Statue of Liberty)
+@PEDIAIMPROVE59
+Unlocks the Constitutional Monarchy advance and government type within the game, and immediately grants this advance to the nation that completes this wonder. The city that completes this wonder also receives 3 free Yeoman units, which will not require support. Click "Special Notes" for further details.
+
+@;Holy Roman Emperor (Eiffel Tower)
+@PEDIAIMPROVE60
+When you first obtain control of this wonder, every nation's attitude toward you is immediately improved by 25%. Attitudes continue to improve gradually over time. Other nations also forget your past transgressions more quickly.
+
+@;King's Holy Land Crusade (Women's Suffrage)
+@PEDIAIMPROVE61
+Under a Constitutional Monarchy government, provides the benefits of a Chivalric Tournament in every city. Does not provide any benefit under other governments. Please click "Special Notes" for details.
+
+@;Cistercian Order (Hoover Dam)
+@PEDIAIMPROVE62
+Provides the benefits of a Water Mill in every city.
+
+@;Palace of the Popes (Manhattan Project)
+@PEDIAIMPROVE63
+Immediately provides 4 free Swiss Pikeman units, which will not require support, in the city where this wonder is constructed. Enables the construction of Swiss Pikeman units in all cities, once the Advanced Polearms advance is acquired.
+
+@;Leaning Tower (United Nations)
+@PEDIAIMPROVE64
+Pays the maintenance cost of a Romanesque Cathedral (2 gold per turn), a Gothic Cathedral (3 gold per turn), and a Cathedral School (2 gold per turn) in the city that builds this wonder. Increased international travel gives all nations the ability to send emissaries to each other at any time.
+
+@;Sea Route to India (Apollo Program)
+@PEDIAIMPROVE65
+Reveals the entire map. Unlocks the ability of each nation to construct a Transatlantic Fleet, once that nation acquires the Age of Discovery advance.
+
+@;Iconic University (SETI Program)
+@PEDIAIMPROVE66
+Provides the benefits of a University in every city.
+
+@;Majestic Gothic Cathedral (Cure for Cancer)
+@PEDIAIMPROVE67
+Turns 1 content citizen into a happy citizen in every city. The city which constructs this wonder immediately receives a free Gothic Cathedral improvement.
+
+@;This line must remain at the end of this file!

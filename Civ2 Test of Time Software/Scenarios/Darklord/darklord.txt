@@ -1,0 +1,23 @@
+@SCENARIO
+@width=450
+@title=%STRING0
+^^Length: %STRING1 to %STRING2
+^
+^One ring to rule them all, one ring to find them.
+^One ring to bring them all, and in the darkness bind them.
+^--- The Lord of the Rings
+^This scenario is based on the War of the Rings. It is designed
+^ to be played as the Dark Lord. Science in the game simulates the Dark
+^ Lord's search for the Ring. When Mordor learns "Whereabouts of the Ring",
+^ a halfling unit will be created which Mordor must track down and destroy in
+^ order to recover the Ring. When the Ring is recovered, Mordor will be able
+^ to build new units to help with the conquest of Middle Earth.
+^
+^   Recommended : Mordorans
+^   Maybe       : Gondor, Rohan, Elves  
+^   Not for Play: Dwarves, Haradrim, Easterlings
+^
+^SCORING by obective. Wonders count as objectives.
+^SPECIAL RULES: NO Government switching, NO tech from conquest.
+@end -- this line must be here!
+

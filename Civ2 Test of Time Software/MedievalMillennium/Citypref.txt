@@ -1,0 +1,13 @@
+@AUTOBUILD
+Wood/Stone Craftsmen §
+Marketplace
+Grist Mill §
+Monastery §
+City Walls
+Market Town Charter
+Water Mill
+Wind Mill
+Barracks
+Foundry §
+Fishing Fleet §
+Romanesque Cathedral

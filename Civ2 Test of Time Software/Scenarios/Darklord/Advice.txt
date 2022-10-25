@@ -1,0 +1,286 @@
+;
+;   CIVILIZATION AUTO ADVICE
+;   Copyright (c) 1995 by MicroProse Software
+;
+;   Altering the contents of this file may cause the
+;   game to malfunction.
+;
+
+@MILITARY
+@width=225
+@title=Military Advisor
+@x=5
+@y=5
+
+@DOMESTIC
+@width=225
+@title=Domestic Advisor
+@x=-5
+@y=5
+
+@SCIENCE0
+@width=250
+@title=Lore Advisor
+@x=-5
+I recommend we develop %STRING0.
+
+@SCIENCE1
+@width=250
+@title=Lore Advisor
+@x=-5
+I recommend we develop %STRING0 so
+that we can build:
+
+@SCIENCE2
+@width=250
+@title=Lore Advisor
+@x=-5
+I recommend we develop %STRING0 so
+that we can someday learn:
+
+@
+@@Temple
+The people are unhappy.
+We should build a %STRING0.
+
+@
+@@Tavern
+The people demand grog and ale.
+Let us appease them with a
+%STRING0.
+
+@
+@@Cathedral
+The people are discontent.
+Perhaps a %STRING0 will
+distract them.
+
+@
+@@Keep
+Our armies cannot be effective
+without proper training!
+We should build a %STRING0.
+
+@
+@@Port Facility
+We should build a %STRING0
+to produce superior ships
+and repair damaged ships quickly.
+
+@
+@@Granary
+We should build a %STRING0
+to encourage city growth.
+
+@
+@@Harbor
+The people grow hungry.  Let
+us build a %STRING0 to harvest
+the ocean's bounty.
+
+@
+@@MarketPlace
+Our people are poor. Let us build a
+%STRING0 to attract merchants and
+traders.
+
+@
+@@Bank
+We should build a %STRING0 where
+money changers can gather.
+
+@
+@@Stock Exchange
+Let us build a %STRING0 and grow
+rich together!
+
+@
+@@Slave Market
+We must build a %STRING0 at once 
+to profit from the slave trade!
+
+@
+@@Monastery
+Let us build a %STRING0, where 
+monks may collect knowledge.
+
+@
+@@University
+Let us build a %STRING0 so that
+we can gather advanced knowledge.
+
+@
+@@Den of Thieves
+We should build a %STRING0
+to gather intelligence.
+
+@
+@@Courthouse
+We must not tolerate disobedience and
+petty corruption!  I suggest we build
+a %STRING0 to punish disloyalty.
+
+@
+@@City Walls
+This city is utterly defenseless!
+We should build %STRING0 at once!
+
+@
+@@Coastal Fortress
+We should build a %STRING0
+to protect our city from ship attacks.
+
+@
+@@Aqueduct
+The people are thirsty!
+We should build an %STRING0
+to let our city grow.
+
+@
+@@Sewer System
+The streets are covered with filth!
+We should build a %STRING0
+to let our city grow.
+
+@
+@@Mill
+@@Power Plant
+@@Water Wheel
+@@Nuclear Plant
+@@Solar Plant
+We are falling behind in productivity!
+Let us quickly build a %STRING0.
+
+@
+@@Peasant
+We should force a %STRING0
+to build roads and fortifications.
+
+@
+@@Engineer
+We need an %STRING0 to build 
+roads for our armies.
+
+@
+@@Crossbowman
+@@Spearman
+Our cities are vulnerable to attack.
+Let us build a %STRING0 and defend
+them.
+
+@
+@@Axeman
+@@Elven Warrior
+We need to recruit an %STRING0
+to defend our nation.
+
+@
+@@Guardsman
+We need to recruit a %STRING0
+to defend our nation.
+
+@
+@@Orc
+We must recruit %STRING0
+to defend our beliefs!
+
+@
+@@Troll
+We should build mighty %STRING0s
+and rule the known world!
+
+@
+@@Archer
+@@Ranger
+We should train our men with
+bow and arrow and shoot our
+enemies full of holes.
+
+@
+@@Corsair
+Let us surprise our enemies from the
+sea. Recruit %STRING0s.
+
+@
+@@Siege Engine
+With a %STRING0 we could
+penetrate enemy fortresses.
+
+@
+@@Balrog
+We should unleash a %STRING0
+to attack our enemies from the sky.
+
+@
+@@Mumak
+We should build an %STRING0
+to trample our enemies!
+
+@
+@@Black Rider
+We should build %STRING0s to
+fight a holy war!
+
+@
+@@Fighter
+@@Stlth Ftr.
+We need a %STRING0 to
+defend our skies!
+
+@
+@@Cavalry
+We should build %STRING0
+to run down our enemies.
+
+@
+@@Horse Lord
+We should build %STRING0s
+to run down our enemies.
+
+@
+@@Horsebowman
+We should recruit a %STRING0
+to harass our enemies.
+
+@
+@@Caravel
+@@Galleon
+@@Black Galleon
+@@Explorer
+We should build %STRING0s
+to explore the world.
+
+@
+@@Frigate
+@@Black Frigate
+@@Elven Ship
+@@Galley
+We should build %STRING0s
+to rule the seas.
+
+@
+@@Default
+We should build a %STRING0.
+
+@
+@@Spy
+We should recruit a %STRING0
+to bribe our enemies or use the
+secret fire against them if they
+can't be bribed.
+
+@
+@@Caravan
+@@Wagon Train
+We should build a %STRING0
+to establish trade routes
+with other civilizations.
+
+@
+@@Wonder
+Let us undertake a great project
+for the glory of our civilization,
+%STRING0!
+
+@
+

@@ -1,0 +1,1985 @@
+;
+;   Civilopedia Descriptions Text File
+;   Copyright (c) 1997 MicroProse Software, Inc.
+;
+;   Medieval Millennium mod for Civ2ToT, by Knighttime
+;   Last updated: 11/20/2020 5:12:40 PM
+;
+
+@ADVANCE_DESCRIPTIONS
+;
+@@ADVANCE_INDEX
+-1,		; 0 Alchemy
+-1,		; 1 Monasticism
+-1,		; 2 Arabic Numerals
+-1,		; 3 Arabic Translation
+4,		; 4 Berber Invasion
+5,		; 5 UNUSED-T5
+-1,		; 6 Bombards
+7,		; 7 Bridge Building
+-1,		; 8 Carvel Shipbuilding
+9,		; 9 Catholic Christianity
+-1,		; 10 Cloth Mill / Fulling
+-1,		; 11 Chainmail Hauberks
+-1,		; 12 Clinker Shipbuilding
+-1,		; 13 Composite Bows
+14,		; 14 Wood/Stone Craftsmanship
+15,		; 15 Feudalism
+-1,		; 16 Renaissance Art
+-1,		; 17 Cranequins
+18,		; 18 Motte and Bailey Castles
+19,		; 19 Corned Gunpowder
+-1,		; 20 Counterweight Trebuchets
+21,		; 21 Merchant Republic
+-1,		; 22 Renaissance Science
+23,		; 23 Catalan Forges
+24,		; 24 Stained Glass
+25,		; 25 Domesday Book construction
+26,		; 26 Guilds
+-1,		; 27 Inquisition
+28,		; 28 Stone Castles
+-1,		; 29 Flying Buttress / Rib Vault
+-1,		; 30 Humanism
+31,		; 31 Tribal Religion
+-1,		; 32 Gothic Architecture
+-1,		; 33 Gun Decks
+-1,		; 34 Advanced Polearms
+35,		; 35 Holy Land Crusades
+-1,		; 36 Gunpowder
+37,		; 37 High Middle Ages
+38,		; 38 UNUSED-T38
+-1,		; 39 Siege Warfare
+-1,		; 40 Harbor Crane
+-1,		; 41 Heavy Wheeled Plows
+-1,		; 42 Chivalry
+-1,		; 43 Movable Type Printing Press
+-1,		; 44 Horizontal Looms
+-1,		; 45 Double-entry Bookkeeping
+46,		; 46 Orbis Terrarum Maps
+-1,		; 47 Horse Collars / Horseshoes
+48,		; 48 Blast Furnace
+-1,		; 49 Illuminated Manuscripts
+-1,		; 50 Medicine
+-1,		; 51 Crossbows
+-1,		; 52 Battle Tactics
+53,		; 53 Primitive Cannons
+54,		; 54 Enlightened Monarchy
+-1,		; 55 Romanesque Architecture
+56,		; 56 Gregorian Chant
+57,		; 57 Large Carvel Ships
+-1,		; 58 Metal Working
+59,		; 59 Age of Discovery
+60,		; 60 Moorish Technology
+-1,		; 61 Lateen Sail
+62,		; 62 Wolf Furnace
+-1,		; 63 Longbows
+-1,		; 64 Cantles / Stirrups
+65,		; 65 Byzantine Influence
+66,		; 66 UNUSED-T66
+67,		; 67 Stone-paved Roads
+-1,		; 68 Magnetic Compasses
+69,		; 69 Manorialism
+70,		; 70 Enclosure
+71,		; 71 Constitutional Monarchy
+-1,		; 72 Matchlocks
+-1,		; 73 Military Orders
+-1,		; 74 Sanitation
+75,		; 75 Large Clinker Ships
+76,		; 76 Mongol Invasion
+-1,		; 77 Muskets
+-1,		; 78 Paper
+-1,		; 79 Plate Armor
+-1,		; 80 Portolan Charts
+-1,		; 81 Scholasticism
+-1,		; 82 Polyphony
+-1,		; 83 Scientific Method
+84,		; 84 Trade
+-1,		; 85 Trivium / Quadrivium
+-1,		; 86 Serpentine Lever
+-1,		; 87 Sternpost Rudders
+-1,		; 88 Universities
+89,		; 89 The Renaissance
+-1,		; 90 Three-Field System
+-1,		; 91 Traction Trebuchets
+-1,		; 92 Trunnions / Limbers
+-1,		; 93 Two-Masted Ships
+-1,		; 94 Ulfberht Swords
+-1,		; 95 Vertical Wind Mills
+96,		; 96 Viking Invasion
+-1,		; 97 Viking Ships
+-1,		; 98 Wheellocks
+99,		; 99 SPECIAL
+-2,		; MUST BE HERE! TERMINATOR!
+
+@@0, Alchemy
+
+@@1, Monasticism
+
+@@2, Arabic Numerals
+
+@@3, Arabic Translation
+
+@@4, Berber Invasion
+This advance cannot be researched, but it will be granted to you automatically when you defeat a Berber Cavalry or Berber Infantry unit in battle.
+
+@@5, (UNUSED-T5)
+UNUSED
+
+@@6, Bombards
+
+@@7, Bridge Building
+Allows Peasants, Serfs, and Yeomen to build roads in tiles that contain a river.
+
+@@8, Carvel Shipbuilding
+
+@@9, Catholic Christianity
+Enables the Primitive Monarchy form of government, and automatically converts your government from Tribal Monarchy to Primitive Monarchy. Along with Byzantine Influence and Wood/Stone Craftsmanship, enables construction of the Decorated Octagonal Basilica wonder.
+
+@@10, Cloth Mill / Fulling
+
+@@11, Chainmail Hauberks
+
+@@12, Clinker Shipbuilding
+
+@@13, Composite Bows
+
+@@14, Wood/Stone Craftsmanship
+Along with Byzantine Influence and Catholic Christianity, enables construction of the Decorated Octagonal Basilica wonder.
+
+@@15, Feudalism
+Even if you have the listed prerequisites, this advance cannot be researched or acquired by any means until your nation has gained knowledge of Catholic Christianity and accepted this religion. Enables the Feudal Monarchy form of government.
+
+@@16, Renaissance Art
+
+@@17, Cranequins
+
+@@18, Motte and Bailey Castles
+Allows Peasants, Serfs, and Yeomen to build castle tile improvements.
+
+@@19, Corned Gunpowder
+Stone Castle tile improvements are converted to Stone Castle units, and new castle tile improvements will now appear as Bastion Fortresses.
+
+@@20, Counterweight Trebuchets
+
+@@21, Merchant Republic
+Enables the form of government with this name.
+
+@@22, Renaissance Science
+
+@@23, Catalan Forges
+Allows the second construction of the Foundry improvement, which provides the Forge specialist. Increases the cost of the Foundry improvement and related city specialists to 70 Materials.
+
+@@24, Stained Glass
+Increases the benefit of each Gothic Cathedral by one citizen.
+
+@@25, Domesday Book construction
+This advance cannot be researched by any nation at any point in the game. It exists solely for the purpose of Medieval Millennium events and will be granted by an event when appropriate.
+
+@@26, Guilds
+Allows the fifth and final construction of the Wood/Stone Craftsmen improvement, which provides the improvement itself.
+
+@@27, Inquisition
+
+@@28, Stone Castles
+Motte and Bailey tile improvements are converted to Motte and Bailey units, and new castle tile improvements will now appear as Stone Castles.
+
+@@29, Flying Buttress / Rib Vault
+
+@@30, Humanism
+
+@@31, Tribal Religion
+Enables the Tribal Monarchy form of government, which is the default for all nations at the beginning of the game until Catholic Christianity is acquired.
+
+@@32, Gothic Architecture
+
+@@33, Gun Decks
+
+@@34, Advanced Polearms
+
+@@35, Holy Land Crusades
+All Barracks in every city are sold, and the gold is added to your treasury. The maintenance cost of any new Barracks that you build is increased to 2 gold per turn.
+
+@@36, Gunpowder
+
+@@37, High Middle Ages
+This advance cannot be researched by any nation at any point in the game. It exists solely for the purpose of Medieval Millennium events and will be granted to the human player by an event in exactly A.D. 1000.
+
+@@38, (UNUSED-T38)
+UNUSED
+
+@@39, Siege Warfare
+
+@@40, Harbor Crane
+
+@@41, Heavy Wheeled Plows
+
+@@42, Chivalry
+
+@@43, Movable Type Printing Press
+
+@@44, Horizontal Looms
+
+@@45, Double-entry Bookkeeping
+
+@@46, Orbis Terrarum Maps
+Makes it possible for you to exchange maps with another nation during negotations.
+
+@@47, Horse Collars / Horseshoes
+
+@@48, Blast Furnace
+Allows the third and final construction of the Foundry improvement, which provides the improvement itself. Increases the cost of the Foundry improvement and related city specialists to 100 Materials.
+
+@@49, Illuminated Manuscripts
+
+@@50, Medicine
+
+@@51, Crossbows
+
+@@52, Battle Tactics
+
+@@53, Primitive Cannons
+All Barracks in every city are sold, and the gold is added to your treasury. The maintenance cost of any new Barracks that you build is increased to 3 gold per turn.
+
+@@54, Enlightened Monarchy
+Enables the form of government with this name. Decreases the benefit of each Romanesque Cathedral by 1 citizen. Conquered cities may produce Refugees.
+
+@@55, Romanesque Architecture
+
+@@56, Gregorian Chant
+Increases the benefit of each Basilica by one citizen.
+
+@@57, Large Carvel Ships
+Coastal ships are 50% less likely to sink if they end their turn away from shore.
+
+@@58, Metal Working
+
+@@59, Age of Discovery
+Increases all ship movement rates by 1.
+
+@@60, Moorish Technology
+The first nation to discover this advance immediately gains an additional advance of their choice.
+
+@@61, Lateen Sail
+
+@@62, Wolf Furnace
+Increases the cost of the Foundry improvement and related city specialists to 80 Materials.
+
+@@63, Longbows
+
+@@64, Cantles / Stirrups
+
+@@65, Byzantine Influence
+Along with Catholic Christianity and Craftsmanship, enables construction of the Decorated Octagonal Basilica wonder.
+
+@@66, (UNUSED-T66)
+UNUSED
+
+@@67, Stone-paved Roads
+Allows Peasants, Serfs, and Yeomen to build a royal highway in a tile that contains a road. All city tiles are immediately upgraded to contain royal highways.
+
+@@68, Magnetic Compasses
+
+@@69, Manorialism
+If you acquire this advance prior to Catholic Christianity, it is *removed* at the time you accept Christianity, and will need to be researched or reacquired again.
+
+@@70, Enclosure
+Allows Peasants, Serfs, and Yeomen to build enclosed fields in tiles that contain irrigation. All city tiles are immediately upgraded to generate Health as if they contained enclosed fields. Reduces the city size required to build a large Grist Mill improvement from 10 to 8.
+
+@@71, Constitutional Monarchy
+Enables the form of government with this name. Cannot be researched, but is given automatically to the nation that builds the Great Charter wonder. All other nations will then be given the opportunity to research it if/when they acquire knowledge of the two prerequisite advances.
+
+@@72, Matchlocks
+
+@@73, Military Orders
+
+@@74, Sanitation
+
+@@75, Large Clinker Ships
+Coastal ships are 50% less likely to sink if they end their turn away from shore.
+
+@@76, Mongol Invasion
+This advance cannot be researched, but it will be granted to you automatically when you defeat a Mongol Cavalry unit in battle.
+
+@@77, Muskets
+
+@@78, Paper
+
+@@79, Plate Armor
+
+@@80, Portolan Charts
+
+@@81, Scholasticism
+
+@@82, Polyphony
+
+@@83, Scientific Method
+
+@@84, Trade
+Allows you to see the trade goods that each city supplies and demands.
+
+@@85, Trivium / Quadrivium
+
+@@86, Serpentine Lever
+
+@@87, Sternpost Rudders
+
+@@88, Universities
+
+@@89, The Renaissance
+This advance can be researched multiple times, and each instance of it is worth points in your final Medieval Millennium score.
+
+@@90, Three-Field System
+
+@@91, Traction Trebuchets
+
+@@92, Trunnions / Limbers
+
+@@93, Two-Masted Ships
+
+@@94, Ulfberht Swords
+
+@@95, Vertical Wind Mills
+
+@@96, Viking Invasion
+This advance cannot be researched, but it will be granted to you automatically when you defeat a Berserker or Viking Raider unit in battle.
+
+@@97, Viking Ships
+
+@@98, Wheellocks
+
+@@99, SPECIAL
+When this advance appears as a prerequisite, it indicates that custom logic within a Medieval Millennium event is being used to manage the availability of the given advance, improvement, wonder, or unit. The SPECIAL advance can never be researched or acquired by any nation at any point in the game.
+
+@IMPROVEMENT_DESCRIPTIONS
+;
+@@IMPROVEMENT_INDEX
+-1,		; 0 Nothing (Nothing)
+1,		; 1 Royal Palace (Palace)
+2,		; 2 Barracks (Barracks)
+3,		; 3 Grist Mill § (Granary)
+-1,		; 4 Basilica (Temple)
+5,		; 5 Marketplace (MarketPlace)
+6,		; 6 Monastery § (Library)
+7,		; 7 Magistrate's Office (Courthouse)
+8,		; 8 City Walls (City Walls)
+9,		; 9 Market Town Charter (Aqueduct)
+10,		; 10 Textile Mill (Bank)
+11,		; 11 Romanesque Cathedral (Cathedral)
+12,		; 12 Cathedral School (University)
+13,		; 13 Sewer Conduits (Mass Transit)
+14,		; 14 Gothic Cathedral (Colosseum)
+15,		; 15 Wood/Stone Craftsmen § (Factory)
+16,		; 16 Foundry § (Manufacturing Plant)
+-1,		; 17 (UNUSED-SDI) (SDI Defense)
+18,		; 18 Hospital (Recycling Center)
+19,		; 19 Wind Mill (Power Plant)
+20,		; 20 Water Mill (Hydro Plant)
+-1,		; 21 (UNUSED-Nuclear Plant) (Nuclear Plant)
+22,		; 22 Bank (Stock Exchange)
+23,		; 23 Free City Charter (Sewer System)
+24,		; 24 Enclosed Fields (Supermarket)
+25,		; 25 Trade Fair Circuit (Superhighways)
+26,		; 26 University (Research Lab)
+27,		; 27 Bastion Fortress (SAM Missile Battery)
+28,		; 28 Trade Fair Circuit (Coastal Fortress)
+29,		; 29 Guildhall (Solar Plant)
+30,		; 30 Fishing Fleet § (Harbor)
+31,		; 31 Harbor Crane (Offshore Platform)
+-1,		; 32 (UNUSED-Airport) (Airport)
+33,		; 33 Chivalric Tournament (Police Station)
+34,		; 34 Shipyard (Port Facility)
+-1,		; 35 (UNUSED-Transporter) (Transporter)
+36,		; 36 Atlantic Fleet: Crew (SS Structural)
+37,		; 37 Atlantic Fleet: Sails (SS Component)
+38,		; 38 Atlantic Fleet: Ship/Cargo (SS Module)
+-1,		; 39 [Scutage] ((Capitalization))
+-2,		; MUST BE HERE! TERMINATOR!
+
+@@0, Nothing
+
+@@1, Royal Palace
+The first city that is founded by your nation receives a free Royal Palace. Only one city in your nation is permitted to contain this improvement at any point in time, which designates it as your capital city. Building this improvement in a new city will cause it to be removed from the city where it is currently located, and transfer your capital.
+
+The cost of a new Royal Palace starts at 50 Materials when the game begins and increases by 10 Materials every century (60 Materials beginning in A.D. 600, 70 Materials beginning in A.D. 700, etc.).
+
+Under two forms of government, there is a maintenance cost for this improvement. In Constitutional Monarchy, the Royal Palace has a maintenance cost of 6 gold per turn, and in Merchant Republic, the cost is based on the number of cities within your nation. Details can be found in the entry for that government type.
+
+Allows: Palatine Chapel wonder (in this city only)
+
+You may not build a Magistrate's Office in your capital city.
+
+@@2, Barracks
+When you acquire the Holy Land Crusades advance, all Barracks in your nation's cities are sold, and the gold is added to your treasury. The maintenance cost of any new Barracks that you build is increased to 2 gold per turn.
+
+Similarly, when you acquire the Primitive Cannons advance, all Barracks in your nation's cities are sold, and the gold is added to your treasury. The maintenance cost of any new Barracks that you build is increased to 3 gold per turn.
+
+Allows Springald unit to be built in this city.
+
+@@3, Grist Mill §
+This improvement can be constructed multiple times within a city. On the first two construction cycles, it produces a specialist instead of the actual improvement.
+
+*** First Construction ***
+Prerequisites: none
+Benefits: Provides a Miller specialist unit. This specialist adds 1 Health to the city every turn.
+
+*** Second Construction ***
+Prerequisites: City has a Miller specialist unit; City size is at least 3; City has a Water Mill or a Wind Mill.
+Benefits: Provides a Bakery specialist unit (alongside the existing Miller). This specialist adds 1 additional Health to the city every turn, but deducts 1 gold from your treasury for maintenance.
+
+*** Third Construction ***
+Prerequisites: City has a Bakery specialist unit; City size is at least 10 (size 8 if your nation has acquired the Enclosure advance), or city has a Royal Palace, or your nation has the Domesday Book wonder; City has a Water Mill or a Wind Mill.
+Benefits: The large Grist Mill city improvement is added (alongside the existing Miller and Bakery). With this improvement in place, after the city has achieved a full complement of Health and increases in size, the Health accumulation resets to 50% full rather than empty.
+Allows: Enclosed Fields improvement
+
+@@4, Basilica
+
+@@5, Marketplace
+Additional benefit: Building a Marketplace in your capital city will immediately grant that city a free Market Town Charter (if it does not have one already). However, this also means you will begin paying the upkeep cost of that improvement.
+
+Allows: Textile Mill; Bank; Trade Fair Circuit
+
+@@6, Monastery §
+When a city completes a Monastery, one of the tiles in the city radius will be converted to the Monastery terrain type and will be populated by an immobile Monks unit. If this unit is ever killed in battle, the Monastery improvement in the city will automatically be removed! You would then need to reconstruct the improvement to replace the Monks and regain its benefit.
+
+Allows: Hospital; School of Medicine wonder; Magnificent Cluniac Abbey wonder; Cistercian Order wonder. Also allows Monastic Knight unit to be built in this city.
+
+The cost of this improvement begins at 80 Materials. Construction of the Magnificent Cluniac Abbey wonder, by any tribe, will increase this by 20. Construction of the Cistercian Order wonder, by any tribe, will increase this by 20 again.
+
+@@7, Magistrate's Office
+Additional prerequisites: City does not have a Royal Palace; City has a Market Town Charter.
+
+@@8, City Walls
+Allows: Bastion Fortress
+
+@@9, Market Town Charter
+Additional prerequisite: City size is at least 4.
+
+Allows: Magistrate's Office; Textile Mill; Free City Charter; Trade Fair Circuit; Harbor Crane
+
+NOTE: Your capital city will automatically receive a free Market Town Charter when it constructs a Marketplace, regardless of its size and regardless of whether your nation has knowledge of Trade.
+
+@@10, Textile Mill
+Additional prerequisites: City has a Marketplace; City has a Market Town Charter; City has a Water Mill or Wind Mill.
+
+@@11, Romanesque Cathedral
+Additional prerequisite: City does not have a Gothic Cathedral; City does not have the Iconic Romanesque Cathedral wonder; City does not have the Opulent Romanesque Cathedral wonder.
+
+Allows: Cathedral School
+
+You may not build the Iconic Romanesque Cathedral wonder or the Opulent Romanesque Cathedral wonder in a city which already has a Romanesque Cathedral. (However, constructing the Iconic Romanesque Cathedral will provide the benefit of a Romanesque Cathedral improvement in every city.)
+
+@@12, Cathedral School
+Additional prerequisite: City has a Romanesque Cathedral or a Gothic Cathedral.
+
+Allows: University; Iconic University wonder
+
+@@13, Sewer Conduits
+Additional prerequisites: City has a Free City Charter; City is adjacent to a river tile or to a Sea tile.
+
+@@14, Gothic Cathedral
+Allows: Cathedral School
+
+You may not build a Romanesque Cathedral, the Iconic Romanesque Cathedral wonder, the Opulent Romanesque Cathedral wonder, or the Magnificent Cluniac Abbey in a city which already has a Gothic Cathedral. (Once an example of more modern Gothic architecture has appeared in a city, the populace will not support beginning a project in the older Romanesque style.)
+
+You also may not build the Iconic Gothic Cathedral wonder or the Majestic Gothic Cathedral wonder in a city which already has a Gothic Cathedral. (However, constructing one of those wonders will automatically provide a free Gothic Cathedral improvement in that city.)
+
+@@15, Wood/Stone Craftsmen §
+This improvement can be constructed multiple times within a city. On the first four construction cycles, it produces a specialist instead of the actual improvement.
+
+*** First Construction ***
+Prerequisites: "Wood/Stone Craftsmanship" advance has been discovered or acquired.
+Benefits: Provides a Carpenter specialist unit. This specialist adds 1 unit of Materials to the city every turn.
+
+*** Second Construction ***
+Prerequisites: City has a Carpenter specialist unit; City size is at least 2.
+Benefits: Provides a Stonecutter specialist unit (alongside the existing Carpenter). This specialist adds 1 unit of Materials to the city every turn.
+
+*** Third Construction ***
+Prerequisites: City has Carpenter and Stonecutter specialist units; City size is at least 4; City has a Water Mill or Wind Mill.
+Benefits: Provides a Sawmill specialist unit which replaces the Carpenter specialist unit (the Stonecutter is not affected). This upgraded specialist adds 2 Materials to the city every turn, but deducts 1 gold from your treasury for maintenance.
+
+*** Fourth Construction ***
+Prerequisites: City has Sawmill and Stonecutter specialist units; City size is at least 6; City has a Water Mill or a Wind Mill.
+Benefits: Provides a Mason specialist unit which replaces the Stonecutter specialist unit (the Sawmill is not affected). This upgraded specialist adds 2 Materials to the city every turn, but deducts 1 gold from your treasury for maintenance.
+
+*** Fifth Construction ***
+Prerequisites: "Guilds" advance has been discovered or acquired; City has Sawmill and Mason specialist units; City size is at least 8; City has a Water Mill or a Wind Mill.
+Benefits: The large Wood/Stone Craftsmen city improvement replaces both the Sawmill and Mason specialist units. With this improvement in place, the quantity of Materials generated is increased by 100% of the base value (acts in concert with related benefit available from Foundry improvement; provides only an additional 25% benefit if Foundry has already been constructed).
+Allows: Guildhall
+
+@@16, Foundry §
+This improvement can be constructed multiple times within a city. On the first two construction cycles, it produces a specialist instead of the actual improvement.
+
+*** First Construction ***
+Prerequisites: "Metal Working" advance has been discovered or acquired.
+Benefits: Provides a Smith specialist unit. This specialist adds 2 Materials to the city every turn, but deducts 1 gold from your treasury for maintenance.
+Allows construction of primitive and small gunpowder artillery (Ribauldequin, Pot-de-fer, Fowler, Serpentine, and Falconet) in this city, once the prerequsite advances for each of those units are acquired.
+
+*** Second Construction ***
+Prerequisites: "Catalan Forges" advance has been discovered or acquired; City has a Smith specialist unit; City size is at least 6; City has a Water Mill or a Wind Mill.
+Benefits: Provides a Forge specialist unit which replaces the Smith specialist unit. This upgraded specialist adds 4 Materials to the city every turn, but deducts 2 gold from your treasury for maintenance.
+Allows construction of medium gunpower artillery (Bombard, Demi-culverin, and Saker) in this city, in addition to the small ones permitted by the Smith, once the prerequisite advances for each of those units are acquired.
+
+*** Third Construction ***
+Prerequisites: "Blast Furnace" advance has been discovered or acquired; City has a Forge specialist unit; City size is at least 8; City has a Water Mill or a Wind Mill.
+Benefits: The large Foundry city improvement replaces the Forge specialist unit. With this improvement in place, the quantity of Materials generated is increased by 100% of the base value (acts in concert with related benefit available from Wood/Stone Craftsmen improvement; provides only an additional 25% benefit if Wood/Stone Craftsmen has already been constructed).
+Allows construction of all gunpower artillery, including large cannons (Basilisk, Culverin, and Field Culverin) in this city, once the prerequisite advances for each of those units are acquired.
+
+The cost of this improvement begins at 60 Materials. It will increase to 70 when Catalan Forges are discovered by any tribe, to 80 when Wolf Furnace is discovered by any tribe, and finally to 100 when Blast Furnace is discovered by any tribe.
+
+@@17, (UNUSED-SDI)
+
+@@18, Hospital
+Reduces the impact of a major plague strike upon the city by 60%, resulting in a much lower chance of units being lost and a smaller population decrease. If a plague strikes and the Hospital serves its purpose, an operational surcharge will be calculated and deducted from your treasury. The amount of the surcharge is calculated based on the severity of the plague and the number of citizens saved.
+
+Also increases by 200% (total of 3x) the quantity of Materials that can be generated in the city before the unsanitary conditions caused by extensive industry (pollution) lead to a minor plague outbreak on a tile within the city radius.
+
+Additional prerequisites: City has a Monastery or a Free City Charter.
+
+@@19, Wind Mill
+Additional prerequisite: City does not have a Water Mill.
+
+Benefits: "Mill power" provides no immediate and direct benefit to the output of a city, but is required in order to construct any of the following specialists or improvements:
+
+• Bakery specialist, represented in the list of build options as Grist Mill. This advanced (level two) specialist is added alongside the basic Miller specialist. The Miller can rely on an animal- or human-powered grindstone, if necessary, but the amount of grain required by a Bakery can only be provided if there is access to mill power. (The final upgrade, to the large Grist Mill improvement, requires mill power as well.)
+
+• Textile Mill improvement.
+
+• Sawmill specialist, represented in the list of build options as Wood/Stone Craftsmen. This advanced (level two) specialist replaces the basic Carpenter specialist, which is available without mill power. The second construction of Wood/Stone Craftsmen, which generates a Stonecutter specialist, is available without mill power as well. But for the third construction of Wood/Stone Craftsmen, which will upgrade the Carpenter to a Sawmill, this and all subsequent levels require mill power.
+
+• Forge specialist, represented in the list of build options as Foundry. This advanced (level two) specialist replaces the basic Smith specialist. The Smith can rely on a hand-powered bellows and furnace, but a larger Forge requires access to mill power. (The final upgrade, to the Foundry improvement, requires mill power as well.)
+
+@@20, Water Mill
+Prerequisites: City is adjacent to a river tile or to a Sea consisting of at least 21 tiles.
+
+Benefits: "Mill power" provides no immediate and direct benefit to the output of a city, but is required in order to construct any of the following specialists or improvements:
+
+• Bakery specialist, represented in the list of build options as Grist Mill. This advanced (level two) specialist is added alongside the basic Miller specialist. The Miller can rely on an animal- or human-powered grindstone, if necessary, but the amount of grain required by a Bakery can only be provided if there is access to mill power. (The final upgrade, to the large Grist Mill improvement, requires mill power as well.)
+
+• Textile Mill improvement.
+
+• Sawmill specialist, represented in the list of build options as Wood/Stone Craftsmen. This advanced (level two) specialist replaces the basic Carpenter specialist, which is available without mill power. The second construction of Wood/Stone Craftsmen, which generates a Stonecutter specialist, is available without mill power as well. But for the third construction of Wood/Stone Craftsmen, which will upgrade the Carpenter to a Sawmill, this and all subsequent levels require mill power.
+
+• Forge specialist, represented in the list of build options as Foundry. This advanced (level two) specialist replaces the basic Smith specialist. The Smith can rely on a hand-powered bellows and furnace, but a larger Forge requires access to mill power. (The final upgrade, to the Foundry improvement, requires mill power as well.)
+
+@@21, (UNUSED-Nuclear Plant)
+
+@@22, Bank
+Additional prerequisites: City has a Marketplace; City has a Free City Charter.
+
+@@23, Free City Charter
+Additional prerequisites: City has a Market Town Charter; Current form of government is Enlightened Monarchy, Constitutional Monarchy, or Merchant Republic; City size is at least 8.
+
+NOTE: Your capital city is permitted to begin production of a Free City Charter at any point in the game, even without acquiring the Enlightened Monarchy advance and regardless of your current form of government, once it reaches a certain size. Under one of the three governments listed above, construction of this improvement can begin at size 8; otherwise, it requires the city to be size 10.
+
+Allows: Sewer Conduits; Hospital; Bank; Guildhall
+
+@@24, Enclosed Fields
+Additional prerequisite: City has a Grist Mill improvement.
+
+@@25, Trade Fair Circuit
+Additional prerequisites: City has a Marketplace; City has a Market Town Charter; City is not adjacent to a Sea consisting of at least 21 tiles; Total number of Sea tiles within the city radius is 4 or fewer. In addition, you can only build a maximum of 6 Trade Fair Circuits in your nation.
+
+The gold income that each Trade Fair Circuit provides every turn varies by your form of government, as follows:
+
+Interregnum: 8
+Tribal Monarchy: 0
+Primitive Monarchy: 8
+Feudal Monarchy: 4
+Enlightened Monarchy: 4
+Constitutional Monarchy: 4
+Merchant Republic: 1
+
+@@26, University
+Additional prerequisites: City size is at least 8; City has a Cathedral School.
+
+You may not build the Iconic University wonder in a city which already has a University. (However, constructing this wonder will then provide the benefit of a University improvement in every city.)
+
+@@27, Bastion Fortress
+Additional prerequisite: City has City Walls.
+
+@@28, Trade Fair Circuit
+Additional prerequisites: City has a Marketplace; City has a Market Town Charter; City is not adjacent to a Sea consisting of at least 21 tiles; Total number of Sea tiles within the city radius is 4 or fewer. In addition, you can only build a maximum of 6 Trade Fair Circuits in your nation.
+
+The gold income that each Trade Fair Circuit provides every turn varies by your form of government, as follows:
+
+Interregnum: 8
+Tribal Monarchy: 0
+Primitive Monarchy: 8
+Feudal Monarchy: 4
+Enlightened Monarchy: 4
+Constitutional Monarchy: 4
+Merchant Republic: 1
+
+@@29, Guildhall
+Additional prerequisites: City has Wood/Stone Craftsmen improvement; City has a Free City Charter.
+
+@@30, Fishing Fleet §
+Prerequisites: Either the "Carvel Shipbuilding" or the "Clinker Shipbuilding" advance has been discovered or acquired; City is adjacent to a Sea tile.
+
+When a city completes a Fishing Fleet, one of the Sea tiles adjacent to the city will be populated by an immobile Fishing Fleet unit. If this unit is ever killed in battle, the Fishing Fleet improvement in the city will automatically be removed! You would then need to reconstruct the improvement to replace the Fishing Fleet and regain its benefit.
+
+@@31, Harbor Crane
+Additional prerequisites: City has a Market Town Charter; City is adjacent to a Sea consisting of at least 21 tiles.
+
+Allows: Hanseatic League Capital wonder
+
+@@32, (UNUSED-Airport)
+
+@@33, Chivalric Tournament
+Has no effect under governments that do not experience unhappiness as a result of campaigning troops (Tribal, Primitive, Feudal, or Enlightened Monarchy).
+
+@@34, Shipyard
+Prerequisites: Either the "Carvel Shipbuilding" or the "Clinker Shipbuilding" advance has been discovered or acquired; City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@35, (UNUSED-Transporter)
+
+@@36, Atlantic Fleet: Crew
+Additional prerequisite: Construction of the Atlantic Fleet can only begin after the Sea Route to India wonder is completed by any nation.
+
+@@37, Atlantic Fleet: Sails
+Additional prerequisite: Construction of the Atlantic Fleet can only begin after the Sea Route to India wonder is completed by any nation.
+
+@@38, Atlantic Fleet: Ship/Cargo
+Additional prerequisites: Construction of the Atlantic Fleet can only begin after the Sea Route to India wonder is completed by any nation; City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@39, [Scutage]
+
+@WONDER_DESCRIPTIONS
+;
+@@WONDER_INDEX
+0,		; 0 Domesday Book (Pyramids)
+1,		; 1 Glorious Gothic Cathedral (Hanging Gardens)
+2,		; 2 Hanseatic League Capital (Colossus)
+-1,		; 3 Commemorative Tapestry (Lighthouse)
+-1,		; 4 Pilgrimage Route (Great Library)
+5,		; 5 Palatine Chapel (Oracle)
+6,		; 6 Offa's Dyke (Great Wall)
+7,		; 7 White Tower Fortress (Sun Tzu's War Academy)
+8,		; 8 Naval Industrial Arsenal (King Richard's Crusade)
+9,		; 9 Travels of Marco Polo (Marco Polo's Embassy)
+10,		; 10 Iconic Romanesque Cathedral (Michelangelo's Chapel)
+11,		; 11 School of Medicine (Copernicus' Observatory)
+12,		; 12 Mount of St Michael (Magellan's Expedition)
+13,		; 13 Decorated Octagonal Basilica (Shakespeare's Theatre)
+14,		; 14 Brunelleschi's Dome (Leonardo's Workshop)
+15,		; 15 Opulent Romanesque Cathedral (J. S. Bach's Cathedral)
+16,		; 16 Magnificent Cluniac Abbey (Isaac Newton's College)
+17,		; 17 Medici Bank (Adam Smith's Trading Co.)
+18,		; 18 Ornate Gospel Book (Darwin's Voyage)
+19,		; 19 Great Charter (Statue of Liberty)
+-1,		; 20 Holy Roman Emperor (Eiffel Tower)
+21,		; 21 King's Holy Land Crusade (Women's Suffrage)
+22,		; 22 Cistercian Order (Hoover Dam)
+23,		; 23 Palace of the Popes (Manhattan Project)
+24,		; 24 Leaning Tower (United Nations)
+25,		; 25 Sea Route to India (Apollo Program)
+26,		; 26 Iconic University (SETI Program)
+27,		; 27 Majestic Gothic Cathedral (Cure for Cancer)
+-2,		; MUST BE HERE! TERMINATOR!
+
+@@0, Domesday Book
+Benefits:
+
+1. The city which constructs this wonder immediately receives a free Miller, Bakery, and large Grist Mill improvement, if any of these are not already present.
+
+2. Going forward, any city that already has a Miller specialist and obtains mill power also receives a Bakery specialist for free. Similarly, any city that already has mill power and constructs a Miller specialist also receives a Bakery specialist for free. (In other words, the benefit is equal regardless of the order in which the Miller and mill power are added to a city.) However, this benefit is not applied retroactively to cities that currently have a Miller and mill power (but not a Bakery) at the time this wonder is built.
+
+3. By default, the large Grist Mill improvement can only be built in your capital and in cities of size 10 or greater. (This is reduced to size 8 or greater after your nation acquires the Enclosure advance.) This wonder allows the construction of the large Grist Mill improvement in any city, regardless of its size.
+
+@@1, Glorious Gothic Cathedral
+Additional prerequisite: City does not already have a Gothic Cathedral improvement; City does not already have one of the four wonders listed below.
+
+You may not build the Iconic Romanesque Cathedral wonder, the Opulent Romanesque Cathedral wonder, the Majestic Gothic Cathedral wonder, or the Brunelleschi's Dome wonder in the city which has the Glorious Gothic Cathedral.
+
+@@2, Hanseatic League Capital
+Additional prerequisite: City has a Harbor Crane improvement.
+
+@@3, Commemorative Tapestry
+
+@@4, Pilgrimage Route
+
+@@5, Palatine Chapel
+Additional prerequisite: City is your capital city — that is, it has a Royal Palace improvement.
+
+@@6, Offa's Dyke
+NOTE: City Walls may still be built in your cities when you own this wonder, thereby allowing you to prepare for its eventual expiration.
+
+@@7, White Tower Fortress
+For standard ground and naval units that win a battle, either attacking or defending, the base chance of 50% is increased to a 100% chance that the unit will become a veteran. Ranged units that are defending have this same likelihood of achieving veteran status. For ranged units that attack with a fired projectile and defeat an enemy unit, the base chance of 16% is increased to 33%.
+
+@@8, Naval Industrial Arsenal
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@9, Travels of Marco Polo
+Additional prerequisite: Government is not Tribal Monarchy.
+
+@@10, Iconic Romanesque Cathedral
+Additional prerequisites: City does not have a Romanesque Cathedral improvement; City does not have a Gothic Cathedral improvement; City does not already have one of the four wonders listed below.
+
+You may not build the Opulent Romanesque Cathedral wonder, the Glorious Gothic Cathedral wonder, the Majestic Gothic Cathedral wonder, or the Brunelleschi's Dome wonder in the city which has the Iconic Romanesque Cathedral.
+
+NOTE: Romanesque Cathedral improvements may still be built in your cities when you own this wonder, thereby allowing you to prepare for its eventual expiration.
+
+@@11, School of Medicine
+Additional prerequisite: City has a Monastery improvement.
+
+@@12, Mount of St Michael
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@13, Decorated Octagonal Basilica
+Prerequisites: All of the following three advances must be discovered or acquired: Byzantine Influence, Catholic Christianity, and Wood/Stone Craftsmanship.
+
+@@14, Brunelleschi's Dome
+Additional prerequisites: City does not already have one of the four wonders listed below.
+
+You may not build the Iconic Romanesque Cathedral wonder, the Opulent Romanesque Cathedral wonder, the Glorious Gothic Cathedral wonder, or the Majestic Gothic Cathedral wonder in the city which has Brunelleschi's Dome.
+
+@@15, Opulent Romanesque Cathedral
+Additional prerequisites: City does not have a Romanesque Cathedral improvement; City does not have a Gothic Cathedral improvement; City does not already have one of the four wonders listed below.
+
+You may not build the Iconic Romanesque Cathedral wonder, the Glorious Gothic Cathedral wonder, the Majestic Gothic Cathedral wonder, or the Brunelleschi's Dome wonder in the city which has the Opulent Romanesque Cathedral.
+
+@@16, Magnificent Cluniac Abbey
+Additional prerequisites: City has a Monastery improvement; City does not have a Gothic Cathedral improvement; City does not have the Cistercian Order wonder.
+
+Increases the cost of the Monastery improvement by 20 Materials.
+
+@@17, Medici Bank
+The list of qualifying city improvements is: Marketplace, City Walls, Market Town Charter, and Fishing Fleet. (Barracks costs 1 gold per turn initially, but this increases before Medici Bank can be built.)
+The list of qualifying city specialists is: Bakery, Sawmill, Mason, and Smith.
+
+@@18, Ornate Gospel Book
+Additional prerequisite: City has a Monastery improvement.
+
+@@19, Great Charter
+The nation that completes this wonder immediately receives the Constitutional Monarchy advance for free, without researching it. At the same time, all other nations in the game receive the ability to research this advance once they have acquired its two prerequisite advances. (They also receive permission to acquire this advance by trade or theft.)
+
+In addition to Constitutional Monarchy, this wonder immediately grants the following three advances, each of which enables the corresponding government type, if the nation that completes this wonder does not already have them: Feudalism, Merchant Republic, and Enlightened Monarchy.
+
+Finally, this wonder enables you to instantly adopt a new form of government, without Interregnum, using a special menu option available by pressing the [Tab] key.
+
+@@20, Holy Roman Emperor
+
+@@21, King's Holy Land Crusade
+Additional prerequisite: Current form of government is not Merchant Republic.
+
+Under Constitutional Monarchy, each campaigning military unit causes 1 citizen to become unhappy, and this wonder therefore eliminates this source of unhappiness in all cities.
+
+Other monarchy governments (Tribal, Primitive, Feudal, or Englightened) do not experience this type of unhappiness, so this wonder provides no benefit under those governments.
+
+Under Merchant Republic, this wonder ceases to function; a nation that has abandoned monarchy in favor of a republic cannot obtain a benefit from the crusade of a former king. With this form of government, each campaigning military unit causes 2 citizens to become unhappy, and this can only be reduced (from 2 to 1) by building Chivalric Tournament improvements in individual cities.
+
+NOTE: Chivalric Tournament improvements may still be built in your cities when you own this wonder, thereby allowing you to prepare for potentially adopting a Merchant Republic government.
+
+@@22, Cistercian Order
+Additional prerequisites: City has a Monastery improvement; City does not have the Magnificent Cluniac Abbey wonder; City is adjacent to a river tile or to a Sea consisting of at least 21 tiles.
+
+Increases the cost of the Monastery improvement by 20 Materials.
+
+NOTE: Neither Water Mills nor Wind Mills can be built in any of your cities as long as this wonder is under your control.
+
+@@23, Palace of the Popes
+NOTE: Only the nation that controls this wonder is ever able to build Swiss Pikeman units.
+
+@@24, Leaning Tower
+NOTE: This wonder cannot be built intentionally, but there is a 5% chance that a city which completes a Romanesque Cathedral will receive it for free.
+
+@@25, Sea Route to India
+Additional prerequisites: City is adjacent to a Sea consisting of at least 21 tiles; year is at least A.D. 1415.
+
+@@26, Iconic University
+Additional prerequisites: City size is at least 8; City has a Cathedral School; City does not have a University.
+
+NOTE: University improvements can not be built in any of your cities as long as this wonder is under your control.
+
+@@27, Majestic Gothic Cathedral
+Additional prerequisite: City does not already have a Gothic Cathedral improvement; City does not already have one of the four wonders listed below.
+
+You may not build the Iconic Romanesque Cathedral wonder, the Opulent Romanesque Cathedral wonder, the Glorious Gothic Cathedral wonder, or the Brunelleschi's Dome wonder in the city which has the Majestic Gothic Cathedral.
+
+@UNIT_DESCRIPTIONS
+;
+@@UNIT_INDEX
+0,		; 0 Peasant
+1,		; 1 Yeoman
+2,		; 2 Serf
+3,		; 3 Peasant Militia
+-1,		; 4 Seax Swordsman
+-1,		; 5 Spearman
+6,		; 6 Halberdier_
+-1,		; 7 Spearman II
+-1,		; 8 Pikeman
+9,		; 9 Refugee
+-1,		; 10 Pikeman II
+11,		; 11 Arbalestier –×_
+-1,		; 12 Halberdier
+13,		; 13 Swiss Pikeman
+-1,		; 14 Axeman II
+-1,		; 15 Axeman
+16,		; 16 Archer –›_
+-1,		; 17 Horseman
+-1,		; 18 Man-at-Arms
+19,		; 19 Crossbowman –+_
+-1,		; 20 Knight II
+-1,		; 21 Lancer
+-1,		; 22 Knight
+23,		; 23 Monastic Knight
+-1,		; 24 Knight III
+-1,		; 25 Demi-lancer
+26,		; 26 Demi-lancer_
+27,		; 27 Cuirassier ²¨
+-1,		; 28 Swordsman
+-1,		; 29 Swordsman II
+30,		; 30 Berber Infantry
+31,		; 31 Berber Cavalry
+32,		; 32 Viking Raider
+33,		; 33 Viking Berserker
+34,		; 34 Arab Infantry
+35,		; 35 Arab Cavalry
+36,		; 36 Mongol Cavalry –»
+37,		; 37 Turkish Janissary ¨
+38,		; 38 Plague
+39,		; 39 Black Death
+40,		; 40 Motte and Bailey
+41,		; 41 Stone Castle
+-1,		; 42 U42
+-1,		; 43 U43
+-1,		; 44 U44
+-1,		; 45 U45
+46,		; 46 Warlord
+47,		; 47 Inquisitor
+48,		; 48 Envoy
+49,		; 49 Commercial Trader
+50,		; 50 Merchant
+-1,		; 51 Scout
+52,		; 52 Archer –›
+53,		; 53 Crossbowman –+
+54,		; 54 Longbowman –»
+55,		; 55 Longbowman –»_
+56,		; 56 Bowman –»
+57,		; 57 Bowman –»_
+58,		; 58 Arbalestier –×
+59,		; 59 Hand Cannoneer ·
+60,		; 60 Hand Culveriner ¨
+61,		; 61 Arquebusier •
+62,		; 62 Musketeer ²•
+63,		; 63 Siege Engineer
+-1,		; 64 U64
+65,		; 65 Siege Tower
+66,		; 66 Torsion Catapult þ
+67,		; 67 Springald }—>
+68,		; 68 Mangonel þ
+69,		; 69 Trebuchet Þ
+70,		; 70 Couillard þ
+71,		; 71 Pot-de-fer }—>
+72,		; 72 Ribauldequin ²¤
+73,		; 73 Fowler o
+74,		; 74 Bombard 0
+75,		; 75 Basilisk O
+76,		; 76 Serpentine °´
+77,		; 77 Demi-culverin ó
+78,		; 78 Culverin Ó
+79,		; 79 Falconet °´
+80,		; 80 Saker ó
+81,		; 81 Field Culverin Ó
+82,		; 82 Carvel Galley
+83,		; 83 Clinker Galley
+84,		; 84 Trade Galley
+85,		; 85 Dromon
+86,		; 86 Viking Longship
+87,		; 87 Knarr
+88,		; 88 Longship
+89,		; 89 Balinger
+90,		; 90 Cog
+91,		; 91 War Cog
+92,		; 92 Slender Galley
+93,		; 93 Great Galley
+94,		; 94 Privateer
+95,		; 95 Hulk
+96,		; 96 Caravel
+97,		; 97 Carrack
+98,		; 98 Armed Carrack ó
+99,		; 99 –› Broadhead Arrows
+100,		; 100 –» Bodkin Arrows
+101,		; 101 –+ Bolts
+102,		; 102 –× Quarrels
+103,		; 103 }—> Artill Arrow
+104,		; 104 þ Rock
+105,		; 105 Þ Boulder
+106,		; 106 · Pebbles
+107,		; 107 ¨ Pellets
+108,		; 108 • Bullets
+109,		; 109 ¤ Stones
+110,		; 110 }—> Garrot
+111,		; 111  o Sm Stone Ball
+112,		; 112  0 Med Stone Ball
+113,		; 113  O Lg Stone Ball
+114,		; 114 °´ Sm Iron Ball
+115,		; 115 ó Med Iron Ball
+116,		; 116 Ó Lg Iron Ball
+117,		; 117 § Miller
+118,		; 118 § Bakery
+119,		; 119 § Monks
+120,		; 120 § Carpenter
+121,		; 121 § Stonecutter
+122,		; 122 § Sawmill
+123,		; 123 § Mason
+124,		; 124 § Smith
+125,		; 125 § Forge
+126,		; 126 § Fishing Fleet
+-2,		; MUST BE HERE! TERMINATOR!
+
+@@0, Peasant
+Under a Primitive Monarchy government (after you have learned Manorialism) or under a Feudal Monarchy government, Peasants are replaced by Serfs, which are slightly cheaper to build and have the same capabilities. New Peasant units that you build will never have veteran status.
+
+@@1, Yeoman
+A Yeoman is a settler-type unit that works twice as fast as either a Peasant or Serf. However, it cannot be built under a Primitive Monarchy or Feudal Monarchy government. The first Yeoman unit that is produced during the game, by any nation, will cause the support cost of each Peasant, Serf, and Yeoman to increase to 2 Health per turn for all nations, and all government types, in exactly 20 years (10 turns). New Yeoman units that you build will never have veteran status. NOTE: This unit is actually permitted to move 1.5 tiles per turn, although the Civilopedia entry only shows that it can move 1 tile.
+
+@@2, Serf
+A Serf is a settler-type unit that can only be built under a Primitive Monarchy government (after you have learned Manorialism) or under a Feudal Monarchy government. Under all other forms of government, the available settler-type units are Peasant and possibly Yeoman. New Serf units that you build will never have veteran status.
+
+@@3, Peasant Militia
+This basic military unit can never be built deliberately, but may be created automatically if a city without sufficient defenders is being threatened by enemies. This will result in the build cost of the unit (20 gold) being deducted directly from your treasury.
+
+@@4, Seax Swordsman
+
+@@5, Spearman
+
+@@6, Halberdier_
+AI-only unit.
+
+@@7, Spearman II
+
+@@8, Pikeman
+
+@@9, Refugee
+This settler-type unit can never be built deliberately, but may appear as "partisans" when a city is conquered.
+
+@@10, Pikeman II
+
+@@11, Arbalestier –×_
+AI-only ranged attack unit that will fire Quarrels, at a cost of 1 gold, whenever an enemy is within range.
+
+@@12, Halberdier
+
+@@13, Swiss Pikeman
+Can only be built by the nation that owns the Palace of the Popes wonder, and only once that nation has acquired knowledge of Advanced Polearms.
+
+@@14, Axeman II
+
+@@15, Axeman
+
+@@16, Archer –›_
+AI-only ranged attack unit that will fire Broadhead Arrows whenever an enemy is within range.
+
+@@17, Horseman
+
+@@18, Man-at-Arms
+
+@@19, Crossbowman –+_
+AI-only ranged attack unit that will fire Bolts, at a cost of 1 gold, whenever an enemy is within range.
+
+@@20, Knight II
+
+@@21, Lancer
+
+@@22, Knight
+
+@@23, Monastic Knight
+Can only be built in a city with a Monastery improvement.
+
+@@24, Knight III
+
+@@25, Demi-lancer
+
+@@26, Demi-lancer_
+AI-only unit.
+
+@@27, Cuirassier ²¨
+Ranged attack unit that will fire 2 Pellets, at a cost of 1 gold each, whenever an enemy is within range.
+
+@@28, Swordsman
+
+@@29, Swordsman II
+
+@@30, Berber Infantry
+Barbarian-only unit.
+
+@@31, Berber Cavalry
+Barbarian-only unit.
+
+@@32, Viking Raider
+Barbarian-only unit.
+
+@@33, Viking Berserker
+Barbarian-only unit.
+
+@@34, Arab Infantry
+Barbarian-only unit.
+
+@@35, Arab Cavalry
+Barbarian-only unit.
+
+@@36, Mongol Cavalry –»
+Barbarian-only unit. Ranged attack unit that will fire Bodkin Arrows whenever an enemy is within range, but will have movement remaining after doing so and can also attack directly.
+
+@@37, Turkish Janissary ¨
+Barbarian-only unit. Ranged attack unit that will fire Pellets whenever an enemy is within range.
+
+@@38, Plague
+This unit will not attack, but it marks the site of a severe plague outbreak and blocks all access to tile resources for 1 turn. When it disappears, it leaves behind "plague pollution" that will reduce tile productivity by 50% for 20 turns.
+
+@@39, Black Death
+This unit will not attack, but it marks the site of a severe plague outbreak and blocks all access to tile resources for 1 turn. When it disappears, it leaves behind "plague pollution" that will reduce tile productivity by 50% for 20 turns.
+
+@@40, Motte and Bailey
+Once you acquire the Stone Castles advance, any Motte and Bailey castles (i.e., fortress tile improvements) you have built to that point will be removed and replaced by this Motte and Bailey unit. New fortresses will then appear in the game as Stone Castles (with a different icon). The unit is always created with veteran status and it will receive the corresponding defense bonus if attacked.
+
+@@41, Stone Castle
+Once you acquire the Corned Gunpowder advance, any Stone Castles (i.e., fortress tile improvements) you have built since you acquired the Stone Castles advance will be removed and replaced by this Stone Castle unit. New fortresses will then appear in the game as Bastion Fortresses (with a different icon). The unit is always created with veteran status and it will receive the corresponding defense bonus if attacked.
+
+@@42, U42
+
+@@43, U43
+
+@@44, U44
+
+@@45, U45
+
+@@46, Warlord
+Barbarian-only unit.
+
+@@47, Inquisitor
+The advanced diplomat unit, with additional capabilities and benefits. May only be built in cities that contain a cathedral. New Inquisitor units that you build will never have veteran status. NOTE: This unit is actually permitted to move 1.5 tiles per turn, although the Civilopedia entry only shows that it can move 1 tile.
+
+@@48, Envoy
+The standard diplomat unit. Once the more advanced Inquisitor is available, an Envoy may only be built in cities that do not contain a cathedral. New Envoy units that you build will never have veteran status.
+
+@@49, Commercial Trader
+The advanced trade unit, with additional capabilities and benefits. May only be built in cities with a size of at least 8. New Commercial Trader units that you build will never have veteran status. NOTE: This unit is actually permitted to move 1.5 tiles per turn, although the Civilopedia entry only shows that it can move 1 tile.
+
+@@50, Merchant
+The standard trade unit. Once the more advanced Commercial Trader is available, a Merchant may only be built in cities with a size less than 8. New Merchant units that you build will never have veteran status.
+
+@@51, Scout
+
+@@52, Archer –›
+Ranged attack unit that will fire Broadhead Arrows whenever an enemy is within range. Can no longer be built after your nation acquires either the Longbows advance or the Composite Bows advance.
+
+@@53, Crossbowman –+
+Ranged attack unit that will fire Bolts, at a cost of 1 gold, whenever an enemy is within range.
+
+@@54, Longbowman –»
+Ranged attack unit that will fire Bodkin Arrows, at a cost of 1 gold, whenever an enemy is within range. NOTE: Every Longbowman unit automatically receives a 50% increase in its chance of receiving veteran status when created.
+
+@@55, Longbowman –»_
+AI-only ranged attack unit that will fire Bodkin Arrows, at a cost of 1 gold, whenever an enemy is within range. NOTE: Every Longbowman unit automatically receives a 50% increase in its chance of receiving veteran status when created.
+
+@@56, Bowman –»
+Ranged attack unit that will fire Bodkin Arrows, at a cost of 1 gold, whenever an enemy is within range.
+
+@@57, Bowman –»_
+AI-only ranged attack unit that will fire Bodkin Arrows, at a cost of 1 gold, whenever an enemy is within range.
+
+@@58, Arbalestier –×
+Ranged attack unit that will fire Quarrels, at a cost of 1 gold, whenever an enemy is within range.
+
+@@59, Hand Cannoneer ·
+Ranged attack unit that will fire Pebbles, at a cost of 1 gold, whenever an enemy is within range.
+
+@@60, Hand Culveriner ¨
+Ranged attack unit that will fire Pellets, at a cost of 1 gold, whenever an enemy is within range.
+
+@@61, Arquebusier •
+Ranged attack unit that will fire Bullets, at a cost of 1 gold, whenever an enemy is within range.
+
+@@62, Musketeer ²•
+Ranged attack unit that will fire 2 Bullets, at a cost of 1 gold each, whenever an enemy is within range.
+
+@@63, Siege Engineer
+This unit is unable to attack. A Siege Engineer will automatically transform into a Siege Tower whenever he is within 2 tiles of an enemy city or adjacent to an enemy castle. Similarly, a Siege Tower will transform back into a Siege Engineer when this is no longer the case.
+
+@@64, U64
+
+@@65, Siege Tower
+A Siege Engineer will automatically transform into a Siege Tower whenever he is within 2 tiles of an enemy city or adjacent to an enemy castle. Similarly, a Siege Tower will transform back into a Siege Engineer when this is no longer the case.
+
+@@66, Torsion Catapult þ
+Mechanical artillery unit that will fire a Rock whenever an enemy is within range.
+
+@@67, Springald }—>
+Can only be built in a city with a Barracks. Mechanical artillery unit that will fire an Artill Arrow, at a cost of 2 gold, whenever an enemy is within range.
+
+@@68, Mangonel þ
+Mechanical artillery unit that will fire a Rock whenever an enemy is within range.
+
+@@69, Trebuchet Þ
+After the acquisition of Bombards, Corned Gunpowder, or Trunnions/Limbers, this unit can only be built in a city without a Smith specialist or Foundry improvement. Mechanical artillery unit that will fire a Boulder, at a cost of 1 gold, whenever an enemy is within range.
+
+@@70, Couillard þ
+After the acquisition of Bombards, Corned Gunpowder, or Trunnions/Limbers, this unit can only be built in a city without a Smith specialist or Foundry improvement. Mechanical artillery unit that will fire a Rock whenever an enemy is within range. NOTE: This unit is actually permitted to move 1.5 tiles per turn, although the Civilopedia entry only shows that it can move 1 tile.
+
+@@71, Pot-de-fer }—>
+Can only be built in a city with a Smith specialist, Forge specialist, or Foundry improvement. Obsolete with the acquisition of any of the following advances: Bombards, Corned Gunpowder, or Trunnions/Limbers. Gunpowder artillery unit that will fire a Garrot, at a cost of 2 gold, whenever an enemy is within range.
+
+@@72, Ribauldequin ²¤
+Can only be built in a city with a Smith specialist, Forge specialist, or Foundry improvement. Obsolete with the acquisition of any of the following advances: Bombards, Corned Gunpowder, or Trunnions/Limbers. Gunpowder artillery unit that will fire 2 Stones, at a cost of 1 gold each, whenever an enemy is within range.
+
+@@73, Fowler o
+Can only be built in a city with a Smith specialist, Forge specialist, or Foundry improvement. Gunpowder artillery unit that will fire a Small Stone Ball, at a cost of 2 gold, whenever an enemy is within range. NOTE: This unit is actually permitted to move 1.5 tiles per turn, although the Civilopedia entry only shows that it can move 1 tile.
+
+@@74, Bombard 0
+Can only be built in a city with a Forge specialist or Foundry improvement. Gunpowder artillery unit that will fire a Medium Stone Ball, at a cost of 4 gold, whenever an enemy is within range.
+
+@@75, Basilisk O
+Can only be built in a city with a Foundry improvement. Gunpowder artillery unit that will fire a Large Stone Ball, at a cost of 6 gold, whenever an enemy is within range.
+
+@@76, Serpentine °´
+Can only be built in a city with a Smith specialist, Forge specialist, or Foundry improvement. Gunpowder artillery unit that will fire a Small Iron Ball, at a cost of 1 gold, whenever an enemy is within range.
+
+@@77, Demi-culverin ó
+Can only be built in a city with a Forge specialist or Foundry improvement. Gunpowder artillery unit that will fire a Medium Iron Ball, at a cost of 3 gold, whenever an enemy is within range. NOTE: This unit is actually permitted to move 1.5 tiles per turn, although the Civilopedia entry only shows that it can move 1 tile.
+
+@@78, Culverin Ó
+Can only be built in a city with a Foundry improvement. Gunpowder artillery unit that will fire a Large Iron Ball, at a cost of 5 gold, whenever an enemy is within range.
+
+@@79, Falconet °´
+Can only be built in a city with a Smith specialist, Forge specialist, or Foundry improvement. Gunpowder artillery unit that will fire a Small Iron Ball, at a cost of 1 gold, whenever an enemy is within range.
+
+@@80, Saker ó
+Can only be built in a city with a Forge specialist or Foundry improvement. Gunpowder artillery unit that will fire a Medium Iron Ball, at a cost of 3 gold, whenever an enemy is within range. NOTE: This unit is actually permitted to move 2.5 tiles per turn, although the Civilopedia entry only shows that it can move 2 tiles.
+
+@@81, Field Culverin Ó
+Can only be built in a city with a Foundry improvement. Gunpowder artillery unit that will fire a Large Iron Ball, at a cost of 5 gold, whenever an enemy is within range.
+
+@@82, Carvel Galley
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@83, Clinker Galley
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@84, Trade Galley
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@85, Dromon
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@86, Viking Longship
+Barbarian-only unit.
+
+@@87, Knarr
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@88, Longship
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@89, Balinger
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@90, Cog
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@91, War Cog
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@92, Slender Galley
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@93, Great Galley
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@94, Privateer
+Barbarian-only unit.
+
+@@95, Hulk
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@96, Caravel
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@97, Carrack
+Additional prerequisite: City is adjacent to a Sea consisting of at least 21 tiles.
+
+@@98, Armed Carrack ó
+Additional prerequisites: City is adjacent to a Sea consisting of at least 21 tiles; City has a Forge specialist or Foundry improvement. Ranged attack unit that will fire a Medium Iron Ball, at a cost of 3 gold, whenever an enemy is within range.
+
+@@99, –› Broadhead Arrows
+Projectile fired by Archer.
+
+@@100, –» Bodkin Arrows
+Projectile fired by Longbowman, Bowman, and Mongol Cavalry for 1 gold.
+
+@@101, –+ Bolts
+Projectile fired by Crossbowman for 1 gold.
+
+@@102, –× Quarrels
+Projectile fired by Arbalestier for 1 gold.
+
+@@103, }—> Artill Arrow
+Projectile fired by Springald for 2 gold. A human defender can lose up to 50% of HP but cannot be killed. Can only move 2 tiles when closest target is an enemy city, castle, artillery unit, or ship at that distance; otherwise, movement is reduced to 1.
+
+@@104, þ Rock
+Projectile fired by Torsion Catapult, Mangonel, and Couillard. A human defender can lose up to 50% of HP but cannot be killed. Can only move 2 tiles when closest target is an enemy city, castle, artillery unit, or ship at that distance; otherwise, movement is reduced to 1.
+
+@@105, Þ Boulder
+Projectile fired by Trebuchet for 1 gold. A human defender can lose up to 50% of HP but cannot be killed. Can only move 2 tiles when closest target is an enemy city, castle, artillery unit, or ship at that distance; otherwise, movement is reduced to 1.
+
+@@106, · Pebbles
+Projectile fired by Hand Cannoneer for 1 gold.
+
+@@107, ¨ Pellets
+Projectile fired by Hand Culveriner, Turkish Janissary, and Cuirassier for 1 gold.
+
+@@108, • Bullets
+Projectile fired by Arquebusier and Musketeer for 1 gold.
+
+@@109, ¤ Stones
+Projectile fired by Ribauldequin for 1 gold. A human defender can lose up to 50% of HP but cannot be killed.
+
+@@110, }—> Garrot
+Projectile fired by Pot-de-fer for 2 gold. A human defender can lose up to 50% of HP but cannot be killed. Can only move 2 tiles when closest target is an enemy city, castle, artillery unit, or ship at that distance; otherwise, movement is reduced to 1.
+
+@@111,  o Sm Stone Ball
+Projectile fired by Fowler for 2 gold. A human defender can lose up to 50% of HP but cannot be killed. Can only move 2 tiles when closest target is an enemy city, castle, artillery unit, or ship at that distance; otherwise, movement is reduced to 1.
+
+@@112,  0 Med Stone Ball
+Projectile fired by Bombard for 4 gold. A human defender can lose up to 50% of HP but cannot be killed. Can only move 2 tiles when closest target is an enemy city, castle, artillery unit, or ship at that distance; otherwise, movement is reduced to 1.
+
+@@113,  O Lg Stone Ball
+Projectile fired by Basilisk for 6 gold. A human defender can lose up to 50% of HP but cannot be killed. Can only move 2 tiles when closest target is an enemy city, castle, artillery unit, or ship at that distance; otherwise, movement is reduced to 1.
+
+@@114, °´ Sm Iron Ball
+Projectile fired by Serpentine and Falconet for 1 gold. A human defender can lose up to 50% of HP but cannot be killed. Can only move 2 tiles when closest target is an enemy city, castle, artillery unit, or ship at that distance; otherwise, movement is reduced to 1.
+
+@@115, ó Med Iron Ball
+Projectile fired by Demi-culverin, Saker, and Armed Carrack for 3 gold. A human defender can lose up to 50% of HP but cannot be killed. Can only move 2 tiles when closest target is an enemy city, castle, artillery unit, or ship at that distance; otherwise, movement is reduced to 1.
+
+@@116, Ó Lg Iron Ball
+Projectile fired by Culverin and Field Culverin for 5 gold. A human defender can lose up to 50% of HP but cannot be killed. Can only move 2 tiles when closest target is an enemy city, castle, artillery unit, or ship at that distance; otherwise, movement is reduced to 1.
+
+@@117, § Miller
+Specialist unit, created by building the Grist Mill improvement.
+
+@@118, § Bakery
+Specialist unit, created by building the Grist Mill improvement.
+
+@@119, § Monks
+Specialist unit, created by building the Monastery improvement. If this unit is destroyed, the Monastery improvement in the city will be lost.
+
+@@120, § Carpenter
+Specialist unit, created by building the Wood/Stone Craftsmen improvement.
+
+@@121, § Stonecutter
+Specialist unit, created by building the Wood/Stone Craftsmen improvement.
+
+@@122, § Sawmill
+Specialist unit, created by building the Wood/Stone Craftsmen improvement.
+
+@@123, § Mason
+Specialist unit, created by building the Wood/Stone Craftsmen improvement.
+
+@@124, § Smith
+Specialist unit, created by building the Foundry improvement. Allows the construction of primitive and small gunpowder artillery (Ribauldequin, Pot-de-fer, Fowler, Serpentine, and Falconet) in this city, once the prerequsite advances for each of those units are acquired.
+
+@@125, § Forge
+Specialist unit, created by building the Foundry improvement. Allows the construction of medium gunpower artillery (Bombard, Demi-culverin, and Saker) in this city, once the prerequisite advances for each of those units are acquired.
+
+@@126, § Fishing Fleet
+Specialist unit, created by building the Fishing Fleet improvement. If this unit is destroyed or disbanded, the Fishing Fleet improvement in the city will be lost.
+
+@TERRAIN_AND_RESOURCE_DESCRIPTIONS
+;
+@@TERRAIN_INDEX
+0,		; 0 Arable (poor)
+1,		; 1 Arable
+2,		; 2 Pasture
+3,		; 3 Arable (lush)
+4,		; 4 Mountain Pass
+5,		; 5 Mountains
+6,		; 6 Dense Forest
+7,		; 7 Pine Forest
+8,		; 8 Heathland
+9,		; 9 Marsh/Fen
+-1,		; 10 Sea
+11,		; 11 Woodland
+12,		; 12 Hills
+13,		; 13 Terraced Hills
+14,		; 14 Monastery
+15,		; 15 Urban
+-1,		; 16 Clay
+-1,		; 17 Small Game
+18,		; 18 Pasture+
+-1,		; 19 Honey
+-1,		; 20 Iron Ore
+-1,		; 21 Iron Ore
+-1,		; 22 Timber
+-1,		; 23 Amber
+-1,		; 24 Wild Fowl
+-1,		; 25 Eels
+-1,		; 26 Herring
+-1,		; 27 Orchard
+28,		; 28 Limestone
+-1,		; 29 Grapes
+-1,		; 30 Abbey Ale
+-1,		; 31 Artesian Well
+-1,		; 32 Domestic Fowl
+-1,		; 33 Pigs
+34,		; 34 Pasture+
+-1,		; 35 Horses
+-1,		; 36 Silver
+-1,		; 37 Silver
+-1,		; 38 Red Deer
+39,		; 39 Bears
+-1,		; 40 Goats
+-1,		; 41 Reeds
+-1,		; 42 Salmon
+-1,		; 43 Foxes
+44,		; 44 Wild Boar
+-1,		; 45 Olives
+-1,		; 46 Goods and Tools
+-1,		; 47 Public Garden
+-2,		; MUST BE HERE! TERMINATOR!
+
+@@0, Arable (poor)
+Irrigation on Arable (poor) terrain will deplete and be lost if it is worked for 150 turns. Arable (poor) terrain that is unworked for 50 turns may revert to Woodland or Marsh/Fen. Warming climate may cause Arable (poor) to change to Arable.
+
+@@1, Arable
+Irrigation on Arable land will cause the terrain to deplete to Arable (poor) if it is worked for 150 turns. Arable terrain that is unworked for 50 turns may revert to Woodland or Marsh/Fen. Warming climate may cause Arable to change to Arable (lush), but cooling climate may cause Arable to change to Arable (poor).
+
+@@2, Pasture
+Pasture that is unworked for 50 turns may revert to Heathland.
+
+@@3, Arable (lush)
+Irrigation on Arable (lush) land will cause the terrain to deplete to Arable if it is worked for 150 turns. Arable (lush) terrain that is unworked for 50 turns may revert to Woodland or Marsh/Fen. Cooling climate may cause Arable (lush) to change to Arable.
+
+@@4, Mountain Pass
+A mine on Mountain Pass will deplete and be lost if it is worked for 150 turns.
+
+@@5, Mountains
+Mountains are impassable to all units except for Peasants, Serfs, and Yeomen. Building a road or a castle on a Mountain tile will convert the tile to Mountain Pass, but the road or castle will be removed. Those improvements would need to be built again on the new terrain. Founding a city on a Mountain tile will convert the tile to a Mountain Pass.
+
+@@6, Dense Forest
+A woodcutting operation on Dense Forest will cause the terrain to deplete to Woodland if it is worked for 75 turns. If this land is cleared to Woodland, a one-time bonus of 20 Materials will be provided to the nearest city. Founding a city on a Dense Forest tile will convert the tile to Arable terrain, with a small possibility of Arable (lush).
+
+@@7, Pine Forest
+A woodcutting operation on Pine Forest will cause the terrain to deplete to Woodland if it is worked for 75 turns. If this land is cleared to Woodland, a one-time bonus of 20 Materials will be provided to the nearest city. Founding a city on a Pine Forest tile will convert the tile to Arable terrain, with a small possibility of Arable (lush).
+
+@@8, Heathland
+A mine on Heathland will deplete and be lost if it is worked for 150 turns. If this land is cleared to Pasture, a one-time bonus of 10 Materials will be provided to the nearest city. Warming climate may cause Heathland to change to Woodland. Founding a city on Heathland will convert the tile to a Pasture.
+
+@@9, Marsh/Fen
+Founding a city on a Marsh/Fen tile will convert the tile to Arable terrain, with a small possibility of Arable (lush).
+
+@@10, Sea
+
+@@11, Woodland
+Woodland will produce 1 extra Health (for a total of 2 per turn) if it contains a river and does not contain a woodcutting operation. A woodcutting operation on Woodland will deplete and be lost if it is worked for 75 turns. Woodland that is unworked for 50 turns may revert to Dense or Pine Forest. If this land is cleared to Arable, a one-time bonus of 10 Materials will be provided to the nearest city. Founding a city on a Woodland tile will convert the tile to Arable terrain, with a small possibility of Arable (lush).
+
+@@12, Hills
+A mine on Hills will deplete and be lost if it is worked for 150 turns. Founding a city on Hills will convert the tile to Terraced Hills.
+
+@@13, Terraced Hills
+Irrigation or a mine on Terraced Hills will deplete and be lost if it is worked for 150 turns. Terraced Hills that is unworked for 50 turns may revert to Hills.
+
+@@14, Monastery
+When a city builds a Monastery improvement, a tile within the city radius will automatically convert to Monastery terrain.
+
+@@15, Urban
+A city tile will automatically convert to Urban when the city reaches size 10. When the city reaches sizes 14,16, 18, and 20, at each of those milestones another tile adjacent to the city will also automatically convert to Urban.
+
+@@16, Clay
+
+@@17, Small Game
+
+@@18, Pasture+
+Approximately 50% of Pasture tiles qualify as Pasture+ and produce 1 unit of Materials in addition to 2 Health. The tile is able to support enough animals to generate a meaningful amount of wool, fur, hides, and leather.
+
+@@19, Honey
+
+@@20, Iron Ore
+
+@@21, Iron Ore
+
+@@22, Timber
+
+@@23, Amber
+
+@@24, Wild Fowl
+
+@@25, Eels
+
+@@26, Herring
+
+@@27, Orchard
+
+@@28, Limestone
+The presence of Limestone removes the Health resource that is normally available on a Hills tile. When this tile is worked, the activity related to extensive stonecutting frightens away the game that is normally in the area.
+
+@@29, Grapes
+
+@@30, Abbey Ale
+
+@@31, Artesian Well
+
+@@32, Domestic Fowl
+
+@@33, Pigs
+
+@@34, Pasture+
+Approximately 50% of Pasture tiles qualify as Pasture+ and produce 1 unit of Materials in addition to 2 Health. The tile is able to support enough animals to generate a meaningful amount of wool, fur, hides, and leather.
+
+@@35, Horses
+
+@@36, Silver
+
+@@37, Silver
+
+@@38, Red Deer
+
+@@39, Bears
+The presence of dangerous Bears causes the normal defensive bonus provided by Pine Forest to be eliminated. Units on this tile will defend at normal strength.
+
+@@40, Goats
+
+@@41, Reeds
+
+@@42, Salmon
+
+@@43, Foxes
+
+@@44, Wild Boar
+The presence of dangerous Wild Boar causes the normal defensive bonus provided by Hills to be eliminated. Units on this tile will defend at normal strength.
+
+@@45, Olives
+
+@@46, Goods and Tools
+
+@@47, Public Garden
+
+@GOVERNMENT_DESCRIPTIONS
+;
+@@GOVERNMENT_INDEX
+0,		; Interregnum (Anarchy)
+2,		; Primitive Monarchy (Despotism)
+4,		; Enlightened Monarchy (Monarchy)
+3,		; Feudal Monarchy (Communism)
+1,		; Tribal Monarchy (Fundamentalism)
+5,		; Constitutional Monarchy (Republic)
+6,		; Merchant Republic (Democracy)
+-2,		; MUST BE HERE! TERMINATOR!
+
+@@Interregnum
+Interregnum occurs when you request or permit a revolution in order to change your form of government, or (less commonly) when your nation's government collapses due to game actions. Interregnum is similar to Primitive Monarchy, except that no taxes are collected, no research occurs, and the corruption rate is even higher.
+
+(Note: replaces "Anarchy" from the base game.)
+
+@@Tribal Monarchy
+This is the initial, default government for every nation at the beginning of the game.
+
+• TILE PRODUCTION: Normal
+• WE LOVE THE TRIBAL KING DAY: For a city celebrating this festival, any tile that generates at least 1 Trade produces 1 additional Trade. The city also receives a bonus of 1 Health per turn.
+• MILITARY UNIT SUPPORT: 3 units per city are free.
+• MORALE: All citizens are content.
+• MAXIMUM TAX, RESEARCH, LUXURY RATE: 80%. However, research suffers a 53% penalty (rounded down) which is deducted at the end of the calculation for each city. This means that the max *effective* research rate is about 38%.
+• ROYAL PALACE UPKEEP: Free
+• CORRUPTION: None in any city.
+• DIPLOMACY: Relationship penalties for diplomatic actions are reduced.
+
+(Note: replaces "Fundamentalism" from the base game.)
+
+@@Primitive Monarchy
+Each nation is automatically converted to this form of government when it acquires the "Catholic Christianity" advance and chooses to adopt Christianity.
+
+• TILE PRODUCTION: Any tile that produces 3 or more of any resource produces 1 less. (However, if the Health production of the city tile itself or an immediately adjacent tile could be affected by this limitation, an event will moderate the penalty by restoring 1 Health per turn directly to the City Growth box.)
+• WE LOVE THE KING DAY: A city celebrating this festival completely avoids the tile production penalty for all tiles. The city also receives a bonus of 1 Health per turn.
+• MILITARY UNIT SUPPORT: The size (number) of the city is the number of military units that the city can support for free.
+• MORALE: 3 units per city can each make 1 unhappy citizen content.
+• MAXIMUM TAX, RESEARCH, LUXURY RATE: 60%
+• TAX AND RESEARCH BONUS: The nation receives a default fixed value of 1 gold and 1 research point per turn. If either the tax or science rate is set to the maximum rate of 60%, then both credits are applied to that single destination instead. If a rate is set below 40%, then no credit is given in that category.
+• ROYAL PALACE UPKEEP: Free
+• CORRUPTION: Based on distance from capital; increases sharply to high levels in distant cities.
+
+(Note: replaces "Despotism" from the base game.)
+
+@@Feudal Monarchy
+This government becomes available when a nation acquires both the "Catholic Christianity" and "Feudalism" advances.
+
+• TILE PRODUCTION: Normal
+• WE LOVE THE FEUDAL KING DAY: For a city celebrating this festival, any tile that generates at least 1 Trade produces 1 additional Trade. The city also receives a bonus of 1 Health per turn.
+• MILITARY UNIT SUPPORT: 2 units per city are free.
+• MORALE: 3 units per city can each make 2 unhappy citizens content.
+• MAXIMUM TAX, RESEARCH, LUXURY RATE: 80%
+• ROYAL PALACE UPKEEP: Free
+• CORRUPTION: Moderate in capital; equally high in all other cities regardless of distance from capital.
+
+(Note: replaces "Communism" from the base game.)
+
+@@Enlightened Monarchy
+This government becomes available when a nation acquires the advance of the same name.
+
+• TILE PRODUCTION: Normal
+• WE LOVE THE ENLIGHTENED KING DAY: For a city celebrating this festival, any tile that generates at least 1 Trade produces 1 additional Trade. The city also receives a bonus of 1 Health per turn.
+• MILITARY UNIT SUPPORT: 3 units per city are free.
+• MORALE: 3 units per city can each make 1 unhappy citizen content.
+• MAXIMUM TAX, RESEARCH, LUXURY RATE: 70%
+• ROYAL PALACE UPKEEP: Free
+• CORRUPTION: Based on distance from capital; increases gradually to moderate levels in distant cities.
+
+(Note: replaces "Monarchy" from the base game.)
+
+@@Constitutional Monarchy
+This government becomes available when a nation acquires the advance of the same name, which is only possible after the Great Charter wonder has been completed.
+
+• TILE PRODUCTION: Any tile that generates at least 1 Trade produces 1 additional Trade.
+• WE LOVE THE LAWFUL KING DAY: For a city celebrating this festival, each happy citizen will reimburse the Materials support cost for 1 unit every turn, up to a maximum of 6 Materials. (This will not be shown on the city screen; the extra Material(s) will be added directly to the city's Production box.) The city also receives a bonus of 1 Health per turn.
+• MILITARY UNIT SUPPORT: 1 unit per city is free. However, the city must initially pay support for *all* units by generating sufficient Materials to do so. It will then be reimbursed by having 1 Material added directly to the city's Production box. (See also special case of celebrating cities).
+• MORALE: 1 unit from each city may always "campaign" with no impact. Each unit after the first which is located outside of a city or castle will make 1 content citizen unhappy. A Chivalric Tournament (or the King's Holy Land Crusade wonder) will eliminate this penalty. Also, if any individual city remains in civil disorder (riot) for two consecutive turns, the national government will collapse and you will enter a period of Interregnum.
+• MAXIMUM TAX, RESEARCH, LUXURY RATE: 80%
+• ROYAL PALACE UPKEEP: 6 gold per turn
+• CORRUPTION: Based on distance from capital; increases slowly to moderate levels in distant cities.
+• DIPLOMACY: The Council of Nobles may force peace.
+
+(Note: replaces "Republic" from the base game.)
+
+@@Merchant Republic
+This government becomes available when a nation acquires the advance of the same name.
+
+• TILE PRODUCTION: Any tile that generates at least 1 Trade produces 1 additional Trade.
+• WE LOVE THE ELECTED DOGE DAY: For a city celebrating this festival, each happy citizen will reimburse the Materials support cost for 1 unit every turn, up to a maximum of 3 Materials. (This will not be shown on the city screen; the extra Material(s) will be added directly to the city's Production box.) The city also receives a bonus of 1 Health per turn.
+• MILITARY UNIT SUPPORT: No units are free (except for special case of celebrating cities).
+• MORALE: The Royal Palace, or a Magistrate's Office, will make 1 content citizen happy. Each and every unit which is "campaigning" (not located within a city or castle) will make 2 content citizens unhappy. The King's Holy Land Crusade wonder ceases to function and cannot be used to reduce this unhappiness. However, a Chivalric Tournament will reduce this penalty from 2 to 1 in each city where it is built. Also, if any individual city remains in civil disorder (riot) for two consecutive turns, the national government will collapse and you will enter a period of Interregnum.
+• MAXIMUM TAX, RESEARCH, LUXURY RATE: 100%
+• ROYAL PALACE UPKEEP: Based on number of cities, with a base value of 1 gold and with each city costing 0.1 more than the previous one. This makes this government efficient for a small nation, but unsuitable for a large one with many cities. The total upkeep scales as follows:
+· 5 cities = 2 gold per turn
+· 10 cities = 6 gold per turn (the same as the fixed cost under Constitutional Monarchy)
+· 15 cities = 12 gold per turn
+· 20 cities = 20 gold per turn
+· 25 cities = 30 gold per turn
+· 30 cities = 43 gold per turn
+· 35 cities = 58 gold per turn
+· 40 cities = 75 gold per turn
+• CORRUPTION: None in any city.
+• DIPLOMACY: The Council of Nobles may force peace. All cities and units are immune to bribery.
+
+(Note: replaces "Democracy" from the base game.)
+
+@CONCEPT_DESCRIPTIONS
+;
+@@ IMPORTANT!
+Many custom game effects within Medieval Millennium are achieved via Lua events. This enables significant functionality alterations and enhancements, which are not present in a standard game of Civilization II. It is highly recommended that you read each of the entries in this "Medieval Millennium Game Concepts" list, and refer back to this section if you encounter anything unexpected within the game.
+
+@@ [Backspace] Key
+During your turn, the [Backspace] key provides context-sensitive help information about the active unit and the tile on which it is currently located. If no unit is currently active, then help is displayed for the tile only (unless the tile contains exactly one unit, in which case its information is also shown).
+
+One key piece of information displayed when you press this key relates to the concept of Stack Attrition. Each type of terrain can only support a fixed number of human (non-mechanical) military units, and the backspace key will reveal the exact limit on a particular tile, as well as the number of units that it is currently supporting. For more details, please see the documentation regarding Stack Attrition within the Civilopedia or in the PDF Guide to Units.
+
+@@ [Tab] Key
+During your turn, the [Tab] key will display an event-driven menu of additional game options. Most of these provide informational displays, often summarizing or organizing details in a more efficient way. These may be very helpful in formulating a strategy or optimizing the efficiency of your nation. The final two options go a step further and allow you to take specific administrative actions that are not available via any other means.
+
+• Display tile usage levels for your cities: This allows you to monitor the land in your nation as it relates to the concept of terrain depletion. Please see the entry for "Depleting and Reverting Terrain" in the Civilopedia or in the PDF Guide to Terrain.
+
+• Display tiles near your cities with plague pollution: This allows you to monitor the presence of plague pollution within your nation, and may help you formulate a strategy regarding the value of cleaning up plague tiles with peasant-type units.
+
+• Display your chances of producing new veteran units: This summarizes the effects of city improvements, wonders of the world, and previous unit construction activity within each city. You have the ability to view the information either by city (for all buildable unit types) or by unit type (for all cities). This may help you formulate a strategy regarding which unit types to build in which locations.
+
+• Display available improvements not built yet: This allows you to list all the cities which do not contain a particular city improvement, as a replacement for cycling through each city screen and examining the list of improvements there. It may be helpful in ensuring that your city development strategy is being executed correctly everywhere in your realm.
+
+• Display technology trading possibilities: This acts as an extra benefit of embassies that you establish with other nations. For every foreign nation with whom you have an embassy, you are provided with two lists of advances: those that they possess but you do not, and those that you possess that they do not. By comparing these lists, you can determine if you consider it worthwhile to initiate a diplomatic meeting with that nation for the purpose of proposing an exchange of knowledge.
+
+• Display power ratings for all (contacted) nations: Please see the entry for "Power Ratings" in the Civilopedia or in the PDF Guide to Gameplay. This menu option allows you to view the numerical value of each nation's rating, providing greater detail than is visible through the diplomacy screens.
+
+• Close one or more Basilicas: City improvements that are considered church property cannot be sold by the order of the king or for the benefit of your treasury. Once the citizens of a city have access to a worship facility, the church will not allow this to be taken away. However, once a city contains a Cathedral (or the benefit of one via a wonder), then a smaller Basilica is no longer considered to be a necessity. You may still wish to keep it operating in order to receive the benefit it provides, but if you conclude that it is truly no longer needed then you can elect to close it. This removes it from the city without providing any immediate benefit to your treasury, but it means you will no longer be required to pay the upkeep for it each turn. Closing unnecessary Basilicas can therefore help to stabilize your economy in trying times.
+
+• Sell one or more Specialist buildings: The entry for Specialists in the Civilopedia, or in the PDF Guide to Improvements, contains details about the various levels of city specialists and how they are constructed. Within your cities, the city specialist units may not be disbanded; furthermore, although the specialist improvements of Wood/Stone Craftsmen and Foundry can be sold, this will not restore any specialists that they replaced. Although the Health and Materials that specialists generate are extremely valuable, in times of economic hardship you may find that the upkeep costs are simply not sustainable. This menu option allows you to sell or downgrade those specialists that charge upkeep to your treasury every turn. You are advised to use this option sparingly and only when truly necessary!
+
+@@Airbase, Airlift, and Airport
+Airbases (as a tile improvement), airlifts (as a unit order), and Airports (as a city improvement) are all modern features of the base game that are not present in Medieval Millennium.
+
+@@Artillery
+=== OVERVIEW ===
+
+Larger ranged units are considered artillery. These typically fire projectiles that can move one or two tiles and are more traditional "air missiles" that can enter or traverse water and also ignore City Walls when attacking (the Ribauldequin is the only exception to this). When attacking a city or castle, they have the potential to cause ancillary damage to buildings on the target tile. Larger projectiles are more likely to cause this ancillary damage (for example, it is more likely that you will be able to destroy City Walls with a Large Stone Ball than with a Small Stone Ball).
+
+Because of the time it takes to load, aim, and fire an artillery weapon, the range of the resulting projectile depends upon the type of target. Only targets with poor mobility such as cities, castles, monasteries, and other artillery units can be attacked from a distance of two tiles. Non-artillery units that are two tiles away on open terrain are too mobile and not a suitable target for long-range artillery. These units can only be targeted when they are on a tile adjacent to the artillery unit itself.
+
+Ships can be attacked by artillery projectiles as well, but they follow a special form of the above rules. First, they can only be targeted by land-based artillery when they are in a coastal tile; in the open water, they can only be targeted by the single sea-based artillery unit in the game, namely the Armed Carrack. Second, they can be targeted at a range of two tiles (provided the first condition is met) similar to land targets with poor mobility; although they are fast-moving units, they cannot dodge or change direction quickly enough to avoid an incoming artillery projectile.
+
+All of the units in this category, and only those in this category, will ignore City Walls when attacking an enemy city. (Ribauldequin is the one exception, see notes for that unit.) None of the units in this category may attack directly under any circumstances. Each may only attack by firing its respective projectile.
+
+=== ARTILLERY DAMAGE TO UNITS ===
+
+Artillery units, whether mechanical or gunpowder in nature, are only able to fully destroy other mechanical or structural units (such as artillery or Siege Towers) or immobile units (such as Monks). If the defending unit is any other human type (infantry, cavalry, or handheld ranged) then it can only be wounded but never killed. Specifically, a defending human unit will never lose more than 50% of the Hit Points it had when the battle began. If a strong unit is attacked by a weak artillery projectile, it may take less damage than this (potentially none at all), but it can never take more. Once that minimum threshold of 50% is reached, the attacking projectile is automatically set to 0 HP and the battle ends.
+
+Conceptually, this is intended to reflect the fact that medieval artillery were especially significant when trying to breach a fortified enemy stronghold, not reduce the size of the enemy army. In gameplay terms, this requires greater diversification of units, while still reserving an important role for artillery that makes them crucial to a successful military campaign. Artillery are ideal for "softening up" a tough enemy, especially in an entrenched position, but are unable to finish them off without assistance.
+
+As you can see, the first artillery attack on a completely healthy unit has the potential to do the most damage and is therefore the most valuable and significant. Additional attacks on the same unit can continue to weaken it until it only has 1 HP remaining, but at that point the defending unit will no longer be identified as a valid target for an artillery attack, so the artillery unit facing it will not fire a projectile. Each of these additional attacks has diminishing returns as far as the number of HP it can remove, and it becomes much less worthwhile to use artillery to attack an enemy that is already weak.
+
+The above limitation also applies to ships that are targeted by an artillery attack — they may suffer a maximum of 50% damage but may not be completely destroyed or sunk.
+
+This behavior applies to AI artillery as well as to those belonging to the human player, with one important variance. When a unit has an odd number of Hit Points (greater than 1), 50% of that value would result in a threshold involving half of a Hit Point. This is always rounded to favor the defender, unless the defender is the human player. In other words, if you (or another AI nation) are attacking an AI target with 7 HP, a successful attack could reduce it to 4 HP. On the other hand, if the AI is attacking one of your units that has 7 HP, a successful attack could reduce it to 3 HP. This distinction was implemented in order to reflect the fact that in contrast to the AI, you can formulate a strategy that incorporates an understanding of these rules.
+
+=== ARTILLERY DAMAGE TO IMPROVEMENTS ===
+
+In addition to the damage it inflicts on a defending unit, an artillery projectile may also destroy a castle or a city improvement. The most likely city improvement to be destroyed is the City Walls; in fact, this may even be the primary goal of the entire artillery attack and its most important outcome. Larger projectiles, fired by more powerful artillery units, have a greater chance of destroying City Walls in an attack. If the City Walls improvement is not destroyed, then it is still possible that another building inside the city would be destroyed instead, but the probability of this is lower.
+ 
+=== ARTILLERY CHANCE TO FIRE ===
+
+Whereas handheld ranged units always fire successfully when a target is within range, artillery will attempt to fire but may not succeed. For any artillery unit, the chance of firing successfully is equal to the percentage of Hit Points that it has remaining. A completely healthy unit will fire 100% of the time; a unit with 6 (out of 10) Hit Points will only fire 60% of the time. Conceptually, this represents a mechanical artillery unit that is damaged and needs repairs to function properly, or a cannon that is overheating and needs to cool down before being fired again. If the unit attempts to fire but fails, it loses all of its movement points for that turn and must rest in its current location.
+
+In another contrast to handheld ranged units, though, an artillery unit that does fire successfully always generates a projectile at full strength, regardless of how many HP it had left at the time. In other words, when comparing artillery to handheld ranged units, artillery have an "all-or-nothing" approach, whereas handheld ranged units have a more gradual one.
+
+Artillery units that do not move will heal naturally every turn, thereby increasing their chance to fire in the future, unless they take additional damage.
+
+=== FIRING GUNPOWDER ARTILLERY ===
+
+When a gunpowder-based artillery unit is fired, the unit automatically takes 1 HP of damage. As a result, these units are never permitted to fire if they only have 1 HP remaining, since that would cause the unit to be destroyed. This type of gradual damage feeds directly into the previous point on Chance to Fire. It also qualifies as "taking additional damage" and therefore the unit will not regain HP due to healing naturally prior to the next turn.
+
+@@Atlantic Fleet (Spaceship)
+The concept of the Atlantic Fleet replaces that of the Spaceship in the base game. In Medieval Millennium, in order to win a peaceful (non-conquest) victory, you must be the first nation to complete an Atlantic Fleet that is able to sail into the west and return with news of a new continent. The discovery of the New World will bring the medieval era to a close and begin a new age of history.
+
+If you wish, you may select the "Old World Only (no Atlantic Fleet allowed)" option in the Select Custom Features dialog as you begin a new game, which eliminates the possibility of any nation building an Atlantic Fleet and leaves victory by conquest as the only option.
+
+@@Barbarian Invasions
+Barbarian invasions are specific waves of barbarian activity that roughly correspond to major invasions faced by Western Europe during the medieval period. These often consist of special "barbarian-only" units that can never be built by any human or AI nation, such as a Viking Raider or Mongol Cavalry. The first such invasion is that of the Berbers, who historically invaded and held much of the Iberian Peninsula for centuries. Later, you will face Arab Infantry and Cavalry in the era of the Crusades. (This is an exception to the rule that these are forces who invaded Europe; it's actually the reverse, in that European nations historically invaded Arab lands. They are included in Medieval Millennium in the role of a consistent opponent faced by European forces from outside the geographical region of the included nations.)
+
+Three barbarian invasions are linked to special game behavior. When you defeat a Berber, Viking, or Mongol unit in battle for the first time, you will receive a corresponding advance for free: Berber Invasion, Viking Invasion, or Mongol Invasion. These represent significant milestones in the technology tree and will serve to unlock new research possibilities. Thus, although barbarians represent a real risk to the success of your nation, you shouldn't necessarily seek to avoid them at all costs.
+
+If barbarian invaders are left to roam around a given area of the map with little interference, they will eventually found their own cities. These will continue to churn out new invading units and menace that entire region. However, a determined counterattack may be able to dislodge them and seize such a city, allowing you to incorporate it into your kingdom.
+
+@@Barbarian Rewards
+As in the base game, a barbarian Warlord is a diplomat-type unit that provides a reward of gold when one is defeated. The amount of the reward depends on the barbarian activity level you selected for that game. In addition, whenever you defeat any other barbarian unit in battle and that unit was the last remaining defender of that tile, you receive a small reward based on the difficulty level of the game overall.
+
+@@Barbarians (Overview)
+When you begin a new game of Medieval Millennium, you will be asked to choose the level of barbarian activity. This selection dialog excludes the traditional option of "Villages Only" and allows you to select one of four potential options: "Roving Bands", "Restless Tribes", "Raging Hordes", or a new extreme level known as "Barbarian Wrath".
+
+In all games of Test of Time, the attack strength of barbarian units against the human player is directly affected by the difficulty level (not the barbarian activity level) of that game. In Medieval Millennium, the values are: Baron = 25%, Earl = 50%, Marquess = 75%, Duke = 100%, Prince = 125%, King = 150%, and Emperor = 175%. Additional special-case adjustments to battles involving barbarian units have been documented in various threads on the civfanatics.com forums.
+
+As in the base game, there will be a constant stream of "background" barbarians, on both land and sea. These generally consist of unit types you can also build, such as Horseman, Archer, and Spearman. As the game progresses, barbarian unit types will gradually improve to present a consistent challenge. Besides these barbarians, though, you will also face specific barbarian invasions at timed points within the game.
+
+@@Battle Casualties
+In the base game, if one of your units was defeated in battle, this did not impact the population of any of your cities, unless the unit was defending a city tile against an enemy attack. In this case, the city on that tile lost 1 population point (that is, its size was reduced by 1). However, building a City Walls blocked this population loss.
+
+In Medieval Millennium, when a unit is defeated in battle, that unit's home city will suffer a decrease in accumulated Health (renamed from "Food" in the base game). This is true for all battles at any location, not only those that occur on city tiles, and always affects the unit's home city even if it is defending a different city. A unit without a home city is therefore exempt from this behavior.
+
+The decrease consists of 24 Health for cities of size 4 or larger; 18 Health for cities of size 3; 12 Health for cities of size 2; and 6 Health for cities of size 1. The City Walls improvement has no effect on this behavior. However, this penalty does not apply if the defeated unit is a "settler" type unit, since building such a unit already decreased the population of its home city by a full point; and it also does not apply to mechanical units such as artillery or ships. 
+
+Note that the Health decrease may cause the city to lose 1 population point, if (but only if) the city's Health box contains less Health than the amount of the decrease. A city of size 1 will not be destroyed, however, even if its Health box is emptied.
+
+@@Battle Survivors
+When a human unit (not mechanical artillery or ship) is defeated in battle, there is a chance that a remnant of the defeated company is able to escape the battle field in a disorganized flight. If this occurs, these soldiers will straggle back to their home city, invisible to the game, reappearing there at a later date. The delay between the battle and their return is determined by the distance between the battle location and the home city that they are trying to reach. As the leader of the nation, you do not have visibility to whether a particular defeated unit will reappear as survivors or when this might take place.
+
+If it does, though, a message will appear to notify you of their return, and the unit will be recreated in its home city with 1 hit point. Additionally, that home city (which suffered a loss of Health at the time the unit was defeated, as described in the documentation regarding Battle Casualties) will receive half of that decrease back again: a size 4 or larger city receives 12 Health; a size 3 city receives 9 Health; a size 2 city receives 6 Health; and a size 1 city receives 3 Health. This increase could cause the city to immediately gain 1 population point, if its Health box is nearly full at that time.
+
+Only military units are eligible to return as survivors. Peasants and Merchants (all "settler" and "trade" type units) who are defeated in battle are considered to be enslaved, killed, or simply melt away into the countryside and begin a new life wherever they can; they will not return to their home city as a surviving unit.
+
+@@Capturing Units
+Mechanical artillery and ships, which are not impacted by the rules for Casualties and Survivors, may instead be captured by a successful attack. Whenever one of these units is defeated while defending against an opponent's attack and it is the last remaining unit on that tile, there is a good chance that it will be captured by the attacking unit. When this happens, the unit is recreated on the tile of the attacker, belonging to that nation, with reduced hit points and no movement for the remainder of that turn.
+
+Note that if a ship is defeated in battle and that ship is carrying other land units, only the ship itself is captured and the land units are lost. (However, if the battle occurred on a coastal sea tile, adjacent to land, those land units may swim to shore and become survivors as outlined elsewhere under "Battle Survivors". If the battle occurred in the middle of the sea, the land units will be permanently lost.)
+
+@@Carvel and Clinker Shipbuilding
+All nations begin the game with the option to research either Carvel Shipbuilding or Clinker Shipbuilding (unless one or both of these advances was granted as a starting tech at the beginning of the game). Once a nation acquires or begins researching one of these advances, the other is removed from the list of potential research options until much later in the game. It can still be acquired from another nation by theft or trade, but it may not be researched directly until many years later.
+
+Each type of shipbuilding leads to subsequent advances on independent paths of the tech tree, allowing you to improve that type of ship technology and built more advanced naval vessels. Eventually, though, to build the largest naval vessels near the end of the game or to build the Atlantic Fleet that allows you to win an exploration victory, the two research paths merge back together.
+
+@@Castles (Fortresses)
+Fortresses are renamed as castles in Medieval Millennium. Under the Constitutional Monarchy government, a unit stationed inside a castle tile improvement built within three tiles of its home city does not cause unhappiness. Barbarian units will never spawn on a tile which is adjacent to a defended castle, so building castles on the perimeter of your nation can be an effective way to keep the barbarians away from developed tiles.
+
+There are three types of castles available in Medieval Millennium. The first type is the Motte and Bailey castle, which becomes available when the advance of that name is acquired. This allows peasant-type units to use the "fortress" command (available through the menu, or by pressing the [f] key) to add a Motte and Bailey castle to any tile. This tile improvement doubles the defensive strength of units on that tile.
+
+The second type is the Stone Castle, which likewise becomes available when the advance of that name is acquired. At that point in time, all Motte and Bailey tile improvements in your territory will be converted to immobile Motte and Bailey units, and the tile improvement will be removed. The Motte and Bailey unit has a defensive strength of 4 and 2 hit points but is always created as a veteran unit, which gives it an effective defensive strength of 6. As a result, the castle itself will defend against many attacks, but no longer confers a defensive bonus on other units located there. You will also be prompted to save and reload your game, so that an event can adjust image files used by the game. Peasant-type units can continue to use the "fortress" command, and doing so will still add the castle tile improvement with the standard benefit, but the castle image will now be that of a Stone Castle. If a Stone Castle tile improvement is constructed on a tile that contains a Motte and Bailey unit, the unit will be removed; essentially, you have just upgraded the castle.
+
+The third and final type of castle is the Bastion Fortress, which becomes available when the Corned Gunpowder advance is acquired. At that point in time, all Motte and Bailey units will be removed from the game (these older castles have crumbled away, since they were never upgraded to Stone Castles). All Stone Castle tile improvements in your territory will be converted to immobile Stone Castle units, and the tile improvement will be removed. The Stone Castle unit has a defensive strength of 4 and 3 hit points (1 more HP than the Motte and Bailey unit) and is likewise created as a veteran unit, which gives it an effective defensive strength of 6. As a result, the castle itself will defend against many attacks, but no longer confers a defensive bonus on other units located there. You will again be prompted to save and reload your game. Peasant-type units can continue to use the "fortress" command, and doing so will still add the castle tile improvement with the standard benefit, but the castle image will now be that of a Bastion Fortress. If a Bastion Fortress tile improvement is constructed on a tile that contains a Stone Castle unit, the unit will be removed; essentially, you have just upgraded the castle.
+
+@@Catholic Christianity
+All nations begin the game with a Tribal Monarchy government. When you acquire the Catholic Christianity advance, you will be given the choice of whether you wish to adopt Christianity as the official religion of your nation. If you accept, your form of government will immediately be changed to Primitive Monarchy, and Tribal Monarchy will no longer be available. On the other hand, if you decline, the Catholic Christianity advance will be removed. You will have to research or trade for it again once you are ready to adopt Christianity.
+
+Every Catholic Christian nation is expected to pay tithes to the Church. The game will calculate every nation's NET treasury change from one turn to the next, and 10% of any gain will be deducted as a tithe. (No action is taken if the treasury experiences a net loss.) Rich nations will therefore contribute more to the support of the church, resulting in a slightly more even playing field across nations.
+
+The Tribal Monarchy form of government has several key advantages over Primitive Monarchy. Most notably, under Tribal Monarchy, all citizens are always content. Also, tile productivity is reduced under Primitive Monarchy; every tile producing three or more of any single resource (Health, Materials, or Trade) produces one less. As a result, you may be inclined to avoid Catholic Christianity and operate as a Tribal Monarchy for as long as possible.
+
+However, Tribal Monarchy also has two very significant disadvantages. First of all, your nation experiences a 53% penalty in research output, which will slow down the pace at which you are able to learn new advances. Second, many of the advanced units and buildings in the game have Catholic Christianity as an "ancestor" prerequisite, and without adopting this religion, you will never be able to build many of the improvements, wonders, and units in the game.
+
+As a result, adopting Christianity is likely to become a question of "when" rather than "if". If you switch too early, the productivity penalties may stymie your early growth; but if you switch too late, AI nations may gain an insurmountable technological lead.
+
+What if, when you are asked to select the next advance to research, Catholic Christianity is the only entry in the list? Early in the game, this may happen if your nation has not yet acquired "Berber Invasion". If you wish to remain a Tribal Monarchy for a longer period of time, you may have to learn this advance and then reject the adoption of Christianity in the subsequent dialog box, while in the meantime seeking to acquire Berber Invasion (either by finding and defeating a Berber unit, or by trading with another nation.) Once you have Berber Invasion, two more advances (other than Catholic Christianity) will appear as research options. A similar situation can also arise a little bit later in the game if you do not have Viking Invasion, or much later if you do not have Mongol Invasion, and a similar solution is necessary in each case.
+
+Ultimately, it should be possible to acquire 34 advances before Catholic Christianity is truly your only option. Of course, you could continue to learn and reject it indefinitely if you wish. However, all 21 nations selected for play within Medieval Millennium historically accepted Christianity at some point, and it is expected that in order to win the game, you will need to do so as well.
+
+@@Celebrating Cities
+As in the base game, a city celebrates this festival whenever it is at least size 3, has no unhappy citizens, and at least half of the citizens are happy. The benefit of the festival varies according to your government type, but Medieval Millennium alters one of the standard effects. In the base game, under Republic or Democracy, a city that was celebrating would grow by one population point every turn (subject to some conditions and limitations). Unfortunately, such a powerful benefit had two drawbacks. First, it made other forms of government much less attractive by comparison. Second, it was not leveraged effectively by AI tribes, providing a disproportionate advantage to the human player.
+
+By contrast, in Medieval Millennium, the corresponding governments of Constitutional Monarchy and Merchant Republic provide a different celebration benefit: each happy citizen will reimburse the city for the Materials cost of supporting one military unit. This benefit will not be visible on the city screen, but each turn that the celebration continues, the appropriate quantity of Materials will be added directly to the city's Production box, allowing the city to complete building projects more quickly.
+
+@@City Improvements (Overview)
+Medieval Millennium contains 35 potential city improvements, excluding only a handful from the base game. However, only three improvements have the exact same name (Barracks, Marketplace, and City Walls), and there are many differences in behavior. These range from enhanced prerequisites to entirely new concepts such as city specialists that will have a major impact on the game. Please see the separate sections of the documentation for the following key concepts: specialists, improvement-linked units, and mill power.
+
+@@City Size Limits
+The two thresholds for growth limitations are at sizes 5 and 10, rather than at sizes 8 and 12 as in the base game. Specifically, a city requires a Market Town Charter to grow beyond size 5 and then a Free City Charter to grow beyond size 10.
+
+@@City Terrain
+When you build a new city, the tile on which it is located will automatically be cleared and converted to the most developed form possible, in order to reasonably support a city. It isn't necessary to change the terrain of a future city site first, before founding the city. The city creation will perform this action automatically.
+
+When a city reaches size 10, the tile on which the city is located will be converted to the terrain type of Urban. This reflects the fact that the city has now grown large enough to encompass that entire land area, replacing the native terrain at that location. As a city increases to size 14, the same terrain change will take place on a tile adjacent to the city, and again at sizes 16, 18, and 20, for a total of up to five Urban tiles within the city radius.
+
+As documented in the Civilopedia entry, an Urban tile produces no Health (unless the tile happens to have a special resource). This puts considerable pressure on the other (outlying) tiles in the city radius to generate enough Health that the city's population remains stable or increases. However, Urban tiles do produce increased levels of Materials and Trade. In general, this game mechanism can tend to limit the population of many cities, limiting explosive population growth except for cities with extremely advantageous locations.
+
+@@Clearing and Converting Terrain
+Each of the native terrain types, except for Sea, can be converted to another type in order to alter or improve its productivity. For nearly all terrain types, this is necessary in order to allow the tile to generate additional Health, which is critical for the growth of each city. However, note that it is not always necessary or advisable to convert every tile, depending on the type of resource that you would like that tile to generate. For example, converting a Dense Forest tile to Woodland, and then to Arable, is necessary to increase the amount of Health it can produce. However, this will simultaneously reduce the potential of this tile to generate Materials. A city will thrive and become most valuable when the nearby tiles have a balance of different terrain types, with different types of tile improvements (irrigation, mine/woodcut, road, etc.).
+
+Note that when Heathland is converted to Pasture, the result is split evenly between the two types of Pasture, with approximately a 50% chance of each. When converting to the Arable terrains, the result will be the standard Arable terrain approximately 80% of the time, but will randomly turn out to be either Arable (lush) or Arable (poor) the other 20% of the time. Terrain that is natively Pine Forest is less likely to be "lush" and more likely to be "poor" terrain compared to that which is natively Dense Forest. Terrain that is natively Marsh/Fen is more likely to be either "lush" or "poor", with a smaller percentage of standard Arable.
+
+@@Climate Warming or Cooling
+During this era of history, climatic changes known today as the Medieval Warm Period and the Little Ice Age caused shifts in growing seasons and land productivity. Medieval Millennium models this as well, in two ways: first, the climate at any given point in time affects the likelihood of *freshly cleared* Arable land to become lush or poor. Second, *existing land* also has the possibility to change to a more favorable (during warm periods) or less favorable (during cooler periods) type of terrain.
+
+@@Coastal Ships
+At the beginning of the game, "coastal" ships will be lost 100% of the time that they end their turn without being adjacent to a land tile. On maps with more widely dispersed islands, this increases the importance of naval research that will allow you to build seagoing vessels. This percentage is reduced to 50% late in the game when a nation acquires the Large Clinker Ships advance, and then reduced further to 25% when that nation acquires the Large Carvel Ships advance.
+
+@@Defensive Bonuses
+As in the base game, many bonuses are available to defending units. Some of these are unchanged: a unit that is fortified receives a +50% bonus, and a unit that is in a castle (fortress tile improvement) receives a +100% bonus. However, the City Walls improvement is less powerful: in the base game, this improvement provides a +200% bonus, but in Medieval Millennium, the bonus is only +100%, the same as a castle. Note that a unit that is fortified within a castle or city with walls receives only the greater bonus, not both; in other words, a castle and City Walls offer only an additional +50% bonus to a unit that is already fortified. (This is still substantial enough to provide the difference between defeat and victory in many battles!)
+
+As in the base game, some terrain types will also provide a bonus to defending units. Please consult the documentation of each terrain type for details.
+
+Naval units are never permitted to attack cities directly, so the concept of a Coastal Fortress to defend against these types of attacks is irrelevant. However, artillery projectiles (such as Rocks, Boulders, and various cannonballs) are air units that will ignore the effects of City Walls. Late in the game, cities can construct a Bastion Fortress improvement, which offers a +50% bonus against these types of attacks.
+
+@@Depleting and Reverting Terrain
+Unfortunately, many aspects of modern farming were unknown in the medieval period. Without hybrid crops, chemical or synthetic fertilizers, or modern sustainability practices, the land was often stretched to its limit to provide for the population. Within Medieval Millennium, land with a mine/woodcut or with irrigation will *deplete* if it is worked by a city for several centuries, which can cause improvements to be lost or the terrain type itself to change to a less productive type. This depletion happens more quickly on wooded terrains (75 turns) than on rocky or irrigated terrains (150 turns).
+
+Furthermore, even cleared and improved land must be worked regularly. If a tile is not worked by a city for 100 years (50 turns), tile improvements will be lost and it will eventually *revert* to its native state. You will need to clear or improve it again if your city requires reasonable productivity from this land.
+
+@@Difficulty Levels
+Medieval Millennium supports seven difficulty levels. Baron (the easiest), Earl, and Marquess all apply disadvantages to AI nations to provide an easier game for the human player. The middle level of Duke is a truly level playing field, with no advantages or disadvantages given to either AI or human nations. Prince and King are progressively more difficult, with various advantages given to AI nations. The most difficult level, Emperor, is a special addition to Medieval Millennium — a seventh level of extreme difficulty that is not available in the base game. Before you attempt to play a game at this level, please see the separate file entitled "Readme-emperor.txt" within the Documentation subdirectory.
+
+Many of the Lua events written for Medieval Millennium make use of probabilities or thresholds that are also adjusted dynamically based on the difficulty level of your game. This might lead the higher difficulty levels to be more challenging than you expect. It is highly recommended that you play your first game at one of the easier levels (Baron, Earl, or Marquess) and then move up gradually, one difficulty level at a time, if you win.
+
+@@Fishing Fleet
+When a city builds the Fishing Fleet improvement, this will automatically create an immobile Fishing Fleet unit on a sea tile adjacent to the city. However, this is not a city specialist unit like those related to the Grist Mill §, Wood/Stone Craftsmen §, and Foundry §. The new unit does not generate any direct benefit to the city and does not replace the city improvement. Instead, the external unit must continue to exist in order for the city improvement to function and provide its expected benefit (namely, allowing each Sea tile in the city radius to generate 2 Health instead of 1 Health). If the external Fishing Fleet unit is ever killed by an enemy, this will immediately destroy the linked Fishing Fleet improvement in the city, and you would need to build it all over again to acquire the benefit. As a result, defending the linked unit should always be a priority; or, perhaps you may find it unwise to build and defend a Fishing Fleet in a city that frequently has enemy ships lurking nearby.
+
+@@Governments (Overview)
+Governments have different names and significantly different capabilities than in a base Civilization II game. In general, governments have been rebalanced to provide slightly less dramatic impacts, while still retaining important variations and nuances. Please refer to the Civilopedia entry for each government type, or the table in the PDF Guide to Governments, for important details.
+
+@@Health (Food)
+The first resource produced by a tile is "Health", renamed from "Food" in the base game. The revised name reflects the fact that Health is what directly drives city growth; food production and variety is naturally a key component of this, but not the only factor. None of the native terrain types generate more than 1 Health, and since 2 Health are required to maintain each citizen, using the "irrigate" option to clear and potentially irrigate the land is of critical importance.
+
+@@Impassable Terrain
+The terrain type of Mountains is impassable to all units, except for settler-type units and Scouts. Building a road, mine/woodcut, or castle on such a tile will convert it to Mountain Pass terrain, which is then accessible by any unit. The road, mine/woodcut, or castle will be removed as part of the transformation but could be rebuilt on the new Mountain Pass if desired.
+
+@@Irrigation
+Once a tile has been cleared to Arable, or hilly terrain has been changed to Terraced Hills, the land can be irrigated to increase the amount of Health that it produces. When your nation acquires the Enclosed Fields advance, these tiles can be irrigated a second time to upgrade the irrigation improvement to enclosed fields. This provides an even larger Health bonus to a city that has built the corresponding Enclosed Fields improvement.
+
+@@Materials (Shields)
+The second resource produced by a tile is "Materials", renamed from "Shields" in the base game. The revised name reflects the fact that Materials are what directly drive the production of city improvements, wonders, and units by the city. As a result, this encompasses all types of resources that could be used for construction, weapons, clothing, etc. In addition, the icon used for Materials is in an hourglass shape, because a key component of city productivity is time. No matter how much stone is available, building a cathedral requires a great deal of human effort on the part of the workers; similarly, no matter how many weapons are available, producing a knight requires time for training.
+
+Although clearing land in order to generate Health is important, this will also reduce the amount of Materials that can be generated by that tile. In some cases, you will want to use the "mine/woodcut" option instead, to increase the rate at which Materials are collected from a tile while leaving it in its native state.
+
+@@Mill Power
+In the base game, a Power/Hydro/Nuclear/Solar Plant was built after a Factory and increased its benefit (as well as impacting pollution levels). In Medieval Millennium, this relationship is inverted; the two replacements for these plants, Water Mill and Wind Mill, are prerequisites for building many higher-level and more powerful city specialists and/or improvements. At the time you construct them, they will not provide any noticeable direct benefit to your city, but will enable new construction options that were not previously possible. The details are provided in the documentation entries for these city improvements.
+
+@@Mine/Woodcut
+The base Civilization II concept of mining has been expanded to include the concept of woodcutting. As a result, Peasants can now build the "mine/woodcut" improvement in wooded terrains; in these locations it represents a dedicated woodcutting operation, and results in an increase in the quantity of Materials produced. Peasants can also build the "mine/woodcut" improvement in Hills or Mountains, where it represents a more traditional mine. The game icon has been changed to a double-headed axe to symbolize this dual concept.
+
+@@Monastery and Monks
+When a city builds a Monastery improvement, two events take place simultaneously. The first is that a land tile within the city radius will be converted to the terrain type of Monastery. The second is that an immobile Monks unit will be created on this tile.
+
+Monastery terrain provides a small amount of Health, no Materials, and a substantial amount of Trade. Units may travel freely through a Monastery tile, and you may build a road or royal highway there if you wish. However, no other type of terrain improvement is possible, and it is not permitted to found a new city or build a castle on this site.
+
+A Monks unit is not a city specialist unit like those related to the Grist Mill §, Wood/Stone Craftsmen §, and Foundry §. The new unit does not generate any direct benefit to the city and does not replace the city improvement. Instead, the external unit must continue to exist in order for the city improvement to function and provide its expected benefit (namely, providing a 50% increase in the research output of the city). If the external Monks unit is ever killed by an enemy, this will immediately destroy the linked Monastery improvement in the city, and you would need to build it all over again to acquire the benefit. As a result, defending the linked unit should always be a priority; or, perhaps you may find it unwise to build and defend a Monastery in a frontier city that is frequently under attack by your enemies.
+
+@@Naval Units (Overview)
+Unlike in the base game, which permits a ship to be built in any city that is adjacent to a water tile, in Medieval Millennium ships can only be built in cities that are adjacent to a larger body of water - specifically, a sea or ocean consisting of at least 21 tiles.
+
+Ships may only attack other ships in open water. They are never permitted to conduct "shore bombardment" and attack an enemy city or unit located on a land tile.
+
+None of the units in this category may be bribed to join your nation with gold. However, all of the units in this category can be captured when they are defeated in battle. If the capture is successful, the unit will be recreated belonging to the winning nation.
+
+@@Peasant Health Support
+Initially, each Peasant or Serf requires 1 Health per turn to support, in addition to a potential support cost of 1 Material per turn. The number of units that can be supported for free by each city (that is, in terms of Materials) varies by government type, and settler-type units follow those rules alongside military units. On the other hand, the support cost of 1 Health does not vary by government type, at least not directly; however, it will increase at a specific point in the game, in a way that is indirectly related to government selection.
+
+Once the first Yeoman unit is produced during the game, by any nation, you will see a message announcing that the cost of supporting each Peasant, Serf, and Yeoman will increase to 2 Health per turn for all nations, and all government types, in exactly 20 years (10 turns). The Yeoman unit has Enlightened Monarchy as its prerequisite, so in order to trigger this countdown a nation must first acquire that advance; but this unit also can only be built under Enlightened Monarchy, Constitutional Monarchy, or Merchant Republic governments, so a nation with knowledge of Enlightened Monarchy must also adopt one of those three governments in order to begin building a Yeoman.
+
+The presence of Yeomen workers in the game signifies a transition from the era of slow and inexpensive Peasants and Serfs, to the era of more productive and expensive Yeomen. However, as noted above, the Health support increase is not limited to Yeomen, but rather applies to all worker types. This increase in support is deferred by 10 turns in order to give you a little time to prepare for the additional Health cost in each city that is supporting Peasants, Serfs, or Yeomen.
+
+@@Peasant Militia
+This basic military unit can never be built deliberately, but may be created automatically if a city without sufficient defenders is being threatened by enemies. This will result in the build cost of the unit (20 gold) being deducted directly from your treasury.
+
+@@Plague and Black Death
+Two major plagues devastated the population of Europe during this time period, and each was followed by centuries during which the plague continued to recur but at lower levels and with less of a devastating effect. Known today as the Plague of Justinian and the Black Death, these two major plague events play a significant role in Medieval Millennium. The first plague strikes quite early and lasts for approximately the first quarter of the game. The second and more deadly plague, the Black Death, strikes in the fourteenth century.
+
+When a plague strikes a city, there are four possible effects. First, the accumulated Health in the city will be reduced, and in the case of a severe plague, the city size will likely be reduced as well. Second, units that are located in or near the city may be killed. Third, a tile within the city radius will become contaminated with plague (replacing the base game concept of pollution), which will substantially reduce its productivity. This plague contamination can be cleansed from the tile by Peasants, Serfs, or Yeomen; if not, it will disappear automatically after 40 years. Fourth, in the case of a severe plague only, a special Plague barbarian unit will appear on that contaminated tile. This unit will not attack you, nor can you attack it, and it will disappear automatically after one turn. However, for that one turn, the presence of the unit prevents the city from working the tile at all, and prevents military units from moving through the area (due to "zone of control" rules).
+
+Two city improvements, the Hospital and Sewer Conduits, reduce the risk and severity of plague. These are not available early in the game, but you will want to build them in all major cities, if you can afford to do so, prior to the onslaught of the Black Death. Please review the documentation regarding these improvements, either in the Civilopedia or in the PDF Guide to Improvements.
+
+@@Population Loss
+See "Battle Casualties".
+
+@@Power Ratings
+Medieval Millennium attempts to replicate the power rating calculations performed by the game engine, using formulas gleaned from various threads on the Civfanatics.com forums. (Although the results may not be 100% identical, they are quite similar and generally "close enough" for most purposes.) You can view the current power rating calculations for all contacted nations by selecting one of the options within the [Tab] menu.
+
+@@Ranged Infantry and Cavalry
+Ranged units using handheld weapons (bows, crossbows, and smaller guns) fire projectiles that can only move one tile. These are essentially "land missiles" that cannot enter a water tile and are not able to ignore City Walls when attacking a unit within a city.
+
+Handheld ranged weapons always fire when an enemy target is within range. However, if the ranged unit is wounded (has reduced HP) then the projectile that is created has its Attack and/or Firepower strength reduced proportionately.
+
+@@Ranged Units (Overview)
+Medieval Millennium supports ranged unit attacks for all nations, human and AI (including barbarians). Some other recent scenarios support this only for the human player, since in these scenarios a ranged unit fires its projectile(s) when the human player presses 'k' on the keyboard. In Medieval Millennium, ranged units for all nations will fire automatically whenever a target is within range; no special action is needed by the human player. Conversely, though, there is nothing you can do to prevent a ranged unit from firing, even if you would rather order it to retreat; this provides parity between the human player and AI nations. (See "Artillery Chance to Fire" within the section on "Artillery" for a more nuanced discussion of this topic.)
+
+Most units will fire only one projectile, although a few are capable of firing two projectiles on a single turn. Each projectile that is fired reduces the movement points remaining to the ranged unit on that turn. For many units, firing a single projectile uses all of the available movement points, but some units will have movement remaining (often only a fraction of a point, however).
+
+Note that the projectile does not automatically move or attack - it is simply created on the same tile as the ranged unit. It is up to you (or the AI) to move the projectile and attack the appropriate target. Note that any projectile which does not attack is disbanded at the end of the turn. Projectiles cannot be carried over or accumulated and used later.
+
+If a projectile is ever activated and the event logic determines that there is no longer a target within range, the game will "undo" the firing of the projectile by removing it and restoring movement points to the unit that originally fired it (if applicable).
+
+All checks that determine whether or not a target is within range run at the time the unit is activated, not after every tile that it moves. If you move a ranged unit toward an enemy unit, such that the opposing unit is now within range of your ranged unit's projectile, you will need to de-activate and re-activate the unit in order for the ranged unit to fire.
+
+@@Research Eras and Rate
+The technology advances in Medieval Millennium are divided into four eras, and the icon for each advance contains a Roman numeral (I through IV) to indicate the era to which it belongs. Each nation must acquire a clear majority of the possible advances in one era in order to unlock the next one and begin researching any advances there. The number of advances in each era, as well as the percentage which must be known in order to advance to the next one, varies for every era. As a result of this configuration, you may not be able to immediately research an advance for which you have both prerequisites, if it belongs to a later era that you have not yet unlocked.
+
+The pace at which advances are acquired throughout a game is also adjusted dynamically as the game progresses, by increasing or decreasing the global setting for research cost. Initially, each advance costs 150% of normal, reflecting the fact that scholarship was at low levels early in the medieval period. The cost of each advance will probably decline as the game progresses, but the extent of this decline (and the potential for the cost to increase again later) will vary in every game. Overall, the research cost is calculated so that one nation (which may be AI-controlled or led by the human player) will be able to finish researching all advances in the late 1400s. In other words, no matter how successful your nation is at generating research, it will be impossible to acquire all techs or complete an Atlantic Fleet by A.D. 1200; the game will simply keep increasing the cost of each technology to maintain a realistic pace. However, since this adjustment is a global one affecting all nations, it is still possible for one nation to acquire many more advances than any other nation and build a large technology lead. The pace is always established based on the nation with the most advances known.
+
+@@Reverting Terrain
+See "Depleting and Reverting Terrain".
+
+@@Rivers
+A river adds one extra Health to Woodland tiles, unless the tile contains a mine/woodcut improvement. A river adds one extra Trade to the output of any tile.
+
+Rivers provide a movement multiplier of 1 for units moving along them, assuming the land does not also have a road or royal highway. In other words, a unit traveling along a river uses only 1 movement point per tile, regardless of the underlying terrain type. A river therefore provides no movement benefit if the terrain type already costs 1 movement point to traverse, but allows a unit to move more quickly through terrain with a higher movement cost.
+
+Rivers offer a natural defense boost of 50% in battle.
+
+In order to build a road on a tile with a river, your nation must have the Bridge Building advance.
+
+@@Roads
+A unit traveling on a road uses only 1/2 of a movement point per tile (displayed in the game as 3/6), regardless of the underlying terrain type.
+
+Roads also offer a benefit to the Trade produced by a tile. If a tile already produces at least 1 Trade, the road will add 1 additional Trade. On the other hand, if a tile produces no Trade, a road will add the first Trade only on Arable (poor), Arable, or Pasture terrain. (Arable (lush) terrain always produces at least 1 Trade even without a road.)
+
+In order to build a road on a tile with a river, your nation must have the Bridge Building advance.
+
+Buliding a road on a Mountain tile does not actually generate the road, but instead turns the terrain into a Mountain Pass. This allows any land unit to move through the tile; a road can then be built on the Mountain Pass to provide standard benefits.
+
+@@Royal Highways (Railroads)
+Royal highways replace the base game concept of railroads. Peasants, Serfs, and Yeomen can upgrade a tile with a road to a royal highway once your nation acquires the "Stone-paved Roads" advance.
+
+A unit traveling on a royal highway uses only 1/3 of a movement point per tile (displayed in the game as 2/6), regardless of the underlying terrain type.
+
+A royal highway preserves the benefit to Trade that is provided by a road, and also offers a benefit to the Materials produced by a tile. If a tile generates 2 or more Materials, then the royal highway provides an increase of 50%, rounded down. That is, a tile producing 2 or 3 produces 1 more; a tile producing 4 or 5 produces 2 more; and a tile producing 6 produces 3 more.
+
+@@Rush Buying
+Medieval Millennium utilizes the "No Incremental Rush Buy" feature of TOTPP. Once you utilize the "Buy" button to purchase all of the remaining Materials necessary to complete production of any item, the "Change" button is disabled to prevent you from selecting a different item.
+
+@@Specialists
+In both the base game and Medieval Millennium, any city can designate a citizen as an Entertainer by not having that citizen work any tile in the city radius. This type of specialist essentially generates luxuries that increase happiness in that city. In cities of size 5 or larger, an Entertainer can be converted to one of two other specialist types: a Tax Collector, who generates gold for the national treasury, or a Scholar, who generates research toward the next advance.
+
+Medieval Millennium also introduces two new categories of specialists, which generate either Health or Materials. Unlike the game's built-in specialists described above, these are created by building improvements within the city; they will then appear as immobile units in the roster of that city. They do not impact the tiles worked by that city or the built-in specialists described above in any way. Once you build the improvement, it is removed so that only the specialist unit remains; however, you will then have the opportunity to build the same improvement again in that city (although perhaps not immediately). This will cause specialists to be upgraded and/or eventually replaced by the final version of that city improvement.
+
+First-level specialists will generate a small amount of Health or Materials, often at no cost; these are named after individuals. Second-level specialists generate a larger amount of Health or Materials but require upkeep (paid in gold) each turn, similar to a traditional city improvement. Most of these are named after small businesses.
+
+The additional Health and Materials that are generated will not appear within the City Resources section of the city screen. They are added directly to the accumulated Health in the City Growth box, and to the accumulated Materials in the production box, at the beginning of each turn. To review the net effects of these specialists, as well as other events, upon the Health and Materials of all of your cities, press the [F1] key to view a table with this information.
+
+The new city specialists are described in the entries for the improvements with which they are associated: the Grist Mill §, Wood/Stone Craftsmen §, and Foundry §.
+
+@@Stack Attrition
+Based on multiple rounds of testing, it seems that the game logic which controls AI unit movements is written to expect "Stack Kills" to be enabled; it is unaware of the TOTPP option which disables this. As a result, the AI tends to avoid large stacks of units (because it sees this as putting all of them at risk) and disperses its units more widely. This may provide a tactical advantage to the human player, since you can utilize large stacks of units freely knowing that there is no risk they could all be lost in a single battle.
+
+To balance this, a new feature called "Stack Attrition" has been created which applies only to the human player. Medieval armies in the field were often asked to "live off the land" by finding their own food (to the detriment of local farmers!), and nations rarely maintained long supply trains back to major cities. Therefore, in Medieval Millennium, a formula is used to calculate the maximum number of units that each tile can support; if any tile contains more than this many units, all units on that tile suffer damage each turn. The number of units that each tile can support is calculated as follows:
+
+• Each point of Health produced by the tile can support 5 units.
+ o Exceptions: Marsh/Fen and Mountain Pass each produce 0 Health and can support 1 unit; Urban produces 0 Health and can support 10 units.
+• A tile that contains any type of castle can support 5 additional units.
+• A city can support any number of units; stack attrition is never applied to units located in a city.
+
+For example: Marsh/Fen terrain produces 0 Health, so its unit support limit is 1. Dense Forest produces 1 Health, so its unit support limit is 5. Arable land without irrigation produces 2 Health, so its unit support limit is 10. However, if the tile is irrigated, then it produces 3 Health and it can support 15. In each case, a castle would increase the limits to 6, 10, 15, and 20 units respectively.
+
+Because the current implementation of TOTPP does not permit Lua to determine if a tile contains a terrain "special", these are ignored when calculating unit support. Only the base statistics of the terrain type itself are evaluated.
+
+When calculating the number of units that are actually present, certain units are excluded:
+
+• Settler-type units such as Peasants, Serfs, and Yeomen are never included and will never take damage. These units are already using 1 or 2 Health per turn from their home city.
+• Units with a trade or diplomacy role such as Merchants and Envoys are excluded.
+• Artillery units such as Trebuchets and all types of cannons are excluded, due to their mechanical nature.
+• All ships are excluded, and units on Sea tiles (aboard ships) are never subject to stack attrition.
+
+When the number of units present exceeds what a tile can support, then the amount of damage is determined by the difference. If a tile can support 5 units but there are 7 present, then 2 HP of damage are applied to each of the 7 units. If a tile can support 10 units but there are 13 present, then 3 HP of damage are applied to each of the 13 units. If the damage exceeds the number of HP that a unit has left, then the unit is killed outright.
+
+The [Backspace] key, which provides context-sensitive help regarding units and terrain, will always display the number of your units which are being supported by the Health output of a tile, as well as the maximum number of units that could be supported before attrition occurs.
+
+@@Stack Damage
+Even though stack kills are not enabled, stacked units may suffer collateral damage if they are present on the same tile as a defending unit that is defeated. Conceptually, this encompasses damage taken by these additional forces as they attempt to aid the unit under attack, as well as decreased morale resulting from that unit's defeat. This "Stack Damage" is applied as follows:
+
+• Each unit with 8 or more HP loses 2 HP
+• Each unit with 5-7 HP loses 1 HP
+• Each unit with 4 or fewer HP is not affected
+
+This stack damage applies to all types of land units (melee, ranged, human, artillery, etc.) that are located on the same tile as the unit which was killed. However, note that all surviving units will heal at the beginning of the defender's next turn, potentially enough to completely recover from this type of collateral damage.
+
+@@Stack Kills
+Medieval Millennium utilizes the "No Stack Kills" feature of TOTPP. If multiple units are on the same land tile and one is attacked and defeated in battle, the others are not immediately lost as a result of the same battle.
+
+@@Submit Feedback
+If you find any bugs in the game, or have suggestions for improvements, please contact me (Knighttime) via PM on Civfanatics.com. I have some ideas in mind regarding further enhancements, and may choose whether or not to pursue them based on the level of community interest.
+
+I would also enjoy hearing from you about aspects of Medieval Millennium that you really liked and appreciated. I hope this scenario gives you many hours of enjoyment.
+
+@@Terraforming Terrain
+In the latter part of the game, you will have the option to "terraform" certain terrain types. If you realize that you have cleared more of your land than necessary or ideal, this action allows you the possibility of increasing Materials production in some tiles. It's not clear that this will always be necessary, however, or even to your advantage. Four possible terraforming actions exist: from Arable land back to Woodland, from Arable (poor) land to Pasture, from Pasture back to Heathland, and from Terraced Hills back to Hills.
+
+@@Terrain (Overview)
+Terrain management is a significant aspect of Medieval Millennium. This is the era when the great primeval forests of central and northern Europe were gradually tamed and cleared into cropland and pasture. In the warmer and drier climates of southern Europe, diminishing populations at the beginning of this period were supported by cultivation practices that persisted from the Roman Empire, but eventually this region also began to grow again and required additional food production.
+
+At the beginning of the game, therefore, the majority of the map consists of wild land in its native states: Heathland, Dense Forest, Pine Forest, Marsh/Fen, Sea, Hills, and Mountains. Your task is to utilize or convert these terrains into ones that can support the growth and expansion of your nation. But geography and terrain are not at the mercy of man, bent to his every whim. You will have to contend with terrain that depletes if it is overworked; terrain that reverts to its native, wild state if it lies abandoned; climate change due to the Medieval Warm Period and the Little Ice Age; urbanization caused by city sprawl; and even forest fires.
+
+Medieval Millennium contains 16 terrain types, taking full advantage of the additional types made available by TOTPP.
+
+@@Terrain Damage from Battle
+Just as in the base game, both human and AI units can deliberately pillage the improvements on a tile. Battles in Medieval Millennium may also result in the removal of tile improvements (you might consider it "automatic pillaging") from the tile on which the battle is fought, with the following conditions and impacts:
+
+1. This type of damage does not occur when the attacking unit is a projectile. The damage is considered to be the result of infantry and/or cavalry charging across fields; targeted attacks by aerial units would not have the same effect.
+2. The damage always takes place on the tile where the defending unit is located, unless the defending unit is in a city. In that case, the damage takes place on the attacking unit's tile.
+3. Damage to tile improvements is the same regardless of whether the attacker or defender is victorious. The battle itself causes the damage, not the efforts of one side or the other.
+4. Enclosed fields and irrigation are always destroyed by a battle, but a mine/woodcut improvement is not. Royal highways are always downgraded to roads, and the road itself may be destroyed in a percentage of cases as well. The road will always be destroyed if the tile contains a river (since the defending units would likely destroy the bridge intentionally to gain a tactical advantage).
+5. The presence of a castle on a tile protects the improvements on that tile from this type of damage, until the final defender of the castle is defeated. (This is admittedly not quite realistic, but it provides motivation for building castles more frequently as the best way to protect key tiles with especially high productivity.) When the final defender is defeated, however, the castle itself (along with tile improvements) may also be destroyed in a percentage of cases.
+
+@@Trade
+The third resource produced by a tile is "Trade", just as in the base game. The generation and utilization of this resource is similar to the base game as well.
+
+@@Unit Movement Rates
+The base game and many scenarios follow a general principle that infantry (foot units) have 1 movement point; cavalry (mounted units) have 2 movement points; and motorized units may have 3 or more movement points. As a result, the unit flag for "Defense x1.5 vs. units with 2 MP and 1 HP" allows for increased defense against cavalry, and is typically given to infantry units with spears or pikes. In addition, the base game has a road multiplier of 3 (that is, a unit uses only 1/3 of a movement point when following a road) and allows infinite movement along railroads.
+
+Medieval Millennium takes a different approach. Although there are exceptions, the general principle is that artillery units (which are generally heavy and must be pulled by a team of horses) have 1 movement point; infantry (foot units) have 2 movement points; and cavalry (mounted units) have 3 movement points. (Motorized units are not applicable to this era.) As a result, the unit flag for "Defense x1.5 vs. units with 2 MP and 1 HP" allows for increased defense against most infantry attacks. Therefore, it is often given to cavalry units, to reflect the inherent disadvantage of a person on foot attempting to initiate an attack against someone on a horse. In other cases, though, it is treated more as a "half defense point" and is used to give one type of unit a defensive bonus for some battles, without making that type universally superior on defense to another similar type.
+
+Furthermore, Medieval Millennium utilizes a road multiplier of only 2 (that is, a unit uses 1/2 of a movement point when following a road) and a multiplier of 3 for royal highways (which are the upgraded roads, replacing railroads). The net effect is that cavalry move the same speed along roads as in the base game, but infantry move slightly faster — that is, the gap between them is reduced. Furthermore, royal highways provide a 50% speed increase compared to roads, for units traveling along them.
+
+Due to the way the game calculates movement points, fractional movement points will always be displayed in the Status pane with a denominator of 6 — that is, 1/3 will display as 2/6, 1/2 will display as 3/6, and 2/3 will display as 4/6. Fractional movement points of 1/6 and 5/6 are also possible when traveling over a combination of roads and royal highways.
+
+It should also be noted that in the base game, terrain without roads never has a movement cost higher than 2, except for Mountains which are 3. In Medieval Millennium, Mountains are impassable to all units except Scouts and those with "settler" capability, and multiple terrain types have a movement cost of 3 or higher. As a result, despite the increased movement rates of infantry and cavalry, they will still proceed slowly over unimproved land. Only by clearing land, and/or adding roads, can decent rates of travel be realized. (See the Civilopedia or the separate PDF Guide to Terrain for more information about terrain types.)
+
+Rivers provide a movement multiplier of 1 for units moving along them, assuming the land does not also have a road or royal highway. In other words, a unit traveling along a river uses only 1 movement point per tile, regardless of the underlying terrain type. A river therefore provides no movement benefit if the terrain type already costs 1 movement point to traverse, but allows a unit to move more quickly through terrain with a higher movement cost.
+
+@@Units (Overview)
+The usage of "combined arms" - armies consisting of multiple different unit types with different roles, acting together on the battlefield - is historically significant, and Medieval Millennium attempts to reflect this. There is no single unit type that can dominate the game in any era, and you will need to organize a strategy around the strengths and weaknesses of infantry, cavalry, and artillery.
+
+Medieval Millennium includes many new features related to units and combat, but perhaps the most noticeable of these is ranged units that fire a projectile instead of attacking directly. These are built and utilized by computer opponents as well as the human player, and there are many special rules that govern their construction and behavior.
+
+Although the quantity and complexity of new features related to units may seem daunting at first, you will gradually become more familiar and proficient with them as you play. Reading the documentation is important, but experience can be the best teacher!
+
+@@Veterans
+Units with specialized roles as settlers, diplomats, or merchants will never receive veteran status at the time they are built. The following information, therefore, applies to all other unit types.
+
+As a particular city produces military units, that city gradually becomes more and more skilled in equipping and training the particular types of units that it has produced. Each time a city builds a unit, the likelihood that the NEXT unit produced in that city of that SAME UNIT TYPE will be a veteran is increased by 10%. Therefore, after a city has built five units of the same type, there will be a 50% chance that the sixth unit will be a veteran; and after a city has built ten units of the same type, all future units of that type will be veterans.
+
+If a city contains a Barracks, this increases the likelihood that any human land unit (i.e., excluding large artillery) will be a veteran by 50%. A Barracks is therefore less effective at producing veteran units than in a base game of Civilization II, where it automatically conferred a 100% chance of veterancy. In other words, the first unit of a given type produced in a city will already have a 50% chance of being a veteran; and after a city has built five units of the same type, the sixth unit is guaranteed to be a veteran. Similarly, if a city contains a Shipyard, this increases the likelihood that any naval unit will be a veteran by 50%.
+
+The White Tower Fortress wonder provides an additional and separate 50% boost to the veteran chances of any human land unit, in every city. Therefore, if a nation possesses this wonder, the veterancy chance in a city with a Barracks would be increased to 100%. Similarly, the Commemorative Tapestry wonder provides an additional 50% boost, separate from the Shipyard, to the veteran chances of any naval unit, in every city.
+
+Overall, this increases the role that combat plays in creating veteran units. As in the base game, a unit has a 50% chance of becoming a veteran each time it survives a combat encounter. This system of determining veteran status may also lead the player to focus on developing unit type "specializations" for construction within cities.
+
+The attack and defense factors of veteran units are increased by 50%, as in the base game. A ranged attack unit will have its veterancy status translated along to the corresponding projectile unit that it fires.
+
+@@We Love The King Day
+See "Celebrating Cities".
+
+@@Wonders (Overview)
+Medieval Millennium contains 28 wonders of the world, each of which can only be constructed once by any nation during the game. All wonders from the base game are therefore included, but all of them have been renamed or reassigned to the medieval era. In some cases the benefit a wonder provides will be easily recognized, but in other cases a wonder confers benefits which are slightly altered or even radically different from the behavior of the base game.
+
+@This must be here to terminate search!!!

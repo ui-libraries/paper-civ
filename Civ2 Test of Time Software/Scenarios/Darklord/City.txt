@@ -1,0 +1,228 @@
+;
+;   CIVILIZATION CITY LIST
+;   Copyright (c) 1995 by MicroProse Software
+;
+;   This file can be altered at your own risk to change
+;   the default names for cities.  Keep in mind that
+;   altering the contents of this file may cause your game
+;   to malfunction.
+;
+;   City names may contain no more than 15 characters.
+;
+
+@GONDOR
+Minas Tirith
+Pelargir
+Dol Amroth
+Calembel
+Erech
+Linhir
+Anfalas
+Tolfalas
+Henneth Annun
+Anorien
+Sarn Ford
+The Shire
+Pinnath Gelin
+Ethring
+Lossarnach
+Andrast
+Amon Din
+Eilenach
+Nardol
+Erelas
+Minrimmon
+Calenhad
+Halifirien
+Dor-en-Ernil
+Belfalas
+Lamedon
+@STOP
+
+@SYLVAN
+Caras Galadon
+Rivendell
+Woodland Realm
+Gray Havens
+Forlond
+Harlond
+Rhosgobel
+Hollin
+White Towers
+Ost-in-Edhil
+Emyn Beraid
+Emyn-nu-Fuuin
+Taru-En-Daedlos
+Gladden Fields
+Ered Luin
+Mirrormere
+Cerin Amroth
+Fanuidhol
+Onodlo
+Edhellond
+Forlindon
+Harlindon
+Lindon
+@STOP
+
+@ROHAN
+Edoras
+Helm's Deep
+Entwade
+Esgaroth
+Carrock
+Bree
+Fenmarch
+East Emnet
+West Emnet
+Dunharrow
+The Wold
+Snowbourn
+Upbourne
+Underharrow
+Thrihyrne
+Starkhorn
+Dwimorberg
+Irensaga
+Morthond Vale
+West Folde
+East Folde
+Hornburg
+Dale
+@STOP
+
+@HARAD
+Umbar
+Harandor
+Near Harad
+Haradwaith
+Far Harad
+Khand
+Harnen
+Poros
+Haud in Gwanur
+Sutherland
+@STOP
+
+@KHAZAD
+Erebor
+Iron Hills
+Blue Mountains
+Aglarond
+Azanulbizar
+Nogrod
+Belegost
+Withered Heath
+Khazad Dum
+Gray Mountains
+Misty Mountains
+Ered Nimrais
+@STOP
+
+@RHUN
+Easterling Town
+Dorwinion
+Rhun Haven
+Wain Rider Town
+Khand
+Balchoth Town
+Dagorlad
+Redwater
+Brownlands
+Running
+Celduin
+Carnen
+@STOP
+
+@MORDOR
+Barad Dur
+Minas Morgul
+Nurn
+Dol Goldur
+The Morannen
+Isengard
+Dunland
+Moria
+Mount Gundabad
+Goblintown
+Mount Gram
+Lithlad
+Angren
+Gwathlo
+Carn Dum
+Udun
+Cirith Ungol
+Gorgoroth
+Durthang
+Cirith Gorgor
+Isenmouthe
+Morgai
+Barrow Downs
+Deadman's Dike
+Ered Lithui
+Ephel Duath
+Trollshaws
+Ettenmoors
+Coldfells
+@STOP
+
+@EXTRA
+Dol Baran
+Methdras
+Angmar
+Angband
+Minhiriath
+Caradhras
+Amon Sul
+Weather Hills
+Annuminas
+Baranduin
+Mithithel
+Bruinen
+Langwell
+Limlight
+Fangorn
+Nindalf
+Emyn Muil
+Lefnui
+Lhun
+The Angle
+Wellinghall
+Derndingle
+Ringlo
+Cril
+Gilrain
+Serniu
+Michel Delving
+Chetwood
+Tookland
+Buckland
+Andrath
+Midgewater
+Evendim
+Nenuial
+@STOP
+
+
+@BARBARIANS
+17
+Huns
+Visigoths
+Ostrogoths
+Sueves
+Angles
+Saxons
+Franks
+Jutes
+Burgundians
+Avars
+Vandals
+Alans
+Bulgars
+Magyars
+Frisians
+Picts
+Langobardi
+
+
+@end

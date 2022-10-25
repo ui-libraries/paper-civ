@@ -1,0 +1,340 @@
+;
+;   CIVILIZATION CITY LIST
+;   Copyright (c) 1995 by MicroProse Software
+;
+;   This file can be altered at your own risk to change
+;   the default names for cities.  Keep in mind that
+;   altering the contents of this file may cause your game
+;   to malfunction.
+;
+;   City names may contain no more than 15 characters.
+;
+
+@ROMANS
+Rome
+@STOP
+
+@BABYLONIANS
+Babylon
+@STOP
+
+@GERMANS
+Berlin
+@STOP
+
+@EGYPTIANS
+Thebes
+@STOP
+
+@AMERICANS
+Washington
+@STOP
+
+@GREEKS
+Paris
+Lyon
+Kobenhavn (De)
+Marseille
+Toulouse
+Amsterdam
+Bordeaux
+Torino
+Le Havre
+Nantes
+Strasbourg
+Toulon
+Milano (It)
+Bruxelles (UP)
+Clermont
+Metz
+Orléans
+Perpignan
+Reims
+Rennes
+Genova
+Firenze
+Zürich
+Anvers
+Amiens
+Brest
+Dijon
+La Rochelle
+Limoges
+Tours
+Köln
+Mainz
+Ajaccio
+Bayonne
+Cherbourg
+Genève (Sw)
+Aalborg
+Nice
+Liège
+Calais
+K. of Naples
+Switzerland
+United Provinces
+Denmark
+Bavaria
+Rhineland
+Westphalia
+Würtemberg 
+K. of Italy
+D. of Poland
+@STOP
+
+@INDIANS
+Delhi
+@STOP
+
+@RUSSIANS
+Russian Empire
+Sankt-Peterburg
+Moskva
+Kyiv
+Minsk
+Ekaterinoslav
+Kharkiv
+Odesa
+Riga
+Niznij Novgorod 
+Rostov-na-Donu
+Voronez
+Jaroslavl'
+Krasnodar
+Tallinn
+Vilna
+Brest-Litovsky
+Grodno
+Vitsyebsk
+Kursk
+Pskov
+Smolensk
+Vjaz'ma
+Sevastopol'
+Kovno
+Vinnytsya
+Zhytomyr
+Tula
+Tver'
+Lublin
+Orel
+Pervomaisk
+Veliki Novgorod
+Cherson
+Narva
+Dubno
+Velikiye Luki
+Corfu
+@STOP
+
+@ZULUS
+Zimbabwe
+@STOP
+
+@FRENCH
+Paris (F)
+@STOP
+
+@AZTECS
+Tenochtitlan
+@STOP
+
+@CHINESE
+Beijing
+@STOP
+
+@ENGLISH
+London
+@STOP
+
+@MONGOLS
+British Empire
+London
+Napoli (Na)
+Birmingham
+Palermo 
+Lisboa (Pt)
+Glasgow
+Dublin
+Bristol
+Edinburgh
+Liverpool
+Manchester
+Messina
+Oporto
+Belfast
+Plymouth
+Cagliari
+Taranto
+Lagos
+Malta
+Lübeck 
+Newcastle 
+Southampton
+Cork
+Straslund
+Corfu
+Göteborg
+Gibraltar
+Hanö
+@STOP
+
+@CELTS
+Cardiff
+@STOP
+
+@JAPANESE
+Austrian Empire
+Wien
+Agram
+München (Ba)
+Frankfurt an M. (Rh)
+Prag
+Stuttgart (Wü)
+Budapest
+Graz
+Kosice
+Pécs
+Nürnberg 
+Debrecen
+Splitz
+Venezia
+Verona
+Krakow
+Lemberg
+Trieste
+Innsbruck
+Olmütz
+Ancona
+Ratisbon
+Ulm
+Ulm
+Temeschwar
+@STOP
+
+@VIKINGS
+Prussian Empire
+Berlin
+Warszawa (Po)
+Bremen
+Hanover
+Dresden (Sa)
+Leipzig
+Stettin
+Hamburg
+Königsberg
+Münster (We)
+Breslau
+Brunswick (Br)
+Kassel
+Danzig
+Posen
+Thorn
+Küstrin
+Magdeburg
+@STOP
+
+@SPANISH
+Spanish Empire
+Madrid
+Roma
+Barcelona
+Málaga
+Sevilla
+Bilbao
+Palma
+Valencia
+Valladolid
+Zaragoza
+Cadiz
+A Coruna
+Cartagena
+Gijón
+Badajoz
+Córdoba
+Burgos
+Ciudad Rodrigo
+Tortosa
+@STOP
+
+@ARABS
+Baghdad
+@STOP
+
+@CARTHAGINIANS
+Carthage
+@STOP
+
+@SIOUX
+Little Bighorn
+@STOP
+
+@INCAS
+Cuzco
+@STOP
+
+@PERSIANS
+Ottoman Empire
+Istanbul
+Ankara 
+Sofia
+Athínai 
+Al-Qahirah
+Izmir
+Antalya
+Al-Iskandariyah
+Adana
+Beograd
+Saloniki
+Bucuresti 
+Bayrut 
+Tarabulus
+Yerushalayim
+Rodos 
+Erdine
+Sinop
+Skopje
+Tubruq 
+Antakya
+Durazzo
+Galati 
+Sarajevo
+Banghazi 
+Irakleion 
+Patrai
+Dumyat
+Tangier
+Oran
+Algier
+Tunis
+Tripoli
+@STOP
+
+@EXTRA
+Naples
+@STOP
+
+
+@BARBARIANS
+17
+Huns
+Visigoths
+Ostrogoths
+Sueves
+Angles
+Saxons
+Franks
+Jutes
+Burgundians
+Avars
+Vandals
+Alans
+Bulgars
+Magyars
+Frisians
+Picts
+Langobardi
+
+
+@end

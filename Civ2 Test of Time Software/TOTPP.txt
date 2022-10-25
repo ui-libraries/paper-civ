@@ -74,4 +74,7 @@ Applied patch: Configurable first trade arrow for roads
 Applied patch: Settler flags
 Applied patch: Extra techs
 Applied patch: Lua scenario scripting
+Applied patch: Multiple instances
+Applied patch: Move Debug
+Applied patch: Debug Scripts
 Done!

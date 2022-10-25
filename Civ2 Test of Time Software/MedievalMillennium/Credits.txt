@@ -1,0 +1,105 @@
+@CREDITS
+
+
+
+
+
+
+
+MEDIEVAL MILLENNIUM
+by Knighttime
+
+
+
+
+
+
+
+
+ACKNOWLEDGEMENTS
+
+
+
+TEST OF TIME PATCH PROJECT (TOTPP)
+A huge thank you to TheNamelessOne for
+creating and releasing TOTPP. Without his
+foundational work, the vast majority of the
+unique features found in Medieval
+Millennium would not be possible.
+
+
+
+QUALITY ASSURANCE AND TESTING
+Sincere thanks to Tootall_2012 for providing
+valuable playtesting feedback, pointing out
+numerous bugs and inconsistencies, serving
+as a terrific sounding board for my ideas,
+and making many helpful recommendations.
+
+Thank you also to PolarBear71 for testing
+and proofreading, and to JPetroski for
+testing and various suggestions.
+
+Their support and encouragement at various
+points during the project are greatly
+appreciated.
+
+
+
+GRAPHICS
+Thank you to the many talented individuals
+in the Civ II community who have so
+willingly shared their work over the years,
+especially Catfish, Fairline, and Tanelorn.
+
+Every attempt was made to preserve the
+signatures of artists within the icon image
+files.
+
+Not all artwork could be definitively
+sourced, and I sincerely apologize to anyone
+whose work is included in this scenario
+without appropriate credit. If you notice
+any graphics in this scenario that you
+designed, please contact me on
+Civfanatics.com, and I would be very happy
+to credit you here or make other
+arrangements if necessary.
+
+
+
+LUA
+Thank you to Prof. Garfield for his
+responsiveness on the Civfanatics forums,
+and for various tips and recommendations
+incorporated into the events.
+
+Specific sources for some sections of event
+code are cited and credited directly within
+the events files.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@END

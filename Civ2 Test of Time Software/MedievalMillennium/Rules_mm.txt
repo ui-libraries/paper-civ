@@ -1,0 +1,1365 @@
+@MOD
+name=Medieval Millennium v1.0.0, by Knighttime
+gametype=Original
+startingYear=500
+yearIncrement=2
+maxTurns=500
+flags=0x000
+
+;
+;   Medieval Millennium mod for Civ2ToT, by Knighttime
+;   Requires ToTPP v0.15.1 or higher
+;   Last updated: 11/20/2020 5:12 PM
+;
+;   CIVILIZATION GAME DATA 8/6/98
+;   Copyright (c) 1999 by MicroProse Software
+;
+;   This file can be altered at your own risk to change
+;   the rules of the game.  Keep in mind that altering the
+;   contents of this file may cause your game to malfunction,
+;   particularly if you use values outside the specified
+;   ranges.
+;
+
+;
+;   Cosmic Principles
+;
+;   The following numbers control various key rules
+;   of the game.  GREAT discretion is advised if you
+;   opt to change these.  Values too far out of the
+;   expected range can cause the game to behave strangely.
+;   All values entered in rules.txt are bounded by +/-127. 
+;   However, this does not mean that all numbers within this 
+;   range will work properly, for example, unit costs must 
+;   not exceed 17.
+;
+@COSMIC
+2        ; <3> Road movement multiplier (NOTE: deprecated in favor of RoadMultiplier, etc.)
+1        ; <2> 1 in x chance Coastal Ship lost, mod. by Large Clinker Ships (Seafaring) and Large Carvel Ships (Navigation)
+2        ; # of food each citizen eats per turn
+12       ; <10> # of rows in food box (rows * (city size + 1) = box size)
+10       ; # of columns in shield box
+1        ; Settlers eat if government <= Enlightened Monarchy (Monarchy)
+1        ; <2> Settlers eat if government >= Feudal Monarchy (Communism)
+7        ; City size for first unhappiness at Baron (Chieftain) level
+15       ; <14> Riot factor based on # cities (higher factor lessens the effect)
+5        ; <8> Market Town Charter (Aqueduct) needed to exceed this size
+10       ; <12> Free City Charter (Sewer System) needed to exceed this size
+15       ; <10> Tech paradigm (higher # slows research)
+16       ; <20> Base time for Yeoman (Engineers) to transform terrain (x2)
+3        ; Enlightened Monarchy (Monarchy) pays support for all units past this (max 8)
+2        ; <3> Feudal Monarchy (Communism) pays support for all units past this (max 8)
+3        ; <10> Tribal Monarchy (Fundamentalism) pays support for all units past this (max 8)
+18       ; <0> Communism is equivalent of this palace distance
+53       ; <50> Tribal Monarchy (Fundamentalism) loses this % of science
+50       ; Percent shield penalty for production type change
+10       ; Max paradrop range
+20       ; <75> Mass/Thrust paradigm (increasing slows spaceship time)
+8        ; <5> Max effective science rate in Tribal Monarchy (Fundamentalism) x10, so 5 = 50%
+2        ; <1> Value of each citizen to the Civilization Score
+25       ; <20> Value of each wonder to the Civilization Score
+2        ; <1> Reward for landing on New World (Alpha Centauri) first = this multiplier * (# of Atlantic Fleet: Ship/Cargo (SS Module)) * (prob. of success)
+0        ; <-10> Cost to Civilization Score (+ or -) for each extant non-AI controlled polluted tile.
+1        ; For each turn of peace after turn 199, this amount * 3 is added to Civilization Score
+5        ; Value to the Civilization Score of each future tech researched
+-10      ; <0> Amount added to Civilization score each time player betrays another civilization (negative numbers assess a penalty)
+0        ; Cost to Civilization Score (+ or -) for each unit destroyed
+11111111 ; Bitmask for goody huts (right bit = map0; 0 = no goody huts)
+0        ; Units with domain 1, range 0 (helicopters) pick up goody huts (0 = no, 1 = yes)
+
+; TOTPP
+; This is a collection of keys followed by a number of values,
+;    terminated by a blank line.
+; For ImpassableAir, when set to 1, air units respect impassable terrain. This can
+;    still be overridden in @UNITS_ADVANCED on a per unit basis.
+; For FortifyDefense/FortressDefense/CityWallsDefense, multiply by 50%
+;    to get the percentage of the normal defense value a unit defends with.
+;    E.g. 3 * 50% = 150% of normal defense
+; Also, these bonuses don't stack, except as noted in the individual comments.
+;    A fortified unit in a city with walls will only use the CityWallsDefense
+;    value (like in the unmodified game).
+; For CityPopulationLossAttack/CityPopulationLossCapture,
+;    0=will lose population, 1=will not lose population,
+;    2=will lose population except when size=1 and the loss would destroy the city
+; For UnitShieldColor, values determine the color of a unit's shield.
+;    It takes up to 2 values, for the primary and the secondary (used for
+;    unit stacks) shield. Values are between 0 and 31, with 0 - black,
+;    31 - tribe color. The values in between are darker (lower values)/lighter
+;    (higher values) hues of the tribe's color. Default shield colors can be
+;    configured through the "TOTPP Configuration" menu.
+; For NoStackKills, the particular mechanics depend on the domain:
+; - For land stacks, only the defender is killed;
+; - For ship stacks carrying land units the defender is sunk together with its cargo;
+; - For ships carrying air units (i.e. carriers or submarines) the defender is sunk
+;   and the air units remain.
+; For EventHeapSize, takes up to 2 values, the first is the (initial) heap size
+;    to be used for events in bytes. The second value flags static/dynamic memory
+;    allocation. When set to 1, it allows the event heap to dynamically allocate
+;    more memory when needed. Dynamic mode is especially recommended when
+;    making use of delayed events, in which case a particularly expensive
+;    "defragmentation" operation to reclaim space is skipped.
+; For NavigableRiversIntercardinal, 1 means only NE/SE/SW/NW movement on rivers,
+;    0 would allow diagonal movement
+; 'RailroadMultiplier', 'RoadMultiplier', 'RiverMultiplier', and 'AlpineMultiplier'
+;    can be enabled individually. They take 2 values, the first needs to be set
+;    to 1 to enable the multiplier, while the second value determines the movement
+;    cost. E.g. setting 'RailroadMultiplier' to 1, 6 means a unit can move 6 tiles
+;    along a railroad for 1 movement point. Setting the movement value to 0 means
+;    the movement cost of the underlying terrain is used, setting it to -1 means
+;    movement is unlimited. In game, all enabled movement multipliers are combined
+;    into an aggregate movement multiplier (exactly their least common multiple).
+;    This number multiplied by the movement rate from @UNITS must be less than 256
+;    for each unit. You'll get a friendly warning when this limit is exceeded.
+;    Note: the key 'MovementMultipliers' used in previous versions is now deprecated,
+;    but the patch still respects it, so scenarios with the old configuration will
+;    still work.
+; For ProductionCarryOver, when enabled with value 1, excess shields carry over
+;    to the next item after city production is completed. When specifying
+;    three values instead of one, this behaviour can be configured per
+;    production type (Units, Improvements & Wonders respectively).
+; For LWPreserveVeterancy, when enabled, veterancy of units is preserved
+;    when units are upgraded by the workshop.
+; For  NumberOfAnimatedUnitSprites, if greater than 80, the train animation from
+;    "unit99.spr" is read from "unit999.spr" (note the extra '9') to avoid conflicts
+;    with the animation for unit 99.
+;
+@COSMIC2
+ImpassableAir, 0                        ; 0 = air units can enter all terrain, 1 = air units respect impassable terrain
+TradeGoldMultiplier, 75                 ; <100> percent of base
+TradeScienceMultiplier, 0               ; <100> percent of base
+FortifyDefense, 3                       ; Applied defense for fortified units (multiply by 50%)
+FortressDefense, 4                      ; Applied defense on tile with fortress, doesn't stack with fortifying (multiply by 50%)
+CityWallsDefense, 4                     ; <6> Applied defense in city with city walls, doesn't stack with fortifying (multiply by 50%)
+CoastalFortressDefense, 2               ; <4> Applied defense in city with coastal fortress (multiply by 50%)
+AegisVSAirDefense, 2                    ; <6> Applied defense for AEGIS units against air units (multiply by 50%)
+AegisVSMissileDefense, 2                ; <10> Applied defense for AEGIS units against missiles (multiply by 50%)
+SAMDefense, 3                           ; <4> Applied defense in city with SAM Missile Battery versus missiles; stacks with SDI (multiply by 50%)
+SDIDefense, 2                           ; <4> Applied defense in city with SDI Defense versus missiles; stacks with SAM (multiply by 50%)
+TerrainDefenseForAir, 0                 ; <1> When set to 0, disables the defensive bonus from terrain for air units
+TerrainDefenseForSea, 0                 ; <1> When set to 0, disables the defensive bonus from terrain for sea units
+CityPopulationLossAttack, 1             ; <0> 0 = yes, 1 = no, 2 = yes but not for a size 1 city
+CityPopulationLossCapture, 2            ; <0> 0 = yes, 1 = no, 2 = yes but not for a size 1 city
+UnitShieldColor, 31, 15                 ; <16, 8> 0 = black, 1-30 = hue, 31 = tribe color
+NoStackKills, 1                         ; <0> 0 = disabled, 1 = enabled
+EventHeapSize, 106480, 1                ; first value is initial heap size, second value is 0 = static, 1 = dynamic
+NavigableRiversIntercardinal, 1         ; 0 = permit diagonal, 1 = only NE/SE/SW/NW
+NumberOfTerrainTypes, 16                ; <11, 11, 11, 11> on each map
+NoIncrementalRushBuy, 1                 ; <0> 0 = disabled i.e. incremental rush buy OK, 1 = blocking this enabled
+RailroadMultiplier, 1, 3                ; <0, -1> 0 = disabled, 1 = enabled; -1 = unlimited, 0 = use underlying terrain, >1 = movement multiplier
+RoadMultiplier, 1, 2                    ; <0, 3> 0 = disabled, 1 = enabled; -1 = unlimited, 0 = use underlying terrain, >1 = movement multiplier
+RiverMultiplier, 1, 1                   ; <0, 3> 0 = disabled, 1 = enabled; -1 = unlimited, 0 = use underlying terrain, >1 = movement multiplier
+AlpineMultiplier, 1, 1                  ; <0, 3> 0 = disabled, 1 = enabled; -1 = unlimited, 0 = use underlying terrain, >1 = movement multiplier
+ProductionCarryOver, 0, 0, 0            ; <0> 0 = disabled, 1 = enabled
+LWPreserveVeterancy, 0                  ; 0 = disabled, 1 = enabled
+CitySpritesPerTribe, 0                  ; 0 = disabled, 1 = enabled. When enabled, override default city/city flag sprites from CITIES.BMP with per tribe files.
+CitySpritesPerMap, 0                    ; 0 = disabled, 1 = enabled. When enabled, override default city/city flag sprites from CITIES.BMP with per map files.
+AICapitalizationLimit, 512              ; Number of units after which the AI switches to Capitalization
+BarbOffensiveUnitLimit, 32              ; <16> Maximum number of offensive barbarian units per landmass. When this limit is reached, barbarian cities stop producing units.
+BarbUnitSupport, 1                      ; <0> When set to 1, allows barbarian units to have a home city. Normally, barbarian-produced units have none.
+NumberOfUnitTypes, 127                  ; <80> Desired number of unit types. Valid values are between 80 and 127.
+NumberOfStaticUnitSprites, 80           ; Static sprites are not by default enabled for extra units. Valid values are between 80 and 127
+NumberOfAnimatedUnitSprites, 80         ; Animated sprites are not by default enabled for extra units. Valid values are between 80 and 127
+
+;
+;   Civilization Advances
+;
+;   Ai Value, Civilized Modifier, Preq1, Preq2, Epoch, Category
+;
+;     Ai Value = Basic value at which computer players
+;                view this advance (used in determining
+;                which discovery to pursue, which to
+;                acquire during exchanges, and value of
+;                gift during diplomacy).
+;     Modifier = Modifier to value based on the "civilized"
+;                aspect of a leader's personality.  Positive
+;                values increase value for civilized leaders,
+;                decrease it for militaristic.  Negative
+;                values vice versa.
+;     preq1, preq2 = Prerequisites
+;
+;     Epoch = historical period
+;             0 = Ancient
+;             1 = Renaissance
+;             2 = Industrial Revolution
+;             3 = Modern
+;
+;     Category = Knowledge category
+;             0 = Military
+;             1 = Economic
+;             2 = Social
+;             3 = Academic
+;             4 = Applied
+;
+@CIVILIZE
+Alchemy,                     2, 0,  Ast, Med, 2, 3    ; AFl  0
+Monasticism,                 4, 1,  Pot, Cer, 0, 3    ; Alp  1
+Arabic Numerals,             1, 0,  Ast, nil, 2, 3    ; Amp  2
+Arabic Translation,          3, 0,  Dem, SE , 2, 3    ; Ast  3
+Berber Invasion,             3, 0,  X7 , nil, 0, 0    ; Ato  4
+(UNUSED-T5),                 4, 0,  no , no , 0, 4    ; Aut  5
+Bombards,                    4,-2,  MP , Cur, 3, 0    ; Ban  6
+Bridge Building,             3, 0,  Cmb, nil, 0, 1    ; Bri  7
+Carvel Shipbuilding,         2, 1,  nil, nil, 0, 4    ; Bro  8
+Catholic Christianity,       4, 2,  X7 , nil, 0, 3    ; Cer  9
+Cloth Mill / Fulling,        1, 1,  Env, X3 , 2, 2    ; Che  10
+Chainmail Hauberks,          6,-1,  Met, X2 , 2, 0    ; Chi  11
+Clinker Shipbuilding,        2, 1,  nil, nil, 0, 4    ; CoL  12
+Composite Bows,              3,-1,  SFl, nil, 2, 0    ; CA   13
+Wood/Stone Craftsmanship,    5, 2,  nil, nil, 0, 2    ; Cmb  14
+Feudalism,                   8, 1,  Mas, Ref, 1, 1    ; Cmn  15
+Renaissance Art,             1, 0,  Fli, E2 , 3, 3    ; Cmp  16
+Cranequins,                  4,-1,  Gue, Met, 3, 0    ; Csc  17
+Motte and Bailey Castles,    5, 0,  U2 , X2 , 1, 0    ; Cst  18
+Corned Gunpowder,            7,-2,  Ban, War, 3, 0    ; Cor  19
+Counterweight Trebuchets,    4,-2,  Gun, U2 , 2, 0    ; Cur  20
+Merchant Republic,           2, 0,  Tac, Tra, 2, 1    ; Dem  21
+Renaissance Science,         1, 0,  NP , Lit, 3, 3    ; Eco  22
+Catalan Forges,              3, 0,  Ato, NF , 0, 2    ; E1   23
+Stained Glass,               3, 1,  FP , Mat, 2, 3    ; E2   24
+Domesday Book construction,  1, 0,  X7 , nil, 3, 2    ; Eng  25
+Guilds,                      5, 2,  Too, Tra, 2, 2    ; Env  26
+Inquisition,                 2, 2,  Roc, Wri, 2, 3    ; Esp  27
+Stone Castles,               3, 1,  Cst, MT , 2, 0    ; Exp  28
+Flying Buttress / Rib Vault, 1, 0,  MT , nil, 2, 3    ; Feu  29
+Humanism,                    4, 1,  Rfg, ToG, 3, 3    ; Fli  30
+Tribal Religion,             1, 0,  X7 , nil, 0, 1    ; Fun  31
+Gothic Architecture,         3, 2,  Feu, MT , 2, 3    ; FP   32
+Gun Decks,                   1,-1,  Cor, Nav, 3, 4    ; Gen  33
+Advanced Polearms,           4,-1,  Chi, CA , 3, 0    ; Gue  34
+Holy Land Crusades,          6, 0,  Cmn, Phi, 2, 2    ; Gun  35
+Gunpowder,                   7,-2,  AFl, SFl, 3, 0    ; Hor  36
+High Middle Ages,            1, 0,  X7 , nil, 2, 2    ; Ind  37
+(UNUSED-T38),                4, 0,  no , no , 0, 4    ; Inv  38
+Siege Warfare,               6,-2,  nil, nil, 0, 0    ; Iro  39
+Harbor Crane,                3, 2,  Cur, X3 , 2, 1    ; Lab  40
+Heavy Wheeled Plows,         2, 0,  NF , nil, 0, 2    ; Las  41
+Chivalry,                    4,-2,  Chi, Gun, 2, 0    ; Ldr  42
+Movable Type Printing Press, 1, 0,  MP , Mag, 3, 3    ; Lit  43
+Horizontal Looms,            2, 1,  Ref, Cmb, 1, 2    ; Too  44
+Double-entry Bookkeeping,    4, 2,  Amp, ToG, 3, 1    ; Mag  45
+Orbis Terrarum Maps,         3, 1,  Cer, Tra, 0, 4    ; Map  46
+Horse Collars / Horseshoes,  3, 0,  PT , E1 , 1, 2    ; Mas  47
+Blast Furnace,               2, 0,  Mob, ToG, 3, 2    ; MP   48
+Illuminated Manuscripts,     3, 1,  Alp, nil, 0, 3    ; Mat  49
+Medicine,                    3, 1,  Alp, Phi, 2, 3    ; Med  50
+Crossbows,                   4,-1,  Ref, U2 , 1, 0    ; Met  51
+Battle Tactics,              3,-1,  Gue, Rob, 3, 0    ; Min  52
+Primitive Cannons,           5,-2,  Hor, Pla, 3, 0    ; Mob  53
+Enlightened Monarchy,        5, 2,  Gun, Exp, 2, 1    ; Mon  54
+Romanesque Architecture,     6, 2,  Bri, The, 2, 3    ; MT   55
+Gregorian Chant,             3, 1,  Cer, nil, 0, 3    ; Mys  56
+Large Carvel Ships,          4, 0,  Sea, X1 , 3, 4    ; Nav  57
+Metal Working,               4, 0,  nil, nil, 0, 2    ; NF   58
+Age of Discovery,            5, 2,  Fli, Nav, 3, 4    ; NP   59
+Moorish Technology,          4, 0,  Ato, Tac, 1, 3    ; Phi  60
+Lateen Sail,                 3, 0,  Pot, Bro, 0, 4    ; Phy  61
+Wolf Furnace,                2, 1,  E1 , Chi, 2, 2    ; Pla  62
+Longbows,                    2,-1,  Chi, Cmn, 2, 0    ; Plu  63
+Cantles / Stirrups,          4, 0,  Ato, nil, 0, 0    ; PT   64
+Byzantine Influence,         2, 0,  nil, nil, 0, 3    ; Pot  65
+(UNUSED-T66),                4, 0,  no , no , 0, 4    ; Rad  66
+Stone-paved Roads,           2, 0,  Bri, Exp, 2, 1    ; RR   67
+Magnetic Compasses,          1, 0,  Ast, Gun, 2, 4    ; Rec  68
+Manorialism,                 5, 2,  PT , U1 , 1, 2    ; Ref  69
+Enclosure,                   3, 1,  Rep, Mon, 2, 2    ; Rfg  70
+Constitutional Monarchy,     3, 1,  Ldr, Wri, 2, 1    ; Rep  71
+Matchlocks,                  4,-1,  Cor, War, 3, 0    ; Rob  72
+Military Orders,             3, 0,  Gun, Med, 2, 0    ; Roc  73
+Sanitation,                  1, 1,  Fli, RR , 3, 2    ; San  74
+Large Clinker Ships,         2, 1,  Sup, Whe, 3, 4    ; Sea  75
+Mongol Invasion,             3, 1,  X7 , nil, 2, 0    ; SFl  76
+Muskets,                     2,-1,  Min, Rob, 3, 0    ; Sth  77
+Paper,                       3, 1,  Phi, nil, 2, 3    ; SE   78
+Plate Armor,                 3,-1,  Ldr, Csc, 3, 0    ; Stl  79
+Portolan Charts,             1, 0,  Lab, Rec, 3, 4    ; Sup  80
+Scholasticism,               3, 0,  Mat, Uni, 1, 3    ; Tac  81
+Polyphony,                   2, 0,  Mys, Uni, 1, 3    ; The  82
+Scientific Method,           3, 0,  AFl, Wri, 3, 3    ; ToG  83
+Trade,                       5, 2,  nil, nil, 0, 1    ; Tra  84
+Trivium / Quadrivium,        4, 2,  Alp, Map, 1, 3    ; Uni  85
+Serpentine Lever,            3,-1,  Stl, Mob, 3, 0    ; War  86
+Sternpost Rudders,           4,-1,  Env, X5 , 2, 4    ; Whe  87
+Universities,                5, 2,  SE , Tac, 2, 3    ; Wri  88
+The Renaissance,             1, 0,  Cmp, Eco, 3, 4    ; ...  89
+Three-Field System,          2, 0,  Las, nil, 0, 2    ; U1   90
+Traction Trebuchets,         4,-1,  Iro, Cmb, 0, 0    ; U2   91
+Trunnions / Limbers,         3,-2,  Cor, nil, 3, 0    ; U3   92
+Two-Masted Ships,            3, 0,  Env, Phy, 2, 4    ; X1   93
+Ulfberht Swords,             3,-1,  E1 , X4 , 1, 0    ; X2   94
+Vertical Wind Mills,         3, 1,  Cst, nil, 2, 2    ; X3   95
+Viking Invasion,             2, 0,  X7 , nil, 1, 0    ; X4   96
+Viking Ships,                3, 0,  CoL, X4 , 1, 4    ; X5   97
+Wheellocks,                  1,-1,  Rob, Stl, 3, 0    ; X6   98
+SPECIAL,                     8,-2,  nil, nil, 3, 2    ; X7   99
+
+;
+; Above 11 tech slots (U1 to X8) allow you to define your own 
+; civilization advances if desired.  Supply the name, the AI 
+; value, and the prerequisites.
+;
+; Then use the "U1", "U2", etc. 
+; identifier to incorporate it into the tech chain as a
+; prerequisite for other techs, units, city improvements.
+
+;
+;  City Improvements
+;
+;   cost(x10), upkeep, preq
+;
+; TOTPP
+; Adds 8 binary flags per improvement. When set, their effects are as follows:
+; 00000001 - Prevents selling of the improvement
+; 00000010 - Do not destroy on city capture
+; 00000100 - Always destroy on city capture. When both this and bit 2 are set, the result is random.
+; 00001000 - currently undefined
+; 00010000 - currently undefined
+; 00100000 - currently undefined
+; 01000000 - currently undefined
+; 10000000 - currently undefined
+;
+@IMPROVE
+Nothing,                      1, 0,   nil, 00000000,  ;  0  (Nothing)
+Royal Palace,                 5, 0,   Cmb, 00000001,  ;  1  (Palace)
+Barracks,                     4, 1,   nil, 00000000,  ;  2  (Barracks)
+Grist Mill §,                 4, 2,   nil, 00000010,  ;  3  (Granary)
+Basilica,                     8, 1,   Cer, 00000001,  ;  4  (Temple)
+Marketplace,                  4, 1,   nil, 00000000,  ;  5  (MarketPlace)
+Monastery §,                  8, 0,   Alp, 00000011,  ;  6  (Library)
+Magistrate's Office,          6, 1,   Ref, 00000100,  ;  7  (Courthouse)
+City Walls,                  10, 1,   Iro, 00000100,  ;  8  (City Walls)
+Market Town Charter,          6, 1,   Tra, 00000101,  ;  9  (Aqueduct)
+Textile Mill,                12, 3,   Che, 00000000,  ; 10  (Bank)
+Romanesque Cathedral,        16, 2,   MT,  00000001,  ; 11  (Cathedral)
+Cathedral School,            14, 2,   Uni, 00000000,  ; 12  (University)
+Sewer Conduits,              12, 2,   San, 00000010,  ; 13  (Mass Transit)
+Gothic Cathedral,            20, 3,   FP,  00000001,  ; 14  (Colosseum)
+Wood/Stone Craftsmen §,       4, 6,   Cmb, 00000010,  ; 15  (Factory)
+Foundry §,                    6, 6,   NF,  00000010,  ; 16  (Manufacturing Plant)
+(UNUSED-SDI),                20, 4,   no,  00000000,  ; 17  (SDI Defense)
+Hospital,                    10, 2,   Roc, 00000000,  ; 18  (Recycling Center)
+Wind Mill,                    6, 0,   X3,  00000001,  ; 19  (Power Plant)
+Water Mill,                   8, 0,   X7,  00000001,  ; 20  (Hydro Plant)
+(UNUSED-Nuclear Plant),      16, 2,   no,  00000000,  ; 21  (Nuclear Plant)
+Bank,                        20, 5,   Mag, 00000000,  ; 22  (Stock Exchange)
+Free City Charter,           10, 3,   Mon, 00000101,  ; 23  (Sewer System)
+Enclosed Fields,             12, 2,   Rfg, 00000010,  ; 24  (Supermarket)
+Trade Fair Circuit,          10, 0,   Env, 00000101,  ; 25  (Superhighways)
+University,                  20, 5,   Wri, 00000000,  ; 26  (Research Lab)
+Bastion Fortress,            14, 2,   Cor, 00000100,  ; 27  (SAM Missile Battery)
+Trade Fair Circuit,          10, 0,   no,  00000101,  ; 28  (Coastal Fortress)
+Guildhall,                   14, 3,   Env, 00000000,  ; 29  (Solar Plant)
+Fishing Fleet §,              8, 1,   X7,  00000001,  ; 30  (Harbor)
+Harbor Crane,                12, 4,   Lab, 00000000,  ; 31  (Offshore Platform)
+(UNUSED-Airport),            16, 3,   no,  00000000,  ; 32  (Airport)
+Chivalric Tournament,        10, 4,   Rep, 00000010,  ; 33  (Police Station)
+Shipyard,                     8, 2,   X7,  00000000,  ; 34  (Port Facility)
+(UNUSED-Transporter),        16, 3,   no,  00000000,  ; 35  (Transporter)
+Atlantic Fleet: Crew,         6, 0,   NP,  00000000,  ; 36  (SS Structural)
+Atlantic Fleet: Sails,        9, 0,   NP,  00000000,  ; 37  (SS Component)
+Atlantic Fleet: Ship/Cargo,  12, 0,   NP,  00000000,  ; 38  (SS Module)
+[Scutage],                   20, 0,   Gun, 00000000,  ; 39  ((Capitalization))
+Domesday Book,               40, 0,   Cst, 00000000,  ; 40 /  0  (Pyramids)
+Glorious Gothic Cathedral,   64, 0,   E2,  00000000,  ; 41 /  1  (Hanging Gardens)
+Hanseatic League Capital,    60, 0,   Lab, 00000000,  ; 42 /  2  (Colossus)
+Commemorative Tapestry,      32, 0,   Too, 00000000,  ; 43 /  3  (Lighthouse)
+Pilgrimage Route,            32, 0,   Map, 00000000,  ; 44 /  4  (Great Library)
+Palatine Chapel,             20, 0,   Mys, 00000000,  ; 45 /  5  (Oracle)
+Offa's Dyke,                 44, 0,   PT,  00000000,  ; 46 /  6  (Great Wall)
+White Tower Fortress,        68, 0,   Exp, 00000000,  ; 47 /  7  (Sun Tzu's War Academy)
+Naval Industrial Arsenal,    64, 0,   Pla, 00000000,  ; 48 /  8  (King Richard's Crusade)
+Travels of Marco Polo,       28, 0,   SFl, 00000000,  ; 49 /  9  (Marco Polo's Embassy)
+Iconic Romanesque Cathedral, 84, 0,   MT,  00000000,  ; 50 / 10  (Michelangelo's Chapel)
+School of Medicine,          36, 0,   Med, 00000000,  ; 51 / 11  (Copernicus' Observatory)
+Mount of St Michael,         56, 0,   Gun, 00000000,  ; 52 / 12  (Magellan's Expedition)
+Decorated Octagonal Basilica,20, 0,   X7,  00000000,  ; 53 / 13  (Shakespeare's Theatre)
+Brunelleschi's Dome,         48, 0,   Fli, 00000000,  ; 54 / 14  (Leonardo's Workshop)
+Opulent Romanesque Cathedral,64, 0,   MT,  00000000,  ; 55 / 15  (J. S. Bach's Cathedral)
+Magnificent Cluniac Abbey,   36, 0,   SE,  00000000,  ; 56 / 16  (Isaac Newton's College)
+Medici Bank,                 60, 0,   Mag, 00000000,  ; 57 / 17  (Adam Smith's Trading Co.)
+Ornate Gospel Book,          24, 0,   Mat, 00000000,  ; 58 / 18  (Darwin's Voyage)
+Great Charter,               52, 0,   Mon, 00000000,  ; 59 / 19  (Statue of Liberty)
+Holy Roman Emperor,          32, 0,   Uni, 00000000,  ; 60 / 20  (Eiffel Tower)
+King's Holy Land Crusade,    68, 0,   Gun, 00000000,  ; 61 / 21  (Women's Suffrage)
+Cistercian Order,            36, 0,   Cmn, 00000010,  ; 62 / 22  (Hoover Dam)
+Palace of the Popes,         52, 0,   Esp, 00000000,  ; 63 / 23  (Manhattan Project)
+Leaning Tower,               16, 0,   X7,  00000000,  ; 64 / 24  (United Nations)
+Sea Route to India,          96, 0,   NP,  00000010,  ; 65 / 25  (Apollo Program)
+Iconic University,           92, 0,   Wri, 00000000,  ; 66 / 26  (SETI Program)
+Majestic Gothic Cathedral,   64, 0,   FP,  00000000,  ; 67 / 27  (Cure for Cancer)
+
+;
+; Expiration advancements for Wonders of the World
+;
+@ENDWONDER
+Eng,        ; Domesday Book (Pyramids)
+nil,        ; Glorious Gothic Cathedral (Hanging Gardens)
+nil,        ; Hanseatic League Capital (Colossus)
+nil,        ; Commemorative Tapestry (Lighthouse)
+ToG,        ; Pilgrimage Route (Great Library)
+E2 ,        ; Palatine Chapel (Oracle)
+Ban,        ; Offa's Dyke (Great Wall)
+nil,        ; White Tower Fortress (Sun Tzu's War Academy)
+nil,        ; Naval Industrial Arsenal (King Richard's Crusade)
+nil,        ; Travels of Marco Polo (Marco Polo's Embassy)
+Cmp,        ; Iconic Romanesque Cathedral (Michelangelo's Chapel)
+nil,        ; School of Medicine (Copernicus' Observatory)
+nil,        ; Mount of St Michael (Magellan's Expedition)
+FP ,        ; Decorated Octagonal Basilica (Shakespeare's Theatre)
+nil,        ; Brunelleschi's Dome (Leonardo's Workshop)
+nil,        ; Opulent Romanesque Cathedral (J. S. Bach's Cathedral)
+nil,        ; Magnificent Cluniac Abbey (Isaac Newton's College)
+nil,        ; Medici Bank (Adam Smith's Trading Co.)
+Lit,        ; Ornate Gospel Book (Darwin's Voyage)
+nil,        ; Great Charter (Statue of Liberty)
+Mob,        ; Holy Roman Emperor (Eiffel Tower)
+nil,        ; King's Holy Land Crusade (Women's Suffrage)
+nil,        ; Cistercian Order (Hoover Dam)
+nil,        ; Palace of the Popes (Manhattan Project)
+MT ,        ; Leaning Tower (United Nations)
+nil,        ; Sea Route to India (Apollo Program)
+nil,        ; Iconic University (SETI Program)
+nil,        ; Majestic Gothic Cathedral (Cure for Cancer)
+
+;
+;    Unit Types
+;
+; until, domain,  move,range,  att,def,  hit,firepwr,  cost,hold,  role, preq,  flags
+;
+; until       = Civ advance which renders unit obsolete
+; domain      = Movement domain of unit
+:               0 = Ground
+;               1 = Air
+;               2 = Sea
+;
+; move        = Movement rate (spaces per turn)
+; range       = # of turns fuel carried (0 for non-air units)
+;
+; att         = Attack factor (chance to score hit attacking)
+; def         = Defense factor (chance to score hit defending)
+; hit         = Hit points (damage x10 which can be taken before elimination)
+; firepwr     = # damage points caused per hit scored on enemy.
+;
+; cost        = Cost (# of shield rows, usually of 10 shields each)
+; hold        = # of holds on ship (for carrying units)
+;
+; role        = AI role (Generally affects the way in
+;               which computer players use the unit, but
+;               roles >= 5 will actually affect abilities
+;               of the unit)
+;               0 = Attack
+;               1 = Defend
+;               2 = Naval Superiority
+;               3 = Air Superiority
+;               4 = Sea Transport
+;               5 = Settle
+;               6 = Diplomacy
+;               7 = Trade
+;
+; preq        = Prerequisite advance
+;
+; "Flags" control special advantages & restrictions.  Not
+; all of these flags "make sense" for all types of units
+; (paradropping ships, for instance).  Nonsensical variations
+; may produce bizarre effects (or worse).  You were warned.
+;
+;   0000000000000001 = Two space visibility
+;   0000000000000010 = Ignore zones of control
+;   0000000000000100 = Can make amphibious assaults
+;   0000000000001000 = Submarine advantages/disadvantages
+;   0000000000010000 = Can attack air units (fighter)
+;   0000000000100000 = Ship must stay near land (trireme)
+;   0000000001000000 = Negates city walls (howitzer)
+;   0000000010000000 = Can carry air units (carrier)
+;   0000000100000000 = Can make paradrops
+;   0000001000000000 = Alpine (treats all squares as road)
+;   0000010000000000 = x2 on defense versus horse (pikemen)
+;   0000100000000000 = Free support for fundamentalism (fanatics)
+;   0001000000000000 = Destroyed after attacking (missiles)
+;   0010000000000000 = x2 on defense versus air (AEGIS)
+;   0100000000000000 = Unit can spot submarines
+;   1000000000000000 = TOTPP: override health bars
+;
+@UNITS
+Peasant,             nil, 0,  1.,0,  0a, 1d,  1h,1f,  3, 0,  5, nil, 0100000000000010  ; 0
+Yeoman,              nil, 0,  1.,0,  0a, 1d,  2h,1f,  6, 0,  5, Mon, 0100000000000010  ; 1
+Serf,                nil, 0,  1.,0,  0a, 1d,  1h,1f,  2, 0,  5, Ref, 0100000000000010  ; 2
+Peasant Militia,     nil, 0,  1.,0,  1a, 1d,  1h,1f,  1, 0,  1, nil, 0100000000000000  ; 3
+Seax Swordsman,      X2 , 0,  2.,0,  2a, 1d,  1h,1f,  1, 0,  0, NF , 0100000000000100  ; 4
+Spearman,            Chi, 0,  2.,0,  1a, 2d,  1h,1f,  2, 0,  1, nil, 0100000000000100  ; 5
+Halberdier_,         nil, 0,  2.,0,  3a, 3d,  1h,1f,  6, 0,  1, Csc, 0100010000000100  ; 6
+Spearman II,         Gue, 0,  2.,0,  1a, 3d,  1h,1f,  4, 0,  1, Chi, 0100000000000100  ; 7
+Pikeman,             Min, 0,  2.,0,  1a, 4d,  1h,1f,  5, 0,  1, Gue, 0100000000000100  ; 8
+Refugee,             nil, 0,  1.,0,  1a, 1d,  1h,1f,  4, 0,  5, nil, 0100000000000010  ; 9
+Pikeman II,          nil, 0,  2.,0,  1a, 5d,  1h,1f,  6, 0,  1, Min, 0100000000000100  ; 10
+Arbalestier –×_,     nil, 0,  2.,1,  4a, 2d,  1h,1f,  5, 0,  0, Csc, 0100000000000000  ; 11
+Halberdier,          nil, 0,  2.,0,  3a, 3d,  1h,1f,  6, 0,  0, Gue, 0100010000000100  ; 12
+Swiss Pikeman,       nil, 0,  2.,0,  4a, 5d,  1h,1f,  8, 0,  0, X7 , 0100000000000100  ; 13
+Axeman II,           Gue, 0,  2.,0,  3a, 2d,  1h,1f,  4, 0,  0, Cst, 0100000000000100  ; 14
+Axeman,              Cst, 0,  2.,0,  2a, 1d,  1h,1f,  1, 0,  0, nil, 0100000000000100  ; 15
+Archer –›_,          CA , 0,  2.,1,  2a, 1d,  1h,1f,  2, 0,  0, nil, 0100010000000000  ; 16
+Horseman,            PT , 0,  3.,0,  2a, 1d,  1h,1f,  3, 0,  0, nil, 0100010000000000  ; 17
+Man-at-Arms,         Min, 0,  3.,0,  4a, 2d,  1h,1f,  6, 0,  0, Ldr, 0100010000000000  ; 18
+Crossbowman –+_,     Csc, 0,  2.,1,  3a, 2d,  1h,1f,  4, 0,  0, Met, 0100000000000000  ; 19
+Knight II,           Stl, 0,  3.,0,  5a, 3d,  1h,1f,  8, 0,  0, Ldr, 0100000000000000  ; 20
+Lancer,              Ldr, 0,  3.,0,  3a, 1d,  1h,1f,  4, 0,  0, PT , 0100010000000000  ; 21
+Knight,              Ldr, 0,  3.,0,  4a, 2d,  1h,1f,  7, 0,  0, Cmn, 0100010000000000  ; 22
+Monastic Knight,     Stl, 0,  3.,0,  6a, 2d,  1h,1f,  9, 0,  0, Roc, 0100010000000000  ; 23
+Knight III,          X6 , 0,  3.,0,  6a, 3d,  1h,1f, 10, 0,  0, Stl, 0100010000000000  ; 24
+Demi-lancer,         nil, 0,  3.,0,  4a, 3d,  1h,1f,  7, 0,  0, Min, 0100010000000000  ; 25
+Demi-lancer_,        nil, 0,  3.,0,  4a, 3d,  1h,1f,  7, 0,  1, Sth, 0100010000000000  ; 26
+Cuirassier ²¨,       nil, 0,  3.,2,  7a, 3d,  1h,1f, 16, 0,  0, X6 , 0100010000000000  ; 27
+Swordsman,           Chi, 0,  2.,0,  3a, 1d,  1h,1f,  3, 0,  0, X2 , 0100000000000100  ; 28
+Swordsman II,        War, 0,  2.,0,  4a, 2d,  1h,1f,  5, 0,  0, Chi, 0100000000000100  ; 29
+Berber Infantry,     nil, 0,  2.,0,  2a, 2d,  1h,1f,  3, 0,  0, X7 , 0100000000000101  ; 30
+Berber Cavalry,      nil, 0,  4.,0,  4a, 1d,  1h,1f,  6, 0,  0, X7 , 0100010000000001  ; 31
+Viking Raider,       nil, 0,  2.,0,  3a, 2d,  1h,1f,  4, 0,  0, X7 , 0100000000000101  ; 32
+Viking Berserker,    nil, 0,  2.,0,  4a, 1d,  2h,1f,  5, 0,  0, X7 , 0100000000000101  ; 33
+Arab Infantry,       nil, 0,  2.,0,  3a, 3d,  1h,1f,  5, 0,  0, X7 , 0100000000000101  ; 34
+Arab Cavalry,        nil, 0,  4.,0,  5a, 2d,  1h,1f,  9, 0,  0, X7 , 0100010000000001  ; 35
+Mongol Cavalry –»,   nil, 0,  4.,1,  5a, 2d,  1h,1f, 11, 0,  0, X7 , 0100010000000001  ; 36
+Turkish Janissary ¨, nil, 0,  2.,1,  5a, 3d,  1h,1f,  9, 0,  0, X7 , 0100000000000001  ; 37
+Plague,              nil, 1,  0.,2, 20a,10d,  4h,5f, 16, 0,  0, X7 , 1100000000000001  ; 38
+Black Death,         nil, 1,  0.,2, 30a,20d,  4h,5f, 16, 0,  0, X7 , 1100000000000001  ; 39
+Motte and Bailey,    nil, 0,  0.,0,  1a, 4d,  2h,1f,  8, 0,  1, X7 , 0100000000000000  ; 40
+Stone Castle,        nil, 0,  0.,0,  1a, 4d,  3h,1f, 12, 0,  1, X7 , 0100000000000000  ; 41
+U42,                 nil, 3,  1.,0,  1a, 1d,  1h,1f,  1, 0,  0, no , 0100000000000000  ; 42
+U43,                 nil, 3,  1.,0,  1a, 1d,  1h,1f,  1, 0,  0, no , 0100000000000000  ; 43
+U44,                 nil, 3,  1.,0,  1a, 1d,  1h,1f,  1, 0,  0, no , 0100000000000000  ; 44
+U45,                 nil, 3,  1.,0,  1a, 1d,  1h,1f,  1, 0,  0, no , 0100000000000000  ; 45
+Warlord,             nil, 0,  2.,0,  0a, 0d,  1h,1f,  6, 0,  6, X7 , 0100000000000010  ; 46
+Inquisitor,          nil, 0,  1.,0,  0a, 0d,  1h,1f,  6, 0,  6, Esp, 0100000000000010  ; 47
+Envoy,               nil, 0,  1.,0,  0a, 0d,  1h,1f,  3, 0,  6, Cer, 0100000000000010  ; 48
+Commercial Trader,   nil, 0,  1.,0,  0a, 1d,  1h,1f,  5, 0,  7, Mag, 0100000000000010  ; 49
+Merchant,            nil, 0,  1.,0,  0a, 1d,  1h,1f,  3, 0,  7, Tra, 0100000000000010  ; 50
+Scout,               NP , 0,  3.,0,  0a, 1d,  1h,1f,  3, 0,  0, nil, 0100011000000010  ; 51
+Archer –›,           CA , 0,  2.,1,  2a, 1d,  1h,1f,  2, 0,  1, nil, 0100010000000000  ; 52
+Crossbowman –+,      Csc, 0,  2.,1,  3a, 2d,  1h,1f,  4, 0,  1, Met, 0100000000000000  ; 53
+Longbowman –»,       Rob, 0,  2.,1,  4a, 2d,  1h,1f,  6, 0,  0, Plu, 0100000000000000  ; 54
+Longbowman –»_,      CA , 0,  2.,1,  3a, 2d,  1h,1f,  6, 0,  1, Plu, 0100000000000000  ; 55
+Bowman –»,           Rob, 0,  2.,1,  3a, 2d,  1h,1f,  5, 0,  1, CA , 0100010000000000  ; 56
+Bowman –»_,          Sth, 0,  2.,1,  3a, 2d,  1h,1f,  5, 0,  0, CA , 0100010000000000  ; 57
+Arbalestier –×,      nil, 0,  2.,1,  4a, 2d,  1h,1f,  5, 0,  1, Csc, 0100000000000000  ; 58
+Hand Cannoneer ·,    War, 0,  2.,1,  3a, 2d,  1h,1f,  4, 0,  0, Mob, 0100010000000000  ; 59
+Hand Culveriner ¨,   Rob, 0,  2.,1,  5a, 2d,  1h,1f,  7, 0,  0, War, 0100010000000000  ; 60
+Arquebusier •,       nil, 0,  2.,1,  6a, 3d,  1h,1f,  9, 0,  0, Rob, 0100000000000000  ; 61
+Musketeer ²•,        nil, 0,  2.,2,  8a, 3d,  1h,1f, 13, 0,  0, Sth, 0100000000000000  ; 62
+Siege Engineer,      nil, 0,  2.,0,  1a, 1d,  1h,1f,  5, 0,  0, Iro, 0100000000000000  ; 63
+U64,                 nil, 3,  1.,0,  1a, 1d,  1h,1f,  1, 0,  0, no , 0100000000000000  ; 64
+Siege Tower,         nil, 0,  1.,0,  4a, 3d,  2h,1f,  5, 0,  0, Iro, 0100000001000000  ; 65
+Torsion Catapult þ,  U2 , 0,  1.,1,  3a, 1d,  1h,1f,  5, 0,  0, Iro, 0100000001000000  ; 66
+Springald }—>,       Cur, 0,  1.,1,  4a, 1d,  1h,1f,  6, 0,  0, Iro, 0100000001000000  ; 67
+Mangonel þ,          Cur, 0,  1.,1,  3a, 1d,  1h,1f,  4, 0,  0, U2 , 0100000001000000  ; 68
+Trebuchet Þ,         nil, 0,  1.,1,  4a, 1d,  1h,1f,  6, 0,  0, Cur, 0100000001000000  ; 69
+Couillard þ,         nil, 0,  1.,1,  3a, 1d,  1h,1f,  4, 0,  0, Cur, 0100000001000000  ; 70
+Pot-de-fer }—>,      nil, 0,  1.,1,  4a, 1d,  1h,1f,  5, 0,  0, Mob, 0100000001000000  ; 71
+Ribauldequin ²¤,     nil, 0,  1.,2,  6a, 1d,  1h,1f,  6, 0,  0, Mob, 0100000000000000  ; 72
+Fowler o,            nil, 0,  1.,1,  5a, 1d,  1h,1f,  6, 0,  0, Ban, 0100000001000000  ; 73
+Bombard 0,           nil, 0,  1.,1,  6a, 1d,  1h,1f,  8, 0,  0, Ban, 0100000001000000  ; 74
+Basilisk O,          nil, 0,  1.,1,  7a, 1d,  1h,1f,  9, 0,  0, Ban, 0100000001000000  ; 75
+Serpentine °´,       U3 , 0,  2.,1,  6a, 1d,  1h,1f,  8, 0,  0, Cor, 0100000001000000  ; 76
+Demi-culverin ó,     U3 , 0,  1.,1,  7a, 1d,  1h,1f, 10, 0,  0, Cor, 0100000001000000  ; 77
+Culverin Ó,          U3 , 0,  1.,1,  8a, 1d,  1h,1f, 13, 0,  0, Cor, 0100000001000000  ; 78
+Falconet °´,         nil, 0,  3.,1,  6a, 1d,  1h,1f, 10, 0,  0, U3 , 0100000001000000  ; 79
+Saker ó,             nil, 0,  2.,1,  7a, 1d,  1h,1f, 11, 0,  0, U3 , 0100000001000000  ; 80
+Field Culverin Ó,    nil, 0,  2.,1,  8a, 1d,  1h,1f, 13, 0,  0, U3 , 0100000001000000  ; 81
+Carvel Galley,       Phy, 2,  5.,0,  2a, 1d,  1h,1f,  2, 2,  4, Bro, 0100000000101000  ; 82
+Clinker Galley,      X5 , 2,  5.,0,  2a, 1d,  1h,1f,  2, 2,  4, CoL, 0100000000101000  ; 83
+Trade Galley,        X1 , 2,  6.,0,  0a, 2d,  1h,1f,  3, 3,  4, Phy, 0100000000100000  ; 84
+Dromon,              X1 , 2,  6.,0,  3a, 2d,  1h,1f,  4, 2,  2, Phy, 0100000000101000  ; 85
+Viking Longship,     nil, 2,  7.,0,  3a, 2d,  1h,1f,  6, 4,  2, X7 , 0100000000001001  ; 86
+Knarr,               Whe, 2,  7.,0,  0a, 2d,  1h,1f,  4, 3,  4, X5 , 0100000000000000  ; 87
+Longship,            Whe, 2,  7.,0,  3a, 2d,  1h,1f,  5, 2,  2, X5 , 0100000000001000  ; 88
+Balinger,            Nav, 2,  8.,0,  2a, 2d,  1h,1f,  5, 2,  2, Whe, 0100000000101000  ; 89
+Cog,                 Sea, 2,  6.,0,  0a, 3d,  1h,1f,  5, 4,  4, Whe, 0100000000000000  ; 90
+War Cog,             nil, 2,  6.,0,  3a, 4d,  1h,1f,  7, 3,  2, Whe, 0100000000001000  ; 91
+Slender Galley,      nil, 2,  7.,0,  3a, 3d,  1h,1f,  6, 2,  2, X1 , 0100000000101000  ; 92
+Great Galley,        Nav, 2,  6.,0,  0a, 4d,  1h,1f,  6, 5,  4, X1 , 0100000000100000  ; 93
+Privateer,           nil, 2,  7.,0,  4a, 3d,  1h,1f,  7, 4,  2, X7 , 0100000000001001  ; 94
+Hulk,                nil, 2,  6.,0,  0a, 4d,  1h,1f,  6, 6,  4, Sea, 0100000000000000  ; 95
+Caravel,             nil, 2,  9.,0,  2a, 3d,  1h,1f,  6, 2,  2, Nav, 0100000000001000  ; 96
+Carrack,             nil, 2,  7.,0,  4a, 5d,  1h,1f,  9, 5,  4, Nav, 0100000000001000  ; 97
+Armed Carrack ó,     nil, 2,  7.,1,  7a, 4d,  1h,1f, 15, 3,  2, Gen, 0100000001001000  ; 98
+–› Broadhead Arrows, nil, 0,  1.,2,  1a, 0d,  1h,1f,  1, 0,  0, X7 , 0100001000000000  ; 99
+–» Bodkin Arrows,    nil, 0,  1.,2,  2a, 0d,  1h,1f,  1, 0,  0, X7 , 0100001000000000  ; 100
+–+ Bolts,            nil, 0,  1.,2,  1a, 0d,  1h,2f,  1, 0,  0, X7 , 0100001000000000  ; 101
+–× Quarrels,         nil, 0,  1.,2,  1a, 0d,  1h,3f,  1, 0,  0, X7 , 0100001000000000  ; 102
+}—> Artill Arrow,    nil, 1,  2.,2,  1a, 0d,  1h,4f,  1, 0,  0, X7 , 0100001001000011  ; 103
+þ Rock,              nil, 1,  2.,2,  3a, 0d,  1h,1f,  1, 0,  0, X7 , 0100001001000011  ; 104
+Þ Boulder,           nil, 1,  2.,2,  4a, 0d,  1h,1f,  1, 0,  0, X7 , 0100001001000011  ; 105
+· Pebbles,           nil, 0,  1.,2,  2a, 0d,  1h,1f,  1, 0,  0, X7 , 0100001000000000  ; 106
+¨ Pellets,           nil, 0,  1.,2,  2a, 0d,  1h,2f,  1, 0,  0, X7 , 0100001000000000  ; 107
+• Bullets,           nil, 0,  1.,2,  2a, 0d,  1h,3f,  1, 0,  0, X7 , 0100001000000000  ; 108
+¤ Stones,            nil, 0,  1.,2,  3a, 0d,  1h,1f,  1, 0,  0, X7 , 0100001000000001  ; 109
+}—> Garrot,          nil, 1,  2.,2,  1a, 0d,  1h,4f,  1, 0,  0, X7 , 0100001001000011  ; 110
+ o Sm Stone Ball,    nil, 1,  2.,2,  5a, 0d,  1h,1f,  1, 0,  0, X7 , 0100001001000011  ; 111
+ 0 Med Stone Ball,   nil, 1,  2.,2,  6a, 0d,  1h,1f,  1, 0,  0, X7 , 0100001001000011  ; 112
+ O Lg Stone Ball,    nil, 1,  2.,2,  7a, 0d,  1h,1f,  1, 0,  0, X7 , 0100001001000011  ; 113
+°´ Sm Iron Ball,     nil, 1,  2.,2,  3a, 0d,  1h,2f,  1, 0,  0, X7 , 0100001001000011  ; 114
+ó Med Iron Ball,     nil, 1,  2.,2,  4a, 0d,  1h,2f,  1, 0,  0, X7 , 0100001001000011  ; 115
+Ó Lg Iron Ball,      nil, 1,  2.,2,  5a, 0d,  1h,2f,  1, 0,  0, X7 , 0100001001000011  ; 116
+§ Miller,            nil, 0,  0.,0,  0a, 0d,  1h,1f,  4, 0,  3, X7 , 1100000000000000  ; 117
+§ Bakery,            nil, 0,  0.,0,  0a, 0d,  1h,1f,  4, 0,  3, X7 , 1100000000000000  ; 118
+§ Monks,             nil, 0,  0.,0,  1a, 1d,  1h,1f,  8, 0,  1, X7 , 1100010000000000  ; 119
+§ Carpenter,         nil, 0,  0.,0,  0a, 0d,  1h,1f,  4, 0,  3, X7 , 1100000000000000  ; 120
+§ Stonecutter,       nil, 0,  0.,0,  0a, 0d,  1h,1f,  4, 0,  3, X7 , 1100000000000000  ; 121
+§ Sawmill,           nil, 0,  0.,0,  0a, 0d,  1h,1f,  4, 0,  3, X7 , 1100000000000000  ; 122
+§ Mason,             nil, 0,  0.,0,  0a, 0d,  1h,1f,  4, 0,  3, X7 , 1100000000000000  ; 123
+§ Smith,             nil, 0,  0.,0,  0a, 0d,  1h,1f,  6, 0,  3, X7 , 1100000000000000  ; 124
+§ Forge,             nil, 0,  0.,0,  0a, 0d,  1h,1f,  6, 0,  3, X7 , 1100000000000000  ; 125
+§ Fishing Fleet,     nil, 2,  0.,0,  0a, 1d,  1h,1f,  8, 0,  2, X7 , 1100000000100000  ; 126
+
+;
+;  Terrain
+;
+;  Movecost, defense,   food, shields, trade,
+;        . . .  Irrigate, bonus, #turns, ai-irrigate,
+;        . . .  Mine,     bonus, #turns, ai-mine
+;        . . .  Transform
+;        . . .  Impassable
+;
+;   defense = multiply by 50% to get % of normal combat factor defended at.
+;       (so 3 x 50% = 150%, meaning a strength 2 unit defends at 3).
+;
+;  Irrigate/Mine = yes, no, or type of terrain changed to
+;  Transform     = Terrain type engineers can transform to
+;
+;  bonus = # extra production from that change
+;
+;  turns = # turns for settler to make change
+;
+;  ai    = Minimum govt level necessary for
+;          computer player to want to perform irrigate/mine
+;        0 Never
+;        1 Primitive Monarchy
+;        2 Enlightened Monarchy
+;        3 Feudal Monarchy
+;        4 Tribal Monarchy
+;        5 Constitutional Monarchy
+;        6 Merchant Republic
+;
+@TERRAIN
+Arable (poor),    1,2,  1,0,0,   yes, 1,  8, 1,   no , 0, 0, 0,  Grs, no ,   ; Drt  0
+Arable,           1,2,  2,0,0,   yes, 1,  6, 1,   no , 0, 0, 0,  Bbb, no ,   ; Pln  1
+Pasture,          1,2,  2,1,0,   no , 0,  0, 0,   no , 0, 0, 0,  Swa, no ,   ; Grs  2
+Arable (lush),    1,2,  2,1,1,   yes, 2,  6, 1,   no , 0, 0, 0,  no , no ,   ; For  3
+Mountain Pass,    3,4,  0,1,0,   no , 1,  0, 0,   yes, 1,12, 1,  no , no ,   ; Hil  4
+Mountains,        5,4,  0,0,0,   no , 0,  0, 0,   Hil, 0,10, 2,  no , yes,   ; Mou  5
+Dense Forest,     3,3,  1,1,0,   Bbb, 0, 10, 1,   yes, 2, 6, 1,  no , no ,   ; Tun  6
+Pine Forest,      3,3,  1,1,0,   Bbb, 0, 10, 1,   yes, 2, 6, 1,  no , no ,   ; Gla  7
+Heathland,        1,2,  1,1,0,   Grs, 0,  8, 1,   yes, 1, 8, 2,  no , no ,   ; Swa  8
+Marsh/Fen,        4,3,  0,0,0,   Pln, 0, 12, 2,   no , 0, 0, 0,  no , no ,   ; Jun  9
+Sea,              1,2,  1,0,2,   no , 1,  0, 0,   no , 1, 0, 0,  no , no ,   ; Oce  10
+Woodland,         2,2,  1,1,0,   Pln, 1,  8, 1,   yes, 1, 6, 2,  no , no ,   ; Bbb  11
+Hills,            4,3,  1,1,0,   Ddd, 0, 12, 2,   yes, 2,10, 1,  no , no ,   ; Ccc  12
+Terraced Hills,   2,3,  2,0,0,   yes, 1, 12, 2,   yes, 1,10, 2,  Ccc, no ,   ; Ddd  13
+Monastery,        2,3,  1,0,3,   no , 0,  0, 0,   no , 0, 0, 0,  no , no ,   ; Eee  14
+Urban,            1,2,  0,2,2,   no , 0,  0, 0,   no , 0, 0, 0,  no , no ,   ; Fff  15
+Clay,             1,2,  1,2,0,
+Small Game,       1,2,  3,0,1,
+Pasture+,         1,2,  2,1,0,
+Honey,            1,2,  3,1,2,
+Iron Ore,         3,4,  0,4,2,
+Iron Ore,         5,4,  0,2,1,
+Timber,           3,3,  1,3,1,
+Amber,            3,3,  1,1,4,
+Wild Fowl,        1,2,  3,1,1,
+Eels,             4,3,  2,0,1,
+Herring,          1,2,  3,0,3,
+Orchard,          2,2,  3,1,1,
+Limestone,        4,3,  0,4,1,
+Grapes,           2,3,  3,0,2,
+Abbey Ale,        2,3,  2,0,5,
+Artesian Well,    1,2,  2,2,2,
+Domestic Fowl,    1,2,  2,0,1,
+Pigs,             1,2,  3,1,0,
+Pasture+,         1,2,  2,1,0,
+Horses,           1,2,  2,2,3,
+Silver,           3,4,  0,2,5,
+Silver,           5,4,  0,1,3,
+Red Deer,         3,3,  3,1,2,
+Bears,            3,2,  2,1,1,
+Goats,            1,2,  3,1,1,
+Reeds,            4,3,  0,1,2,
+Salmon,           1,2,  3,0,3,
+Foxes,            2,2,  1,2,2,
+Wild Boar,        4,2,  2,1,2,
+Olives,           2,3,  3,0,1,
+Goods and Tools,  2,3,  1,1,5,
+Public Garden,    1,2,  2,2,2,
+
+; TOTPP
+; Adds a check to the transform order to see if the tribe has the technology
+; required to transform that particular terrain type. This allows the designer
+; to make transformations of "easy" terrain types available earlier in the tech-tree.
+; Consists of one line per terrain type, containing a tech abbreviation and a comma.
+; The order of terrain types is the same as in the @TERRAIN section.
+; "nil" means no tech requirement, though you will still need a unit with engineering capabilities.
+; @TRANSFORM1 .. @TRANSFORM3 can be used for secondary maps, similarly to @TERRAIN1-3.
+;
+@TRANSFORM
+Rfg,    ; Drt
+nil,    ; Pln
+nil,    ; Grs
+nil,    ; For
+nil,    ; Hil
+nil,    ; Mou
+nil,    ; Tun
+nil,    ; Gla
+nil,    ; Swa
+nil,    ; Jun
+nil,    ; Oce
+nil,    ; Bbb
+nil,    ; Ccc
+nil,    ; Ddd
+nil,    ; Eee
+nil,    ; Fff
+
+; TOTPP
+; The @FERTILITY section consists of a list of terrain types, optionally accompanied
+;    by 3 "fertility coefficients" 
+; Adding a terrain type to this section allows it to be settled by the AI.
+; Conversely, terrain types not in this section will never be settled by the AI.
+; The "fertility coefficients" can be used to make a terrain type more or less desirable.
+;    These 3 values are multiplied by the food, shields and trade values of the terrain type,
+;    respectively. The sum of these multiplications determines the fertility value. In the above
+;    example, a grassland tile will get a fertility value of 0, since all its coefficients are 0.
+;    Tundra on the other hand, will get a fertility value of 6, given its default tile production
+;    of 1 food, 0 shields, 0 trade. By default, these coefficients are 3, 2 and 1.
+; As an alternative to the name of the terrain, its ordinal index can be used.
+;    "0" is the same as "Desert", etc.
+; @FERTILITY1 .. @FERTILITY3 can be used for secondary maps, similarly to @TERRAIN1-3.
+; In the absence of a @FERTILITY section for a map, defaults are used. Defaults are game type
+;    specific, usually 1, 2 (i.e. plains and grasslands), except for the Fantasy game, where
+;    the defaults are 3, 5 for map 2 and 3, 4, 5 for map 3.
+; This patch also fixes a minor bug in the default fertility calculation where a tile with
+;    resource #2 was using the production values from resource #1. Therefore, just having this
+;    patch enabled without any @FERTILITY sections will give slightly different fertility values
+;    for such tiles compared to the vanilla game.
+;
+@FERTILITY
+Arable (poor), 7, 3, 1
+Arable, 5, 2, 1
+Pasture, 3, 2, 0
+Arable (lush), 5, 4, 1
+Dense Forest, 4, 4, 2
+Pine Forest, 3, 4, 2
+Heathland, 4, 3, 0
+Woodland, 5, 4, 0
+Hills, 5, 3, 1
+Terraced Hills, 5, 2, 1
+Urban, 3, 3, 2
+
+; TOTPP
+; The @OVERLAYS section enables custom overlays from TERRAIN2.bmp for arbitrary terrain types.
+; This section consists of a list of terrain types followed by 3 numbers.
+; -  For the terrain type you can either use its ordinal index (0-15), the abbreviation
+;    used in @TERRAIN (Drt, Pln, etc.), or the full name
+; -  The first number is the number of tiles to read, either 1, 3 or 16. When 16, tiles are read in
+;    2 rows of 8, similar to the original overlays. When 1 or 3, tiles are read from a single row.
+;    The use for the 3-tile overlay is to prevent the dithering used between different terrain types
+;    to render on top of the tile. These tiles correspond to the three tiles in TERRAIN1.bmp.
+; -  The second number is the height of the tiles, 32, 48 or 64.
+;    This reveals the reason to use overlays in TERRAIN2.bmp for 1 or 3 tiles: you can increase
+;    the height of these graphics to 48 or 64, instead of being fixed at 32 as they are in TERRAIN1.bmp.
+; -  The third number is the y-coordinate in TERRAIN2.bmp from where to start reading the tiles.
+;    The starting x-coordinate is always 1.
+; Tiles are expected to be separated from each other by a one-pixel border.
+; River tiles are always read from their original position of (1, 67). River mouths and coastal tiles
+;    shift down, they are read from right below the bottommost overlay.
+; In the absence of an @OVERLAYS section, overlays are defined to correspond to a default TERRAIN2.bmp file.
+; @OVERLAYS1 .. @OVERLAYS3 can be used for secondary maps, similarly to @TERRAIN1-3.
+;
+@OVERLAYS
+Mountain Pass, 16, 32, 133
+Mountains, 16, 32, 199
+Dense Forest, 16, 32, 265
+Pine Forest, 16, 32, 331
+Hills, 16, 32, 397
+Terraced Hills, 16, 32, 463
+
+@GOVERNMENTS
+Interregnum,             Lord,             Lady
+Primitive Monarchy,      King,             Queen
+Enlightened Monarchy,    Enlightened King, Enlightened Queen
+Feudal Monarchy,         Feudal King,      Feudal Queen
+Tribal Monarchy,         Tribal King,      Tribal Queen
+Constitutional Monarchy, Lawful King,      Lawful Queen
+Merchant Republic,       Elected Doge,     Elected Dogaressa
+
+;
+;   Leaders
+;
+;   leader, female, color, style, plural, adjective, ...
+;           ...attack, expand, civilize, ...
+;           ...govt, male, female...<repeat>
+;
+;   female:     0 = male           1 = female
+;
+;   color:  Color set (1 - 7)
+;   style:  City style (0 - 3)
+;           0 = Bronze Age
+;           1 = Classical
+;           2 = Far East
+;           3 = Medieval
+;
+;   attack:     1 = aggressive    -1 = rational
+;   expand:     1 = expansionist  -1 = perfectionist
+;   civilize:   1 = civilized     -1 = militaristic
+;
+;   govt = government type for name replacement (0 = Interregnum, 6 = Merchant Republic)
+;
+;   male, female = titles for leader of government
+;
+@LEADERS
+Liuvigild,             Brunhilda,           0, 1, 3,  The Visigoths,        Visigothic,   1, 1,-1,    
+Charlemagne,           Hildegard,           0, 2, 1,  The Franks,           Frankish,     1, 1, 0,    
+Otto,                  Adelaide,            0, 3, 1,  Germany,              German,       0, 1, 0,    
+Alfred,                Æthelflæd,           0, 4, 0,  The English Saxons,   Saxon,        1, 0, 0,    
+Arnulf,                Judith,              0, 5, 1,  Bavaria,              Bavarian,    -1,-1,-1,    
+Rudolph II,            Richilde,            0, 6, 1,  Burgundy,             Burgundian,  -1, 0, 1,    
+Liutprand,             Matilda of Tuscany,  0, 7, 1,  The Lombards,         Lombard,      0, 0, 1,    
+Cnut,                  Emma,                0, 1, 0,  Denmark,              Danish,       1, 0,-1,    
+William I,             Matilda of Flanders, 0, 2, 0,  The English Normans,  Norman,       1, 1, 1,    
+Roger II,              Constance,           0, 3, 3,  Sicily,               Sicilian,    -1, 0, 0,    
+Ferdinand,             Urraca,              0, 4, 3,  Castile and Leon,     Castilian,   -1, 1, 0,    
+William V,             Eleanor,             1, 5, 0,  Aquitaine,            Aquitanian,  -1,-1, 0,    
+Afonso,                Theresa,             0, 6, 3,  Portugal,             Portuguese,   0, 0, 0,    
+Philip II,             Joan,                0, 7, 0,  France,               French,      -1, 1, 1,    
+Enrico Dandolo,        Veronica Franco,     0, 1, 2,  Venice,               Venetian,    -1,-1, 1,    
+Peter III,             Petronilla,          0, 2, 3,  Aragon,               Aragonese,    0,-1, 0,    
+Robert the Bruce,      Elizabeth de Burgh,  0, 3, 0,  Scotland,             Scottish,     1,-1,-1,    
+Louis,                 Mary,                0, 4, 2,  Hungary,              Hungarian,    0, 0,-1,    
+Simone Boccanegra,     Simonetta Vespucci,  0, 5, 3,  Genoa,                Genovese,     0,-1, 1,    
+Charles IV,            Ludmilla,            0, 6, 2,  Bohemia,              Bohemian,     0,-1,-1,    
+Wladyslaw II Jagiello, Jadwiga,             0, 7, 2,  Poland,               Polish,       0, 1,-1,    
+
+;
+;   Trading Commodities
+;
+@CARAVAN
+Wool,
+Furs,
+Salt,
+Horses,
+Copper,
+Silk,
+Iron,
+Pottery,
+Wine,
+Amber,
+Textiles,
+Spices,
+Glass,
+Dye,
+Timber,
+Silver,
+
+@ORDERS
+Fortify,            F
+Fortified,          F
+Sentry,             s
+Build Castle,       c
+Build Road,         R
+Irrigate,           i
+Mine/Woodcut,       m
+Terraform,          o
+Cleanse Plague,     p
+Build Airbase,      e
+Build Teleporter,   j
+Go To,              G
+
+@DIFFICULTY
+Baron
+Earl
+Marquess
+Duke
+Prince
+King
+Emperor
+
+@ATTITUDES
+Worshipful
+Enthusiastic
+Cordial
+Receptive
+Neutral
+Uncooperative
+Icy
+Hostile
+Enraged
+
+;
+; The CIVILIZE2 section lists the group numbers for each of the 100 technologies available in the game.
+; Remember that technologies are numbered from 0 to 99.
+; Everything following the semi-colons on each line is a comment.
+; These groups are then used in LEADERS2 to control capabilities for all techs in that group
+;
+@CIVILIZE2
+2        ; AFl  0
+0        ; Alp  1
+2        ; Amp  2
+2        ; Ast  3
+6        ; Ato  4
+7        ; Aut  5
+3        ; Ban  6
+0        ; Bri  7
+4        ; Bro  8
+0        ; Cer  9
+2        ; Che  10
+2        ; Chi  11
+4        ; CoL  12
+2        ; CA   13
+0        ; Cmb  14
+5        ; Cmn  15
+3        ; Cmp  16
+3        ; Csc  17
+1        ; Cst  18
+3        ; Cor  19
+2        ; Cur  20
+2        ; Dem  21
+3        ; Eco  22
+0        ; E1   23
+2        ; E2   24
+7        ; Eng  25
+2        ; Env  26
+2        ; Esp  27
+2        ; Exp  28
+2        ; Feu  29
+3        ; Fli  30
+7        ; Fun  31
+2        ; FP   32
+3        ; Gen  33
+3        ; Gue  34
+2        ; Gun  35
+3        ; Hor  36
+7        ; Ind  37
+7        ; Inv  38
+0        ; Iro  39
+2        ; Lab  40
+0        ; Las  41
+2        ; Ldr  42
+3        ; Lit  43
+1        ; Too  44
+3        ; Mag  45
+0        ; Map  46
+1        ; Mas  47
+3        ; MP   48
+0        ; Mat  49
+2        ; Med  50
+1        ; Met  51
+3        ; Min  52
+3        ; Mob  53
+2        ; Mon  54
+2        ; MT   55
+0        ; Mys  56
+3        ; Nav  57
+0        ; NF   58
+3        ; NP   59
+1        ; Phi  60
+0        ; Phy  61
+2        ; Pla  62
+2        ; Plu  63
+0        ; PT   64
+0        ; Pot  65
+7        ; Rad  66
+2        ; RR   67
+2        ; Rec  68
+1        ; Ref  69
+2        ; Rfg  70
+7        ; Rep  71
+3        ; Rob  72
+2        ; Roc  73
+3        ; San  74
+3        ; Sea  75
+6        ; SFl  76
+3        ; Sth  77
+2        ; SE   78
+3        ; Stl  79
+3        ; Sup  80
+1        ; Tac  81
+1        ; The  82
+3        ; ToG  83
+0        ; Tra  84
+1        ; Uni  85
+3        ; War  86
+2        ; Whe  87
+2        ; Wri  88
+3        ; ...  89
+0        ; U1   90
+0        ; U2   91
+3        ; U3   92
+2        ; X1   93
+1        ; X2   94
+2        ; X3   95
+6        ; X4   96
+1        ; X5   97
+3        ; X6   98
+7        ; X7   99
+
+;
+; LEADERS2 shows 8 columns per row, each column representing a technology group.
+; *Groups* are numbered from 0 to 7 (reading from *left to right*).
+; Each *row* represents one of the 21 possible tribes.
+; The tribe names that follow the semi-colons are merely comments.
+; 0 - Each Technology in this group can be researched, stolen, traded, obtained by conquest or by events, ie, no restrictions.
+; 1 - Each Technology in this group cannot be researched, but can be stolen, traded, obtained by conquest or by events.
+; 2 - Each Technology in this group cannot be researched, stolen*, traded or obtained by conquest. It can only be obtained by events.
+;
+@LEADERS2
+01110212        ; The Visigoths
+01110212        ; The Franks
+01110212        ; Germany
+01110212        ; The English Saxons
+01110212        ; Bavaria
+01110212        ; Burgundy
+01110212        ; The Lombards
+01110212        ; Denmark
+01110212        ; The English Normans
+01110212        ; Sicily
+01110212        ; Castile and Leon
+01110212        ; Aquitaine
+01110212        ; Portugal
+01110212        ; France
+01110212        ; Venice
+01110212        ; Aragon
+01110212        ; Scotland
+01110212        ; Hungary
+01110212        ; Genoa
+01110212        ; Bohemia
+01110212        ; Poland
+
+;
+; Advanced unit fields
+;
+; A) 'tribe may build' mask:        0 - can't; 1 - can
+; B) 'not allowed on map' mask:     1 - not allowed on map
+; C) minimum bribe amount:          n - minimum bribe; 0 - don't care; -1 - can't bribe
+; D) 'build transport site' mask:   1: can; 0: can't for each site type
+; E) 'use transport site' mask:     1: can; 0: can't for each site type
+; F) native transport ability:      1: can; 0: can't for each map relationship type
+; G) General flags
+;    000000001    invisible until attack:                 1 - invisible
+;    000000010    non-disbandable (human players only):   1 - cannot disband
+;    000000100    0-range-air-unit damage override:       1 - override damage
+;    000001000    barbarian units can't be bought off:    1 - can't buy off
+;    000010000    impassable terrain override:            1 - override impassable terrain
+;    000100000    unit acquires engineering abilities:    1 - engineer
+;    001000000    barbarian unit will not expire:         1 - no expire
+;    010000000    override .SPR file for this unit:       1 - don't use .SPR
+;    100000000    enable naval unit to sail on rivers:    1 - can sail (only affects domain 2 units)
+;
+;   A         B     C          D                 E               F             G
+;
+@UNITS_ADVANCED
+11111110, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011010000  ;  0  Peasant
+11111110, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011110000  ;  1  Yeoman
+11111110, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011010000  ;  2  Serf
+00000000, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000010  ;  3  Peasant Militia
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ;  4  Seax Swordsman
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ;  5  Spearman
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ;  6  Halberdier_
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ;  7  Spearman II
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ;  8  Pikeman
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011010000  ;  9  Refugee
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 10  Pikeman II
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 11  Arbalestier –×_
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 12  Halberdier
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 13  Swiss Pikeman
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 14  Axeman II
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 15  Axeman
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 16  Archer –›_
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 17  Horseman
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 18  Man-at-Arms
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 19  Crossbowman –+_
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 20  Knight II
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 21  Lancer
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 22  Knight
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 23  Monastic Knight
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 24  Knight III
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 25  Demi-lancer
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 26  Demi-lancer_
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 27  Cuirassier ²¨
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 28  Swordsman
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 29  Swordsman II
+00000001, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 30  Berber Infantry
+00000001, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 31  Berber Cavalry
+00000001, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 32  Viking Raider
+00000001, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 33  Viking Berserker
+00000001, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 34  Arab Infantry
+00000001, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 35  Arab Cavalry
+00000001, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 36  Mongol Cavalry –»
+00000001, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 37  Turkish Janissary ¨
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011001010  ; 38  Plague
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011001010  ; 39  Black Death
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 40  Motte and Bailey
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 41  Stone Castle
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 42  U42
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 43  U43
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 44  U44
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 45  U45
+00000001, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 46  Warlord
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 47  Inquisitor
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 48  Envoy
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 49  Commercial Trader
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 50  Merchant
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011010000  ; 51  Scout
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 52  Archer –›
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 53  Crossbowman –+
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 54  Longbowman –»
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 55  Longbowman –»_
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 56  Bowman –»
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 57  Bowman –»_
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 58  Arbalestier –×
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 59  Hand Cannoneer ·
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 60  Hand Culveriner ¨
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 61  Arquebusier •
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 62  Musketeer ²•
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 63  Siege Engineer
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 64  U64
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 65  Siege Tower
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 66  Torsion Catapult þ
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 67  Springald }—>
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 68  Mangonel þ
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 69  Trebuchet Þ
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 70  Couillard þ
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 71  Pot-de-fer }—>
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 72  Ribauldequin ²¤
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 73  Fowler o
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 74  Bombard 0
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 75  Basilisk O
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 76  Serpentine °´
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 77  Demi-culverin ó
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 78  Culverin Ó
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 79  Falconet °´
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 80  Saker ó
+11111111, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000000  ; 81  Field Culverin Ó
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 82  Carvel Galley
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 83  Clinker Galley
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 84  Trade Galley
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 85  Dromon
+00000001, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 86  Viking Longship
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 87  Knarr
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 88  Longship
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 89  Balinger
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 90  Cog
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 91  War Cog
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 92  Slender Galley
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 93  Great Galley
+00000001, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 94  Privateer
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 95  Hulk
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 96  Caravel
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 97  Carrack
+11111111, 00000000,  0, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 98  Armed Carrack ó
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 99  –› Broadhead Arrows
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 100  –» Bodkin Arrows
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 101  –+ Bolts
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 102  –× Quarrels
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 103  }—> Artill Arrow
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 104  þ Rock
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 105  Þ Boulder
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 106  · Pebbles
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 107  ¨ Pellets
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 108  • Bullets
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 109  ¤ Stones
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 110  }—> Garrot
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 111   o Sm Stone Ball
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 112   0 Med Stone Ball
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 113   O Lg Stone Ball
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 114  °´ Sm Iron Ball
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 115  ó Med Iron Ball
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 116  Ó Lg Iron Ball
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 117  § Miller
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 118  § Bakery
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 119  § Monks
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 120  § Carpenter
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 121  § Stonecutter
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 122  § Sawmill
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 123  § Mason
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 124  § Smith
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 011000010  ; 125  § Forge
+00000000, 00000000, -1, 0000000000000000,0000000000000000,0000000000000000, 010000000  ; 126  § Fishing Fleet
+
+@INITIAL_SETTINGS
+0,0,15    ; The Visigoths
+0,0,15    ; The Franks
+0,0,15    ; Germany
+0,0,15    ; The English Saxons
+0,0,15    ; Bavaria
+0,0,15    ; Burgundy
+0,0,15    ; The Lombards
+0,0,15    ; Denmark
+0,0,15    ; The English Normans
+0,0,15    ; Sicily
+0,0,15    ; Castile and Leon
+0,0,15    ; Aquitaine
+0,0,15    ; Portugal
+0,0,15    ; France
+0,0,15    ; Venice
+0,0,15    ; Aragon
+0,0,15    ; Scotland
+0,0,15    ; Hungary
+0,0,15    ; Genoa
+0,0,15    ; Bohemia
+0,0,15    ; Poland
+
+@SOUNDS
+Silence.wav       ; Peasant
+Silence.wav       ; Yeoman
+Silence.wav       ; Serf
+Swordfgt.wav      ; Peasant Militia
+SwordShield.wav   ; Seax Swordsman
+Swordfgt.wav      ; Spearman
+Swordfgt.wav      ; Halberdier_
+Swordfgt.wav      ; Spearman II
+Swordfgt.wav      ; Pikeman
+Swordfgt.wav      ; Refugee
+Swordfgt.wav      ; Pikeman II
+Quarrel.wav       ; Arbalestier –×_
+Swordfgt.wav      ; Halberdier
+Swordfgt.wav      ; Swiss Pikeman
+Warrior.wav       ; Axeman II
+Warrior.wav       ; Axeman
+Arrow.wav         ; Archer –›_
+Horseman.wav      ; Horseman
+Swrdhors.wav      ; Man-at-Arms
+Bolt.wav          ; Crossbowman –+_
+Knight.wav        ; Knight II
+Swrdhors.wav      ; Lancer
+Knight.wav        ; Knight
+Knight.wav        ; Monastic Knight
+Knight.wav        ; Knight III
+Demi-lancer.wav   ; Demi-lancer
+Demi-lancer.wav   ; Demi-lancer_
+CavGun.wav        ; Cuirassier ²¨
+SwordShield.wav   ; Swordsman
+SwordShield.wav   ; Swordsman II
+Swordfgt.wav      ; Berber Infantry
+Swrdhors.wav      ; Berber Cavalry
+Warrior.wav       ; Viking Raider
+Warrior.wav       ; Viking Berserker
+Swordfgt.wav      ; Arab Infantry
+Swrdhors.wav      ; Arab Cavalry
+CavArch.wav       ; Mongol Cavalry –»
+Pellets.wav       ; Turkish Janissary ¨
+Silence.wav       ; Plague
+Silence.wav       ; Black Death
+Silence.wav       ; Motte and Bailey
+Silence.wav       ; Stone Castle
+Silence.wav       ; U42
+Silence.wav       ; U43
+Silence.wav       ; U44
+Silence.wav       ; U45
+Silence.wav       ; Warlord
+Inquisitor.wav    ; Inquisitor
+Envoy.wav         ; Envoy
+Stkmarkt.wav      ; Commercial Trader
+Stkmarkt.wav      ; Merchant
+Silence.wav       ; Scout
+Arrow.wav         ; Archer –›
+Bolt.wav          ; Crossbowman –+
+Archers.wav       ; Longbowman –»
+Archers.wav       ; Longbowman –»_
+Archers.wav       ; Bowman –»
+Archers.wav       ; Bowman –»_
+Quarrel.wav       ; Arbalestier –×
+HandCannon.wav    ; Hand Cannoneer ·
+Pellets.wav       ; Hand Culveriner ¨
+Riflemen.wav      ; Arquebusier •
+Riflemen.wav      ; Musketeer ²•
+Swordfgt.wav      ; Siege Engineer
+Silence.wav       ; U64
+Siege.wav         ; Siege Tower
+Catapult.wav      ; Torsion Catapult þ
+ArtArrow.wav      ; Springald }—>
+Catapult.wav      ; Mangonel þ
+CatapultBig.wav   ; Trebuchet Þ
+Catapult.wav      ; Couillard þ
+Potdefer.wav      ; Pot-de-fer }—>
+Ribauld.wav       ; Ribauldequin ²¤
+Smallexp.wav      ; Fowler o
+Medexpl.wav       ; Bombard 0
+Bigexpl.wav       ; Basilisk O
+Medgun.wav        ; Serpentine °´
+Biggun.wav        ; Demi-culverin ó
+NavBttle.wav      ; Culverin Ó
+Medgun.wav        ; Falconet °´
+Biggun.wav        ; Saker ó
+NavBttle.wav      ; Field Culverin Ó
+ShieldBoat.wav    ; Carvel Galley
+ShieldBoat.wav    ; Clinker Galley
+ShieldBoat.wav    ; Trade Galley
+ShieldBoat.wav    ; Dromon
+ShieldBoat.wav    ; Viking Longship
+ShieldBoat.wav    ; Knarr
+ShieldBoat.wav    ; Longship
+ShieldBoat.wav    ; Balinger
+ShieldBoat.wav    ; Cog
+ShieldBoat.wav    ; War Cog
+ShieldBoat.wav    ; Slender Galley
+ShieldBoat.wav    ; Great Galley
+ShieldBoat.wav    ; Privateer
+ShieldBoat.wav    ; Hulk
+ShieldBoat.wav    ; Caravel
+ShieldBoat.wav    ; Carrack
+GunBoat.wav       ; Armed Carrack ó
+Arrow.wav         ; –› Broadhead Arrows
+Archers.wav       ; –» Bodkin Arrows
+Bolt.wav          ; –+ Bolts
+Quarrel.wav       ; –× Quarrels
+ArtArrow.wav      ; }—> Artill Arrow
+Catapult.wav      ; þ Rock
+CatapultBig.wav   ; Þ Boulder
+HandCannon.wav    ; · Pebbles
+Pellets.wav       ; ¨ Pellets
+Riflemen.wav      ; • Bullets
+Ribauld.wav       ; ¤ Stones
+Potdefer.wav      ; }—> Garrot
+Smallexp.wav      ;  o Sm Stone Ball
+Medexpl.wav       ;  0 Med Stone Ball
+Bigexpl.wav       ;  O Lg Stone Ball
+Medgun.wav        ; °´ Sm Iron Ball
+Biggun.wav        ; ó Med Iron Ball
+NavBttle.wav      ; Ó Lg Iron Ball
+Silence.wav       ; § Miller
+Silence.wav       ; § Bakery
+Silence.wav       ; § Monks
+Silence.wav       ; § Carpenter
+Silence.wav       ; § Stonecutter
+Silence.wav       ; § Sawmill
+Silence.wav       ; § Mason
+Silence.wav       ; § Smith
+Silence.wav       ; § Forge
+Silence.wav       ; § Fishing Fleet
+
+@RIVERS
+River,          ; map 1
+River,          ; map 2
+River,          ; map 3
+River,          ; map 4
+
+;
+; Attacks per turn
+;
+; The numbers in this section define the number of attacks per turn per unit type.
+; The section itself consist of a list of numbers, 10 per line, corresponding in order
+;    to the entries in @UNITS.
+; The number of attacks is limited by the movement rate, as each attack still costs 1 movement point.
+; The popup shown when a unit is out of attacks can be overridden in GAME.TXT
+;    using the key @ATTACKSPERTURN.
+;
+@ATTACKS
+0, 0, 0, 1, 1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1, 1, 1, 0, 0,
+0, 0, 1, 1, 1, 1, 0, 0, 0, 0,
+0, 0, 1, 1, 1, 1, 1, 1, 1, 1,
+1, 1, 1, 0, 1, 1, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 1, 1, 0, 1, 1, 0, 1, 1,
+0, 1, 1, 0, 1, 0, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 
+
+; please do not remove this line

@@ -1,0 +1,1320 @@
+;
+;   CIVILIZATION GAME DATA
+;   Copyright (c) 1995 by MicroProse Software
+;
+;   This file can be altered at your own risk to change
+;   the rules of the game.  Keep in mind that altering the
+;   contents of this file may cause your game to malfunction,
+;   particularly if you use values outside the specified
+;   ranges.
+;   Modified for "Napoléon" scenario 2/5/2020 - SUMMER RULES TWO
+;    	
+;	
+;   Cosmic Principles
+;
+;
+@COSMIC
+3       ; Road movement multiplier
+2       ; 1 in x chance Trireme lost (mod. by Seafaring, Navigation)
+2       ; # of food each citizen eats per turn
+30      ; # of rows in food box (rows * city_size+1 = box)
+10      ; # of rows in shield box
+1       ; Settlers eat (govt <= Monarchy)
+2       ; Settlers eat (govt >= Communism)
+7       ; City size for first unhappiness at Chieftain level
+14      ; Riot factor based on # cities (higher factor lessens the effect)
+8       ; Aqueduct needed to exceed this size
+12      ; Sewer System needed to exceed this size
+30      ; Tech paradigm (higher # slows research)
+30      ; Base time for engineers to transform terrain (x2)
+2       ; Monarchy  pays support for all units past this
+3       ; Communism pays support for all units past this
+4       ; Fundamentalism pays support for all units past this
+0       ; Communism is equivalent of this palace distance.
+30      ; Fundamentalism loses this % of science
+50      ; Percent shield penalty for production type change
+5       ; Max paradrop range
+75      ; Mass/Thrust paradigm (increasing slows spaceship time)
+6       ; Max effective science rate in fascism (x10, so 5 = 50%)
+1	; Value of each citizen to the Civilization Score.
+20	; Value of each wonder to the Civilization Score.
+1	; Reward for landing on A. Centauri first = this multiplier*(# of habitats)*(prob. of success) 
+-10	; Cost to Civilization Score (+ or -) for each extant non-AI controlled polluted tile. 
+1	; For each turn of peace after turn 199, this amount *3 is added to Civilization Score.
+5	; Value to the Civilization Score of each future tech researched.
+0	; Penalty assessed to Civilization Score each time player betrays another race.
+0	; Cost to Civilization Score (+ or -) for each unit destroyed.
+11111111; bitmask for goodie huts, right bit =map0, 0=no goodie huts
+0       ; Helicopters pick up huts 0=no 1=yes
+
+@COSMIC2
+CityPopulationLossAttack, 2
+CityPopulationLossCapture, 2
+;UnitShieldColor, 28
+NoStackKills, 1
+EventHeapSize, 106480, 1
+NavigableRiversIntercardinal, 1
+NumberOfTerrainTypes, 16,16,11,11
+NoIncrementalRushBuy, 1
+MovementMultipliers, 1
+RailroadMultiplier, 4
+RiverMultiplier, 0
+AlpineMultiplier, 0
+ProductionCarryOver,0
+CitySpritesPerMap, 1
+NumberOfUnitTypes, 127
+AICapitalizationLimit, 1200
+PlayableTribes, 0b01000000
+PlayableDifficulties, 0b100000  
+
+;
+;   Civilization Advances
+;
+;   Ai Value, Civilized Modifier, Preq1, Preq2, Epoch, Category
+;
+;     Ai Value = Basic value at which computer players
+;                view this advance (used in determining
+;                which discovery to pursue, which to
+;                acquire during exchanges, and value of
+;                gift during diplomacy).
+;     Modifier = Modifier to value based on the "civilized"
+;                aspect of a leader's personality.  Positive
+;                values increase value for civilized leaders,
+;                decrease it for militaristic.  Negative
+;                values vice versa.
+;     preq1, preq2 = Prerequisites
+;
+;     Epoch = historical period
+;             0 = Ancient
+;             1 = Renaissance
+;             2 = Industrial Revolution
+;             3 = Modern
+;
+;     Category = Knowledge category
+;             0 = Military
+;             1 = Economic
+;             2 = Social
+;             3 = Academic
+;             4 = Applied
+;
+@CIVILIZE
+Austria,	      4,-2,  Plu, nil, 0, 2    ; AFl 0  
+19th Century,         5, 1,  nil, nil, 3, 2    ; Alp 1
+Ottoman Empire,       3,-2,  Plu, nil, 2, 4    ; Amp 2
+Rhineland States,     4, 1,  Bro, nil, 3, 1    ; Ast 3
+Munitions,   	      0, 0,  Plu, nil, 2, 0    ; Ato 4    
+France,	    	      4,-1,  Plu, nil, 0, 0    ; Aut 5
+Banking,              4, 1,  Plu, nil, 1, 2    ; Ban 6
+Road Network,	      4, 0,  Alp, nil, 1, 3    ; Bri 7
+Minor Powers,         6,-1,  Plu, nil, 3, 1    ; Bro 8
+Monotheism,           5, 0,  Alp, nil, 1, 1    ; Cer 9 
+Chemistry,            5,-1,  Uni, nil, 3, 2    ; Che 10 
+England,   	      5, 1,  Plu, nil, 0, 1    ; Chi 11 
+Civil Code,           4, 1,  Uni, nil, 2, 1    ; CoL 12
+Prussia,              5,-1,  Plu, nil, 0, 3    ; CA  13
+Siege Warfare, 	      5,-1,  Gun, Ref, 2, 0    ; Cmb 14
+Not Used,	      5, 0,  no,  no,  1, 1    ; Cmn 15
+Spanish Military,     4, 1,  Plu, nil, 1, 4    ; Cmp 16 
+Not Used,   	      0, 0,  no,  no,  1, 1    ; Csc 17 ***NOT USED***
+Battle Field,         4, 0,  no,  no,  0, 0    ; Cst 18
+Trade,		      4, 0,  Eco, nil, 1, 2    ; Cor 19
+Baltic States,        4, 1,  Bro, nil, 3, 1    ; Cur 20 
+Not Used,   	      0, 0,  no,  no,  1, 1    ; Dem 21 ***NOT USED***
+Economics,            4, 1,  Ban, nil, 1, 2    ; Eco 22
+Mechanical Revolution,0, 0,  Plu, nil, 2, 2    ; E1  23 ***NOT USED***
+French Military,      4, 0,  Aut, nil, 0, 0    ; E2  24 
+Engineering,          4, 0,  Bri, nil, 1, 3    ; Eng 25
+Troupes Spéciales,    0, 0,  E2,  nil, 0, 0    ; Env 26 
+French Fatigue,	      0, 0,  Plu, nil, 0, 0    ; Esp 27 ***NOT USED***
+Not Used,   	      0, 0,  no,  no,  1, 1    ; Exp 28 ***NOT USED***
+German States,        4,-1,  Bro, nil, 3, 1    ; Feu 29
+Italian States,       4,-1,  Bro, nil, 3, 1    ; Fli 30
+Autocracy,            3,-2,  no,  no,  1, 1    ; Fun 31
+Not Used,   	      0, 0,  no,  no,  2, 1    ; FP  32 ***NOT USED*** 
+Western States,       3, 2,  Bro, nil, 3, 1    ; Gen 33
+Spain,		      4, 1,  Plu, nil, 1, 4    ; Gue 34
+Gribeauval System,    8,-2,  Che, Aut, 2, 0    ; Gun 35
+La Garde Impériale,   4,-1,  E2,  nil, 0, 0    ; Hor 36
+Russia,   	      0, 0,  Fun, nil, 0, 4    ; Ind 37 
+Not Used,   	      0, 0,  no,  no,  1, 1    ; Inv 38 ***NOT USED***
+Naval Transport,      4, 1,  Plu, nil, 2, 3    ; Iro 39
+Ottoman Military,     4,-1,  Amp, nil, 2, 4    ; Lab 40
+Austrian Military,    4, 0,  Plu, nil, 0, 2    ; Las 41 
+Papal confinement,    0, 0,  Plu, nil, 1, 1    ; Ldr 42  
+Playwrights,          5, 2,  Uni, nil, 2, 1    ; Lit 43
+Supply Logistics,     0, 0,  Cor, Aut, 2, 0    ; Too 44  
+Magnetism,            4,-1,  Nav, nil, 2, 3    ; Mag 45
+Not Used,   	      0, 0,  no,  no,  1, 1    ; Map 46 ***NOT USED***
+English Military,     4, 1,  Plu, nil, 0, 1    ; Mas 47
+Not Used,   	      0, 0,  no,  no,  1, 1    ; MP  48 ***NOT USED***
+Prussian Military,    4,-1,  Plu, nil, 0, 3    ; Mat 49
+Medicine,             4, 0,  San, nil, 3, 2    ; Med 50
+Iron Foundry,         6,-2,  Che, E1,  2, 2    ; Met 51
+Russian Military,     4, 1,  Ind, nil, 0, 4    ; Min 52
+Not Used,   	      0, 0,  no,  no,  1, 1    ; Mob 53 ***NOT USED***
+Absolute Monarchy,    5, 1,  Plu, nil, 1, 1    ; Mon 54
+Gothic Architecture,  5, 1,  Cer, nil, 1, 1    ; MT  55
+Clergy,   	      0, 0,  Cer, nil, 1, 1    ; Mys 56 ***NOT USED***
+Navigation,           6,-1,  Sea, nil, 2, 3    ; Nav 57
+New Naval Base,       0, 0,  Phy, Aut, 2, 3    ; NF  58 
+European Ports,       0, 0,  Plu, nil, 2, 3    ; NP  59 
+Not Used,   	      0, 0,  no,  no,  1, 1    ; Phi 60 ***NOT USED*** 
+Naval Gunnery,        4,-1,  Mag, nil, 2, 3    ; Phy 61
+Not Used,   	      0, 0,  no,  no,  1, 1    ; Pla 62 ***NOT USED***
+European Powers,      4, 0,  no,  no,  1, 1    ; Plu 63 
+Extra Military Academy,0,0,  Rec, nil, 1, 3    ; PT  64 
+Continental Blockade, 0, 0,  Plu, nil, 2, 3    ; Pot 65 
+Siege Engines, 	      0, 0,  Cmb, nil, 2, 0    ; Rad 66 
+Not Used,   	      0, 0,  no,  no,  1, 1    ; RR  67 ***NOT USED***
+Infrastructure,	      0, 0,  Too, nil, 2, 2    ; Rec 68 
+Warehouses,	      4, 0,  SE,  Eco, 2, 2    ; Ref 69
+Intensive Farming,    0, 0,  Cor, nil, 1, 3    ; Rfg 70 
+Constit. Monarchy,    5, 1,  Plu, nil, 0, 1    ; Rep 71
+Heavy Artillery,      0, 0,  Ref, Too, 2, 0    ; Rob 72  
+Russian Guards,	      0, 0,  Ind, nil, 0, 4    ; Roc 73 
+Sanitation,           4, 2,  Uni, nil, 3, 2    ; San 74
+Seafaring,            4, 1,  Alp, nil, 2, 3    ; Sea 75
+Captured Moskva,      0, 0,  Plu, nil, 1, 0    ; SFl 76 
+Siege Vessels,        0, 0,  Cmb, nil, 2, 3    ; Sth 77 
+Steam Engine,         4,-1,  Met, nil, 2, 2    ; SE  78
+Extra Constabulary,   0, 0,  Rec, nil, 1, 3    ; Stl 79 
+Hydraulics,    	      4, 1,  Eng, nil, 1, 3    ; Sup 80
+Extra Train Militaire,0, 0,  Rec, nil, 1, 3    ; Tac 81 
+Papal  Concordat,     3, 2,  MT,  Ato, 1, 1    ; The 82
+Naval Architecture,   4, 0,  Phy, Chi, 2, 3    ; ToG 83
+Commerce,             4, 2,  Alp, nil, 1, 2    ; Tra 84
+Classical Education,  5, 1,  Wri, nil, 2, 1    ; Uni 85
+Marine Française,     4,-1,  Aut, nil, 0, 0    ; War 86 
+British Royal Marines,0, 0,  ToG, Cor, 0, 1    ; Whe 87 
+Schools,	      4, 2,  Alp, nil, 2, 1    ; Wri 88
+Battle Plan,          1, 0,  Uni, nil, 3, 2    ; ... 89
+Succession,           3, 0,  Plu, nil, 1, 1    ; U1  90
+Divorce Joséphine,    3, 0,  U1,  nil, 1, 1    ; U2  91
+Marriage Marie-Louise,3, 0,  U2,  nil, 1, 1    ; U3  92
+Russian preparations, 3, 0,  Plu, nil, 2, 0    ; X1  93
+Invasion of Russia,   3, 0,  X1,  nil, 1, 0    ; X2  94
+Ottoman preparations, 3, 0,  Plu, nil, 2, 0    ; X3  95
+War with Sultanate,   3, 0,  X3,  nil, 1, 0    ; X4  96
+Captured London,      3, 0,  Plu, nil, 1, 0    ; X5  97
+Captured Istanbul,    3, 0,  Plu, nil, 1, 0    ; X6  98
+Extra Advance 7,      3, 0,  no,  no,  0, 0    ; X7  99
+
+;
+; Above 3 tech lots allow you to define your own civilization
+; advances if desired.  Supply the name, the AI value, and
+; the prerequisites.
+;
+; Then use the "U1", "U2", or "U3"
+; identifier to incorporate it into the tech chain as a
+; prerequisite for other techs, units, city improvements.
+;
+
+;
+;  City Improvements
+;
+;   cost(x10), upkeep, preq
+;
+;   Improvement Flags
+;	
+;   00000001 = Bit 1, Prevents selling of the improvement
+;   00000010 = Bit 2, Do not destroy improvement on city capture
+;   00000100 = Bit 3, Always destroy improvement on city capture, result is random if bit 2 and 3 are set
+;   00000000 = Bits 4-8 are currently undefined
+;
+@IMPROVE
+Nothing,                1,  0,    nil,  00000000,
+Seat of Government,     10, 0,    no,   00000000, ***NOT USED*** (Only at set up)
+Military Academy,   	4,  2,    no,   00000011, ***NOT USED*** (Only at set up)
+---Granary,             6,  1,    no,   00000000, ***NOT USED*** 
+Church,                 6,  2,    Cer,  00000001,
+MarketPlace,		14, 1,    Tra,  00000001,
+School,                 8,  2,    no,   00000001, ***NOT USED*** (Only at set up)
+Courthouse,             14, 1,    CoL,  00000001,
+Fortifications,		8,  0,    no,   00000011, ***NOT USED*** (Only at set up)
+Sewer,	                8,  2,    no,   00000001, ***NOT USED*** (Only at set up)
+Bank,                   20, 4,    Ban,  00000001, (Only at set up for some powers)
+Cathedral,              12, 3,    MT,   00000001,
+University,             16, 3,    no,   00000001, ***NOT USED*** (Only at set up)
+Recruitment Center,     16, 3,    no,   00000011, ***NOT USED*** (Only at set up) 
+Theater,                12, 2,    Lit,  00000001,
+Manufacture,            20, 4,    Met,  00000001,
+Arsenal,               	24, 6,    Ref,  00000000,
+Siege Workshop,         20, 4,    Cmb,  00000011,  
+Stables,		20, 5,    no,   00000011, ***NOT USED*** (Only at set up) 
+Steam Engine,           20, 4,    SE,   00000001, 
+Water Wheel,            16, 3,    Sup,  00000001, 
+---Nuclear Plant,       16, 2,    no,   00000000, ***NOT USED*** 
+Great Market,           24, 4,    Eco,  00000000,
+Hospital,             	12, 2,    no,   00000001, ***NOT USED*** (Only at set up)
+Grain Farm,            	18, 3,    Rfg,  00000000,  
+Cobbled Roads,         	28, 5,    Cor,  00000000, 
+Les Grandes Écoles,     16, 3,    no,   00000001, ***NOT USED*** (Only at set up)
+---SAM Missile Battery,	10, 2,    no,   00000000, ***NOT USED*** 
+Coastal Fortress,       8,  3,    Cmb,  00000011, 
+Cannon Foundry,         32, 5,    no,   00000011, ***NOT USED*** (Only at set up) 
+Fishing Port,           6,  1,    Sea,  00000001,
+Dockyard,            	16, 6,    no,   00000011, ***NOT USED*** (Only at set up)
+---Airport,             16, 3,    no,   00000001, ***NOT USED*** 
+Constabulary,           6,  2,    no,   00000011, ***NOT USED*** (Only at set up)
+Naval Base,             8,  3,    no,   00000001, ***NOT USED*** (Only at set up)
+Transporter,            0,  0,    no,   00000000, ***NOT USED*** (Only at set up)
+SS Structural,          8,  0,    no,   00000000, ***NOT USED*** 
+SS Component,           16, 0,    no,   00000000, ***NOT USED*** 
+SS Module,              32, 0,    no,   00000000, ***NOT USED*** 
+(Money Market),         60, 0,    Alp,  00000000,
+Pyramids,               20, 0,    no,   00000000, ***NOT USED***
+Russian Patriotism,     20, 0,    Ind,  00000000,
+Colonial Trade,         20, 0,    Tra,  00000000,
+British Navy,           20, 0,    Phy,  00000000,
+Great Library,          30, 0,    no,   00000000, ***NOT USED***  
+Sultan Ahmed Mosque,    30, 0,    Amp,  00000000,
+Great Wall,             30, 0,    no,   00000000, ***NOT USED***
+L'Élan Napoléonien,	30, 0,    Aut,  00000000,
+Watt's Steam Engines,  	30, 0,    SE,   00000000,
+Corps Diplomatique,     20, 0,    CoL,  00000000,
+The Vatican,		40, 0,    MT,   00000000,
+The Royal Society,      30, 0,    Uni,  00000000,
+British Admiralty,    	40, 0,    ToG,  00000000,
+St-Paul's Cathedral,    30, 0,    MT,   00000000,
+Leonardo's Workshop,    40, 0,    no,   00000000, ***NOT USED***
+Hofburg Palast,         60, 0,    AFl,  00000000,
+L'Institut de France,	40, 0,    Uni,  00000000,
+The British Trade,      40, 0,    Ban,  00000000,
+Darwin's Voyage,        40, 0,    no,   00000000, ***NOT USED***
+Statue of Liberty,      40, 0,    no,   00000000, ***NOT USED***
+Eiffel Tower,           30, 0,    no,   00000000, ***NOT USED***
+Westminster Palace,     60, 0,    Chi,  00000000,
+Hoover Dam,             60, 0,    no,   00000000, ***NOT USED***
+Manhattan Project,      60, 0,    no,   00000000, ***NOT USED***
+United Nations,         60, 0,    no,   00000000, ***NOT USED***
+Apollo Program,         60, 0,    no,   00000000, ***NOT USED***
+SETI Program,           60, 0,    no,   00000000, ***NOT USED***
+Orthodox Church,        40, 0,    Ind,  00000000,
+
+;
+; Expiration advancements for Wonders of the World
+;
+@ENDWONDER
+nil,    ; Pyramids
+nil,    ; Russian Patriotism	(Hanging Gardens)
+nil,    ; Colonial Trade	(Colossus)
+X5,     ; British Navy 	   	(Lighthouse)
+nil,	; Great Library
+X6,     ; Sultan Ahmed Mosque  	(Oracle)
+nil,    ; Great Wall
+Esp,	; L'Élan Napoléonien   	(Sun Tzu's War Academy)
+nil,    ; Watt's Steam Engines 	(King Richard's Crusade)
+nil,    ; Corps Diplomatique   	(Marco Polo's Embassy)
+Ldr,    ; The Vatican	   	(Michelangelo)
+nil,    ; The Royal Society	(Copernicus)
+X5,     ; British Admiralty	(Magellan's Expedition)
+nil,    ; St-Paul's Cathedral 	(Shakespeare)
+nil,    ; Leonardo's Workshop
+nil,    ; Hofburg Palast 	(Bach)
+nil,    ; Les Grandes Écoles 	(Newton)
+Pot,    ; British Trade   	(Smith's Trading Co.)
+nil,    ; Darwin's Voyage
+nil,    ; Statue of Liberty
+nil,    ; Eiffel Tower
+nil,    ; Westminster Palace 	(Women's Suffrage)
+nil,    ; Hoover Dam
+nil,    ; Manhattan Project
+nil,    ; United Nations
+nil,    ; Apollo
+nil,    ; SETI
+SFl,    ; Orthodox Church    	(Cure for Cancer)
+
+;
+;    Unit Types
+;
+; until, domain,  move,rng,  att,def  hit,firepwr  cost,hold,  role, preq,  flags
+;
+; until       = Civ advance which renders unit obsolete
+; Move        = Movement rate (spaces per turn)
+; Range       = # of turns fuel carried (0 for non-air units)
+;
+; domain      = Movement domain of unit
+:               0 = Ground
+;               1 = Air
+;               2 = Sea
+;
+; att         = Attack factor (chance to score hit attacking)
+; def         = Defense factor (chance to score hit defending)
+; hit         = Hit points (damage x10 which can be taken before elimination)
+; firepwr     = # damage points caused per hit scored on enemy.
+;
+; cost        = Cost (# of shield rows, usually of 10 shields each)
+; hold        = # of holds on ship (for carrying units)
+;
+; role        = AI role (Generally affects the way in
+;               which computer players use the unit, but
+;               roles >= 5 will actually affect abilities
+;               of the unit)
+;               0 = Attack
+;               1 = Defend
+;               2 = Naval Superiority
+;               3 = Air Superiority
+;               4 = Sea Transport
+;               5 = Settle
+;               6 = Diplomacy
+;               7 = Trade
+;
+; preq        = Prerequisite advance
+;
+; "Flags" control special advantages & restrictions.  Not
+; all of these flags "make sense" for all types of units
+; (paradropping ships, for instance).  Nonsensical variations
+; may produce bizarre effects (or worse).  You were warned.
+;
+;   0000000000000001 = Two space visibility
+;   0000000000000010 = Ignore zones of control
+;   0000000000000100 = Can make amphibious assaults
+;   0000000000001000 = Submarine advantages/disadvantages
+;   0000000000010000 = Can attack air units (fighter)
+;   0000000000100000 = Ship must stay near land (trireme)
+;   0000000001000000 = Negates city walls (howitzer)
+;   0000000010000000 = Can carry air units (carrier)
+;   0000000100000000 = Can make paradrops
+;   0000001000000000 = Alpine (treats all squares as road)
+;   0000010000000000 = x2 on defense versus horse (pikemen)
+;   0000100000000000 = Free support for fundamentalism (fanatics)
+;   0001000000000000 = Destroyed after attacking (missiles)
+;   0010000000000000 = x2 on defense versus air (AEGIS)
+;   0100000000000000 = Unit can spot submarines
+;   1000000000000000 = Override health bars
+;
+;
+@UNITS
+DO NOT USE,	     nil, 0,  0.,0,  0a,0d,  0h,0f, 10,0,  1, Alp, 0000000000000000
+Sapeurs,	     nil, 0,  2.,0,  0a,2d,  2h,1f, 18,0,  5, Rad, 0000000000000000
+Gendarmes,           nil, 0,  2.,0,  3a,2d,  1h,1f,  3,0,  0, E2,  0000000001000000
+A. Landwehr,         nil, 0,  0.,0,  0a,3d,  1h,1f,  3,0,  1, AFl, 0000000000000000
+O. Provincial,       nil, 0,  2.,0,  3a,2d,  1h,1f,  3,0,  1, Lab, 0000000001000000
+P. Landwehr,         nil, 0,  0.,0,  0a,3d,  1h,1f,  3,0,  1, CA,  0000000000000000
+S. Militia,          nil, 0,  0.,0,  0a,3d,  1h,1f,  3,0,  1, Gue, 0000000000000000
+O. Janissaries,      nil, 0,  3.,0,  5a,3d,  1h,1f,  4,0,  0, Lab, 0000000001000000
+R. Opolchenye,       nil, 0,  2.,0,  3a,2d,  1h,1f,  3,0,  0, Ind, 0000000001000000
+Guerrilla,           nil, 0,  1.,0,  0a,3d,  2h,1f,  3,0,  1, Gue, 0000001001000011
+Napoléon I,          nil, 0,  4.,0,  0a,1d,  1h,1f, 30,0,  0, Aut, 0000000000000011
+Garde Impériale,     nil, 0,  3.,0,  9a,5d,  2h,1f, 10,0,  0, Hor, 0000000001000000
+Régiment de Ligne,   nil, 0,  3.,0,  5a,6d,  1h,1f,  5,0,  0, E2,  0000010001000000
+Infanterie Légère,   nil, 0,  3.,0,  6a,3d,  1h,1f,  6,0,  0, E2,  0000000001000000
+Carabiniers,	     nil, 0,  3.,0,  7a,3d,  1h,1f,  7,0,  0, Env, 0000000001000000
+Cuirassiers,  	     nil, 0,  4.,0,  8a,4d,  2h,1f, 12,0,  0, E2,  0000000000000000
+Lanciers,            nil, 0,  5.,0,  9a,2d,  1h,2f, 10,0,  0, E2,  0000000000000001
+Grenadier à Cheval,  nil, 0,  4.,0, 11a,5d,  2h,2f, 14,0,  0, Hor, 0000000000000000
+O. Nezam-I Cedid,    nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Lab, 0000000001000000
+O. Mameluke,	     nil, 0,  4.,0,  7a,4d,  2h,1f, 10,0,  0, Lab, 0000000001000000
+O. Sipahi,           nil, 0,  5.,0,  8a,2d,  1h,2f,  8,0,  0, Lab, 0000000001000001
+S. Line Infantry,    nil, 0,  3.,0,  4a,5d,  1h,1f,  3,0,  1, Cmp, 0000010001000000
+S. Light Infantry,   nil, 0,  3.,0,  5a,3d,  1h,1f,  4,0,  0, Cmp, 0000000001000000
+Art. à pied 8lb,     nil, 0,  2.,0,  0a,2d,  2h,2f, 16,0,  0, E2,  0000000000000000
+O. Artillery,        nil, 0,  2.,0,  9a,2d,  2h,2f,  8,0,  0, Lab, 0000000001000000
+Art. à Cheval,	     nil, 0,  3.,0,  0a,3d,  2h,2f, 18,0,  0, E2,  0000000000000000
+Mortier de 12po.,    nil, 0,  2.,0,  0a,2d,  2h,3f, 30,0,  0, Rad, 0000000001000000
+Wellington,          nil, 0,  3.,0,  9a,6d,  5h,4f,  1,0,  0, Chi, 0000010001000000
+K.G.L.,              nil, 0,  3.,0,  8a,4d,  2h,1f,  1,0,  0, Rep, 0000000001000000
+B. Line Infantry,    nil, 0,  3.,0,  5a,6d,  1h,1f,  5,0,  1, Mas, 0000000001000000
+B. Light Infantry,   nil, 0,  3.,0,  6a,3d,  1h,1f,  6,0,  0, Mas, 0000000001000100
+Dragoon Guards,      nil, 0,  4.,0,  8a,4d,  2h,1f, 12,0,  0, Mas, 0000000001000000
+Light Dragoon,       nil, 0,  5.,0,  9a,2d,  1h,2f, 10,0,  0, Mas, 0000000001000001
+B. Foot Artillery,   nil, 0,  2.,0, 10a,2d,  2h,2f, 10,0,  0, Mas, 0000000001000000
+B. Horse Artillery,  nil, 0,  3.,0,  8a,3d,  2h,2f,  9,0,  0, Mas, 0000000001000000
+Nelson,  	     nil, 2, 14.,0, 10a,8d,  5h,2f,  1,0,  2, Chi, 0100000000001000
+Kutusov,             nil, 0,  3.,0, 10a,5d,  4h,4f,  1,0,  0, Ind, 0000010001000000
+Customs Warehouse,   nil, 0,  0.,0,  0a,1d,  1h,1f, 20,0,  0, Eco, 1000000000000000
+R. Line Infantry,    nil, 0,  3.,0,  5a,6d,  1h,1f,  5,0,  1, Min, 0000000001000000
+R. Light Infantry,   nil, 0,  3.,0,  6a,3d,  1h,1f,  6,0,  0, Min, 0000000001000000
+R. Cuirassiers,      nil, 0,  4.,0,  8a,4d,  2h,1f, 12,0,  0, Min, 0000000001000000
+Don Cossack,         nil, 0,  3.,0,  9a,2d,  1h,2f,  1,0,  0, Min, 0000001001000001
+R. Foot Artillery,   nil, 0,  2.,0, 10a,2d,  2h,2f, 10,0,  0, Min, 0000000001000000
+R. Horse Artillery,  nil, 0,  3.,0,  8a,3d,  2h,2f,  9,0,  0, Min, 0000000001000000
+Mortar Shells,       nil, 1,  1.,1,  6a,1d,  2h,3f,  4,0,  0, Ato, 0001000001000000
+6 pdr Shells,        nil, 1,  1.,1,  3a,1d,  2h,2f,  2,0,  0, Ato, 0001000001000000
+8 pdr Shells,        nil, 1,  1.,1,  4a,1d,  2h,2f,  2,0,  0, Ato, 0001000001000000
+Hussars,    	     nil, 0,  4.,0,  0a,3d,  2h,1f,  6,0,  6, Env, 0000000000000011
+Train Militaire,     nil, 0,  2.,0,  0a,1d,  1h,1f, 18,0,  3, Too, 0000000000000000
+Plunder,             nil, 0,  2.,0,  0a,1d,  1h,1f, 20,0,  1, Eco, 0000000000000000
+S. Line Cavalry,     nil, 0,  4.,0,  7a,4d,  2h,1f,  9,0,  0, Cmp, 0000000001000000
+Minor Fort,          nil, 1,  0.,0,  0a,9d,  4h,1f,  8,0,  0, Eng, 0100000000000001
+Major Fort,          nil, 1,  0.,0, 0a,11d,  5h,2f, 15,0,  0, Eng, 0100000000000001
+Village,	     nil, 0,  0.,0,  0a,2d,  2h,1f,  2,0,  0, Ind, 1000000000000001
+Charles, 	     nil, 0,  3.,0,  9a,5d,  4h,3f,  1,0,  0, AFl, 0000000001000001
+Schwarzenberg,       nil, 0,  3.,0,  9a,5d,  4h,3f,  1,0,  0, AFl, 0000000001000001
+A. Line Infantry,    nil, 0,  3.,0,  4a,5d,  1h,1f,  4,0,  1, Las, 0000010001000000
+A. Light Infantry,   nil, 0,  3.,0,  5a,3d,  1h,1f,  5,0,  0, Las, 0000000001000000
+A. Kürassier,        nil, 0,  4.,0,  7a,4d,  2h,1f, 10,0,  0, Las, 0000000001000000
+A. Uhlans,	     nil, 0,  5.,0,  8a,2d,  1h,2f,  8,0,  0, Las, 0000000001000001
+A. Foot Artillery,   nil, 0,  2.,0,  9a,2d,  2h,2f,  8,0,  0, Las, 0000000001000000
+A. Horse Artillery,  nil, 0,  3.,0,  7a,3d,  2h,2f,  8,0,  0, Las, 0000000001000000
+S. Foot Artillery,   nil, 0,  2.,0,  9a,2d,  2h,2f,  7,0,  0, Cmp, 0000000001000000
+Blücher,	     nil, 0,  3.,0,  9a,5d,  4h,3f,  1,0,  0, CA,  0000000001000001
+Yorck,               nil, 0,  3.,0,  8a,4d,  4h,3f, 16,0,  1, CA,  0000000001000001
+P. Line Infantry,    nil, 0,  3.,0,  4a,5d,  1h,1f,  4,0,  1, Mat, 0000000001000000
+P. Light Infantry,   nil, 0,  3.,0,  5a,3d,  1h,1f,  5,0,  0, Mat, 0000000001000000
+P. Kürassier,        nil, 0,  4.,0,  7a,4d,  2h,1f, 10,0,  0, Mat, 0000000001000000
+P. Uhlans,	     nil, 0,  5.,0,  8a,2d,  1h,2f,  8,0,  0, Mat, 0000000001000001
+P. Foot Artillery,   nil, 0,  2.,0,  9a,2d,  2h,2f,  8,0,  0, Mat, 0000000001000000
+P. Horse Artillery,  nil, 0,  3.,0,  7a,3d,  2h,2f,  8,0,  0, Mat, 0000000001000000
+Cuesta,    	     nil, 0,  3.,0,  8a,4d,  4h,3f, 16,0,  1, Gue, 0000000001000001
+Soult,               nil, 0,  3.,0,  0a,1d,  1h,1f, 16,0,  0, Aut, 0000000000000010
+Davout,    	     nil, 0,  3.,0,  0a,1d,  1h,1f, 16,0,  0, Aut, 0000000000000010
+Lannes,   	     nil, 0,  3.,0,  0a,1d,  1h,1f, 20,0,  0, Aut, 0000000000000010
+Murat,               nil, 0,  4.,0,  0a,1d,  1h,1f, 20,0,  0, Aut, 0000000000000011
+Moore,               nil, 0,  3.,0,  9a,5d,  4h,3f, 20,0,  0, Chi, 0000000001000001
+Uxbridge,            nil, 0,  3.,0,  8a,4d,  4h,3f, 16,0,  0, Chi, 0000000001000001
+Bagration,           nil, 0,  3.,0,  9a,5d,  4h,3f,  1,0,  0, Ind, 0000000001000001
+Barclay de Tolly,    nil, 0,  3.,0,  9a,5d,  4h,3f,  1,0,  0, Ind, 0000000001000001
+Blake,    	     nil, 0,  3.,0,  8a,4d,  4h,3f, 16,0,  1, Gue, 0000000001000001
+18 pdr Shells,       nil, 1,  1.,1,  3a,1d,  2h,2f,  3,0,  2, Ato, 0101000001000010
+Bombard Shells,      nil, 1,  1.,1,  6a,1d,  2h,3f,  4,0,  0, Ato, 0001000001000000
+Bombarde,   	     nil, 2, 10.,0,  0a,3d,  3h,2f, 30,0,  0, Sth, 0000000000000000
+Frigate,   	     nil, 2, 20.,0,  4a,4d,  3h,2f, 10,0,  2, Mag, 0100000000001001
+Two Decker, 	     nil, 2, 16.,0,  6a,7d,  4h,2f, 16,0,  2, Phy, 0100000000001000
+Three Decker, 	     nil, 2, 14.,0,  9a,8d,  4h,2f, 22,0,  2, Phy, 0100000000000000
+Coalition Shells,    nil, 1,  2.,1,  6a,1d,  2h,2f,  1,0,  0, Ato, 0101000001000010
+Transport,   	     nil, 2, 16.,0,  0a,7d,  4h,2f, 10,4,  4, Iro, 0000000000000000
+Villeneuve,	     nil, 2, 14.,0,  0a,8d,  6h,3f, 24,0,  2, War, 0100000000001000
+Neapolitan Infantry, nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Fli, 0000000001000000
+Sicilian Infantry,   nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Fli, 0000000001000000
+Irish Rebel,         nil, 0,  0.,0,  0a,3d,  2h,1f,  3,0,  1, Gen, 0000001001000011
+Bavarian Infantry,   nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Ast, 0000000001000000
+Bavarian Cavalry,    nil, 0,  4.,0,  7a,3d,  2h,1f,  8,0,  0, Ast, 0000000000000000
+Danish Infantry,     nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Cur, 0000000001000000
+Danish Cavalry,      nil, 0,  4.,0,  7a,3d,  2h,1f,  8,0,  0, Cur, 0000000000000000
+Italian Infantry,    nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Fli, 0000000001000000
+Italian Cavalry,     nil, 0,  4.,0,  7a,3d,  2h,1f,  8,0,  0, Fli, 0000000000000000
+Rhine Infantry,      nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Ast, 0000000000000000
+Polish Infantry,     nil, 0,  3.,0,  6a,3d,  1h,1f,  5,0,  0, Cur, 0000000001000000
+Polish Lancers,      nil, 0,  5.,0,  9a,2d,  1h,2f,  9,0,  0, Cur, 0000000000000001
+Dutch Infantry,      nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Gen, 0000000001000000
+Dutch Cavalry,       nil, 0,  4.,0,  7a,3d,  2h,1f,  8,0,  0, Gen, 0000000000000000
+Westphalian Infantry,nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Feu, 0000000001000000
+Westphalian Cavalry, nil, 0,  4.,0,  7a,3d,  2h,1f,  8,0,  0, Feu, 0000000000000000
+Würtemberg Infantry, nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Ast, 0000000001000000
+Border,	   	     nil, 1,  0.,2,  0a,9d,  9h,1f,  1,0,  1, CoL, 1000000000000000
+Swiss Infantry,	     nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Fli, 0000000001000000
+Brunswick Infantry,  nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Feu, 0000000001000000
+Brunswick Cavalry,   nil, 0,  4.,0,  7a,3d,  2h,1f,  1,0,  0, Feu, 0000000001000000
+Portuguese Infantry, nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Gen, 0000000001000000
+Portuguese Cavalry,  nil, 0,  4.,0,  7a,3d,  2h,1f,  1,0,  0, Gen, 0000000001000000
+Saxon Infantry,      nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Feu, 0000000001000000
+Saxon Cavalry,       nil, 0,  4.,0,  7a,3d,  2h,1f,  1,0,  0, Feu, 0000000001000000
+Swedish Infantry,    nil, 0,  3.,0,  4a,5d,  1h,1f,  5,0,  1, Cur, 0000000001000000
+Swedish Cavalry,     nil, 0,  4.,0,  7a,3d,  2h,1f,  1,0,  0, Cur, 0000000001000000
+Frégate,   	     nil, 2, 20.,0,  0a,5d,  5h,2f, 16,0,  2, War, 0100000000001001
+Deux-ponts,	     nil, 2, 16.,0,  0a,8d,  5h,2f, 24,0,  2, War, 0000000000001000
+Trois-ponts,	     nil, 2, 14.,0,  0a,8d,  6h,3f, 36,0,  2, War, 0000000000001000
+24 pdr Shells,       nil, 1,  1.,1,  5a,1d,  2h,2f,  3,0,  2, Ato, 0101000001000010
+Royal Marines,       nil, 0,  2.,0,  7a,4d,  2h,2f,  1,0,  0, Whe, 0000001001000000
+Art. à pied 12lb,    nil, 0,  2.,0,  0a,3d,  2h,2f, 24,0,  0, Rob, 0000000000000000
+12 pdr Shells,       nil, 1,  1.,1,  6a,1d,  2h,2f,  3,0,  0, Ato, 0001000001000000
+Garde Frontalier,    nil, 0,  0.,0,  1a,1d,  1h,1f,  1,0,  0, Aut, 0000000000000000
+32 pdr Shells,       nil, 1,  1.,1,  7a,1d,  2h,2f,  3,0,  2, Ato, 0101000001000010
+Poniatowski,   	     nil, 0,  3.,0,  0a,1d,  1h,1f, 20,0,  0, Cur, 0000000000000010
+
+;
+;  Terrain
+;
+;  Movecost, defense,   food, shields, trade,
+;        . . .  Irrigate, bonus, #turns, ai-irrigate,
+;        . . .  Mine,     bonus, #turns, ai-mine
+;        . . .  Transform
+;
+;   defense = multiply by 50% to get % of normal combat factor defended at.
+;       (so 3 x 50% = 150%, meaning a strength 2 unit defends at 3).
+;
+;  Irrigate/Mine = yes, no, or type of terrain changed to
+;  Transform     = Terrain type engineers can transform to
+;
+;  bonus = # extra production from that change
+;
+;  turns = # turns for settler to make change;
+;  ai    = Minimum govt level necessary for
+;          computer player to want to perform irrigate/mine
+;        0 Never
+;        1 Despotism
+;        2 Monarchy
+;        3 Communism
+;        4 Fascism
+;        5 Republic
+;        6 Democracy
+;
+
+;Name,                  m,d,  f,s,t,   irr, f,#t,ai,   mine,s,#t, ai,xform,impassable
+@TERRAIN
+Desert,			1,1,  0,1,0,   no,  0, 0, 0,   no,  0, 0,  0,  no,  yes,; Drt 0
+Temperate Plains,	1,2,  2,0,0,   yes, 1, 6, 2,   yes, 4, 3,  0,  no,  no, ; Pln 1
+Grasslands,   		1,2,  2,1,0,   yes, 1, 6, 2,   yes, 4, 3,  0,  no,  no, ; Grs 2
+Forests, 		2,3,  1,2,0,   no,  0, 0, 0,   no,  0, 0,  0,  no,  no, ; For 3
+Hills,			2,4,  1,0,0,   no,  0, 0, 0,   no,  0, 0,  0,  no,  no, ; Mou 4
+Mountains,		3,6,  0,1,0,   no,  0, 0, 0,   no,  0, 0,  0,  no,  yes,; Hil 5
+Riverbed,	        2,1,  1,0,1,   no,  0, 0, 0,   no,  0, 0,  0,  no,  no, ; Tun 6
+Impassable,    		1,3,  0,0,0,   no,  0, 0, 0,   no,  0, 0,  0,  no,  yes,; Gla 7
+Marshes,		3,1,  1,0,0,   no,  0, 0, 0,   no,  0, 0,  0,  no,  no, ; Swa 8
+City Center, 		1,3,  2,1,4,   no,  0, 0, 0,   no,  0, 0,  0,  no,  no, ; Jun 9
+Ocean,       		1,2,  1,0,2,   no,  0, 0, 0,   no,  0, 0,  0,  no,  no, ; Oce A
+Plains,			1,2,  2,0,0,   yes, 1, 6, 2,   no,  0, 0,  0,  no,  no, ; Bbb
+Temperate Riverbed,	2,1,  1,0,1,   no,  0, 0, 0,   no,  0, 0,  0,  no,  no, ; Ccc
+Temperate Forests,	2,3,  1,2,0,   no,  0, 0, 0,   no,  0, 0,  0,  no,  no, ; Ddd
+Temperate Hills,	2,4,  1,0,0,   no,  0, 0, 0,   no,  0, 0,  0,  no,  no, ; Eee
+Temperate Mountains,	3,6,  0,1,0,   no,  0, 0, 0,   no,  0, 0,  0,  no,  yes,; Fff
+Oasis,	     1,1,  1,1,1,
+Horses,      1,2,  2,1,1,
+Grassland,   1,2,  2,1,0,
+Lumber Mill, 2,3,  1,3,1,
+Iron,        2,4,  1,3,0,
+Gold,        3,6,  0,1,4,
+Riverbed,    2,1,  1,0,1,
+Impassable,  3,3,  0,0,0,
+Peat Moss,   3,1,  1,2,0,
+Factory,     1,3,  2,3,4,
+Whales,      1,2,  1,2,2,
+Cows,        1,2,  2,2,0, ; Bbb1
+Riverbed,    2,1,  1,0,1, ; Ccc1
+Lumber Mill, 2,3,  1,3,1, ; Ddd1
+Iron,        2,4,  1,3,0, ; Eee1
+Gold,        3,6,  0,1,4, ; Fff1
+Salt,        1,1,  0,1,2,
+Wheat,       1,2,  4,0,0,
+Grassland,   1,2,  2,1,0,
+Lumber,      2,3,  1,2,2,
+Grapes,      2,4,  1,0,5,
+Silver,      3,6,  0,3,2,
+Riverbed,    2,1,  1,0,1,
+Impassable,  3,3,  0,0,0,
+Marshes,     3,1,  1,0,0,
+Market,      1,2,  2,1,8,
+Fish,	     1,2,  3,0,2,
+Wheat,       1,2,  4,0,0, ; Bbb1
+Riverbed,    2,1,  1,0,1, ; Ccc1
+Lumber,      2,3,  1,2,2, ; Ddd1
+Grapes,      2,4,  1,0,5, ; Eee1
+Iron Ore,    3,6,  0,4,0, ; Fff1
+
+;Name,                  m,d, f,s,t,   irr, f,#t,ai,   mine,s,#t, ai,xform,impassable 
+@TERRAIN1
+Supply Train,           0,1, 0,3,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Drt 0
+France,         	0,1, 2,3,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Pln 1
+England,	        0,1, 2,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Grs 2
+Austria,                0,1, 2,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; For 3
+Prussia,	        0,1, 2,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Hil 4
+Supply Column,          0,1, 0,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Mou 5
+Transit Point,          0,1, 0,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Tun 6 
+Russia, 		0,1, 2,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Gla 7
+Spain,                  0,1, 2,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Swa 8
+Ottoman, 	        0,1, 2,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Jun 9
+·,                      0,1, 0,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Oce A
+Training Base,		5,1, 0,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Bbb
+Rhineland,		0,1, 2,1,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Ccc
+Italian,    		0,1, 2,1,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Ddd
+Polish, 		0,1, 2,0,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Eee
+Denmark,		0,1, 2,3,0,   no, 0, 0, 0,  no,   0, 0,  0,  no,   no,  ; Fff
+1 ,           0,1, 0,4,0, ; Drt 0
+A ,           0,1, 2,5,0, ; Pln 1
+B ,           0,1, 2,0,0, ; Grs 2
+C ,           0,1, 2,0,0, ; For 3
+D ,           0,1, 2,0,0, ; Hil 4
+E ,           0,1, 0,0,0, ; Mou 5
+F ,           0,1, 0,0,0, ; Tun 6
+G ,           0,1, 2,0,0, ; Gla 7
+H ,           0,1, 2,0,0, ; Swa 8
+I ,           0,1, 2,0,0, ; Jun 9
+J ,           0,1, 0,0,0, ; Oce A
+K ,           0,1, 0,0,0, ; Bbb1
+L ,           0,1, 2,2,0, ; Ccc1
+M ,           0,1, 2,0,0, ; Ddd1
+N ,           0,1, 2,0,0, ; Eee1
+O ,           0,1, 2,4,0, ; Fff1
+2 ,           0,1, 0,3,0, ; Drt 0
+P ,           0,1, 2,5,0, ; Pln 1
+Q ,           0,1, 2,0,0, ; Grs 2
+R ,           0,1, 2,0,0, ; For 3
+S ,           0,1, 2,0,0, ; Hil 4
+T ,           0,1, 0,0,0, ; Mou 5
+U ,           0,1, 0,0,0, ; Tun 6
+V ,           0,1, 2,0,0, ; Gla 7
+W ,           0,1, 2,0,0, ; Swa 8
+X ,           0,1, 2,0,0, ; Jun 9
+Y ,           0,1, 0,0,0, ; Oce A
+Z ,           0,1, 0,0,0, ; Bbb1
+aa,           0,1, 2,3,0, ; Ccc1
+bb,           0,1, 2,4,0, ; Ddd1
+cc,           0,1, 2,0,0, ; Eee1
+dd,           0,1, 2,4,0, ; Fff1
+
+@TERRAIN2
+Desert,     1,2,  0,1,0,   yes, 1, 5, 5,   yes, 1, 5,  3,  Pln,  no, ; Drt
+Plains,     1,2,  1,1,0,   yes, 1, 5, 1,   For, 0,15,  0,  Grs,  no, ; Pln
+Grassland,  1,2,  2,1,0,   yes, 1, 5, 2,   For, 0,10,  0,  Hil,  no, ; Grs
+Forest,     2,3,  1,2,0,   Pln, 0, 5, 5,   no,  0, 0,  0,  Grs,  no, ; For
+Hills,      2,4,  1,0,0,   yes, 1,10, 0,   yes, 3,10,  1,  Pln,  no, ; Hil
+Mountains,  3,6,  0,1,0,   no,  0, 0, 0,   yes, 1,10,  6,  Hil,  no, ; Mou
+Tundra,     1,2,  1,0,0,   yes, 1,10, 1,   no,  0, 0,  0,  Drt,  no, ; Tun
+Glacier,    2,2,  0,0,0,   no,  0, 0, 0,   yes, 1,15,  3,  Tun,  no, ; Gla
+Swamp,      2,3,  1,0,0,   Grs, 0,15, 6,   For, 0,15,  0,  Pln,  no, ; Swa
+Jungle,     2,3,  1,0,0,   Grs, 0,15, 6,   For, 0,15,  0,  Pln,  no, ; Jun
+Ocean,      1,2,  1,0,2,   no,  0, 0, 0,   no,  0, 0,  0,  no,   no, ; Oce
+Oasis,      1,2,  3,1,0,
+Buffalo,    1,2,  1,3,0,
+Grassland,  1,2,  2,1,0,
+Pheasant,   2,3,  3,2,0,
+Coal,       2,4,  1,2,0,
+Gold,       3,6,  0,1,6,
+Game,       1,2,  3,1,0,
+Ivory,      2,2,  1,1,4,
+Peat,       2,3,  1,4,0,
+Gems,       2,3,  1,0,4,
+Fish,       1,2,  3,0,2,
+Desert Oil, 1,2,  0,4,0,
+Wheat,      1,2,  3,1,0,
+Grassland,  1,2,  2,1,0,
+Silk,       2,3,  1,2,3,
+Wine,       2,4,  1,0,4,
+Iron,       3,6,  0,4,0,
+Furs,       1,2,  2,0,3,
+Glacier Oil,2,2,  0,4,0,
+Spice,      2,3,  3,0,4,
+Fruit,      2,3,  4,0,1,
+Whales,     1,2,  2,2,3,
+
+@TERRAIN3
+Desert,     1,2,  0,1,0,   yes, 1, 5, 5,   yes, 1, 5,  3,  Pln,  no, ; Drt
+Plains,     1,2,  1,1,0,   yes, 1, 5, 1,   For, 0,15,  0,  Grs,  no, ; Pln
+Grassland,  1,2,  2,1,0,   yes, 1, 5, 2,   For, 0,10,  0,  Hil,  no, ; Grs
+Forest,     2,3,  1,2,0,   Pln, 0, 5, 5,   no,  0, 0,  0,  Grs,  no, ; For
+Hills,      2,4,  1,0,0,   yes, 1,10, 0,   yes, 3,10,  1,  Pln,  no, ; Hil
+Mountains,  3,6,  0,1,0,   no,  0, 0, 0,   yes, 1,10,  6,  Hil,  no, ; Mou
+Tundra,     1,2,  1,0,0,   yes, 1,10, 1,   no,  0, 0,  0,  Drt,  no, ; Tun
+Glacier,    2,2,  0,0,0,   no,  0, 0, 0,   yes, 1,15,  3,  Tun,  no, ; Gla
+Swamp,      2,3,  1,0,0,   Grs, 0,15, 6,   For, 0,15,  0,  Pln,  no, ; Swa
+Jungle,     2,3,  1,0,0,   Grs, 0,15, 6,   For, 0,15,  0,  Pln,  no, ; Jun
+Ocean,      1,2,  1,0,2,   no,  0, 0, 0,   no,  0, 0,  0,  no,   no, ; Oce
+Oasis,      1,2,  3,1,0,
+Buffalo,    1,2,  1,3,0,
+Grassland,  1,2,  2,1,0,
+Pheasant,   2,3,  3,2,0,
+Coal,       2,4,  1,2,0,
+Gold,       3,6,  0,1,6,
+Game,       1,2,  3,1,0,
+Ivory,      2,2,  1,1,4,
+Peat,       2,3,  1,4,0,
+Gems,       2,3,  1,0,4,
+Fish,       1,2,  3,0,2,
+Desert Oil, 1,2,  0,4,0,
+Wheat,      1,2,  3,1,0,
+Grassland,  1,2,  2,1,0,
+Silk,       2,3,  1,2,3,
+Wine,       2,4,  1,0,4,
+Iron,       3,6,  0,4,0,
+Furs,       1,2,  2,0,3,
+Glacier Oil,2,2,  0,4,0,
+Spice,      2,3,  3,0,4,
+Fruit,      2,3,  4,0,1,
+Whales,     1,2,  2,2,3,
+
+; map type: 1-underwater; 2-underground; 3-floating; 4-land dominant; 5-gas giant
+; blob size,blob density
+; bridge length,bridge chance
+; blue rooms, ice chambers,fire chambers,storms
+; range1-3 - for underwater, it's coral, vent, empty
+;   desired length,minimum length,frequency
+
+
+@FERTILITY 
+
+@SECONDARY_MAPS
+6, 0,0, 0,0, 0,0,0,0, 0,0,0, 0,0,0, 0,0,0,
+;6, 0,0, 0,0, 0,0,0,0, 0,0,0, 0,0,0, 0,0,0,
+;6, 0,0, 0,0, 0,0,0,0, 0,0,0, 0,0,0, 0,0,0,
+
+
+@GOVERNMENTS
+Anarchy,          Mr.,         Ms.
+Despotism,        General,     General
+Absolute Monarchy,Emperor,     Empress
+Communism,        Comrade,     Comrade
+Autocracy,        Tsar,        Tsar
+Const. Monarchy,  King,        Queen
+Democracy,        President,   President
+
+;
+;   Leaders
+;
+;   leader, female, color, style, plural, adjective, ...
+;           ...attack, expand, civilize, ...
+;           ...govt, male, female...<repeat>
+;
+;   female:     0 = male           1 = female
+;
+;   color:  Color set (1 - 7)
+;   style:  City style (0 - 3)
+;           0 = Bronze Age
+;           1 = Classical
+;           2 = Far East
+;           3 = Medieval
+;
+;   attack:     1 = aggressive    -1 = rational
+;   expand:     1 = expansionist  -1 = perfectionist
+;   civilize:   1 = civilized     -1 = militaristic
+;
+;   govt = government type for name replacement (0 = Anarchy, 6 = Democracy)
+;
+;   male, female = titles for leader of government
+;
+@LEADERS
+Caesar,       Livia,               0, 1, 1, Romans,      Roman,       0,  1,  1,     1, Dictator, Dictator, 2, Imperator, Imperatrix
+Hammurabi,    Ishtari,             0, 2, 0, Babylonians, Babylonian, -1, -1,  1,
+Frederick,    Maria Theresa,       0, 3, 3, Germans,     German,      1, -1,  1,     4, Archbishop, Archbishop, 6, Chancellor, Chancellor
+Ramesses,     Cleopatra,           1, 4, 3, Egyptians,   Egyptian,    0,  0,  1,     1, Pharaoh, Pharaoh, 2, Great Pharaoh, Great Pharaoh
+Abe Lincoln,  E. Roosevelt,        0, 5, 1, Americans,   American,   -1,  0,  1,     4, Reverend, Reverend, 5, Speaker, Speaker
+Alexander,    Hippolyta,           1, 6, 3, Greeks,      Greek,       0,  1, -1,     6, Prime Minister, Prime Minister
+Mohandas Gandhi,Indira Gandhi,     0, 7, 2, Indians,     Indian,     -1, -1,  0,     2, Maharaja, Maharaja,
+Lenin,        Catherine the Great, 1, 1, 3, Russians,    Russian,     1,  0, -1,     2, Czar, Czarina, 4, Patriarch, Matriarch
+Shaka,        Shakala,             0, 2, 0, Zulus,       Zulu,        1,  0,  0,
+Louis XIV,    Joan of Arc,         0, 3, 3, French,      French,      1,  1,  1,     4, Archbishop, Archbishop, 6, Premier, Premier
+Montezuma,    Nazca,               0, 4, 0, Aztecs,      Aztec,       0, -1,  1,
+Mao Tse Tung, Wu Zhao,             0, 5, 2, Chinese,     Chinese,     0,  0,  1,     3, Chairman, Chairperson
+Henry VIII,   Elizabeth I,         1, 6, 3, English,     English,     0,  1,  0,     4, Lord Protector, Lady Protector, 6, Prime Minister, Prime Minister
+Genghis Khan, Bortei,              0, 7, 1, Mongols,     Mongol,      1,  1, -1,
+Cunobelin,    Boadicea,            1, 1, 0, Celts,       Celtic,     -1,  1,  0,     4, Druid, Druid
+Tokugawa,     Amaterasu,           0, 2, 3, Japanese,    Japanese,    1, -1, -1,     2, Shogun, Shogun, 6, Prime Minister, Prime Minister
+Canute,       Gunnhild,            1, 3, 3, Vikings,     Viking,      1,  1,  0,     1, Warlord, Warlord
+Philip II,    Isabella,            1, 4, 2, Spanish,     Spanish,    -1,  1, -1,     4, Archbishop, Archbishop
+Xerxes,       Scheherezade,        0, 5, 0, Persians,    Persian,     0, -1,  0,     2, Shah, Shah,  4, Ayatollah, Ayatollah
+Hannibal,     Dido,                0, 6, 1, Carthaginians, Carthaginian, 0,  0, -1,
+Sitting Bull, Sacajawea,           0, 7, 0, Sioux,       Sioux,       0,  0,  0,     1, Chief, Chief, 2, Great Chief, Great Chief
+
+Saladin,    ...,     0, 5, Arabs,       Arab,        1,  0,  1,     4, Ayatollah, Ayatollah, 2, Sultan, Sultana
+Atawallpa,  ...,     0, 1, Incas,       Inca,       -1,  1,  1,
+
+
+
+;
+;   Trading Commodities
+;
+@CARAVAN
+Iron Ore,
+Uniforms,
+Pig Iron,
+Wool,
+Whale Oil,
+Copper,
+Cotton,
+Manufactu,
+Wine,
+Textiles,
+Silver,
+Muskets,
+Linen,
+Timber,
+Gold,
+Coal,
+
+
+@ORDERS
+Fortify,            F
+Fortified,          F
+Sleep,              S
+Build Fortress,     F
+Build Road,         R
+Build Irrigation,   I
+Build Mine,         m
+Transform,          O
+Clean Pollution,    p
+Build Airbase,      E
+Build Transporter,  j
+Go to,              G
+
+
+@DIFFICULTY
+Corporal
+Sergeant
+Lieutenant
+Captain
+Colonel
+General
+
+
+@ATTITUDES
+Worshipful
+Enthusiastic
+Cordial
+Receptive
+Neutral
+Uncooperative
+Icy
+Hostile
+Enraged
+
+
+@CIVILIZE2
+0		; 00 AFl
+0		; 01 Alp
+0		; 02 Amp
+0		; 03 Ast
+0		; 04 Ato
+0		; 05 Aut
+0		; 06 Ban
+0		; 07 Bri
+0		; 08 Bro
+0		; 09 Cer
+0		; 10 Che
+0		; 11 Chi
+0		; 12 CoL
+0		; 13 CA
+0		; 14 Cmb
+0		; 15 Cmn
+0		; 16 Cmp
+0		; 17 Csc
+0		; 18 Cst
+0		; 19 Cor
+0		; 20 Cur
+0		; 21 Dem
+0		; 22 Eco
+0		; 23 E1
+0		; 24 E2
+0		; 25 Eng
+0		; 26 Env
+0		; 27 Esp
+0		; 28 Exp
+0		; 29 Feu
+0		; 30 Fli
+0		; 31 Fun
+0		; 32 FP
+0		; 33 Gen
+0		; 34 Gue
+0		; 35 Gun
+0		; 36 Hor
+0		; 37 Ind
+0		; 38 Inv
+0		; 39 Iro
+0		; 40 Lab
+0		; 41 Las
+0		; 42 Ldr
+0		; 43 Lit
+0		; 43 Too
+0		; 45 Mag
+0		; 46 Map
+0		; 47 Mas
+0		; 48 MP
+0		; 49 Mat
+0		; 50 Med
+0		; 51 Met
+0		; 52 Min
+0		; 53 Mob
+0		; 54 Mon
+0		; 55 MT
+0		; 56 Mys
+0		; 57 Nav
+0		; 58 NF
+0		; 59 NP
+0		; 60 Phi
+0		; 61 Phy
+0		; 62 Pla
+0		; 63 Plu
+0		; 64 PT
+0		; 65 Pot
+0		; 66 Rad
+0		; 67 RR
+0		; 68 Rec
+0		; 69 Ref
+0		; 70 Rfg
+0		; 71 Rep
+0		; 72 Rob
+0		; 73 Roc
+0		; 74 San
+0		; 75 Sea
+0		; 76 SFl
+0		; 77 Sth
+0		; 78 SE
+0		; 79 Stl
+0		; 80 Sup
+0		; 81 Tac
+0		; 82 The
+0		; 83 ToG
+0		; 84 Tra
+0		; 85 Uni
+0		; 86 War
+0		; 87 Whe
+0		; 88 Wri
+0		; 89 ...
+0		; 90 U1
+0		; 91 U2
+0		; 92 U3
+0		; 93 X1
+0		; 94 X2
+0		; 95 X3
+0		; 96 X4
+0		; 97 X5
+0		; 98 X6
+0		; 99 X7
+
+
+@LEADERS2
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
+00000000
+00000000
+
+
+; Advanced unit fields
+
+; A) 'tribe may build' mask:		0 - can't; 1 - can
+; B) 'not allowed on map' mask:		1 - not allowed on map
+; C) minimum bribe amount:		n - minimum bribe; 0 - don't care; -1 - can't bribe
+; D) 'build transport site' mask:	1: can; 0: can't for each site type
+; E) 'use transport site' mask:		1: can; 0: can't for each site type
+; F) native transport ability:		1: can; 0: can't for each map relationship type
+; G) General flags
+;   00000001	invisible until attack:			1 - invisible
+;   00000010	non-disbandable (human players only):	1 - cannot disband
+;   00000100	0-range-air-unit damage override:	1 - override damage
+;   00001000	barbarian units can't be bought off:	1 - can't buy off
+;   00010000	impassable terrain override:		1 - override impassable terrain
+;   00100000	unit acquires engineering abilities	1 - engineer
+;   01000000    barbarian unit will not expire:         1 - no expire
+;   10000000    override .SPR file for this unit:	1 - don't use .SPR
+
+;   A         B     C          D                 E               F             G
+
+@UNITS_ADVANCED
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	DO NOT USE
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Sapeurs
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Gendarmes
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	A. Landwehr
+00100000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	O. Provincial
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	P. Landwehr
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	S. Militia
+00100000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	O. Janissaries
+00000010, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	R. Opolchenye
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000001 ;	Guerilla
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000010 ;	Napoléon
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000010 ;	Garde Impériale
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Régiment de Ligne
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Infantrie Légère
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Carabiniers
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Cuirassier
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000010 ;	Chevaux Lanciers 
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Grenadier à Cheval
+00100000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	O. Nezam-I Cedid
+00100000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	O. Mameluke 
+00100000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	O. Sipahi
+00010000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	S. Light Infantry
+00010000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	S. Light Infantry 
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Art. à pied 8lb
+00100000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;   O. Artillery
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Artillerie à Cheval
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Mortier de 12po.
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Wellington
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	K.G.L.
+10000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	B. Line Infantry
+10000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	B. Light Infantry 
+10000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Dragoon Guards
+10000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Light Dragoon
+10000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	B. Foot Artillery
+10000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	B. Horse Artillery
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Nelson
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Kutusov
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000010 ;	Customs Warehouse
+00000010, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	R. Line Infantry
+00000010, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	R. Light Infantry
+00000010, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	R. Cuirassier
+00000010, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Don Cossack
+00000010, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	R. Foot Artillery
+00000010, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	R. Horse Artillery
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Mortar Shells 
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	6 pdr Shells
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	8 pdr Shells
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Hussars 
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Train Militaire
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Plunder
+00010000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	S. Line Cavalry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Minor Fort
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Major Fort
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Village
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Charles
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Schwarzenberg
+00000100, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	A. Line Infantry
+00000100, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	A. Light Infantry
+00000100, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	A. Kürassier
+00000100, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	A. Uhlans
+00000100, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	A. Foot Artillery
+00000100, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	A. Horse Artillery
+00010000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	S. Foot Artillery
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Blücher
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Yorck
+00001000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	P. Line Infantry
+00001000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	P. Light Infantry
+00001000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	P. Kürassier
+00001000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	P. Uhlans
+00001000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	P. Foot Artillery
+00001000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	P. Horse Artillery
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Cuesta
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000010 ;	Soult
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000010 ;	Davout
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000010 ;	Lannes
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000010 ;	Murat
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Moore
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Uxbridge
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Bagration
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Barclay de Tolly
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Blake
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	18 pdr Shells
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Bombard Shells
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Bombarde
+10110010, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Frigate
+10110010, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Two Decker
+10010010, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Three Decker
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Coalition Shells
+11000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Transport
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Villeneuve
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Neapolitan Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Sicilian Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Irish Rebel
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Bavarian Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Bavarian Cavalry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Danish Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Danish Cavalry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Italian Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Italian Cavalry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Rhine Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Polish Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Polish Lancers
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Dutch Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Dutch Cavalry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Westphalian Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Westphalian Cavalry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Wurttemberg Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Border
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Swiss Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Brunswick Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Brunswick Cavalry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Portuguese Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Portuguese Cavalry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Saxon Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Saxon Cavalry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Swedish Infantry
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Swedish Cavalry
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Frégate
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Deux-ponts
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Trois-ponts
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	24 pdr Shells
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Royal Marines
+01000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Art. à pied 12lb
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	12 pdr Shells
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	Garde Frontalier
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000000 ;	32 pdr Shells
+00000000, 00000000,-1, 0000000000000000,0000000000000000,0000000000000000, 10000010 ;	Poniatowski
+
+
+; 0-15 define legal transport possibilities
+; art matched in threes 0/3/6/9/12/15; 1/4/7/10/13; 2/5/8/11/14
+; Graphic - only for builders (column D). Irrelevant for WotR.
+; 1 Stairs
+; 2 Tunnel Entrance
+; 3 Concealed Entrance
+
+@MAP_TRANSPORT_RELATIONSHIPS
+0,1 ;0/1
+0,0 ;1/2
+0,0 ;2/3
+0,0 ;3/1
+0,0 ;4/2
+0,0 ;5/3
+0,0 ;6/1
+0,0 ;7/2
+0,0 ;8/3
+0,0 ;9/1
+0,0 ;10/2
+0,0 ;11/3
+0,0 ;12/1
+0,0 ;13/2
+0,0 ;14/3
+0,0 ;15/1
+
+
+; map, primary unit type, secondary unit type
+
+@INITIAL_SETTINGS
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+0,0,3
+
+@SOUNDS		
+<none>	 	; DO NOT USE
+<none> 		; Sapeurs
+Gendarmes.wav  	; Gendarmes
+Gendarmes.wav  	; A. Landwehr
+Gendarmes.wav  	; O. Provincial
+Gendarmes.wav 	; P. Landwehr
+Gendarmes.wav  	; Sp. Militia
+InfLight.wav  	; O. Janissaries
+Gendarmes.wav  	; R. Opolchenye
+Rifles3.wav  	; Guerrila
+<none>  	; Napoléon I
+Infantry(F).wav	; Garde Impériale
+InfLine.wav  	; Régiment de Ligne
+InfLight.wav  	; Infantrie Légère
+Musket(F).wav  	; Carabiniers
+Cavalry(F).wav 	; Cuirassier
+CavalryChg.wav	; Chevaux Lanciers
+Cavalry(F).wav 	; Grenadier à Cheval
+InfLine.wav  	; O. Nezam-I Cedid
+Cavalry(O).WAV	; O. Mameluke 
+Cavalry(O).WAV 	; O. Sipahi
+InfLine.wav  	; S. Line Infantry
+InfLight.wav  	; S. Light Infantry
+<none>  	; Art. à pied 8lb
+ArtilleryFt.wav ; O. Artillery
+<none>  	; Artillerie à Cheval
+<none>  	; Mortier de 12po.
+Infantry(B).wav	; Wellington
+Musket(G).wav 	; KGL
+InfLine.wav	; B. Line Infantry
+InfLight.wav  	; B. Light Infantry
+Cavalry(B).wav 	; Dragoon Guards
+CavalryChg.wav	; Light Dragoon
+Artillery(B).wav; B. Foot Artillery
+ArtilleryHr.wav ; B. Horse Artillery
+ShipofLine2.wav	; Nelson
+Infantry(R).wav	; Kutusov
+<none>   	; Customs Warehouse
+InfLine.wav 	; R. Line Infantry
+InfLight.wav  	; R. Light Infantry
+Cavalry(R).wav 	; Chevaliers Garde
+CavalryChg.wav	; Don Cossack
+Artillery(R).wav; R. Foot Artillery
+ArtilleryHr.wav ; R. Horse Artillery
+Mortier.wav  	; Mortar Shells
+Artillery(F).wav; 6 pdr Shells
+Artillery(F).wav; 8 pdr Shells
+<none>  	; Hussars
+<none>  	; Train Militaire
+<none>  	; Plunder
+CavalryChg.wav	; S. Line Cavalry
+<none>  	; Minor Fort
+<none>  	; Major Fort
+<none>  	; Village
+Infantry(G).wav	; Charles
+Infantry(G).wav	; Schwarzenberg
+InfLine.wav 	; A. Line Infantry
+InfLight.wav 	; A. Light Infantry
+Cavalry(G).wav 	; A. Kürassier
+CavalryChg.wav	; A. Uhlans
+Artillery(G).wav; A. Foot Artillery
+ArtilleryHr.wav ; A. Horse Artillery
+ArtilleryFt.wav ; S. Foot Artillery
+Infantry(G).wav	; Blücher
+Infantry(G).wav	; Yorck
+InfLine.wav  	; P. Line Infantry
+InfLight.wav 	; P. Light Infantry
+Cavalry(G).wav 	; P. Kürassier
+CavalryChg.wav	; P. Uhlans
+Artillery(G).wav; P. Foot Artillery
+ArtilleryHr.wav ; P. Horse Artillery
+Lineinfantry.wav; Cuesta
+<none>  	; Soult
+<none>  	; Davout
+<none>  	; Lannes
+<none>  	; Murat
+Infantry(B).wav	; Moore 
+Infantry(B).wav	; Uxbridge
+Infantry(R).wav	; Bagration
+Infantry(R).wav	; Barclay de Tolly
+Lineinfantry.wav; Blake
+ShipofLine.wav 	; 18 pdr Shells
+Mortier.wav  	; Bombard Shells
+<none>  	; Bombarde
+Frigate.wav  	; Frigate
+ShipofLine.wav  ; Two Decker
+ShipofLine.wav  ; Three Decker
+ShipofLine.wav 	; Coalition Shells
+<none>  	; Transport
+<none>  	; Villeneuve
+InfLine.wav  	; Neapolitan Infantry
+InfLine.wav  	; Sicilian Infantry
+InfLine.wav  	; Irish Rebel
+InfLine.wav  	; Bavarian Infantry
+CavalryHvy.wav	; Bavarian Cavalry
+InfLine.wav  	; Danish Infantry
+CavalryHvy.wav	; Danish Cavalry
+InfLine.wav  	; Italian Infantry
+CavalryHvy.wav	; Italian Cavalry
+InfLine.wav  	; Rhine Infantry
+InfLight.wav  	; Polish Infantry
+CavalryHvy.wav  ; Polish Lancers
+InfLine.wav  	; Dutch Infantry
+CavalryHvy.wav  ; Dutch Cavalry
+InfLine.wav  	; Westphalian Infantry
+CavalryHvy.wav  ; Westphalian Cavalry
+InfLine.wav  	; Wurttemberg Infantry
+<none>  	; Border
+InfLine.wav 	; Swiss Infantry
+InfLine.wav  	; Brunswick Infantry
+CavalryHvy.wav  ; Brunswick Cavalry
+InfLine.wav  	; Portuguese Infantry
+CavalryHvy.wav  ; Portuguese Cavalry
+InfLine.wav  	; Saxon Infantry
+CavalryHvy.wav  ; Saxon Cavalry
+InfLine.wav  	; Swedish Infantry
+CavalryHvy.wav  ; Swedish Cavalry
+<none>  	; Frégate
+<none>  	; Deux-ponts
+<none>  	; Trois-ponts
+ShipofLine2.wav	; 24 pdr Shells
+Musket(B).wav  	; Royal Marines
+<none>  	; Art. à pied 12lb
+Artillery(F).wav; 12 pdr Shells
+<none>  	; Garde Frontalier
+ShipofLine2.wav	; 32 pdr Shells
+<none>  	; Poniatowski
+
+
+@RIVERS
+River,          ; map 1
+River,          ; map 2
+River,          ; map 3
+River,          ; map 4
+
+; please do not remove this line
+
+
