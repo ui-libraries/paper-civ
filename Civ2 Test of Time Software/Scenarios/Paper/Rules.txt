@@ -95,106 +95,106 @@ AlpineMultiplier, 1, 3
 ;             4 = Applied
 ;
 @CIVILIZE
-Advanced Flight,    4,-2,  Rad, Too, 3, 4    ; AFl00
-Alphabet,           5, 1,  nil, nil, 0, 3    ; Alp
-Amphibious Warfare, 3,-2,  Nav, Tac, 3, 0    ; Amp
-Astronomy,          4, 1,  Mys, Mat, 1, 3    ; Ast
-Atomic Theory,      4,-1,  ToG, Phy, 2, 3    ; Ato
-Automobile,         6,-1,  Cmb, Stl, 3, 4    ; Aut
-Banking,            4, 1,  Tra, Rep, 1, 1    ; Ban
-Bridge Building,    4, 0,  Iro, Cst, 0, 4    ; Bri
-Bronze Working,     6,-1,  nil, nil, 0, 4    ; Bro
-Ceremonial Burial,  5, 0,  nil, nil, 0, 2    ; Cer
-Chemistry,          5,-1,  Uni, Med, 1, 3    ; Che10
-Chivalry,           4,-2,  Feu, Hor, 1, 0    ; Chi
-Code of Laws,       4, 1,  Alp, nil, 0, 2    ; CoL
-Combined Arms,      5,-1,  Mob, AFl, 3, 0    ; CA
-Combustion,         5,-1,  Ref, Exp, 2, 4    ; Cmb
-Communism,          5, 0,  Phi, Ind, 2, 2    ; Cmn
-Computers,          4, 1,  Min, MP,  3, 4    ; Cmp
-Conscription,       7,-1,  Dem, Met, 2, 0    ; Csc
-Construction,       4, 0,  Mas, Cur, 0, 4    ; Cst
-Corporation,        4, 0,  Ind, Eco, 2, 1    ; Cor
-Currency,           4, 1,  Bro, nil, 0, 1    ; Cur20
-Democracy,          5, 1,  Ban, Inv, 2, 2    ; Dem
-Economics,          4, 1,  Uni, Ban, 2, 1    ; Eco
-Electricity,        4, 0,  Met, Mag, 2, 4    ; E1
-Electronics,        4, 1,  E1,  Cor, 3, 4    ; E2
-Engineering,        4, 0,  Whe, Cst, 0, 4    ; Eng
-Environmentalism,   3, 1,  Rec, SFl, 3, 2    ; Env
-Espionage,          2,-1,  Cmn, Dem, 3, 0    ; Esp
-Explosives,         5, 0,  Gun, Che, 2, 4    ; Exp
-Feudalism,          4,-1,  War, Mon, 0, 0    ; Feu
-Flight,             4,-1,  Cmb, ToG, 2, 4    ; Fli30
-Fundamentalism,     3,-2,  MT,  Csc, 2, 2    ; Fun
-Fusion Power,       3, 0,  NP,  Sup, 3, 3    ; FP
-Genetic Engineering,3, 2,  Med, Cor, 3, 3    ; Gen
-Guerrilla Warfare,  4, 1,  Cmn, Tac, 3, 0    ; Gue
-Gunpowder,          8,-2,  Inv, Iro, 1, 0    ; Gun
-Horseback Riding,   4,-1,  nil, nil, 0, 0    ; Hor
-Industrialization,  6, 0,  RR,  Ban, 2, 1    ; Ind
-Invention,          6, 0,  Eng, Lit, 1, 4    ; Inv
-Iron Working,       5,-1,  Bro, War, 0, 4    ; Iro
-Labor Union,        4,-1,  MP,  Gue, 3, 2    ; Lab40
-Laser,              4, 0,  NP,  MP,  3, 3    ; Las
-Leadership,         5,-1,  Chi, Gun, 1, 0    ; Ldr
-Literacy,           5, 2,  Wri, CoL, 0, 3    ; Lit
-Machine Tools,      4,-2,  Stl, Tac, 2, 4    ; Too
-Magnetism,          4,-1,  Phy, Iro, 1, 3    ; Mag
-Map Making,         6,-1,  Alp, nil, 0, 1    ; Map
-Masonry,            4, 1,  nil, nil, 0, 4    ; Mas
-Mass Production,    5, 0,  Aut, Cor, 3, 4    ; MP
-Mathematics,        4,-1,  Alp, Mas, 0, 3    ; Mat
-Medicine,           4, 0,  Phi, Tra, 1, 1    ; Med50
-Metallurgy,         6,-2,  Gun, Uni, 1, 0    ; Met
-Miniaturization,    4, 1,  Too, E2,  3, 4    ; Min
-Mobile Warfare,     8,-1,  Aut, Tac, 3, 0    ; Mob
-Monarchy,           5, 1,  Cer, CoL, 0, 2    ; Mon
-Monotheism,         5, 1,  Phi, PT,  1, 2    ; MT
-Mysticism,          4, 0,  Cer, nil, 0, 2    ; Mys
-Navigation,         6,-1,  Sea, Ast, 1, 1    ; Nav
-Nuclear Fission,    6,-2,  Ato, MP,  3, 3    ; NF
-Nuclear Power,      3, 0,  NF,  E2,  3, 3    ; NP
-Philosophy,         6, 1,  Mys, Lit, 1, 2    ; Phi60
-Physics,            4,-1,  Nav, Lit, 1, 3    ; Phy
-Plastics,           4, 1,  Ref, SFl, 3, 4    ; Pla
-Plumbing,           4, 0,  no,  no,  1, 4    ; Plu  (Cst & Pot)
-Polytheism,         4, 0,  Cer, Hor, 0, 2    ; PT
-Pottery,            4, 1,  nil, nil, 0, 1    ; Pot
-Radio,              5,-1,  Fli, E1,  3, 4    ; Rad
-Railroad,           6, 0,  SE, Bri,  2, 1    ; RR
-Recycling,          2, 1,  MP, Dem,  3, 2    ; Rec
-Refining,           4, 0,  Che, Cor, 2, 4    ; Ref
-Refrigeration,      3, 1,  E1,  San, 3, 1    ; Rfg70
-Republic,           5, 1,  CoL, Lit, 0, 2    ; Rep
-Robotics,           5,-2,  Cmp, Mob, 3, 0    ; Rob
-Rocketry,           6,-2,  AFl, E2,  3, 0    ; Roc
-Sanitation,         4, 2,  Med, Eng, 2, 1    ; San
-Seafaring,          4, 1,  Map, Pot, 0, 1    ; Sea
-Space Flight,       4, 1,  Cmp, Roc, 3, 3    ; SFl
-Stealth,            3,-2,  Sup, Rob, 3, 0    ; Sth
-Steam Engine,       4,-1,  Phy, Inv, 2, 3    ; SE
-Steel,              4,-1,  E1,  Ind, 2, 4    ; Stl
-Superconductor,     4, 1,  Pla, Las, 3, 3    ; Sup80
-Tactics,            6,-1,  Csc, Ldr, 2, 0    ; Tac
-Theology,           3, 2,  MT,  Feu, 1, 2    ; The
-Theory of Gravity,  4, 0,  Ast, Uni, 1, 3    ; ToG
-Trade,              4, 2,  Cur, CoL, 0, 1    ; Tra
-University,         5, 1,  Mat, Phi, 1, 3    ; Uni
-Warrior Code,       4,-1,  nil, nil, 0, 0    ; War
-Wheel,              4,-1,  Hor, nil, 0, 4    ; Whe
-Writing,            4, 2,  Alp, nil, 0, 3    ; Wri
-Future Technology,  1, 0,  FP,  Rec, 3, 3    ; ...
-User Def Tech A,    3, 0,  no,  no,  0, 0    ; U190
-User Def Tech B,    3, 0,  no,  no,  0, 0    ; U2
-User Def Tech C,    3, 0,  no,  no,  0, 0    ; U3
-Extra Advance 1,    3, 0,  no,  no,  0, 0    ; X1
-Extra Advance 2,    3, 0,  no,  no,  0, 0    ; X2
-Extra Advance 3,    3, 0,  no,  no,  0, 0    ; X3
-Extra Advance 4,    3, 0,  no,  no,  0, 0    ; X4
-Extra Advance 5,    3, 0,  no,  no,  0, 0    ; X5
-Extra Advance 6,    3, 0,  no,  no,  0, 0    ; X6
-Extra Advance 7,    3, 0,  no,  no,  0, 0    ; X799
+Advanced Flight,               4,-2,  Rad, Too, 3, 4    ; AFl00
+Starch Sizing,                 5, 1,  nil, nil, 0, 3    ; Alp
+Subsidies,                     3,-2,  Mys, Tac, 3, 0    ; Amp
+Lime Baths,                    4, 1,  Cur, nil, 1, 3    ; Ast
+Packaging,                     4,-1,  Feu, Alp, 2, 3    ; Ato
+ISLAMIC WORLD Tech,            6,-1,  nil, nil, 3, 4    ; Aut
+Botany,                        4, 1,  Pot, Map, 1, 1    ; Ban
+Bridge Building,               4, 0,  Iro, Cst, 0, 4    ; Bri
+Joinery,                       6,-1,  nil, nil, 0, 4    ; Bro
+Rituals,                       5, 0,  nil, nil, 0, 2    ; Cer
+Insect Proofing,               5,-1,  Ban, nil, 1, 3    ; Che10
+Literati,                      4,-2,  Feu, Lit, 1, 0    ; Chi
+Principles of Reuse,           4, 1,  Cur, nil, 0, 2    ; CoL
+Bast Cultivation,              5,-1,  Map, nil, 3, 0    ; CA
+Trip Hammers,                  5,-1,  Rep, Ref, 2, 4    ; Cmb
+Italian Wool Merchants,        5, 0,  Too, Roc, 2, 2    ; Cmn
+Museology,                     4, 1,  Med, Env,  3, 4    ; Cmp
+Trade Secrets,                 7,-1,  Gun, FP, 2, 0    ; Csc
+Construction,                  4, 0,  Bro, nil, 0, 4    ; Cst
+Burnishing,                    4, 0,  Rep, nil, 2, 1    ; Cor
+Rag Pulping,                   4, 1,  Cor, nil, 0, 1    ; Cur20
+The Improved Mill,             5, 1,  Rob, NP, 2, 2    ; Dem
+Paper Currency,                4, 1,  Nav, Tra, 2, 1    ; Eco
+Grass Screens,                 4, 0,  Mon, Eng, 2, 4    ; E1
+Suspension Systems,            4, 1,  Ref, nil, 3, 4    ; E2
+Fine Toolmaking,               4, 0,  X1, nil, 0, 4    ; Eng
+Mercantilism,                  3, 1,  Rep, Exp, 3, 2    ; Env
+Heritage,                      2,-1,  Amp, Rec, 3, 0    ; Esp
+Caliphate Secretariats,        5, 0,  Lab, Rep, 2, 4    ; Exp
+Public Works,                  4,-1,  War, nil, 0, 0    ; Feu
+Parchment Nostalgia,           4,-1,  Gue, nil, 2, 4    ; Fli30
+Caliphate Secretariats,        3,-2,  Lab,  Env, 2, 2    ; Fun
+Islamicate Merchants,          3, 0,  Mys,  Eco, 3, 3    ; FP
+The Printed Book,              3, 2,  NF, Ref, 3, 3    ; Gen
+Paper Manufacture Society,     4, 1,  Cmn, Env, 3, 0    ; Gue
+Associations,                  8,-2,  Ldr, nil, 1, 0    ; Gun
+Land Surveying,                4,-1,  nil, nil, 0, 0    ; Hor
+The Printing Press,            6, 0,  Med,  Whe, 2, 1    ; Ind
+EAST ASIA TECH,                6, 0,  nil, nil, 1, 4    ; Inv
+Grindstones,                   5,-1,  Cur, Mas, 0, 4    ; Iro
+Islamic and Byzantine Scribes, 4,-1,  Rep,  Esp, 3, 2    ; Lab40
+Watertight Vats,               4, 0,  Cst,  nil,  3, 3    ; Las
+Artisanal Fairs,               5,-1,  Chi, Uni, 1, 0    ; Ldr
+Scrolls,                       5, 2,  Wri, nil, 0, 3    ; Lit
+Brass Wire Lattice,            4,-2,  Gen, nil, 2, 4    ; Too
+The Codex,                     4,-1,  Che, Nav, 1, 3    ; Mag
+Hydrology,                     6,-1,  Hor, Pot, 0, 1    ; Map
+Animal Husbandry,              4, 1,  Ldr, PT, 0, 4    ; Mas
+Roll Beaters,                  5, 0,  Rob, Min, 3, 4    ; MP
+Dye Processing,                4,-1,  Alp, Pot, 0, 3    ; Mat
+The University,                4, 0,  Gen, Lab, 1, 1    ; Med50
+Fine Arts,                     6,-2,  Tac, ToG, 1, 0    ; Met
+Rag Collection Monopolies,     4, 1,  Env, X3,  3, 4    ; Min
+Bale Shipping,                 8,-1,  Cmn, nil, 3, 0    ; Mob
+Bark Fibers,                   5, 1,  CA, Ban, 0, 2    ; Mon
+Sutras,                        5, 1,  Phy, Lit,  1, 2    ; MT
+Family Registry,               4, 0,  Tra, Mag, 0, 2    ; Mys
+Woodblock Printing,            6,-1,  Lit, nil, 1, 1    ; Nav
+Moveable Type,                 6,-2,  Mag, nil,  3, 3    ; NF
+Hydropowered Hammers,          3, 0,  Rad,  Cmb,  3, 3    ; NP
+The Ream,                      6, 1,  Mob, Rob, 1, 2    ; Phi60
+Divinity,                      4,-1,  Cer, nil, 1, 3    ; Phy
+Wire Watermarkers,             4, 1,  Too, nil, 3, 4    ; Pla
+Gelatin Sizing,                4, 0,  Too, nil,  1, 4    ; Plu  (Cst & Pot)
+Wove Moulds,                   4, 0,  Ind, Roc, 0, 2    ; PT
+Horticulture,                  4, 1,  nil, nil, 0, 1    ; Pot
+Water Mills,                   5,-1,  Rep, nil,  3, 4    ; Rad
+French River Transport,        6, 0,  U2, nil,  2, 1    ; RR
+The Paper Goddess,             2, 1,  The, Tac,  3, 2    ; Rec
+The Post/Reduplication,        4, 0,  E1, San, 2, 4    ; Ref
+Linen Manufacturing,           3, 1,  nil, nil, 3, 1    ; Rfg70
+Silk Road,                     5, 1,  FP, ToG, 0, 2    ; Rep
+Loft Drying,                   5,-2,  X2, X7, 3, 0    ; Rob
+Aesthetics,                    6,-2,  Sth, Esp,  3, 0    ; Roc
+Mucilaginous Additives,        4, 2,  Mon, nil, 2, 1    ; San
+Alkaline Cooking,              4, 1,  Ast, nil, 0, 1    ; Sea
+Marbling,                      4, 1,  Met, nil, 3, 3    ; SFl
+Paper Clothin,                 3,-2,  Che, E1, 3, 0    ; Sth
+Levered Press,                 4,-1,  Cst, E1, 2, 3    ; SE
+Large Formats,                 4,-1,  E2, nil, 2, 4    ; Stl
+Paper Architecture,            4, 1,  San, Stl, 3, 3    ; Sup80
+Patronage,                     6,-1,  Ldr, Tra, 2, 0    ; Tac
+Water Deities,                 3, 2,  MT, CA, 1, 2    ; The
+Merchandising,                 4, 0,  Ato, Gun, 1, 3    ; ToG
+Bureaucratic Favor,            4, 2,  Lit, War, 0, 1    ; Tra
+Decorative Techniques,         5, 1,  Mat, CoL, 1, 3    ; Uni
+Court Presense,                4,-1,  nil, nil, 0, 0    ; War
+Screw Press,                   4,-1,  Too, nil, 0, 4    ; Whe
+Historical Records,            4, 2,  Alp, nil, 0, 3    ; Wri
+Raw Materials Shortage,        1, 0,  U2,  Phi, 3, 3    ; FT
+The Delhi Sultanate,           3, 0,  Exp, nil,  0, 0    ; U1
+Accelerated Demand,            3, 0,  Fli, Phi,  0, 0    ; U2
+Glazing Roll,                  3, 0,  MP, nil,  0, 0    ; U3
+Deckle Sticks,                 3, 0,  Bro, nil,  0, 0    ; X1
+Cellar Retting,                3, 0,  Cmb, nil,  0, 0    ; X2
+Linen Manufacturing,           3, 0,  Env, nil,  0, 0    ; X3
+The Book Trade,                3, 0,  X5, nil,  0, 0    ; X4
+Typography,                    3, 0,  Ind, nil,  0, 0    ; X5
+Corn Mill Conversion,          3, 0,  Env, Rad,  0, 0    ; X6
+Felt Couching,                 3, 0,  Cmn, Ind,  0, 0    ; X799
 
 ;
 ; Above 11 tech slots (U1 to X8) allow you to define your own 

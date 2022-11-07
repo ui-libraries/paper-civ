@@ -1,0 +1,12 @@
+@BEGINEVENTS
+;@DEBUG
+
+@IF
+TURN
+turn=1
+@THEN
+TEXT
+^^The Dawn of Fibre Arts
+Paper is but a dream. We must find resources to begin our journey.
+ENDTEXT
+@ENDIF
